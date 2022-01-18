@@ -1,0 +1,22 @@
+.elementor-718 .elementor-element.elementor-element-42ed823 > .elementor-container{min-height:300px;}.elementor-718 .elementor-element.elementor-element-42ed823:not(.elementor-motion-effects-element-type-background), .elementor-718 .elementor-element.elementor-element-42ed823 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://agritech.dt4g.net/wp-content/uploads/2021/06/news-banner-bg.png");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-718 .elementor-element.elementor-element-42ed823{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:0px 0px 0px 0px;}.elementor-718 .elementor-element.elementor-element-42ed823 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-718 .elementor-element.elementor-element-9fa7f48 .elementor-heading-title{color:#FFFFFF;font-family:"Roboto", Sans-serif;font-weight:500;text-shadow:5px 9px 15px rgba(0,0,0,0.3);}.elementor-718 .elementor-element.elementor-element-9fa7f48 > .elementor-widget-container{padding:0px 0px 20px 0px;}.elementor-718 .elementor-element.elementor-element-cce21df > .elementor-element-populated{padding:40px 0px 040px 0px;}.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-posts-container .elementor-post__thumbnail{padding-bottom:calc( 0.66 * 100% );}.elementor-718 .elementor-element.elementor-element-c4dccd0:after{content:"0.66";}.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-post__thumbnail__link{width:100%;}.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-post__meta-data span + span:before{content:"-";}.elementor-718 .elementor-element.elementor-element-c4dccd0{--grid-column-gap:30px;--grid-row-gap:35px;}.elementor-718 .elementor-element.elementor-element-c4dccd0.elementor-posts--thumbnail-left .elementor-post__thumbnail__link{margin-right:20px;}.elementor-718 .elementor-element.elementor-element-c4dccd0.elementor-posts--thumbnail-right .elementor-post__thumbnail__link{margin-left:20px;}.elementor-718 .elementor-element.elementor-element-c4dccd0.elementor-posts--thumbnail-top .elementor-post__thumbnail__link{margin-bottom:20px;}.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-pagination{text-align:center;}body:not(.rtl) .elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-pagination .page-numbers:not(:first-child){margin-left:calc( 10px/2 );}body:not(.rtl) .elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-pagination .page-numbers:not(:last-child){margin-right:calc( 10px/2 );}body.rtl .elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-pagination .page-numbers:not(:first-child){margin-right:calc( 10px/2 );}body.rtl .elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-pagination .page-numbers:not(:last-child){margin-left:calc( 10px/2 );}@media(max-width:767px){.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-posts-container .elementor-post__thumbnail{padding-bottom:calc( 0.5 * 100% );}.elementor-718 .elementor-element.elementor-element-c4dccd0:after{content:"0.5";}.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-post__thumbnail__link{width:100%;}}/* Start custom CSS for posts, class: .elementor-element-c4dccd0 */.elementor-718 .elementor-element.elementor-element-c4dccd0 .elementor-pagination {
+    margin-top: 40px;
+}
+
+.elementor-718 .elementor-element.elementor-element-c4dccd0 .page-numbers {
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.elementor-718 .elementor-element.elementor-element-c4dccd0 a.page-numbers,
+.elementor-718 .elementor-element.elementor-element-c4dccd0 span.page-numbers {
+    background: #8e8e8e;
+}
+
+.elementor-718 .elementor-element.elementor-element-c4dccd0 span.current {
+    background: #008b32;
+}
+
+.elementor-718 .elementor-element.elementor-element-c4dccd0 a.page-numbers:hover {
+    background: #008b32;
+}/* End custom CSS */

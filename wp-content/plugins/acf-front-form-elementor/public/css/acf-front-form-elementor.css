@@ -1,0 +1,23 @@
+.acf-fields.-left>.acf-field:before {
+    content: none!important;
+}
+.acf-input .acf-input-prepend {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0px!important;
+    margin-right: 0px!important;
+    border-right: none!important;
+}
+.acf-input .acf-input-append {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0px!important;
+    margin-left: 0px!important;
+    border-left: none!important;
+}
+.acf-is-prepended {
+    border-right: none!important;
+    margin-right: 0px!important;
+} 
+.acf-is-appended {
+    border-left: none!important;
+    margin-left: 0px!important;
+}

@@ -1,0 +1,831 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ACF Front Form Elementor\n"
+"POT-Creation-Date: 2020-01-11 20:53+0100\n"
+"PO-Revision-Date: 2020-01-11 20:54+0100\n"
+"Last-Translator: Mourad Arifi <arifi.armedia@gmail.com>\n"
+"Language-Team: Mourad Arifi <arifi.armedia@gmail.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: docs\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+"X-Poedit-SearchPathExcluded-2: lang\n"
+"X-Poedit-SearchPathExcluded-3: documentation\n"
+
+#: acf-front-form-elementor.php:121
+#: acf-front-form-elementor/acf-front-form-elementor.php:126
+msgid "ACF Front Form Elementor"
+msgstr "ACF Front Form Elementor"
+
+#: acf-front-form-elementor.php:122
+#: acf-front-form-elementor/acf-front-form-elementor.php:127
+msgid "ACF Front Form Elementor Settings"
+msgstr "Paramètres d'ACF Front Form Elementor"
+
+#: acf-front-form-elementor.php:166
+#: acf-front-form-elementor/acf-front-form-elementor.php:203
+msgid "ACF Front Form"
+msgstr "ACF Front Form"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/class-acf_front_form-admin.php:132
+#: includes/acf-front-form-common/admin/class-acf_front_form-admin.php:132
+msgid "Settings"
+msgstr "Paramètres"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/class-acf_front_form-admin.php:148
+#: includes/acf-front-form-common/admin/class-acf_front_form-admin.php:148
+msgid "Read the docs"
+msgstr "Read the docs"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:51
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:55
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:51
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:55
+msgid "Use <code>acf_form_head()</code> function"
+msgstr "Use <code>acf_form_head()</code> function"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:57
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:71
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:85
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:57
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:71
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:85
+msgid "Yes please"
+msgstr "Oui s'il vous plaît"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:59
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:59
+msgid ""
+"This function is used to process, validate and save the submitted form data "
+"created by the <code>acf_form()</code> function. It will also enqueue all "
+"ACF related scripts and styles for the acf form to render correctly. <a href="
+"\"https://www.advancedcustomfields.com/resources/acf_form_head/\"  target="
+"\"_blank\">Read the documentation</a>"
+msgstr ""
+"Cette fonction est utilisée pour traiter, valider et enregistrer les données "
+"du formulaire soumis, créées par la fonction <code>acf_form()</code>. Elle "
+"va également empiler tous les scripts et styles ACF liés pour afficher le "
+"formulaire ACF correctement. <a href=\"https://www.advancedcustomfields.com/"
+"resources/acf_form_head/\"  target=\"_blank\">Lire la documentation</a>"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:60
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:60
+msgid ""
+"Disable this function if you have added <code>acf_form_head()</code> "
+"manually or using another plugin"
+msgstr ""
+"Désactiver cette fonction si vous avez ajouté <code>acf_form_head()</code> "
+"manuellement ou en utilisant un autre plugin"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:65
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:69
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:65
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:69
+msgid "Use <code>acf_enqueue_uploader()</code> function"
+msgstr "Utiliser la fonction <code>acf_enqueue_uploader()</code>"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:73
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:73
+msgid ""
+"This will create a hidden WYSIWYG field and enqueue the required JS "
+"templates for the WP media popups"
+msgstr ""
+"Cela va créer un champ masqué de WYSIWYG et empiler les modèles JS requis "
+"pour les popups WP médias"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:74
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:74
+msgid ""
+"Disable this function if you have added <code>acf_enqueue_uploader()</code> "
+"manually or using another plugin"
+msgstr ""
+"Désactiver cette fonction si vous avez ajouté <code>acf_enqueue_uploader()</"
+"code> manuellement ou en utilisant un autre plugin"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:79
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:83
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:79
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:83
+msgid "Place inline JS in the appended HTML"
+msgstr "Placer inline JS a l'HTML empilé"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:88
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:88
+msgid ""
+"This will allow ACF to initialize the fields within the newly added HTML. <a "
+"href=\"https://www.advancedcustomfields.com/resources/acf_form/#ajax\" "
+"target=\"_blank\">Read the documentation</a>"
+msgstr ""
+"Cela permettra à ACF d'initialiser les champs dans le code HTML nouvellement "
+"ajouté. <a href=\"https://www.advancedcustomfields.com/resources/acf_form/"
+"#ajax\" target=\"_blank\"> Lire la documentation </a>"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:89
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:89
+msgid ""
+"Disable this function if you have added the inline JS manually or using "
+"another plugin"
+msgstr ""
+"Désactivez cette fonction si vous avez ajouté le inline JS manuellement ou "
+"en utilisant une autre extension"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:94
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:94
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:105
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:105
+msgid "About"
+msgstr "A propos"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:108
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:108
+msgid " : make front end forms without coding with Advanced Custom Fields"
+msgstr ""
+" : Créez des formulaires frontaux sans codage avec Advanced Custom Fields et "
+"Visual Composer"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:109
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:109
+msgid "© Copyright "
+msgstr "© Copyright "
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:123
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:123
+msgid "Documentation"
+msgstr "Documentation"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:126
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:126
+msgid "Get the up to date documentation at <a href=\""
+msgstr "Consultez la documentation à jour dans <a href=\""
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:140
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:140
+msgid "Note"
+msgstr "Note"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:144
+#: includes/acf-front-form-common/admin/partials/acf_front_form-admin-display.php:144
+msgid ""
+"This plugin does not change the way ACF works, but just apply what is "
+"described on the official ACF website, please <a href=\"https://www."
+"advancedcustomfields.com/resources/acf_form/\" target=\"_blank\">read the "
+"documentation about <code>acf_form()</code></a>"
+msgstr ""
+"Ce plugin ne change pas le fonctionnement d'ACF, parcontre applique ce qui "
+"est décrit sur le site officiel d'ACF, veuillez <a href=\"https://www."
+"advancedcustomfields.com/resources/acf_form/\" target=\"_blank\"> lire la "
+"documentation sur <code>acf_form()</code></a>"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/class-acf_front_form-shortcodes.php:120
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:367
+#: includes/acf-front-form-common/includes/class-acf_front_form-shortcode.php:123
+#: includes/widgets/acf-element-form.php:367
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: acf-front-form-elementor/includes/acf-front-form-common/class-acf_front_form-shortcodes.php:123
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:383
+#: includes/acf-front-form-common/includes/class-acf_front_form-shortcode.php:126
+#: includes/widgets/acf-element-form.php:383
+msgid "Post updated"
+msgstr "Article mis à jour"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:43
+#: includes/widgets/acf-element-form.php:59
+msgid "ACF Form"
+msgstr "Formulaire ACF"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:71
+#: includes/widgets/acf-element-form.php:87
+msgid "- This page -"
+msgstr "- Cette page -"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:72
+#: includes/widgets/acf-element-form.php:88
+msgid "- Home URL -"
+msgstr "- Accueil -"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:81
+#: includes/widgets/acf-element-form.php:97
+msgid "- Custom URL -"
+msgstr "- URL Personnalisé -"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:128
+#: includes/widgets/acf-element-form.php:144
+msgid "Post"
+msgstr "Article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:135
+#: includes/widgets/acf-element-form.php:162
+msgid "Post ID"
+msgstr "ID de l'Article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:137
+#: includes/widgets/acf-element-form.php:164
+msgid "post id or new_post"
+msgstr "id de l'Article ou new_post"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:146
+#: includes/widgets/acf-element-form.php:176
+msgid "New Post Values"
+msgstr "Valeurs du Nouvel Article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:158
+#: includes/widgets/acf-element-form.php:188
+msgid "Post Title"
+msgstr "Titre de l'Article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:185
+#: includes/widgets/acf-element-form.php:215
+msgid "Post Type"
+msgstr "Type d'article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:199
+#: includes/widgets/acf-element-form.php:229
+msgid "Post Status"
+msgstr "État de l'Article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:203
+#: includes/widgets/acf-element-form.php:233
+msgid "Publish"
+msgstr "Publié"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:207
+#: includes/widgets/acf-element-form.php:237
+msgid "Draft"
+msgstr "Brouillon"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:211
+#: includes/widgets/acf-element-form.php:241
+msgid "Private"
+msgstr "Privé"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:215
+#: includes/widgets/acf-element-form.php:245
+msgid "Pending"
+msgstr "En attente"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:219
+#: includes/widgets/acf-element-form.php:249
+msgid "Trash"
+msgstr "Corbeille"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:235
+#: includes/widgets/acf-element-form.php:265
+msgid "Additional New Post Variables"
+msgstr "Variables additionnel du Nouvel Article"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:236
+#: includes/widgets/acf-element-form.php:266
+msgid ""
+"One per line. New post values, Example : post_password=123. More details <a "
+"href=\"https://codex.wordpress.org/Class_Reference/WP_Post\" target=\"_blank"
+"\">here</a>"
+msgstr ""
+"Une par ligne. Valeurs du nouvel article, Example : post_password=123. Plus "
+"de détails <a href=\"https://codex.wordpress.org/Class_Reference/WP_Post\" "
+"target=\"_blank\">ici</a>"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:254
+#: includes/widgets/acf-element-form.php:284
+#: includes/widgets/acf-element-form.php:416
+msgid "Form"
+msgstr "Formulaire"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:261
+#: includes/widgets/acf-element-form.php:291
+msgid "This is a Form"
+msgstr "Ceci est un Formulaire"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:263
+#: includes/widgets/acf-element-form.php:293
+msgid ""
+"Whether or not to create a form element. Useful when a adding to an existing "
+"form. Defaults to Yes"
+msgstr ""
+"Créer un élément de formulaire ou non. Utile lors de l'ajout à un formulaire "
+"existant. Par défaut à Oui"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:272
+#: includes/widgets/acf-element-form.php:424
+msgid "Alignment"
+msgstr "Aligenment"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:276
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:510
+#: includes/widgets/acf-element-form.php:428
+#: includes/widgets/acf-element-form.php:1046
+msgid "Left"
+msgstr "Gauche"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:280
+#: includes/widgets/acf-element-form.php:432
+msgid "Center"
+msgstr "Centre"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:284
+#: includes/widgets/acf-element-form.php:436
+msgid "Right"
+msgstr "Droit"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:288
+#: includes/widgets/acf-element-form.php:440
+msgid "Justified"
+msgstr "Justifié"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:303
+#: includes/widgets/acf-element-form.php:303
+msgid "Form ID"
+msgstr "ID du Formulaire"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:305
+#: includes/widgets/acf-element-form.php:305
+msgid "Unique identifier for the form. Defaults to \"acf-form\""
+msgstr "Identifiant unique pour le formulaire. Par défaut \"acf-form\""
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:318
+#: includes/widgets/acf-element-form.php:318
+msgid "Form Attributes"
+msgstr "Attributs du formulaire"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:322
+#: includes/widgets/acf-element-form.php:322
+msgid "One per line. List of HTML attributes for the form element"
+msgstr "Un par ligne. Liste d'Attributs HTML pour l’élément form"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:333
+#: includes/widgets/acf-element-form.php:333
+msgid "Return to"
+msgstr "Retour"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:334
+#: includes/widgets/acf-element-form.php:334
+msgid ""
+"The Page where to be redirected to after the form is submit. Default to "
+"current page."
+msgstr ""
+"La page de redirection après que le formulaire ai été soummis. Defaut vers "
+"la page en cours."
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:347
+#: includes/widgets/acf-element-form.php:347
+msgid "Custom URL"
+msgstr "URL Personnalisé"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:349
+#: includes/widgets/acf-element-form.php:349
+msgid "http://your-custom-url.com"
+msgstr "http://votre-url-personnalisé.com"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:364
+#: includes/widgets/acf-element-form.php:364
+msgid "Submit Value"
+msgstr "Valeur d'Envoyer"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:366
+#: includes/widgets/acf-element-form.php:366
+msgid "The text displayed on the submit button"
+msgstr "Le texte affiché sur le bouton Soumettre"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:380
+#: includes/widgets/acf-element-form.php:380
+msgid "Updated Message"
+msgstr "Massage de mise à jour"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:382
+#: includes/widgets/acf-element-form.php:382
+msgid ""
+"A message displayed above the form after being redirected. Empty for no "
+"message"
+msgstr ""
+"Un message affiché au-dessus du formulaire après redirection. Vide pour "
+"aucun message"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:396
+#: includes/widgets/acf-element-form.php:396
+msgid "Sanitize with wp_kses_post()"
+msgstr "Sanitizer avec wp_kses_post()"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:398
+#: includes/widgets/acf-element-form.php:398
+msgid ""
+"Whether or not to sanitize all $_POST data with the wp_kses_post() function. "
+"Defaults to Yes"
+msgstr ""
+"Sanitizer toutes les données $_POST avec la fonction wp_kses_post() ou non. "
+"Defaut à Oui"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:415
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:454
+#: includes/widgets/acf-element-form.php:896
+#: includes/widgets/acf-element-form.php:976
+#: includes/widgets/acf-element-form.php:1029
+msgid "Fields"
+msgstr "Champs"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:422
+#: includes/widgets/acf-element-form.php:941
+msgid "Show Title"
+msgstr "Afficher le titre"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:431
+#: includes/widgets/acf-element-form.php:951
+msgid "Show Content"
+msgstr "Afficher le Contenu"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:443
+#: includes/widgets/acf-element-form.php:964
+msgid "Field Groups"
+msgstr "Groupes de champs"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:466
+#: includes/widgets/acf-element-form.php:903
+msgid "Field Element"
+msgstr "Element du champ"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:467
+#: includes/widgets/acf-element-form.php:904
+msgid "Determines element used to wrap a field. Defaults to 'div'"
+msgstr ""
+"Détermine l'élément utilisé pour envelopper un champ. Par défaut à 'div'"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:471
+#: includes/widgets/acf-element-form.php:908
+msgid "Division (div)"
+msgstr ""
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:475
+#: includes/widgets/acf-element-form.php:912
+msgid "Table Row (tr)"
+msgstr "Ligne de Table (tr)"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:479
+#: includes/widgets/acf-element-form.php:916
+msgid "Table Data (td)"
+msgstr ""
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:483
+#: includes/widgets/acf-element-form.php:920
+msgid "Unordered List (ul)"
+msgstr "List Non Ordonnée (ul)"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:487
+#: includes/widgets/acf-element-form.php:924
+msgid "Ordered List (ol)"
+msgstr "List Ordonnée (ol)"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:491
+#: includes/widgets/acf-element-form.php:928
+msgid "Description List (dl)"
+msgstr "List de Description"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:502
+#: includes/widgets/acf-element-form.php:1038
+msgid "Label Placement"
+msgstr "Emplacement du Label"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:506
+#: includes/widgets/acf-element-form.php:1042
+msgid "Top"
+msgstr "Haut"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:521
+#: includes/widgets/acf-element-form.php:1084
+msgid "Instruction Placement"
+msgstr "Emplacement d'instruction"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:525
+#: includes/widgets/acf-element-form.php:1088
+msgid "Label"
+msgstr "Étiquette"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:529
+#: includes/widgets/acf-element-form.php:1092
+msgid "Field"
+msgstr "Champ"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:540
+#: includes/widgets/acf-element-form.php:992
+msgid "Uploader"
+msgstr "Téléverseur"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:544
+#: includes/widgets/acf-element-form.php:997
+msgid "WordPress"
+msgstr ""
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:548
+#: includes/widgets/acf-element-form.php:1001
+msgid "Basic"
+msgstr "De base"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:560
+#: includes/widgets/acf-element-form.php:1013
+msgid "Honeypot"
+msgstr "Pot de miél"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:562
+#: includes/widgets/acf-element-form.php:1015
+msgid ""
+"Whether to include a hidden input field to capture non human form "
+"submission. Defaults to Yes"
+msgstr ""
+"Indique si vous souhaitez inclure un champ de saisie masqué pour capturer la "
+"soumission de formulaire non humaine. Par défaut à Oui"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:576
+msgid "HTML"
+msgstr "HTML"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:583
+#: includes/widgets/acf-element-form.php:1229
+msgid "HTML Before Fields"
+msgstr "HTML Avant les champs"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:584
+#: includes/widgets/acf-element-form.php:1230
+msgid "Extra HTML to add before the fields"
+msgstr "HTML supplémentaire ajouté avant les champs"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:595
+#: includes/widgets/acf-element-form.php:1241
+msgid "HTML After Fields"
+msgstr "HTML Après les Champs"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:596
+#: includes/widgets/acf-element-form.php:1242
+msgid "Extra HTML to add after the fields"
+msgstr "HTML supplémentaire à ajouté après les champs"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:607
+#: includes/widgets/acf-element-form.php:1253
+msgid "HTML Update Message"
+msgstr "HTML du Message de Mise à jour"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:608
+msgid "HTML used to render the updated message"
+msgstr "HTML utilisé pour afficher le message mis à jour"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:619
+#: includes/widgets/acf-element-form.php:1157
+#: includes/widgets/acf-element-form.php:1266
+msgid "Submit Button"
+msgstr "Bouton d'Envoie"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:620
+#: includes/widgets/acf-element-form.php:1267
+msgid "HTML used to render the submit button"
+msgstr "HTML utilisé pour afficher le bouton d'envoie"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:631
+#: includes/widgets/acf-element-form.php:1279
+msgid "Submit Spinner"
+msgstr "Spinner d'Envoie"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:632
+#: includes/widgets/acf-element-form.php:1280
+msgid "HTML used to render the submit button loading spinner"
+msgstr "HTML utilisé pour afficher le Spinner du bouton d'envoie"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:649
+#: includes/widgets/acf-element-form.php:1298
+msgid "Table"
+msgstr "Table"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:660
+#: includes/widgets/acf-element-form.php:1310
+msgid "Add table tags"
+msgstr "Ajouter les tags de table"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:661
+#: includes/widgets/acf-element-form.php:1311
+msgid ""
+"Whether or not to add table tag. Works only if field_el is set to tr or td"
+msgstr ""
+"Ajoute ou pas une étiquette de table. Fonctionne uniquement si field_el est "
+"défini sur tr ou td"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:671
+#: includes/widgets/acf-element-form.php:1338
+msgid "Table Head Columns"
+msgstr "Colonnes d'Entête de Table"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:672
+#: includes/widgets/acf-element-form.php:1339
+msgid "One per line. Text added into td tags. This will add the thead tag"
+msgstr ""
+"Une par ligne. Texte à ajouter dans des balises td. Cela va ajouter la "
+"balise de l’élément thead"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:685
+#: includes/widgets/acf-element-form.php:1368
+msgid "Table Footer Columns"
+msgstr "Colonnes de Bas de Table"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:686
+#: includes/widgets/acf-element-form.php:1369
+msgid "One per line. Text added into td tags. This will add the tfooter tag"
+msgstr ""
+"Une par ligne. Texte à ajouter dans des balises td. Cela va ajouter la "
+"balise de l’élément tfooter"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:714
+msgid "Site Title"
+msgstr "Titre du Site"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:722
+msgid "Text Color"
+msgstr "Couleur du Texte"
+
+#: acf-front-form-elementor/includes/widgets/acf-element-form.php:747
+msgid "Hover Animation"
+msgstr "Animation au Survol"
+
+#: includes/widgets/acf-element-form.php:151
+msgid "Create New Post"
+msgstr "Créer un nouvel article"
+
+#: includes/widgets/acf-element-form.php:153
+msgid "Whether or not to create a new post."
+msgstr "Créer un nouvel article ou non"
+
+#: includes/widgets/acf-element-form.php:575
+msgid "Width"
+msgstr "Largeur"
+
+#: includes/widgets/acf-element-form.php:608
+msgid "Max Width"
+msgstr "Largeur max"
+
+#: includes/widgets/acf-element-form.php:648
+msgid "Margin"
+msgstr "Marges"
+
+#: includes/widgets/acf-element-form.php:660
+msgid "Padding"
+msgstr "Remplissage"
+
+#: includes/widgets/acf-element-form.php:683
+msgid "Border Radius"
+msgstr "Rayon de bordure"
+
+#: includes/widgets/acf-element-form.php:791
+msgid "Opacity"
+msgstr "Opacité"
+
+#: includes/widgets/acf-element-form.php:834
+msgid "Background Color"
+msgstr "Couleur d’arrière-plan"
+
+#: includes/widgets/acf-element-form.php:860
+msgid "Transition Duration"
+msgstr "Durée de la transition"
+
+#: includes/widgets/acf-element-form.php:943
+msgid "Whether to use the default wp post title as a field in the form or not"
+msgstr "Utiliser le titre de Wordpress par défaut comme champ ou non"
+
+#: includes/widgets/acf-element-form.php:953
+msgid ""
+"Whether to use the default wp post content as a field in the form or not"
+msgstr "Utiliser le contenu de Wordpress par défaut comme champ ou non"
+
+#: includes/widgets/acf-element-form.php:965
+msgid "Select the ACF Field Groups to use in the form"
+msgstr "Sélectionnez les groupes de champs a utiliser dans le formulaire"
+
+#: includes/widgets/acf-element-form.php:977
+msgid "Select the ACF Fields to use in the form"
+msgstr "Sélectionnez les champs a utiliser dans le formulaire"
+
+#: includes/widgets/acf-element-form.php:993
+msgid ""
+"Whether to use the WP uploader or a basic input for image and file fields"
+msgstr ""
+"Utiliser le téléverseur de Wordpress ou un basique pour les images et les "
+"fichier"
+
+#: includes/widgets/acf-element-form.php:1057
+msgid "Label Width"
+msgstr "Largeur d'étiquette"
+
+#: includes/widgets/acf-element-form.php:1118
+msgid "Input"
+msgstr "Champ"
+
+#: includes/widgets/acf-element-form.php:1192
+msgid "Content Editor Buttons"
+msgstr "Boutons de l'éditeur de contenu"
+
+#: includes/widgets/acf-element-form.php:1222
+msgid "Advanced"
+msgstr "Avancée"
+
+#: includes/widgets/acf-element-form.php:1255
+#, fuzzy
+#| msgid ""
+#| "A message displayed above the form after being redirected. Empty for no "
+#| "message"
+msgid ""
+"A message displayed above the form after being redirected. Can also be set "
+"to false for no message"
+msgstr ""
+"Un message affiché au-dessus du formulaire après redirection. Vide pour "
+"aucun message"
+
+#: includes/widgets/acf-element-form.php:1324
+msgid "Try Default Labels in Header"
+msgstr "Essayer les étiquettes par défaut dans l'entete"
+
+#: includes/widgets/acf-element-form.php:1325
+msgid "Whether or not to use default labels in table header"
+msgstr "Utiliser les étiquettes par défaut dans l'entete du tableau ou non"
+
+#: includes/widgets/acf-element-form.php:1354
+msgid "Try Default Labels in Footer"
+msgstr "Essayer les étiquettes par défaut dans le pied"
+
+#: includes/widgets/acf-element-form.php:1355
+msgid "Whether or not to use default labels in table footer"
+msgstr "Utiliser les étiquettes par défaut dans le pied du tableau ou non"
+
+#: includes/widgets/acf-element-form.php:1396
+msgid "Authorizations"
+msgstr "Autorisations"
+
+#: includes/widgets/acf-element-form.php:1409
+msgid "Logged in only"
+msgstr "Seulement connecté"
+
+#: includes/widgets/acf-element-form.php:1410
+msgid "Display the form for only logged in users."
+msgstr "Afficher le formulaire uniquement au utilisateurs connectés"
+
+#: includes/widgets/acf-element-form.php:1422
+msgid "Roles"
+msgstr ""
+
+#: includes/widgets/acf-element-form.php:1423
+msgid "Define which roles the form will be displayed to. Leave blank for all"
+msgstr ""
+"Définir les roles qui auront accée au formulair, laisser vide pour tous"
+
+#: includes/widgets/acf-element-form.php:1448
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: includes/widgets/acf-element-form.php:1449
+msgid "Define which users the form will be displayed to. Leave blank for all"
+msgstr ""
+"Définir les utilisateurs qui auront accée au formulair, laisser vide pour "
+"tous"
+
+#: acf-front-form-elementor/documentation/_static/doctools.js:193
+msgid "Permalink to this headline"
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/doctools.js:199
+msgid "Permalink to this definition"
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/doctools.js:232
+msgid "Hide Search Matches"
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/searchtools.js:400
+msgid "Searching"
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/searchtools.js:405
+msgid "Preparing search..."
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/searchtools.js:569
+msgid "Search Results"
+msgstr "Résultats de recherche pour: %s"
+
+#: acf-front-form-elementor/documentation/_static/searchtools.js:571
+msgid ""
+"Your search did not match any documents. Please make sure that all words are "
+"spelled correctly and that you've selected enough categories."
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/searchtools.js:573
+#, javascript-format
+msgid "Search finished, found %s page(s) matching the search query."
+msgstr ""
+
+#: acf-front-form-elementor/documentation/_static/searchtools.js:626
+msgid ", in "
+msgstr ""

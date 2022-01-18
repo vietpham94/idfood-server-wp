@@ -1,0 +1,5959 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Premium Addons PRO for Elementor\n"
+"POT-Creation-Date: 2020-03-11 09:38+0200\n"
+"PO-Revision-Date: 2018-02-15 10:41+0200\n"
+"Last-Translator: \n"
+"Language-Team: Leap13\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html__;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets/js\n"
+"X-Poedit-SearchPathExcluded-1: admin/assets/js\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: assets/frontend/min-js/charts.min.js:1
+msgid "resize"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "loading"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "<div class=\"eb-loadingicon\">"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "owner"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "thumbsUp"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "views"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "fields"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "tags"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "close"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "chevronDown"
+msgstr ""
+
+#: assets/frontend/min-js/embed-behance.min.js:1
+msgid "chevronUp"
+msgstr ""
+
+#: admin/includes/admin-notices.php:137
+msgid ""
+"Premium Addons PRO is not working because you need to activate Premium "
+"Addons for Elementor plugin."
+msgstr ""
+
+#: admin/includes/admin-notices.php:139
+msgid "Activate Now"
+msgstr ""
+
+#: admin/includes/admin-notices.php:147
+msgid ""
+"Premium Addons PRO is not working because you need to Install Premium Addons "
+"for Elementor plugin."
+msgstr ""
+
+#: admin/includes/admin-notices.php:149
+msgid "Install Now"
+msgstr ""
+
+#: admin/settings/elements.php:41
+msgid "Settings"
+msgstr ""
+
+#: admin/settings/elements.php:74
+msgid "PRO Settings"
+msgstr ""
+
+#: admin/settings/elements.php:110 includes/white-label/admin.php:111
+#: license/admin.php:77
+#, php-format
+msgid ""
+"Thank you for using %s. This plugin has been developed by %s and we hope you "
+"enjoy using it."
+msgstr ""
+
+#: admin/settings/elements.php:129 widgets/premium-notbar.php:34
+msgid "Alert Box"
+msgstr ""
+
+#: admin/settings/elements.php:137 widgets/premium-behance.php:33
+msgid "Behance Feed"
+msgstr ""
+
+#: admin/settings/elements.php:149 widgets/premium-charts.php:32
+msgid "Charts"
+msgstr ""
+
+#: admin/settings/elements.php:157 widgets/premium-content-toggle.php:39
+msgid "Content Switcher"
+msgstr ""
+
+#: admin/settings/elements.php:169 widgets/premium-color-transition.php:26
+msgid "Background Transition"
+msgstr ""
+
+#: admin/settings/elements.php:177 widgets/premium-divider.php:39
+msgid "Divider"
+msgstr ""
+
+#: admin/settings/elements.php:189 widgets/premium-facebook-feed.php:29
+msgid "Facebook Feed"
+msgstr ""
+
+#: admin/settings/elements.php:197 widgets/premium-facebook-reviews.php:31
+msgid "Facebook Reviews"
+msgstr ""
+
+#: admin/settings/elements.php:209 widgets/premium-flipbox.php:39
+msgid "Flip Box"
+msgstr ""
+
+#: admin/settings/elements.php:217 widgets/premium-google-reviews.php:31
+msgid "Google Reviews"
+msgstr ""
+
+#: admin/settings/elements.php:229 widgets/premium-hscroll.php:29
+msgid "Horizontal Scroll"
+msgstr ""
+
+#: admin/settings/elements.php:237 widgets/premium-iconbox.php:39
+msgid "Icon Box"
+msgstr ""
+
+#: admin/settings/elements.php:249 widgets/premium-ihover.php:39
+msgid "iHover"
+msgstr ""
+
+#: admin/settings/elements.php:257 widgets/premium-image-accordion.php:39
+msgid "Image Accordion"
+msgstr ""
+
+#: admin/settings/elements.php:269 widgets/premium-image-comparison.php:32
+msgid "Image Comparison"
+msgstr ""
+
+#: admin/settings/elements.php:277 widgets/premium-image-hotspots.php:41
+msgid "Image Hotspots"
+msgstr ""
+
+#: admin/settings/elements.php:289 widgets/premium-img-layers.php:36
+msgid "Image Layers"
+msgstr ""
+
+#: admin/settings/elements.php:297 widgets/premium-instagram-feed.php:25
+msgid "Instagram Feed"
+msgstr ""
+
+#: admin/settings/elements.php:309 widgets/premium-magic-section.php:39
+msgid "Magic Section"
+msgstr ""
+
+#: admin/settings/elements.php:317 widgets/premium-fb-chat.php:25
+msgid "Messenger Chat"
+msgstr ""
+
+#: admin/settings/elements.php:329 widgets/premium-multi-scroll.php:37
+msgid "Multi Scroll"
+msgstr ""
+
+#: admin/settings/elements.php:337 widgets/premium-prev-img.php:38
+#: widgets/premium-prev-img.php:201
+msgid "Preview Window"
+msgstr ""
+
+#: admin/settings/elements.php:349 widgets/premium-tables.php:37
+#: widgets/premium-tables.php:2116
+msgid "Table"
+msgstr ""
+
+#: admin/settings/elements.php:357 widgets/premium-tabs.php:30
+#: widgets/premium-tabs.php:135
+msgid "Tabs"
+msgstr ""
+
+#: admin/settings/elements.php:369 widgets/premium-twitter-feed.php:29
+msgid "Twitter Feed"
+msgstr ""
+
+#: admin/settings/elements.php:377 widgets/premium-unfold.php:26
+msgid "Unfold"
+msgstr ""
+
+#: admin/settings/elements.php:389 widgets/premium-whatsapp-chat.php:32
+msgid "Whatsapp Chat"
+msgstr ""
+
+#: admin/settings/elements.php:397 widgets/premium-yelp-reviews.php:31
+msgid "Yelp Reviews"
+msgstr ""
+
+#: admin/settings/elements.php:407
+msgid "Section Elements"
+msgstr ""
+
+#: admin/settings/elements.php:410
+#: modules/premium-section-gradient/module.php:109
+msgid "Animated Gradient"
+msgstr ""
+
+#: admin/settings/elements.php:418
+#: modules/premium-section-parallax/module.php:111
+msgid "Parallax"
+msgstr ""
+
+#: admin/settings/elements.php:430
+#: modules/premium-section-particles/module.php:108
+msgid "Particles"
+msgstr ""
+
+#: admin/settings/elements.php:438
+msgid "Ken Burns"
+msgstr ""
+
+#: admin/settings/elements.php:450
+msgid "Save Settings"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:71
+msgid "Behance Feed: Username"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:82
+msgid "Charts: X-axis Label"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:87
+msgid "Charts: Data Labels"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:92
+msgid "Charts: Y-axis Label"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:97
+msgid "Charts: Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:109
+msgid "Content Switcher: First Label"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:114
+msgid "Content Switcher: Second Label"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:119
+msgid "Content Switcher: First Content"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:124
+msgid "Content Switcher: Second Content"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:135
+msgid "Divider: Separator Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:140
+msgid "Divider: Link Titlte"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:151
+msgid "Facebook Feed: Access Token"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:156
+msgid "Facebook Feed: User ID/Page Slug"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:167
+msgid "Facebook Reviews: Page Name"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:178
+msgid "Flip Box: Front Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:183
+msgid "Flip Box: Back Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:188
+msgid "Flip Box: Front Description"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:193
+msgid "Flip Box: Back Description"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:198
+msgid "Flip Box: Link Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:203
+msgid "Flip Box: URL"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:214
+msgid "Google Reviews: API Key"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:219
+msgid "Google Reviews: Place ID"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:224
+msgid "Google Reviews: Language Prefix"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:235
+msgid "Icon Box: Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:240
+msgid "Icon Box: Description"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:245
+msgid "Icon Box: Read More Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:250
+msgid "Icon Box: URL"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:261
+msgid "iHover: Link Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:266
+msgid "iHover: Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:271
+msgid "iHover: Description Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:276
+msgid "iHover: URL"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:287
+msgid "Image Comparison: First Label"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:292
+msgid "Image Comparison: Second Label"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:308
+msgid "Magic Section: Content"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:313
+msgid "Magic Section: Button Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:324
+msgid "Multi Scroll: Dots Tooltips Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:336
+msgid "Alert Box: Content Template ID"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:341
+msgid "Alert Box: Content Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:346
+msgid "Alert Box: Close Button Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:357
+msgid "Preview Window: Image Alt"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:362
+msgid "Preview Window: Caption"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:367
+msgid "Preview Window: Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:372
+msgid "Preview Window: Description"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:377
+msgid "Preview Window: URL"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:393
+msgid "Unfold: Title"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:398
+msgid "Unfold: Content"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:403
+msgid "Unfold: Unfold Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:408
+msgid "Unfold: Fold Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:419
+msgid "Whatsapp: Phone Number"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:424
+msgid "Whatsapp: Group ID"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:429
+msgid "Whatsapp: Button Text"
+msgstr ""
+
+#: includes/compatibility/class-premium-pro-wpml.php:434
+msgid "Whatsapp: Tooltip Text"
+msgstr ""
+
+#: includes/compatibility/widgets/charts.php:54
+msgid "Charts: Y-axis Data"
+msgstr ""
+
+#: includes/compatibility/widgets/hotspots.php:52
+msgid "Hotspots: Content"
+msgstr ""
+
+#: includes/compatibility/widgets/hotspots.php:55
+msgid "Hotspots: Link Title"
+msgstr ""
+
+#: includes/compatibility/widgets/multiscroll.php:52
+msgid "Multi Scroll: Left Template ID"
+msgstr ""
+
+#: includes/compatibility/widgets/multiscroll.php:56
+msgid "Multi Scroll: Right Template ID"
+msgstr ""
+
+#: includes/compatibility/widgets/tabs.php:53
+msgid "Tabs: Tab Template ID"
+msgstr ""
+
+#: includes/compatibility/widgets/tabs.php:56
+msgid "Tabs: Tab Content"
+msgstr ""
+
+#: includes/compatibility/widgets/tabs.php:59
+msgid "Tabs: Tab Title"
+msgstr ""
+
+#: includes/deps/reviews.php:164 includes/deps/reviews.php:388
+#: includes/deps/reviews.php:567
+msgid "Read More »"
+msgstr ""
+
+#: includes/white-label/admin.php:65
+msgid "White Labeling"
+msgstr ""
+
+#: includes/white-label/admin.php:122
+msgid "Free Version"
+msgstr ""
+
+#: includes/white-label/admin.php:125 includes/white-label/admin.php:145
+msgid "Author Name"
+msgstr ""
+
+#: includes/white-label/admin.php:128 includes/white-label/admin.php:148
+msgid "Author URL"
+msgstr ""
+
+#: includes/white-label/admin.php:131 includes/white-label/admin.php:150
+msgid "Plugin Name"
+msgstr ""
+
+#: includes/white-label/admin.php:134 includes/white-label/admin.php:152
+msgid "Plugin Description"
+msgstr ""
+
+#: includes/white-label/admin.php:136
+msgid "Hide Plugin Row Meta Links"
+msgstr ""
+
+#: includes/white-label/admin.php:137
+msgid "This will hide Docs & FAQs and Video Tutorials links on Plugins page."
+msgstr ""
+
+#: includes/white-label/admin.php:143
+msgid "PRO Version"
+msgstr ""
+
+#: includes/white-label/admin.php:154
+msgid "Hide Plugin Changelog Link"
+msgstr ""
+
+#: includes/white-label/admin.php:155
+msgid "This will hide Changelog link on Plugins page."
+msgstr ""
+
+#: includes/white-label/admin.php:160
+msgid "General Options"
+msgstr ""
+
+#: includes/white-label/admin.php:163
+msgid "Widgets Category Name"
+msgstr ""
+
+#: includes/white-label/admin.php:166
+msgid "Widgets Prefix"
+msgstr ""
+
+#: includes/white-label/admin.php:169
+msgid "Widgets Badge"
+msgstr ""
+
+#: includes/white-label/admin.php:180
+msgid "Admin Settings"
+msgstr ""
+
+#: includes/white-label/admin.php:184
+msgid "Rate Notice"
+msgstr ""
+
+#: includes/white-label/admin.php:185
+msgid "This will hide the rating notice at the bottom of plugin admin tabs"
+msgstr ""
+
+#: includes/white-label/admin.php:187
+msgid "About Tab"
+msgstr ""
+
+#: includes/white-label/admin.php:188
+msgid "This will hide About tab"
+msgstr ""
+
+#: includes/white-label/admin.php:190
+msgid "Version Control Tab"
+msgstr ""
+
+#: includes/white-label/admin.php:191
+msgid "Hide Version Control Tab"
+msgstr ""
+
+#: includes/white-label/admin.php:193 includes/white-label/admin.php:194
+msgid "Hide Premium Addons Logo"
+msgstr ""
+
+#: includes/white-label/admin.php:195
+msgid "License Tab"
+msgstr ""
+
+#: includes/white-label/admin.php:196
+msgid "Hide License Tab"
+msgstr ""
+
+#: includes/white-label/admin.php:197
+msgid "White Labeling Tab"
+msgstr ""
+
+#: includes/white-label/admin.php:198
+msgid ""
+"This will Hide White Label options tab, to reset this option, please "
+"reactivate Premium Addons Pro for Elementor Plugin"
+msgstr ""
+
+#: includes/white-label/admin.php:205
+msgid "Did you like Premium Addons for Elementor Plugin? Please "
+msgstr ""
+
+#: includes/white-label/admin.php:205
+#, php-format
+msgid "Click Here to Rate it %s"
+msgstr ""
+
+#: includes/white-label/branding.php:39
+msgid "Visit Plugin Site"
+msgstr ""
+
+#: includes/white-label/branding.php:56
+msgid "View Premium Addons Pro Changelog"
+msgstr ""
+
+#: includes/white-label/branding.php:56
+msgid "Changelog"
+msgstr ""
+
+#: license/admin.php:40
+msgid "License"
+msgstr ""
+
+#: license/admin.php:87
+msgid ""
+"Enter your license key here, to activate Premium Addons Pro, and enable "
+"feature updates, Premium Templates, white labeling options and premium "
+"support."
+msgstr ""
+
+#: license/admin.php:89
+msgid "Log in to "
+msgstr ""
+
+#: license/admin.php:89
+msgid "your account"
+msgstr ""
+
+#: license/admin.php:89
+msgid " to get your license key"
+msgstr ""
+
+#: license/admin.php:90
+msgid "If you don't have a license key yet, "
+msgstr ""
+
+#: license/admin.php:90
+msgid "get Premium Addons Pro now."
+msgstr ""
+
+#: license/admin.php:91
+msgid "Copy the license key from your account and paste it below."
+msgstr ""
+
+#: license/admin.php:92
+msgid "Click on Activate to activate the license."
+msgstr ""
+
+#: license/admin.php:95
+msgid "Please enter your license key here"
+msgstr ""
+
+#: license/admin.php:100
+msgid "Deactivate"
+msgstr ""
+
+#: license/admin.php:101 widgets/premium-multi-scroll.php:905
+#: widgets/premium-tables.php:2065 widgets/premium-tabs.php:368
+msgid "Active"
+msgstr ""
+
+#: license/admin.php:104
+msgid "Activate"
+msgstr ""
+
+#: license/admin.php:105
+msgid "License not valid"
+msgstr ""
+
+#: license/api.php:30 license/api.php:60 license/api.php:108
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: license/api.php:39
+#, php-format
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: license/api.php:44
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: license/api.php:47
+msgid "Invalid license."
+msgstr ""
+
+#: license/api.php:51
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: license/api.php:54
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: license/api.php:57
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: license/updater.php:201
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: license/updater.php:209
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+
+#: license/updater.php:399
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: license/updater.php:399
+msgid "Error"
+msgstr ""
+
+#: modules/premium-section-gradient/module.php:123
+msgid "Enable Animated Gradient"
+msgstr ""
+
+#: modules/premium-section-gradient/module.php:134
+msgid ""
+"NOTICE: Please remove Elementor's background image/gradient for this section"
+msgstr ""
+
+#: modules/premium-section-gradient/module.php:141
+#: widgets/premium-color-transition.php:106
+#: widgets/premium-color-transition.php:266
+msgid "Select Color"
+msgstr ""
+
+#: modules/premium-section-gradient/module.php:156
+msgid "Animation Speed (sec)"
+msgstr ""
+
+#: modules/premium-section-gradient/module.php:167
+msgid "Gradient Angle (degrees)"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:89
+msgid "Ken Burns Effect"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:96
+msgid "Add the images that you need, Save and Preview to see your changes"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:103
+msgid "Enable Ken Burns Effect"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:114
+#: widgets/premium-facebook-reviews.php:146
+#: widgets/premium-google-reviews.php:125
+#: widgets/premium-image-accordion.php:78 widgets/premium-img-layers.php:88
+#: widgets/premium-yelp-reviews.php:125
+msgid "Upload Image"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:123
+msgid "Image Fit"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:126
+msgid "Fill"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:127
+#: widgets/premium-color-transition.php:139
+#: widgets/premium-color-transition.php:298
+#: widgets/premium-image-accordion.php:96
+msgid "Contain"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:128
+#: widgets/premium-color-transition.php:140
+#: widgets/premium-color-transition.php:299
+#: widgets/premium-image-accordion.php:97
+msgid "Cover"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:137
+#: modules/premium-section-parallax/module.php:244
+#: modules/premium-section-parallax/module.php:301
+#: widgets/premium-content-toggle.php:347 widgets/premium-facebook-feed.php:174
+#: widgets/premium-facebook-reviews.php:244
+#: widgets/premium-facebook-reviews.php:405
+#: widgets/premium-google-reviews.php:221
+#: widgets/premium-google-reviews.php:380
+#: widgets/premium-image-accordion.php:392 widgets/premium-img-layers.php:425
+#: widgets/premium-img-layers.php:490 widgets/premium-img-layers.php:555
+#: widgets/premium-img-layers.php:620 widgets/premium-img-layers.php:685
+#: widgets/premium-notbar.php:148 widgets/premium-tables.php:829
+#: widgets/premium-twitter-feed.php:200 widgets/premium-yelp-reviews.php:222
+#: widgets/premium-yelp-reviews.php:379
+msgid "Direction"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:140
+#: widgets/premium-color-transition.php:194
+#: widgets/premium-color-transition.php:353
+#: widgets/premium-image-accordion.php:145
+msgid "Center Center"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:141
+#: widgets/premium-color-transition.php:195
+#: widgets/premium-color-transition.php:354
+#: widgets/premium-image-accordion.php:146
+msgid "Center Left"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:142
+#: widgets/premium-color-transition.php:196
+#: widgets/premium-color-transition.php:355
+#: widgets/premium-image-accordion.php:147
+msgid "Center Right"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:143
+#: widgets/premium-color-transition.php:197
+#: widgets/premium-color-transition.php:356
+#: widgets/premium-image-accordion.php:148
+msgid "Top Center"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:144
+#: widgets/premium-color-transition.php:200
+#: widgets/premium-color-transition.php:359
+#: widgets/premium-image-accordion.php:151
+msgid "Bottom Center"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:145
+#: widgets/premium-color-transition.php:198
+#: widgets/premium-color-transition.php:357 widgets/premium-fb-chat.php:178
+#: widgets/premium-image-accordion.php:149
+msgid "Top Left"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:146
+#: widgets/premium-color-transition.php:199
+#: widgets/premium-color-transition.php:358 widgets/premium-fb-chat.php:179
+#: widgets/premium-image-accordion.php:150
+msgid "Top Right"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:147
+#: widgets/premium-color-transition.php:201
+#: widgets/premium-color-transition.php:360 widgets/premium-fb-chat.php:180
+#: widgets/premium-image-accordion.php:152
+msgid "Bottom Left"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:148
+#: widgets/premium-color-transition.php:202
+#: widgets/premium-color-transition.php:361 widgets/premium-fb-chat.php:181
+#: widgets/premium-image-accordion.php:153
+msgid "Bottom Right"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:157
+msgid "Zoom Direction"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:160
+#: widgets/premium-magic-section.php:197
+msgid "In"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:161
+#: widgets/premium-magic-section.php:223
+msgid "Out"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:177
+msgid "Scale Speed (sec)"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:194
+#: widgets/premium-flipbox.php:754 widgets/premium-img-layers.php:815
+msgid "Effect"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:197
+#: widgets/premium-content-toggle.php:338 widgets/premium-flipbox.php:757
+#: widgets/premium-image-hotspots.php:571 widgets/premium-prev-img.php:463
+#: widgets/premium-whatsapp-chat.php:491
+msgid "Fade"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:198
+msgid "Scroll Horizontal"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:199
+msgid "Scroll Vertical"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:208
+msgid "Effect Speed (sec)"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:222
+msgid "Infinite"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:224
+msgid "This option works only if you have only one image slide"
+msgstr ""
+
+#: modules/premium-section-kenburns/module.php:231
+#: widgets/premium-flipbox.php:346 widgets/premium-flipbox.php:732
+#: widgets/premium-ihover.php:1070 widgets/premium-image-accordion.php:526
+#: widgets/premium-image-comparison.php:413
+#: widgets/premium-image-comparison.php:854
+#: widgets/premium-magic-section.php:1097
+msgid "Overlay Color"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:125
+msgid "Enable Parallax"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:135
+#: widgets/premium-color-transition.php:86
+#: widgets/premium-color-transition.php:254 widgets/premium-tables.php:433
+msgid "Type"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:138
+#: widgets/premium-charts.php:630 widgets/premium-img-layers.php:1259
+#: widgets/premium-notbar.php:487
+msgid "Scroll"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:139
+msgid "Scroll + Opacity"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:140
+#: widgets/premium-iconbox.php:534
+msgid "Opacity"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:141
+#: widgets/premium-behance.php:125 widgets/premium-img-layers.php:742
+#: widgets/premium-img-layers.php:750 widgets/premium-img-layers.php:754
+#: widgets/premium-instagram-feed.php:262
+msgid "Scale"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:142
+msgid "Scale + Opacity"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:143
+msgid "Auto Moving Background"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:144
+msgid "Multi Layer Parallax"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:154
+#: widgets/premium-divider.php:297 widgets/premium-ihover.php:66
+#: widgets/premium-image-comparison.php:68
+#: widgets/premium-image-comparison.php:205
+#: widgets/premium-image-hotspots.php:82 widgets/premium-prev-img.php:83
+#: widgets/premium-prev-img.php:231
+msgid "Choose Image"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:165
+#: widgets/premium-fb-chat.php:191 widgets/premium-flipbox.php:275
+#: widgets/premium-flipbox.php:660 widgets/premium-image-comparison.php:102
+#: widgets/premium-image-comparison.php:239
+#: widgets/premium-image-hotspots.php:213 widgets/premium-notbar.php:180
+msgid "Horizontal Position"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:167
+msgid "Set the horizontal position for the layer background, default: 50%"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:179
+#: widgets/premium-fb-chat.php:204 widgets/premium-flipbox.php:249
+#: widgets/premium-flipbox.php:634 widgets/premium-image-comparison.php:149
+#: widgets/premium-image-comparison.php:287
+#: widgets/premium-image-hotspots.php:234 widgets/premium-magic-section.php:687
+#: widgets/premium-multi-scroll.php:515 widgets/premium-multi-scroll.php:637
+#: widgets/premium-notbar.php:196
+msgid "Vertical Position"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:186
+msgid "Set the vertical position for the layer background, default: 50%"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:193
+#: widgets/premium-behance.php:384 widgets/premium-behance.php:433
+#: widgets/premium-behance.php:543 widgets/premium-behance.php:1129
+#: widgets/premium-behance.php:1327 widgets/premium-charts.php:842
+#: widgets/premium-charts.php:874 widgets/premium-charts.php:955
+#: widgets/premium-charts.php:983 widgets/premium-charts.php:1051
+#: widgets/premium-color-transition.php:135
+#: widgets/premium-color-transition.php:294
+#: widgets/premium-content-toggle.php:394 widgets/premium-divider.php:378
+#: widgets/premium-facebook-feed.php:589 widgets/premium-facebook-feed.php:656
+#: widgets/premium-facebook-reviews.php:748
+#: widgets/premium-facebook-reviews.php:832
+#: widgets/premium-facebook-reviews.php:1584
+#: widgets/premium-google-reviews.php:746
+#: widgets/premium-google-reviews.php:830
+#: widgets/premium-google-reviews.php:1574 widgets/premium-hscroll.php:751
+#: widgets/premium-hscroll.php:919 widgets/premium-iconbox.php:108
+#: widgets/premium-iconbox.php:394 widgets/premium-ihover.php:78
+#: widgets/premium-image-accordion.php:92
+#: widgets/premium-image-accordion.php:655
+#: widgets/premium-image-comparison.php:724
+#: widgets/premium-image-hotspots.php:272
+#: widgets/premium-image-hotspots.php:721
+#: widgets/premium-image-hotspots.php:819
+#: widgets/premium-instagram-feed.php:502
+#: widgets/premium-instagram-feed.php:716 widgets/premium-magic-section.php:267
+#: widgets/premium-magic-section.php:293 widgets/premium-magic-section.php:1003
+#: widgets/premium-notbar.php:639 widgets/premium-tabs.php:546
+#: widgets/premium-twitter-feed.php:650 widgets/premium-twitter-feed.php:716
+#: widgets/premium-twitter-feed.php:866 widgets/premium-whatsapp-chat.php:304
+#: widgets/premium-yelp-reviews.php:763 widgets/premium-yelp-reviews.php:834
+msgid "Size"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:204
+#: widgets/premium-img-layers.php:1183
+msgid "z-index"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:207
+msgid "Choose z-index for the parallax layer, default: 3"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:213
+msgid "Mouse Track"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:215
+#: widgets/premium-img-layers.php:353
+msgid "Enable or disable mousemove interaction"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:221
+#: widgets/premium-facebook-reviews.php:1035
+#: widgets/premium-google-reviews.php:1014 widgets/premium-img-layers.php:386
+#: widgets/premium-yelp-reviews.php:1037
+msgid "Rate"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:227
+msgid "Choose the movement rate for the layer background, default: -10"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:236
+msgid "Scroll Parallax"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:238
+msgid "Enable or disable scroll parallax"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:247
+#: widgets/premium-img-layers.php:493
+msgid "Up"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:248
+#: widgets/premium-img-layers.php:494
+msgid "Down"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:259
+#: modules/premium-section-parallax/module.php:319
+#: modules/premium-section-parallax/module.php:336
+#: widgets/premium-img-layers.php:505 widgets/premium-img-layers.php:570
+#: widgets/premium-img-layers.php:700 widgets/premium-img-layers.php:765
+#: widgets/premium-img-layers.php:830 widgets/premium-img-layers.php:1047
+#: widgets/premium-img-layers.php:1163
+msgid "Speed"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:278
+#: widgets/premium-img-layers.php:459 widgets/premium-img-layers.php:524
+#: widgets/premium-img-layers.php:589 widgets/premium-img-layers.php:654
+#: widgets/premium-img-layers.php:719 widgets/premium-img-layers.php:784
+#: widgets/premium-img-layers.php:849
+msgid "Viewport"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:288
+#: widgets/premium-charts.php:403 widgets/premium-charts.php:500
+#: widgets/premium-content-toggle.php:359
+#: widgets/premium-facebook-reviews.php:198
+#: widgets/premium-facebook-reviews.php:227
+#: widgets/premium-facebook-reviews.php:344
+#: widgets/premium-facebook-reviews.php:373 widgets/premium-flipbox.php:261
+#: widgets/premium-flipbox.php:646 widgets/premium-flipbox.php:672
+#: widgets/premium-google-reviews.php:177
+#: widgets/premium-google-reviews.php:205
+#: widgets/premium-google-reviews.php:319
+#: widgets/premium-google-reviews.php:348 widgets/premium-hscroll.php:482
+#: widgets/premium-iconbox.php:190 widgets/premium-image-accordion.php:463
+#: widgets/premium-image-comparison.php:161
+#: widgets/premium-image-comparison.php:299
+#: widgets/premium-image-hotspots.php:496 widgets/premium-img-layers.php:469
+#: widgets/premium-img-layers.php:534 widgets/premium-img-layers.php:599
+#: widgets/premium-img-layers.php:664 widgets/premium-img-layers.php:729
+#: widgets/premium-img-layers.php:794 widgets/premium-img-layers.php:859
+#: widgets/premium-img-layers.php:931 widgets/premium-magic-section.php:126
+#: widgets/premium-magic-section.php:575 widgets/premium-magic-section.php:609
+#: widgets/premium-magic-section.php:699 widgets/premium-multi-scroll.php:307
+#: widgets/premium-multi-scroll.php:527 widgets/premium-multi-scroll.php:649
+#: widgets/premium-notbar.php:83 widgets/premium-notbar.php:201
+#: widgets/premium-prev-img.php:574 widgets/premium-yelp-reviews.php:176
+#: widgets/premium-yelp-reviews.php:205 widgets/premium-yelp-reviews.php:318
+#: widgets/premium-yelp-reviews.php:347
+msgid "Bottom"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:289
+#: widgets/premium-charts.php:402 widgets/premium-charts.php:498
+#: widgets/premium-content-toggle.php:351
+#: widgets/premium-facebook-reviews.php:190
+#: widgets/premium-facebook-reviews.php:219
+#: widgets/premium-facebook-reviews.php:336
+#: widgets/premium-facebook-reviews.php:365 widgets/premium-flipbox.php:253
+#: widgets/premium-flipbox.php:638 widgets/premium-flipbox.php:664
+#: widgets/premium-google-reviews.php:169
+#: widgets/premium-google-reviews.php:197
+#: widgets/premium-google-reviews.php:311
+#: widgets/premium-google-reviews.php:340 widgets/premium-iconbox.php:170
+#: widgets/premium-iconbox.php:188 widgets/premium-image-accordion.php:455
+#: widgets/premium-image-comparison.php:153
+#: widgets/premium-image-comparison.php:291
+#: widgets/premium-image-hotspots.php:495 widgets/premium-img-layers.php:470
+#: widgets/premium-img-layers.php:535 widgets/premium-img-layers.php:600
+#: widgets/premium-img-layers.php:665 widgets/premium-img-layers.php:730
+#: widgets/premium-img-layers.php:795 widgets/premium-img-layers.php:860
+#: widgets/premium-img-layers.php:923 widgets/premium-magic-section.php:125
+#: widgets/premium-magic-section.php:567 widgets/premium-magic-section.php:601
+#: widgets/premium-magic-section.php:691 widgets/premium-multi-scroll.php:305
+#: widgets/premium-multi-scroll.php:519 widgets/premium-multi-scroll.php:641
+#: widgets/premium-notbar.php:79 widgets/premium-notbar.php:199
+#: widgets/premium-prev-img.php:572 widgets/premium-tables.php:128
+#: widgets/premium-yelp-reviews.php:168 widgets/premium-yelp-reviews.php:197
+#: widgets/premium-yelp-reviews.php:310 widgets/premium-yelp-reviews.php:339
+msgid "Top"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:304
+#: widgets/premium-facebook-feed.php:178 widgets/premium-flipbox.php:775
+#: widgets/premium-twitter-feed.php:204
+msgid "Left to Right"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:305
+#: widgets/premium-facebook-feed.php:182 widgets/premium-flipbox.php:774
+#: widgets/premium-twitter-feed.php:208
+msgid "Right to Left"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:306
+#: widgets/premium-flipbox.php:776
+msgid "Top to Bottom"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:307
+#: widgets/premium-flipbox.php:777
+msgid "Bottom to Top"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:341
+msgid "Set the speed of background movement, default: 3"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:350
+msgid "Enable Parallax on Android"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:360
+msgid "Enable Parallax on iOS"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:370
+msgid "NEW: Now you can position, resize parallax layers from the preview area"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:391
+msgid "Apply Scroll Parallax On"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:394
+#: modules/premium-section-particles/module.php:152
+#: widgets/premium-img-layers.php:1213
+msgid "Desktop"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:395
+#: modules/premium-section-particles/module.php:153
+#: widgets/premium-img-layers.php:1214
+msgid "Tablet"
+msgstr ""
+
+#: modules/premium-section-parallax/module.php:396
+#: modules/premium-section-particles/module.php:154
+#: widgets/premium-img-layers.php:1215
+msgid "Mobile"
+msgstr ""
+
+#: modules/premium-section-particles/module.php:115
+msgid "Enable Particles"
+msgstr ""
+
+#: modules/premium-section-particles/module.php:125
+#: widgets/premium-hscroll.php:243 widgets/premium-notbar.php:214
+msgid "Z-index"
+msgstr ""
+
+#: modules/premium-section-particles/module.php:133
+msgid "Custom Style"
+msgstr ""
+
+#: modules/premium-section-particles/module.php:135
+msgid ""
+"Paste your particles JSON code here - Generate it from <a href=\"http://"
+"vincentgarreau.com/particles.js/#default\" target=\"_blank\">Here!</a>"
+msgstr ""
+
+#: modules/premium-section-particles/module.php:142
+msgid ""
+"Kindly, be noted that you will need to add a background as particles JSON "
+"code doesn't include a background color"
+msgstr ""
+
+#: modules/premium-section-particles/module.php:149
+msgid "Apply Particles On"
+msgstr ""
+
+#: widgets/premium-behance.php:68 widgets/premium-facebook-feed.php:70
+#: widgets/premium-facebook-reviews.php:70
+#: widgets/premium-google-reviews.php:70 widgets/premium-instagram-feed.php:67
+#: widgets/premium-twitter-feed.php:72 widgets/premium-yelp-reviews.php:70
+msgid "Access Credentials"
+msgstr ""
+
+#: widgets/premium-behance.php:74
+msgid "API key"
+msgstr ""
+
+#: widgets/premium-behance.php:84
+msgid "Username"
+msgstr ""
+
+#: widgets/premium-behance.php:95 widgets/premium-content-toggle.php:329
+#: widgets/premium-facebook-reviews.php:119
+#: widgets/premium-google-reviews.php:98
+#: widgets/premium-image-accordion.php:378
+#: widgets/premium-image-comparison.php:337
+#: widgets/premium-magic-section.php:592 widgets/premium-tables.php:567
+#: widgets/premium-yelp-reviews.php:98
+msgid "Display Options"
+msgstr ""
+
+#: widgets/premium-behance.php:101
+msgid "Number of Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:104 widgets/premium-facebook-feed.php:152
+#: widgets/premium-facebook-reviews.php:302
+#: widgets/premium-google-reviews.php:277
+#: widgets/premium-instagram-feed.php:236 widgets/premium-twitter-feed.php:178
+#: widgets/premium-yelp-reviews.php:279
+msgid "1 Column"
+msgstr ""
+
+#: widgets/premium-behance.php:105 widgets/premium-facebook-feed.php:153
+#: widgets/premium-facebook-reviews.php:303
+#: widgets/premium-google-reviews.php:278
+#: widgets/premium-instagram-feed.php:237 widgets/premium-twitter-feed.php:179
+#: widgets/premium-yelp-reviews.php:280
+msgid "2 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:106 widgets/premium-facebook-feed.php:154
+#: widgets/premium-facebook-reviews.php:304
+#: widgets/premium-google-reviews.php:279
+#: widgets/premium-instagram-feed.php:238 widgets/premium-twitter-feed.php:180
+#: widgets/premium-yelp-reviews.php:281
+msgid "3 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:107 widgets/premium-facebook-feed.php:155
+#: widgets/premium-facebook-reviews.php:305
+#: widgets/premium-google-reviews.php:280
+#: widgets/premium-instagram-feed.php:239 widgets/premium-twitter-feed.php:181
+msgid "4 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:108 widgets/premium-facebook-feed.php:156
+#: widgets/premium-facebook-reviews.php:306
+#: widgets/premium-google-reviews.php:281
+#: widgets/premium-instagram-feed.php:240 widgets/premium-twitter-feed.php:182
+msgid "5 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:109 widgets/premium-facebook-feed.php:157
+#: widgets/premium-facebook-reviews.php:307
+#: widgets/premium-google-reviews.php:282
+#: widgets/premium-instagram-feed.php:241 widgets/premium-twitter-feed.php:183
+msgid "6 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:110
+msgid "7 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:111
+msgid "8 Columns"
+msgstr ""
+
+#: widgets/premium-behance.php:119 widgets/premium-instagram-feed.php:256
+msgid "Hover Image Effect"
+msgstr ""
+
+#: widgets/premium-behance.php:122 widgets/premium-iconbox.php:147
+#: widgets/premium-ihover.php:713 widgets/premium-ihover.php:994
+#: widgets/premium-instagram-feed.php:259
+msgid "None"
+msgstr ""
+
+#: widgets/premium-behance.php:123 widgets/premium-instagram-feed.php:260
+msgid "Zoom In"
+msgstr ""
+
+#: widgets/premium-behance.php:124 widgets/premium-instagram-feed.php:261
+msgid "Zoom Out"
+msgstr ""
+
+#: widgets/premium-behance.php:126 widgets/premium-instagram-feed.php:263
+msgid "Grayscale"
+msgstr ""
+
+#: widgets/premium-behance.php:127 widgets/premium-img-layers.php:612
+#: widgets/premium-instagram-feed.php:264
+msgid "Blur"
+msgstr ""
+
+#: widgets/premium-behance.php:128
+msgid "Bright"
+msgstr ""
+
+#: widgets/premium-behance.php:129 widgets/premium-instagram-feed.php:265
+msgid "Sepia"
+msgstr ""
+
+#: widgets/premium-behance.php:130 widgets/premium-img-layers.php:980
+#: widgets/premium-instagram-feed.php:267
+msgid "Translate"
+msgstr ""
+
+#: widgets/premium-behance.php:139 widgets/premium-facebook-reviews.php:186
+#: widgets/premium-facebook-reviews.php:332
+#: widgets/premium-google-reviews.php:165
+#: widgets/premium-google-reviews.php:307 widgets/premium-yelp-reviews.php:164
+#: widgets/premium-yelp-reviews.php:306
+msgid "Image Alignment"
+msgstr ""
+
+#: widgets/premium-behance.php:143 widgets/premium-behance.php:168
+#: widgets/premium-behance.php:196 widgets/premium-behance.php:227
+#: widgets/premium-behance.php:403 widgets/premium-charts.php:418
+#: widgets/premium-charts.php:501 widgets/premium-content-toggle.php:151
+#: widgets/premium-content-toggle.php:209
+#: widgets/premium-content-toggle.php:287
+#: widgets/premium-content-toggle.php:363 widgets/premium-divider.php:220
+#: widgets/premium-divider.php:595 widgets/premium-facebook-feed.php:196
+#: widgets/premium-facebook-reviews.php:265
+#: widgets/premium-facebook-reviews.php:426
+#: widgets/premium-facebook-reviews.php:1479 widgets/premium-flipbox.php:279
+#: widgets/premium-flipbox.php:304 widgets/premium-flipbox.php:690
+#: widgets/premium-google-reviews.php:242
+#: widgets/premium-google-reviews.php:401
+#: widgets/premium-google-reviews.php:1468 widgets/premium-hscroll.php:483
+#: widgets/premium-iconbox.php:166 widgets/premium-iconbox.php:278
+#: widgets/premium-ihover.php:248 widgets/premium-ihover.php:455
+#: widgets/premium-image-accordion.php:421
+#: widgets/premium-image-accordion.php:481
+#: widgets/premium-image-comparison.php:106
+#: widgets/premium-image-comparison.php:243
+#: widgets/premium-image-hotspots.php:114
+#: widgets/premium-image-hotspots.php:497 widgets/premium-img-layers.php:877
+#: widgets/premium-magic-section.php:141 widgets/premium-magic-section.php:498
+#: widgets/premium-magic-section.php:537 widgets/premium-magic-section.php:613
+#: widgets/premium-magic-section.php:663 widgets/premium-multi-scroll.php:234
+#: widgets/premium-multi-scroll.php:290 widgets/premium-notbar.php:413
+#: widgets/premium-prev-img.php:178 widgets/premium-prev-img.php:275
+#: widgets/premium-prev-img.php:346 widgets/premium-prev-img.php:398
+#: widgets/premium-prev-img.php:575 widgets/premium-tables.php:181
+#: widgets/premium-tables.php:214 widgets/premium-tables.php:626
+#: widgets/premium-tables.php:727 widgets/premium-tables.php:756
+#: widgets/premium-tables.php:805 widgets/premium-tables.php:975
+#: widgets/premium-tables.php:1119 widgets/premium-tables.php:1496
+#: widgets/premium-tables.php:1578 widgets/premium-twitter-feed.php:222
+#: widgets/premium-unfold.php:121 widgets/premium-unfold.php:263
+#: widgets/premium-whatsapp-chat.php:324 widgets/premium-whatsapp-chat.php:354
+#: widgets/premium-whatsapp-chat.php:385 widgets/premium-whatsapp-chat.php:416
+#: widgets/premium-yelp-reviews.php:243 widgets/premium-yelp-reviews.php:400
+#: widgets/premium-yelp-reviews.php:1488
+msgid "Left"
+msgstr ""
+
+#: widgets/premium-behance.php:147 widgets/premium-behance.php:172
+#: widgets/premium-behance.php:200 widgets/premium-behance.php:231
+#: widgets/premium-behance.php:407 widgets/premium-charts.php:422
+#: widgets/premium-content-toggle.php:155
+#: widgets/premium-content-toggle.php:213
+#: widgets/premium-content-toggle.php:291 widgets/premium-divider.php:224
+#: widgets/premium-facebook-feed.php:200
+#: widgets/premium-facebook-reviews.php:194
+#: widgets/premium-facebook-reviews.php:223
+#: widgets/premium-facebook-reviews.php:269
+#: widgets/premium-facebook-reviews.php:340
+#: widgets/premium-facebook-reviews.php:369
+#: widgets/premium-facebook-reviews.php:430
+#: widgets/premium-facebook-reviews.php:1483 widgets/premium-flipbox.php:283
+#: widgets/premium-flipbox.php:308 widgets/premium-flipbox.php:694
+#: widgets/premium-google-reviews.php:173
+#: widgets/premium-google-reviews.php:201
+#: widgets/premium-google-reviews.php:246
+#: widgets/premium-google-reviews.php:315
+#: widgets/premium-google-reviews.php:344
+#: widgets/premium-google-reviews.php:405
+#: widgets/premium-google-reviews.php:1472 widgets/premium-iconbox.php:282
+#: widgets/premium-ihover.php:252 widgets/premium-ihover.php:459
+#: widgets/premium-image-accordion.php:485
+#: widgets/premium-image-comparison.php:110
+#: widgets/premium-image-comparison.php:247
+#: widgets/premium-image-hotspots.php:118 widgets/premium-img-layers.php:881
+#: widgets/premium-img-layers.php:927 widgets/premium-magic-section.php:502
+#: widgets/premium-magic-section.php:541 widgets/premium-magic-section.php:667
+#: widgets/premium-notbar.php:417 widgets/premium-prev-img.php:182
+#: widgets/premium-prev-img.php:279 widgets/premium-prev-img.php:350
+#: widgets/premium-prev-img.php:402 widgets/premium-tables.php:185
+#: widgets/premium-tables.php:218 widgets/premium-tables.php:630
+#: widgets/premium-tables.php:731 widgets/premium-tables.php:760
+#: widgets/premium-tables.php:809 widgets/premium-tables.php:979
+#: widgets/premium-tables.php:1123 widgets/premium-tables.php:1500
+#: widgets/premium-tables.php:1582 widgets/premium-twitter-feed.php:226
+#: widgets/premium-unfold.php:125 widgets/premium-unfold.php:267
+#: widgets/premium-whatsapp-chat.php:328 widgets/premium-whatsapp-chat.php:358
+#: widgets/premium-whatsapp-chat.php:389 widgets/premium-yelp-reviews.php:172
+#: widgets/premium-yelp-reviews.php:201 widgets/premium-yelp-reviews.php:247
+#: widgets/premium-yelp-reviews.php:314 widgets/premium-yelp-reviews.php:343
+#: widgets/premium-yelp-reviews.php:404 widgets/premium-yelp-reviews.php:1492
+msgid "Center"
+msgstr ""
+
+#: widgets/premium-behance.php:151 widgets/premium-behance.php:176
+#: widgets/premium-behance.php:204 widgets/premium-behance.php:235
+#: widgets/premium-behance.php:411 widgets/premium-charts.php:426
+#: widgets/premium-charts.php:499 widgets/premium-content-toggle.php:159
+#: widgets/premium-content-toggle.php:217
+#: widgets/premium-content-toggle.php:295
+#: widgets/premium-content-toggle.php:355 widgets/premium-divider.php:228
+#: widgets/premium-divider.php:662 widgets/premium-facebook-feed.php:204
+#: widgets/premium-facebook-reviews.php:273
+#: widgets/premium-facebook-reviews.php:434
+#: widgets/premium-facebook-reviews.php:1487 widgets/premium-flipbox.php:287
+#: widgets/premium-flipbox.php:312 widgets/premium-flipbox.php:698
+#: widgets/premium-google-reviews.php:250
+#: widgets/premium-google-reviews.php:409
+#: widgets/premium-google-reviews.php:1476 widgets/premium-hscroll.php:484
+#: widgets/premium-iconbox.php:174 widgets/premium-iconbox.php:286
+#: widgets/premium-ihover.php:256 widgets/premium-ihover.php:463
+#: widgets/premium-image-accordion.php:420
+#: widgets/premium-image-accordion.php:489
+#: widgets/premium-image-comparison.php:114
+#: widgets/premium-image-comparison.php:251
+#: widgets/premium-image-hotspots.php:122
+#: widgets/premium-image-hotspots.php:498 widgets/premium-img-layers.php:885
+#: widgets/premium-magic-section.php:142 widgets/premium-magic-section.php:506
+#: widgets/premium-magic-section.php:545 widgets/premium-magic-section.php:605
+#: widgets/premium-magic-section.php:671 widgets/premium-multi-scroll.php:235
+#: widgets/premium-multi-scroll.php:291 widgets/premium-notbar.php:421
+#: widgets/premium-prev-img.php:186 widgets/premium-prev-img.php:283
+#: widgets/premium-prev-img.php:354 widgets/premium-prev-img.php:406
+#: widgets/premium-prev-img.php:573 widgets/premium-tables.php:189
+#: widgets/premium-tables.php:222 widgets/premium-tables.php:634
+#: widgets/premium-tables.php:735 widgets/premium-tables.php:764
+#: widgets/premium-tables.php:813 widgets/premium-tables.php:983
+#: widgets/premium-tables.php:1127 widgets/premium-tables.php:1504
+#: widgets/premium-tables.php:1586 widgets/premium-twitter-feed.php:230
+#: widgets/premium-unfold.php:129 widgets/premium-unfold.php:271
+#: widgets/premium-whatsapp-chat.php:332 widgets/premium-whatsapp-chat.php:362
+#: widgets/premium-whatsapp-chat.php:393 widgets/premium-whatsapp-chat.php:415
+#: widgets/premium-yelp-reviews.php:251 widgets/premium-yelp-reviews.php:408
+#: widgets/premium-yelp-reviews.php:1496
+msgid "Right"
+msgstr ""
+
+#: widgets/premium-behance.php:164
+msgid "Name Alignment"
+msgstr ""
+
+#: widgets/premium-behance.php:192
+msgid "Author Alignment"
+msgstr ""
+
+#: widgets/premium-behance.php:223
+msgid "Info Alignment"
+msgstr ""
+
+#: widgets/premium-behance.php:263 widgets/premium-charts.php:444
+#: widgets/premium-color-transition.php:412
+#: widgets/premium-facebook-feed.php:223
+#: widgets/premium-facebook-reviews.php:538 widgets/premium-fb-chat.php:105
+#: widgets/premium-google-reviews.php:512 widgets/premium-hscroll.php:259
+#: widgets/premium-multi-scroll.php:320 widgets/premium-notbar.php:439
+#: widgets/premium-prev-img.php:438 widgets/premium-tables.php:649
+#: widgets/premium-twitter-feed.php:249 widgets/premium-unfold.php:323
+#: widgets/premium-whatsapp-chat.php:446 widgets/premium-yelp-reviews.php:511
+msgid "Advanced Settings"
+msgstr ""
+
+#: widgets/premium-behance.php:269
+msgid "Show Project Name"
+msgstr ""
+
+#: widgets/premium-behance.php:279
+msgid "Show Author"
+msgstr ""
+
+#: widgets/premium-behance.php:289
+msgid "Show Apprectiations"
+msgstr ""
+
+#: widgets/premium-behance.php:299
+msgid "Show Views"
+msgstr ""
+
+#: widgets/premium-behance.php:309 widgets/premium-instagram-feed.php:140
+msgid "Lightbox"
+msgstr ""
+
+#: widgets/premium-behance.php:316 widgets/premium-facebook-feed.php:272
+#: widgets/premium-facebook-reviews.php:579
+#: widgets/premium-google-reviews.php:553 widgets/premium-twitter-feed.php:296
+#: widgets/premium-yelp-reviews.php:552
+msgid "Show Date"
+msgstr ""
+
+#: widgets/premium-behance.php:326
+msgid "Project URL"
+msgstr ""
+
+#: widgets/premium-behance.php:336
+msgid "Image Caption"
+msgstr ""
+
+#: widgets/premium-behance.php:346 widgets/premium-flipbox.php:230
+#: widgets/premium-flipbox.php:237 widgets/premium-flipbox.php:528
+#: widgets/premium-flipbox.php:535 widgets/premium-flipbox.php:1076
+#: widgets/premium-flipbox.php:1340 widgets/premium-iconbox.php:247
+#: widgets/premium-iconbox.php:253 widgets/premium-iconbox.php:892
+#: widgets/premium-ihover.php:426 widgets/premium-ihover.php:783
+#: widgets/premium-image-accordion.php:226
+#: widgets/premium-image-accordion.php:781 widgets/premium-prev-img.php:371
+#: widgets/premium-tabs.php:731
+msgid "Description"
+msgstr ""
+
+#: widgets/premium-behance.php:355
+msgid "Number of Projects"
+msgstr ""
+
+#: widgets/premium-behance.php:364
+msgid "Load More"
+msgstr ""
+
+#: widgets/premium-behance.php:375 widgets/premium-behance.php:1493
+#: widgets/premium-ihover.php:847 widgets/premium-magic-section.php:164
+#: widgets/premium-notbar.php:173 widgets/premium-notbar.php:829
+#: widgets/premium-unfold.php:148 widgets/premium-unfold.php:787
+#: widgets/premium-whatsapp-chat.php:117 widgets/premium-whatsapp-chat.php:509
+msgid "Button"
+msgstr ""
+
+#: widgets/premium-behance.php:388 widgets/premium-magic-section.php:478
+#: widgets/premium-unfold.php:233 widgets/premium-whatsapp-chat.php:308
+msgid "Small"
+msgstr ""
+
+#: widgets/premium-behance.php:389 widgets/premium-magic-section.php:479
+#: widgets/premium-unfold.php:234 widgets/premium-whatsapp-chat.php:309
+msgid "Medium"
+msgstr ""
+
+#: widgets/premium-behance.php:390 widgets/premium-magic-section.php:480
+#: widgets/premium-unfold.php:235 widgets/premium-whatsapp-chat.php:310
+msgid "Large"
+msgstr ""
+
+#: widgets/premium-behance.php:391 widgets/premium-content-toggle.php:135
+#: widgets/premium-facebook-reviews.php:174
+#: widgets/premium-facebook-reviews.php:323
+#: widgets/premium-google-reviews.php:153
+#: widgets/premium-google-reviews.php:298 widgets/premium-magic-section.php:481
+#: widgets/premium-unfold.php:236 widgets/premium-whatsapp-chat.php:311
+#: widgets/premium-yelp-reviews.php:152 widgets/premium-yelp-reviews.php:297
+msgid "Block"
+msgstr ""
+
+#: widgets/premium-behance.php:399 widgets/premium-charts.php:414
+#: widgets/premium-content-toggle.php:146
+#: widgets/premium-content-toggle.php:204
+#: widgets/premium-content-toggle.php:282 widgets/premium-divider.php:216
+#: widgets/premium-facebook-reviews.php:1475
+#: widgets/premium-google-reviews.php:1464 widgets/premium-iconbox.php:274
+#: widgets/premium-ihover.php:244 widgets/premium-ihover.php:451
+#: widgets/premium-image-hotspots.php:110 widgets/premium-magic-section.php:494
+#: widgets/premium-notbar.php:409 widgets/premium-prev-img.php:174
+#: widgets/premium-prev-img.php:271 widgets/premium-prev-img.php:342
+#: widgets/premium-prev-img.php:394 widgets/premium-tables.php:177
+#: widgets/premium-tables.php:210 widgets/premium-tables.php:971
+#: widgets/premium-tables.php:1115 widgets/premium-tables.php:1492
+#: widgets/premium-tables.php:1574 widgets/premium-unfold.php:117
+#: widgets/premium-unfold.php:259 widgets/premium-yelp-reviews.php:1484
+msgid "Alignment"
+msgstr ""
+
+#: widgets/premium-behance.php:426 widgets/premium-color-transition.php:90
+#: widgets/premium-color-transition.php:120
+#: widgets/premium-color-transition.php:258
+#: widgets/premium-color-transition.php:279 widgets/premium-divider.php:268
+#: widgets/premium-flipbox.php:121 widgets/premium-flipbox.php:419
+#: widgets/premium-ihover.php:60 widgets/premium-ihover.php:331
+#: widgets/premium-image-hotspots.php:76 widgets/premium-image-hotspots.php:614
+#: widgets/premium-image-hotspots.php:813 widgets/premium-img-layers.php:1272
+#: widgets/premium-prev-img.php:220
+msgid "Image"
+msgstr ""
+
+#: widgets/premium-behance.php:462 widgets/premium-behance.php:572
+#: widgets/premium-behance.php:663 widgets/premium-behance.php:735
+#: widgets/premium-behance.php:851 widgets/premium-behance.php:953
+#: widgets/premium-behance.php:1057 widgets/premium-behance.php:1158
+#: widgets/premium-behance.php:1248 widgets/premium-behance.php:1356
+#: widgets/premium-behance.php:1446 widgets/premium-behance.php:1559
+#: widgets/premium-behance.php:1647 widgets/premium-charts.php:676
+#: widgets/premium-charts.php:769 widgets/premium-content-toggle.php:581
+#: widgets/premium-content-toggle.php:667
+#: widgets/premium-content-toggle.php:723
+#: widgets/premium-content-toggle.php:861
+#: widgets/premium-content-toggle.php:946
+#: widgets/premium-content-toggle.php:1018 widgets/premium-divider.php:473
+#: widgets/premium-facebook-feed.php:378 widgets/premium-facebook-feed.php:427
+#: widgets/premium-facebook-feed.php:608 widgets/premium-facebook-feed.php:823
+#: widgets/premium-facebook-reviews.php:784
+#: widgets/premium-facebook-reviews.php:857
+#: widgets/premium-facebook-reviews.php:929
+#: widgets/premium-facebook-reviews.php:1189
+#: widgets/premium-facebook-reviews.php:1517
+#: widgets/premium-facebook-reviews.php:1609 widgets/premium-flipbox.php:831
+#: widgets/premium-flipbox.php:864 widgets/premium-flipbox.php:945
+#: widgets/premium-flipbox.php:1210 widgets/premium-flipbox.php:1487
+#: widgets/premium-flipbox.php:1568 widgets/premium-google-reviews.php:782
+#: widgets/premium-google-reviews.php:908
+#: widgets/premium-google-reviews.php:1172
+#: widgets/premium-google-reviews.php:1507
+#: widgets/premium-google-reviews.php:1599 widgets/premium-hscroll.php:803
+#: widgets/premium-hscroll.php:879 widgets/premium-hscroll.php:971
+#: widgets/premium-hscroll.php:1109 widgets/premium-iconbox.php:620
+#: widgets/premium-iconbox.php:720 widgets/premium-iconbox.php:856
+#: widgets/premium-iconbox.php:965 widgets/premium-iconbox.php:1071
+#: widgets/premium-iconbox.php:1152 widgets/premium-iconbox.php:1223
+#: widgets/premium-iconbox.php:1290 widgets/premium-iconbox.php:1388
+#: widgets/premium-iconbox.php:1455 widgets/premium-ihover.php:99
+#: widgets/premium-ihover.php:563 widgets/premium-ihover.php:938
+#: widgets/premium-image-accordion.php:685
+#: widgets/premium-image-accordion.php:905
+#: widgets/premium-image-comparison.php:481
+#: widgets/premium-image-comparison.php:577
+#: widgets/premium-image-comparison.php:682
+#: widgets/premium-image-comparison.php:875
+#: widgets/premium-image-hotspots.php:319
+#: widgets/premium-image-hotspots.php:668
+#: widgets/premium-image-hotspots.php:760
+#: widgets/premium-image-hotspots.php:863
+#: widgets/premium-image-hotspots.php:968
+#: widgets/premium-image-hotspots.php:1131
+#: widgets/premium-image-hotspots.php:1188 widgets/premium-img-layers.php:1297
+#: widgets/premium-img-layers.php:1365 widgets/premium-instagram-feed.php:333
+#: widgets/premium-instagram-feed.php:417
+#: widgets/premium-instagram-feed.php:532
+#: widgets/premium-instagram-feed.php:630
+#: widgets/premium-instagram-feed.php:746
+#: widgets/premium-instagram-feed.php:843
+#: widgets/premium-instagram-feed.php:961 widgets/premium-magic-section.php:860
+#: widgets/premium-magic-section.php:943 widgets/premium-magic-section.php:1044
+#: widgets/premium-magic-section.php:1127 widgets/premium-multi-scroll.php:504
+#: widgets/premium-multi-scroll.php:626 widgets/premium-multi-scroll.php:800
+#: widgets/premium-multi-scroll.php:973 widgets/premium-notbar.php:549
+#: widgets/premium-notbar.php:668 widgets/premium-notbar.php:777
+#: widgets/premium-notbar.php:903 widgets/premium-prev-img.php:627
+#: widgets/premium-prev-img.php:737 widgets/premium-prev-img.php:800
+#: widgets/premium-prev-img.php:875 widgets/premium-prev-img.php:990
+#: widgets/premium-prev-img.php:1089 widgets/premium-prev-img.php:1166
+#: widgets/premium-tables.php:1674 widgets/premium-tables.php:1768
+#: widgets/premium-tables.php:1873 widgets/premium-tables.php:2005
+#: widgets/premium-tables.php:2052 widgets/premium-tables.php:2099
+#: widgets/premium-tables.php:2140 widgets/premium-tabs.php:249
+#: widgets/premium-tabs.php:325 widgets/premium-tabs.php:567
+#: widgets/premium-tabs.php:682 widgets/premium-tabs.php:807
+#: widgets/premium-tabs.php:894 widgets/premium-twitter-feed.php:439
+#: widgets/premium-twitter-feed.php:489 widgets/premium-twitter-feed.php:669
+#: widgets/premium-twitter-feed.php:891 widgets/premium-twitter-feed.php:940
+#: widgets/premium-unfold.php:486 widgets/premium-unfold.php:556
+#: widgets/premium-unfold.php:661 widgets/premium-unfold.php:878
+#: widgets/premium-unfold.php:1005 widgets/premium-unfold.php:1107
+#: widgets/premium-whatsapp-chat.php:593 widgets/premium-whatsapp-chat.php:743
+#: widgets/premium-yelp-reviews.php:795 widgets/premium-yelp-reviews.php:859
+#: widgets/premium-yelp-reviews.php:931 widgets/premium-yelp-reviews.php:1192
+#: widgets/premium-yelp-reviews.php:1526 widgets/premium-yelp-reviews.php:1607
+msgid "Border Radius"
+msgstr ""
+
+#: widgets/premium-behance.php:489 widgets/premium-behance.php:592
+#: widgets/premium-behance.php:683 widgets/premium-behance.php:754
+#: widgets/premium-behance.php:862 widgets/premium-behance.php:964
+#: widgets/premium-behance.php:1068 widgets/premium-behance.php:1177
+#: widgets/premium-behance.php:1267 widgets/premium-behance.php:1375
+#: widgets/premium-behance.php:1465 widgets/premium-behance.php:1578
+#: widgets/premium-behance.php:1666 widgets/premium-charts.php:695
+#: widgets/premium-charts.php:788 widgets/premium-content-toggle.php:753
+#: widgets/premium-content-toggle.php:969
+#: widgets/premium-content-toggle.php:1037 widgets/premium-divider.php:509
+#: widgets/premium-divider.php:752 widgets/premium-facebook-feed.php:454
+#: widgets/premium-facebook-feed.php:509 widgets/premium-facebook-feed.php:619
+#: widgets/premium-facebook-feed.php:667 widgets/premium-facebook-feed.php:724
+#: widgets/premium-facebook-feed.php:785 widgets/premium-facebook-feed.php:842
+#: widgets/premium-facebook-reviews.php:810
+#: widgets/premium-facebook-reviews.php:877
+#: widgets/premium-facebook-reviews.php:948
+#: widgets/premium-facebook-reviews.php:1022
+#: widgets/premium-facebook-reviews.php:1117
+#: widgets/premium-facebook-reviews.php:1208
+#: widgets/premium-facebook-reviews.php:1278
+#: widgets/premium-facebook-reviews.php:1337
+#: widgets/premium-facebook-reviews.php:1379
+#: widgets/premium-facebook-reviews.php:1438
+#: widgets/premium-facebook-reviews.php:1536 widgets/premium-flipbox.php:980
+#: widgets/premium-flipbox.php:1052 widgets/premium-flipbox.php:1123
+#: widgets/premium-flipbox.php:1245 widgets/premium-flipbox.php:1316
+#: widgets/premium-flipbox.php:1387 widgets/premium-flipbox.php:1498
+#: widgets/premium-flipbox.php:1579 widgets/premium-google-reviews.php:808
+#: widgets/premium-google-reviews.php:856
+#: widgets/premium-google-reviews.php:927
+#: widgets/premium-google-reviews.php:1001
+#: widgets/premium-google-reviews.php:1097
+#: widgets/premium-google-reviews.php:1191
+#: widgets/premium-google-reviews.php:1263
+#: widgets/premium-google-reviews.php:1323
+#: widgets/premium-google-reviews.php:1368
+#: widgets/premium-google-reviews.php:1427
+#: widgets/premium-google-reviews.php:1526 widgets/premium-iconbox.php:655
+#: widgets/premium-iconbox.php:755 widgets/premium-iconbox.php:867
+#: widgets/premium-iconbox.php:976 widgets/premium-iconbox.php:1082
+#: widgets/premium-iconbox.php:1163 widgets/premium-iconbox.php:1243
+#: widgets/premium-iconbox.php:1310 widgets/premium-iconbox.php:1408
+#: widgets/premium-iconbox.php:1475 widgets/premium-ihover.php:598
+#: widgets/premium-ihover.php:662 widgets/premium-ihover.php:770
+#: widgets/premium-ihover.php:823 widgets/premium-ihover.php:958
+#: widgets/premium-ihover.php:1114 widgets/premium-image-accordion.php:696
+#: widgets/premium-image-accordion.php:757
+#: widgets/premium-image-accordion.php:818
+#: widgets/premium-image-accordion.php:924
+#: widgets/premium-image-comparison.php:894
+#: widgets/premium-image-hotspots.php:791
+#: widgets/premium-image-hotspots.php:885
+#: widgets/premium-image-hotspots.php:990
+#: widgets/premium-image-hotspots.php:1150
+#: widgets/premium-image-hotspots.php:1207 widgets/premium-img-layers.php:1316
+#: widgets/premium-img-layers.php:1384 widgets/premium-instagram-feed.php:367
+#: widgets/premium-instagram-feed.php:451
+#: widgets/premium-instagram-feed.php:557
+#: widgets/premium-instagram-feed.php:655
+#: widgets/premium-instagram-feed.php:771
+#: widgets/premium-instagram-feed.php:867
+#: widgets/premium-instagram-feed.php:984
+#: widgets/premium-magic-section.php:1065 widgets/premium-multi-scroll.php:540
+#: widgets/premium-multi-scroll.php:662 widgets/premium-multi-scroll.php:984
+#: widgets/premium-notbar.php:568 widgets/premium-notbar.php:706
+#: widgets/premium-notbar.php:805 widgets/premium-notbar.php:923
+#: widgets/premium-prev-img.php:653 widgets/premium-prev-img.php:747
+#: widgets/premium-prev-img.php:818 widgets/premium-prev-img.php:902
+#: widgets/premium-prev-img.php:1000 widgets/premium-prev-img.php:1099
+#: widgets/premium-tables.php:1787 widgets/premium-tables.php:1947
+#: widgets/premium-tabs.php:268 widgets/premium-tabs.php:344
+#: widgets/premium-tabs.php:469 widgets/premium-tabs.php:588
+#: widgets/premium-tabs.php:706 widgets/premium-tabs.php:836
+#: widgets/premium-tabs.php:914 widgets/premium-twitter-feed.php:516
+#: widgets/premium-twitter-feed.php:571 widgets/premium-twitter-feed.php:680
+#: widgets/premium-twitter-feed.php:727 widgets/premium-twitter-feed.php:783
+#: widgets/premium-twitter-feed.php:829 widgets/premium-twitter-feed.php:959
+#: widgets/premium-unfold.php:507 widgets/premium-unfold.php:577
+#: widgets/premium-unfold.php:682 widgets/premium-unfold.php:760
+#: widgets/premium-unfold.php:923 widgets/premium-unfold.php:1050
+#: widgets/premium-whatsapp-chat.php:639 widgets/premium-whatsapp-chat.php:788
+#: widgets/premium-yelp-reviews.php:815 widgets/premium-yelp-reviews.php:879
+#: widgets/premium-yelp-reviews.php:950 widgets/premium-yelp-reviews.php:1024
+#: widgets/premium-yelp-reviews.php:1120 widgets/premium-yelp-reviews.php:1211
+#: widgets/premium-yelp-reviews.php:1283 widgets/premium-yelp-reviews.php:1343
+#: widgets/premium-yelp-reviews.php:1388 widgets/premium-yelp-reviews.php:1447
+#: widgets/premium-yelp-reviews.php:1545
+msgid "Margin"
+msgstr ""
+
+#: widgets/premium-behance.php:502 widgets/premium-magic-section.php:651
+msgid "Overlay"
+msgstr ""
+
+#: widgets/premium-behance.php:523 widgets/premium-behance.php:1109
+#: widgets/premium-behance.php:1307 widgets/premium-divider.php:267
+#: widgets/premium-divider.php:281 widgets/premium-fb-chat.php:157
+#: widgets/premium-flipbox.php:78 widgets/premium-flipbox.php:103
+#: widgets/premium-flipbox.php:376 widgets/premium-flipbox.php:401
+#: widgets/premium-flipbox.php:904 widgets/premium-flipbox.php:1168
+#: widgets/premium-iconbox.php:61 widgets/premium-iconbox.php:79
+#: widgets/premium-iconbox.php:348 widgets/premium-iconbox.php:359
+#: widgets/premium-iconbox.php:570 widgets/premium-ihover.php:288
+#: widgets/premium-ihover.php:313 widgets/premium-ihover.php:518
+#: widgets/premium-image-accordion.php:193
+#: widgets/premium-image-accordion.php:201
+#: widgets/premium-image-accordion.php:593
+#: widgets/premium-image-hotspots.php:701
+#: widgets/premium-instagram-feed.php:480
+#: widgets/premium-instagram-feed.php:694 widgets/premium-magic-section.php:165
+#: widgets/premium-magic-section.php:208 widgets/premium-magic-section.php:234
+#: widgets/premium-magic-section.php:335 widgets/premium-magic-section.php:346
+#: widgets/premium-notbar.php:274 widgets/premium-notbar.php:301
+#: widgets/premium-notbar.php:593 widgets/premium-tables.php:98
+#: widgets/premium-tabs.php:74 widgets/premium-tabs.php:497
+#: widgets/premium-unfold.php:172 widgets/premium-whatsapp-chat.php:202
+#: widgets/premium-whatsapp-chat.php:212
+msgid "Icon"
+msgstr ""
+
+#: widgets/premium-behance.php:529 widgets/premium-behance.php:622
+#: widgets/premium-behance.php:1115 widgets/premium-behance.php:1207
+#: widgets/premium-behance.php:1313 widgets/premium-behance.php:1405
+#: widgets/premium-charts.php:729 widgets/premium-charts.php:831
+#: widgets/premium-charts.php:863 widgets/premium-charts.php:895
+#: widgets/premium-charts.php:944 widgets/premium-charts.php:976
+#: widgets/premium-charts.php:1004 widgets/premium-charts.php:1044
+#: widgets/premium-color-transition.php:89
+#: widgets/premium-color-transition.php:257 widgets/premium-divider.php:401
+#: widgets/premium-divider.php:602 widgets/premium-divider.php:669
+#: widgets/premium-facebook-feed.php:486 widgets/premium-facebook-feed.php:530
+#: widgets/premium-facebook-feed.php:642 widgets/premium-facebook-feed.php:687
+#: widgets/premium-facebook-feed.php:747
+#: widgets/premium-facebook-reviews.php:1242
+#: widgets/premium-facebook-reviews.php:1301
+#: widgets/premium-facebook-reviews.php:1357
+#: widgets/premium-facebook-reviews.php:1402
+#: widgets/premium-facebook-reviews.php:1570 widgets/premium-flipbox.php:910
+#: widgets/premium-google-reviews.php:1225
+#: widgets/premium-google-reviews.php:1287
+#: widgets/premium-google-reviews.php:1346
+#: widgets/premium-google-reviews.php:1391
+#: widgets/premium-google-reviews.php:1560 widgets/premium-hscroll.php:762
+#: widgets/premium-hscroll.php:840 widgets/premium-hscroll.php:931
+#: widgets/premium-iconbox.php:585 widgets/premium-iconbox.php:685
+#: widgets/premium-ihover.php:528 widgets/premium-ihover.php:696
+#: widgets/premium-image-accordion.php:599
+#: widgets/premium-image-accordion.php:726
+#: widgets/premium-image-accordion.php:787
+#: widgets/premium-image-accordion.php:851
+#: widgets/premium-image-comparison.php:436
+#: widgets/premium-image-comparison.php:532
+#: widgets/premium-image-comparison.php:738
+#: widgets/premium-image-comparison.php:768
+#: widgets/premium-image-hotspots.php:255
+#: widgets/premium-image-hotspots.php:707
+#: widgets/premium-instagram-feed.php:587
+#: widgets/premium-instagram-feed.php:701
+#: widgets/premium-instagram-feed.php:801
+#: widgets/premium-instagram-feed.php:1013
+#: widgets/premium-magic-section.php:760 widgets/premium-magic-section.php:816
+#: widgets/premium-magic-section.php:904 widgets/premium-magic-section.php:990
+#: widgets/premium-notbar.php:603 widgets/premium-notbar.php:739
+#: widgets/premium-notbar.php:835 widgets/premium-prev-img.php:937
+#: widgets/premium-prev-img.php:1035 widgets/premium-tables.php:1624
+#: widgets/premium-tables.php:1977 widgets/premium-tables.php:2024
+#: widgets/premium-tables.php:2071 widgets/premium-tabs.php:504
+#: widgets/premium-tabs.php:620 widgets/premium-tabs.php:766
+#: widgets/premium-twitter-feed.php:548 widgets/premium-twitter-feed.php:592
+#: widgets/premium-twitter-feed.php:702 widgets/premium-twitter-feed.php:747
+#: widgets/premium-twitter-feed.php:806 widgets/premium-twitter-feed.php:852
+#: widgets/premium-unfold.php:617 widgets/premium-unfold.php:716
+#: widgets/premium-yelp-reviews.php:1245 widgets/premium-yelp-reviews.php:1307
+#: widgets/premium-yelp-reviews.php:1366 widgets/premium-yelp-reviews.php:1411
+#: widgets/premium-yelp-reviews.php:1579
+msgid "Color"
+msgstr ""
+
+#: widgets/premium-behance.php:554 widgets/premium-behance.php:645
+#: widgets/premium-behance.php:833 widgets/premium-behance.php:935
+#: widgets/premium-behance.php:1039 widgets/premium-behance.php:1140
+#: widgets/premium-behance.php:1230 widgets/premium-behance.php:1338
+#: widgets/premium-behance.php:1428 widgets/premium-content-toggle.php:563
+#: widgets/premium-content-toggle.php:648
+#: widgets/premium-content-toggle.php:705
+#: widgets/premium-content-toggle.php:843
+#: widgets/premium-content-toggle.php:928 widgets/premium-divider.php:449
+#: widgets/premium-facebook-feed.php:360 widgets/premium-facebook-feed.php:409
+#: widgets/premium-facebook-feed.php:805 widgets/premium-flipbox.php:331
+#: widgets/premium-flipbox.php:717 widgets/premium-ihover.php:1084
+#: widgets/premium-instagram-feed.php:943 widgets/premium-tables.php:929
+#: widgets/premium-tables.php:1074 widgets/premium-tables.php:1254
+#: widgets/premium-tables.php:1367 widgets/premium-tables.php:1450
+#: widgets/premium-tables.php:1533 widgets/premium-tables.php:1652
+#: widgets/premium-twitter-feed.php:421 widgets/premium-twitter-feed.php:470
+#: widgets/premium-twitter-feed.php:922
+msgid "Background"
+msgstr ""
+
+#: widgets/premium-behance.php:584 widgets/premium-behance.php:675
+#: widgets/premium-iconbox.php:1235 widgets/premium-iconbox.php:1302
+#: widgets/premium-iconbox.php:1400 widgets/premium-iconbox.php:1467
+msgid "Box Shadow"
+msgstr ""
+
+#: widgets/premium-behance.php:603 widgets/premium-behance.php:694
+#: widgets/premium-behance.php:765 widgets/premium-behance.php:873
+#: widgets/premium-behance.php:975 widgets/premium-behance.php:1079
+#: widgets/premium-behance.php:1188 widgets/premium-behance.php:1278
+#: widgets/premium-behance.php:1386 widgets/premium-behance.php:1476
+#: widgets/premium-behance.php:1589 widgets/premium-behance.php:1677
+#: widgets/premium-charts.php:706 widgets/premium-charts.php:799
+#: widgets/premium-content-toggle.php:600
+#: widgets/premium-content-toggle.php:686
+#: widgets/premium-content-toggle.php:742
+#: widgets/premium-content-toggle.php:981
+#: widgets/premium-content-toggle.php:1048 widgets/premium-divider.php:523
+#: widgets/premium-divider.php:763 widgets/premium-facebook-feed.php:466
+#: widgets/premium-facebook-feed.php:853
+#: widgets/premium-facebook-reviews.php:959
+#: widgets/premium-facebook-reviews.php:1222
+#: widgets/premium-facebook-reviews.php:1547
+#: widgets/premium-facebook-reviews.php:1620 widgets/premium-flipbox.php:991
+#: widgets/premium-flipbox.php:1063 widgets/premium-flipbox.php:1134
+#: widgets/premium-flipbox.php:1256 widgets/premium-flipbox.php:1327
+#: widgets/premium-flipbox.php:1398 widgets/premium-flipbox.php:1509
+#: widgets/premium-flipbox.php:1590 widgets/premium-google-reviews.php:938
+#: widgets/premium-google-reviews.php:1205
+#: widgets/premium-google-reviews.php:1537
+#: widgets/premium-google-reviews.php:1610 widgets/premium-hscroll.php:893
+#: widgets/premium-hscroll.php:982 widgets/premium-hscroll.php:1120
+#: widgets/premium-hscroll.php:1151 widgets/premium-iconbox.php:666
+#: widgets/premium-iconbox.php:766 widgets/premium-iconbox.php:878
+#: widgets/premium-iconbox.php:987 widgets/premium-iconbox.php:1093
+#: widgets/premium-iconbox.php:1174 widgets/premium-iconbox.php:1254
+#: widgets/premium-iconbox.php:1321 widgets/premium-iconbox.php:1419
+#: widgets/premium-iconbox.php:1486 widgets/premium-ihover.php:609
+#: widgets/premium-ihover.php:673 widgets/premium-ihover.php:834
+#: widgets/premium-ihover.php:969 widgets/premium-ihover.php:1125
+#: widgets/premium-image-accordion.php:707
+#: widgets/premium-image-accordion.php:768
+#: widgets/premium-image-accordion.php:829
+#: widgets/premium-image-comparison.php:509
+#: widgets/premium-image-comparison.php:605
+#: widgets/premium-image-comparison.php:701
+#: widgets/premium-image-hotspots.php:679
+#: widgets/premium-image-hotspots.php:801
+#: widgets/premium-image-hotspots.php:895
+#: widgets/premium-image-hotspots.php:1000
+#: widgets/premium-image-hotspots.php:1218 widgets/premium-img-layers.php:1327
+#: widgets/premium-img-layers.php:1395 widgets/premium-instagram-feed.php:378
+#: widgets/premium-instagram-feed.php:568
+#: widgets/premium-instagram-feed.php:666
+#: widgets/premium-instagram-feed.php:782
+#: widgets/premium-instagram-feed.php:877
+#: widgets/premium-instagram-feed.php:994 widgets/premium-magic-section.php:885
+#: widgets/premium-magic-section.php:964 widgets/premium-magic-section.php:1076
+#: widgets/premium-magic-section.php:1166 widgets/premium-multi-scroll.php:551
+#: widgets/premium-multi-scroll.php:673 widgets/premium-multi-scroll.php:995
+#: widgets/premium-notbar.php:579 widgets/premium-notbar.php:717
+#: widgets/premium-notbar.php:816 widgets/premium-notbar.php:934
+#: widgets/premium-prev-img.php:664 widgets/premium-prev-img.php:758
+#: widgets/premium-prev-img.php:829 widgets/premium-prev-img.php:913
+#: widgets/premium-prev-img.php:1011 widgets/premium-prev-img.php:1110
+#: widgets/premium-prev-img.php:1184 widgets/premium-tables.php:1161
+#: widgets/premium-tables.php:1421 widgets/premium-tables.php:1693
+#: widgets/premium-tables.php:1798 widgets/premium-tables.php:1915
+#: widgets/premium-tabs.php:279 widgets/premium-tabs.php:355
+#: widgets/premium-tabs.php:480 widgets/premium-tabs.php:600
+#: widgets/premium-tabs.php:718 widgets/premium-tabs.php:848
+#: widgets/premium-tabs.php:926 widgets/premium-twitter-feed.php:528
+#: widgets/premium-twitter-feed.php:902 widgets/premium-twitter-feed.php:970
+#: widgets/premium-unfold.php:518 widgets/premium-unfold.php:588
+#: widgets/premium-unfold.php:694 widgets/premium-unfold.php:772
+#: widgets/premium-unfold.php:934 widgets/premium-unfold.php:1061
+#: widgets/premium-unfold.php:1119 widgets/premium-whatsapp-chat.php:650
+#: widgets/premium-whatsapp-chat.php:799 widgets/premium-yelp-reviews.php:961
+#: widgets/premium-yelp-reviews.php:1225 widgets/premium-yelp-reviews.php:1556
+msgid "Padding"
+msgstr ""
+
+#: widgets/premium-behance.php:616
+msgid "Tags"
+msgstr ""
+
+#: widgets/premium-behance.php:711
+msgid "Project"
+msgstr ""
+
+#: widgets/premium-behance.php:778 widgets/premium-behance.php:988
+#: widgets/premium-facebook-reviews.php:972
+#: widgets/premium-google-reviews.php:951 widgets/premium-yelp-reviews.php:974
+msgid "Name"
+msgstr ""
+
+#: widgets/premium-behance.php:788 widgets/premium-behance.php:904
+#: widgets/premium-behance.php:994 widgets/premium-behance.php:1520
+#: widgets/premium-content-toggle.php:533
+#: widgets/premium-content-toggle.php:618
+#: widgets/premium-content-toggle.php:803
+#: widgets/premium-content-toggle.php:888
+#: widgets/premium-facebook-reviews.php:978
+#: widgets/premium-facebook-reviews.php:1078 widgets/premium-flipbox.php:1010
+#: widgets/premium-flipbox.php:1082 widgets/premium-flipbox.php:1275
+#: widgets/premium-flipbox.php:1346 widgets/premium-flipbox.php:1447
+#: widgets/premium-flipbox.php:1528 widgets/premium-google-reviews.php:957
+#: widgets/premium-google-reviews.php:1057 widgets/premium-iconbox.php:793
+#: widgets/premium-iconbox.php:902 widgets/premium-iconbox.php:1031
+#: widgets/premium-ihover.php:632 widgets/premium-ihover.php:793
+#: widgets/premium-ihover.php:874 widgets/premium-image-hotspots.php:914
+#: widgets/premium-image-hotspots.php:1082
+#: widgets/premium-instagram-feed.php:903 widgets/premium-multi-scroll.php:459
+#: widgets/premium-multi-scroll.php:581 widgets/premium-multi-scroll.php:852
+#: widgets/premium-multi-scroll.php:911 widgets/premium-prev-img.php:687
+#: widgets/premium-tables.php:867 widgets/premium-tables.php:1012
+#: widgets/premium-tables.php:1189 widgets/premium-tables.php:1303
+#: widgets/premium-unfold.php:825 widgets/premium-unfold.php:952
+#: widgets/premium-whatsapp-chat.php:536 widgets/premium-whatsapp-chat.php:686
+#: widgets/premium-yelp-reviews.php:980 widgets/premium-yelp-reviews.php:1080
+msgid "Text Color"
+msgstr ""
+
+#: widgets/premium-behance.php:802 widgets/premium-behance.php:1008
+#: widgets/premium-behance.php:1608 widgets/premium-iconbox.php:807
+#: widgets/premium-iconbox.php:916 widgets/premium-iconbox.php:1112
+#: widgets/premium-ihover.php:888 widgets/premium-multi-scroll.php:866
+#: widgets/premium-multi-scroll.php:925 widgets/premium-tables.php:881
+#: widgets/premium-tables.php:1026 widgets/premium-tables.php:1205
+#: widgets/premium-tables.php:1318
+msgid "Text Hover Color"
+msgstr ""
+
+#: widgets/premium-behance.php:886 widgets/premium-facebook-feed.php:680
+#: widgets/premium-twitter-feed.php:740
+msgid "Author"
+msgstr ""
+
+#: widgets/premium-behance.php:898 widgets/premium-charts.php:109
+#: widgets/premium-charts.php:200 widgets/premium-image-comparison.php:81
+#: widgets/premium-image-comparison.php:218 widgets/premium-tables.php:711
+msgid "Label"
+msgstr ""
+
+#: widgets/premium-behance.php:1097
+msgid "Apprectiations"
+msgstr ""
+
+#: widgets/premium-behance.php:1201 widgets/premium-behance.php:1399
+#: widgets/premium-instagram-feed.php:580
+#: widgets/premium-instagram-feed.php:794
+msgid "Number"
+msgstr ""
+
+#: widgets/premium-behance.php:1295
+msgid "Views"
+msgstr ""
+
+#: widgets/premium-behance.php:1514 widgets/premium-facebook-feed.php:354
+#: widgets/premium-flipbox.php:817 widgets/premium-flipbox.php:1441
+#: widgets/premium-hscroll.php:325 widgets/premium-iconbox.php:579
+#: widgets/premium-iconbox.php:1025 widgets/premium-iconbox.php:1200
+#: widgets/premium-iconbox.php:1365 widgets/premium-ihover.php:497
+#: widgets/premium-image-accordion.php:548
+#: widgets/premium-image-hotspots.php:641 widgets/premium-img-layers.php:197
+#: widgets/premium-img-layers.php:321 widgets/premium-instagram-feed.php:317
+#: widgets/premium-magic-section.php:810 widgets/premium-multi-scroll.php:846
+#: widgets/premium-tables.php:938 widgets/premium-tables.php:1083
+#: widgets/premium-tables.php:1263 widgets/premium-tables.php:1376
+#: widgets/premium-tables.php:1459 widgets/premium-tables.php:1542
+#: widgets/premium-tables.php:1971 widgets/premium-tabs.php:204
+#: widgets/premium-twitter-feed.php:415 widgets/premium-unfold.php:460
+#: widgets/premium-unfold.php:819 widgets/premium-whatsapp-chat.php:530
+msgid "Normal"
+msgstr ""
+
+#: widgets/premium-behance.php:1602 widgets/premium-facebook-feed.php:403
+#: widgets/premium-flipbox.php:1522 widgets/premium-iconbox.php:679
+#: widgets/premium-iconbox.php:1106 widgets/premium-iconbox.php:1267
+#: widgets/premium-iconbox.php:1432 widgets/premium-image-accordion.php:564
+#: widgets/premium-image-hotspots.php:473
+#: widgets/premium-instagram-feed.php:391 widgets/premium-magic-section.php:898
+#: widgets/premium-tables.php:954 widgets/premium-tables.php:1098
+#: widgets/premium-tables.php:1278 widgets/premium-tables.php:1391
+#: widgets/premium-tables.php:1475 widgets/premium-tables.php:1557
+#: widgets/premium-tables.php:2018 widgets/premium-tabs.php:292
+#: widgets/premium-twitter-feed.php:464 widgets/premium-unfold.php:530
+#: widgets/premium-unfold.php:946 widgets/premium-whatsapp-chat.php:663
+msgid "Hover"
+msgstr ""
+
+#: widgets/premium-behance.php:1784
+msgid "Please fill the required fields: App ID & Access Token"
+msgstr ""
+
+#: widgets/premium-charts.php:65
+msgid "Premium Charts"
+msgstr ""
+
+#: widgets/premium-charts.php:71 widgets/premium-facebook-feed.php:130
+#: widgets/premium-facebook-reviews.php:390
+#: widgets/premium-google-reviews.php:365
+#: widgets/premium-instagram-feed.php:196 widgets/premium-notbar.php:119
+#: widgets/premium-twitter-feed.php:156 widgets/premium-yelp-reviews.php:364
+msgid "Layout"
+msgstr ""
+
+#: widgets/premium-charts.php:74
+msgid "Line"
+msgstr ""
+
+#: widgets/premium-charts.php:75 widgets/premium-notbar.php:68
+#: widgets/premium-notbar.php:522
+msgid "Bar"
+msgstr ""
+
+#: widgets/premium-charts.php:76
+msgid "Horizontal Bar"
+msgstr ""
+
+#: widgets/premium-charts.php:77
+msgid "Pie"
+msgstr ""
+
+#: widgets/premium-charts.php:78
+msgid "Radar"
+msgstr ""
+
+#: widgets/premium-charts.php:79
+msgid "Doughnut"
+msgstr ""
+
+#: widgets/premium-charts.php:80
+msgid "Polar Area"
+msgstr ""
+
+#: widgets/premium-charts.php:92 widgets/premium-charts.php:812
+msgid "X-Axis"
+msgstr ""
+
+#: widgets/premium-charts.php:98 widgets/premium-charts.php:189
+msgid "Show Axis Label"
+msgstr ""
+
+#: widgets/premium-charts.php:103
+msgid "Show or Hide X-Axis Label"
+msgstr ""
+
+#: widgets/premium-charts.php:122 widgets/premium-charts.php:854
+msgid "Data Labels"
+msgstr ""
+
+#: widgets/premium-charts.php:126
+msgid "Enter labels for X-Axis separated with ' , ' "
+msgstr ""
+
+#: widgets/premium-charts.php:133 widgets/premium-charts.php:317
+msgid "Show Grid Lines"
+msgstr ""
+
+#: widgets/premium-charts.php:139
+msgid "Show or Hide X-Axis Grid Lines"
+msgstr ""
+
+#: widgets/premium-charts.php:145 widgets/premium-charts.php:329
+msgid "Begin at Zero"
+msgstr ""
+
+#: widgets/premium-charts.php:148
+msgid "Start X-Axis Labels at zero"
+msgstr ""
+
+#: widgets/premium-charts.php:154
+msgid "Labels' Rotation "
+msgstr ""
+
+#: widgets/premium-charts.php:164
+msgid "Column Width"
+msgstr ""
+
+#: widgets/premium-charts.php:183 widgets/premium-charts.php:925
+msgid "Y-Axis"
+msgstr ""
+
+#: widgets/premium-charts.php:194
+msgid "Show or Hide Y-Axis Label"
+msgstr ""
+
+#: widgets/premium-charts.php:215 widgets/premium-charts.php:352
+#: widgets/premium-charts.php:358 widgets/premium-charts.php:366
+#: widgets/premium-charts.php:719 widgets/premium-flipbox.php:187
+#: widgets/premium-flipbox.php:195 widgets/premium-flipbox.php:485
+#: widgets/premium-flipbox.php:493 widgets/premium-flipbox.php:1004
+#: widgets/premium-flipbox.php:1269 widgets/premium-iconbox.php:200
+#: widgets/premium-iconbox.php:206 widgets/premium-iconbox.php:214
+#: widgets/premium-iconbox.php:783 widgets/premium-ihover.php:371
+#: widgets/premium-ihover.php:622 widgets/premium-image-accordion.php:217
+#: widgets/premium-image-accordion.php:720 widgets/premium-prev-img.php:300
+#: widgets/premium-prev-img.php:310 widgets/premium-tabs.php:89
+#: widgets/premium-tabs.php:90 widgets/premium-tabs.php:613
+#: widgets/premium-unfold.php:70 widgets/premium-unfold.php:78
+#: widgets/premium-unfold.php:606
+msgid "Title"
+msgstr ""
+
+#: widgets/premium-charts.php:223 widgets/premium-charts.php:281
+#: widgets/premium-charts.php:967 widgets/premium-tables.php:242
+msgid "Data"
+msgstr ""
+
+#: widgets/premium-charts.php:224
+msgid "Enter Data Numbers for Y-Axis separated with ' , ' "
+msgstr ""
+
+#: widgets/premium-charts.php:233
+msgid "URLs"
+msgstr ""
+
+#: widgets/premium-charts.php:235
+msgid "Enter URLs for each Dataset separated with ' , ' "
+msgstr ""
+
+#: widgets/premium-charts.php:242
+msgid "First Fill Color"
+msgstr ""
+
+#: widgets/premium-charts.php:249
+msgid "Second Fill Color"
+msgstr ""
+
+#: widgets/premium-charts.php:256
+msgid "Fill Colors"
+msgstr ""
+
+#: widgets/premium-charts.php:257
+msgid ""
+"Enter Colors separated with ' , ', this will work only for pie and doughnut "
+"charts "
+msgstr ""
+
+#: widgets/premium-charts.php:265 widgets/premium-ihover.php:1013
+msgid "Border Width"
+msgstr ""
+
+#: widgets/premium-charts.php:273 widgets/premium-hscroll.php:783
+#: widgets/premium-tabs.php:210
+msgid "Border Color"
+msgstr ""
+
+#: widgets/premium-charts.php:285
+msgid "Dataset #1"
+msgstr ""
+
+#: widgets/premium-charts.php:290
+msgid "Dataset #2"
+msgstr ""
+
+#: widgets/premium-charts.php:302 widgets/premium-tables.php:248
+msgid "Data Type"
+msgstr ""
+
+#: widgets/premium-charts.php:305 widgets/premium-charts.php:589
+msgid "Linear"
+msgstr ""
+
+#: widgets/premium-charts.php:306
+msgid "Logarithmic"
+msgstr ""
+
+#: widgets/premium-charts.php:323
+msgid "Show or Hide Y-Axis Grid Lines"
+msgstr ""
+
+#: widgets/premium-charts.php:333
+msgid "Start Y-Axis Data at zero"
+msgstr ""
+
+#: widgets/premium-charts.php:339
+msgid "Open Links in new tab"
+msgstr ""
+
+#: widgets/premium-charts.php:368
+msgid "Enter a Title for the Chart"
+msgstr ""
+
+#: widgets/premium-charts.php:379 widgets/premium-content-toggle.php:112
+#: widgets/premium-divider.php:336 widgets/premium-flipbox.php:209
+#: widgets/premium-flipbox.php:507 widgets/premium-ihover.php:397
+#: widgets/premium-prev-img.php:322
+msgid "HTML Tag"
+msgstr ""
+
+#: widgets/premium-charts.php:399 widgets/premium-color-transition.php:191
+#: widgets/premium-color-transition.php:350 widgets/premium-fb-chat.php:175
+#: widgets/premium-iconbox.php:376 widgets/premium-image-accordion.php:142
+#: widgets/premium-img-layers.php:117 widgets/premium-magic-section.php:121
+#: widgets/premium-magic-section.php:137 widgets/premium-magic-section.php:597
+#: widgets/premium-multi-scroll.php:231 widgets/premium-notbar.php:75
+msgid "Position"
+msgstr ""
+
+#: widgets/premium-charts.php:450
+msgid "Minimum Value"
+msgstr ""
+
+#: widgets/premium-charts.php:452
+msgid ""
+"Set Y-axis minimum value, this will be overriden if data has a smaller value"
+msgstr ""
+
+#: widgets/premium-charts.php:461
+msgid "Maximum Value"
+msgstr ""
+
+#: widgets/premium-charts.php:463
+msgid ""
+"Set Y-axis maximum value, this will be overriden if data has a larger value"
+msgstr ""
+
+#: widgets/premium-charts.php:474
+msgid "Step Size"
+msgstr ""
+
+#: widgets/premium-charts.php:484
+msgid "Show Legend"
+msgstr ""
+
+#: widgets/premium-charts.php:489
+msgid "Show or Hide chart legend"
+msgstr ""
+
+#: widgets/premium-charts.php:495
+msgid "Legend Position"
+msgstr ""
+
+#: widgets/premium-charts.php:512
+msgid "Reverse"
+msgstr ""
+
+#: widgets/premium-charts.php:514
+msgid "Enable or Disable legend data reverse"
+msgstr ""
+
+#: widgets/premium-charts.php:524
+msgid "Show Values on Hover"
+msgstr ""
+
+#: widgets/premium-charts.php:534
+msgid "Convert Values to percent"
+msgstr ""
+
+#: widgets/premium-charts.php:545
+msgid "Mode"
+msgstr ""
+
+#: widgets/premium-charts.php:548
+msgid "Point"
+msgstr ""
+
+#: widgets/premium-charts.php:549
+msgid "Nearest"
+msgstr ""
+
+#: widgets/premium-charts.php:550
+msgid "Dataset"
+msgstr ""
+
+#: widgets/premium-charts.php:551
+msgid "X"
+msgstr ""
+
+#: widgets/premium-charts.php:552
+msgid "Y"
+msgstr ""
+
+#: widgets/premium-charts.php:563
+msgid "Show Values on Chart"
+msgstr ""
+
+#: widgets/premium-charts.php:565
+msgid "This option works only with Pie and Douhnut Charts"
+msgstr ""
+
+#: widgets/premium-charts.php:578
+msgid "Animation Duration (msec)"
+msgstr ""
+
+#: widgets/premium-charts.php:579
+msgid "Set the animation duration in milliseconds"
+msgstr ""
+
+#: widgets/premium-charts.php:586 widgets/premium-content-toggle.php:335
+#: widgets/premium-image-hotspots.php:568 widgets/premium-img-layers.php:296
+#: widgets/premium-prev-img.php:460 widgets/premium-whatsapp-chat.php:488
+msgid "Animation"
+msgstr ""
+
+#: widgets/premium-charts.php:590
+msgid "Ease in Quad"
+msgstr ""
+
+#: widgets/premium-charts.php:591
+msgid "Ease out Quad"
+msgstr ""
+
+#: widgets/premium-charts.php:592
+msgid "Ease in out Quad"
+msgstr ""
+
+#: widgets/premium-charts.php:593
+msgid "Ease in Cubic"
+msgstr ""
+
+#: widgets/premium-charts.php:594
+msgid "Ease out Cubic"
+msgstr ""
+
+#: widgets/premium-charts.php:595 widgets/premium-charts.php:607
+msgid "Ease in out Cubic"
+msgstr ""
+
+#: widgets/premium-charts.php:596
+msgid "Ease in Quart"
+msgstr ""
+
+#: widgets/premium-charts.php:597
+msgid "Ease out Quart"
+msgstr ""
+
+#: widgets/premium-charts.php:598
+msgid "Ease in out Quart"
+msgstr ""
+
+#: widgets/premium-charts.php:599
+msgid "Ease in Quint"
+msgstr ""
+
+#: widgets/premium-charts.php:600
+msgid "Ease out Quint"
+msgstr ""
+
+#: widgets/premium-charts.php:601
+msgid "Ease in out Quint"
+msgstr ""
+
+#: widgets/premium-charts.php:602
+msgid "Ease in Sine"
+msgstr ""
+
+#: widgets/premium-charts.php:603
+msgid "Ease out Sine"
+msgstr ""
+
+#: widgets/premium-charts.php:604
+msgid "Ease in out Sine"
+msgstr ""
+
+#: widgets/premium-charts.php:605
+msgid "Ease in Expo"
+msgstr ""
+
+#: widgets/premium-charts.php:606
+msgid "Ease out Expo"
+msgstr ""
+
+#: widgets/premium-charts.php:608
+msgid "Ease in Circle"
+msgstr ""
+
+#: widgets/premium-charts.php:609
+msgid "Ease out Circle"
+msgstr ""
+
+#: widgets/premium-charts.php:610
+msgid "Ease in out Circle"
+msgstr ""
+
+#: widgets/premium-charts.php:611
+msgid "Ease in Elastic"
+msgstr ""
+
+#: widgets/premium-charts.php:612
+msgid "Ease out Elastic"
+msgstr ""
+
+#: widgets/premium-charts.php:613
+msgid "Ease in out Elastic"
+msgstr ""
+
+#: widgets/premium-charts.php:614
+msgid "Ease in Back"
+msgstr ""
+
+#: widgets/premium-charts.php:615
+msgid "Ease out Back"
+msgstr ""
+
+#: widgets/premium-charts.php:616
+msgid "Ease in Out Back"
+msgstr ""
+
+#: widgets/premium-charts.php:617
+msgid "Ease in Bounce"
+msgstr ""
+
+#: widgets/premium-charts.php:618
+msgid "Ease out Bounce"
+msgstr ""
+
+#: widgets/premium-charts.php:619
+msgid "Ease in out Bounce"
+msgstr ""
+
+#: widgets/premium-charts.php:627
+msgid "Load Chart On"
+msgstr ""
+
+#: widgets/premium-charts.php:631
+msgid "Page Load"
+msgstr ""
+
+#: widgets/premium-charts.php:641
+msgid "General"
+msgstr ""
+
+#: widgets/premium-charts.php:648 widgets/premium-content-toggle.php:777
+#: widgets/premium-divider.php:567 widgets/premium-flipbox.php:796
+#: widgets/premium-ihover.php:750 widgets/premium-image-comparison.php:641
+#: widgets/premium-image-comparison.php:802
+#: widgets/premium-image-hotspots.php:546 widgets/premium-multi-scroll.php:348
+#: widgets/premium-notbar.php:472 widgets/premium-prev-img.php:540
+msgid "Height"
+msgstr ""
+
+#: widgets/premium-charts.php:650
+msgid "Set the height of the graph in pixels"
+msgstr ""
+
+#: widgets/premium-charts.php:819 widgets/premium-charts.php:932
+msgid "Axis Label"
+msgstr ""
+
+#: widgets/premium-charts.php:886 widgets/premium-charts.php:995
+#: widgets/premium-twitter-feed.php:167
+msgid "Grid"
+msgstr ""
+
+#: widgets/premium-charts.php:903 widgets/premium-charts.php:1012
+#: widgets/premium-color-transition.php:156
+#: widgets/premium-color-transition.php:315 widgets/premium-ihover.php:727
+#: widgets/premium-image-accordion.php:109
+#: widgets/premium-image-comparison.php:628
+#: widgets/premium-image-comparison.php:819 widgets/premium-img-layers.php:172
+#: widgets/premium-notbar.php:135 widgets/premium-tables.php:588
+#: widgets/premium-tables.php:1716 widgets/premium-tables.php:1821
+msgid "Width"
+msgstr ""
+
+#: widgets/premium-charts.php:1034
+msgid "Legend"
+msgstr ""
+
+#: widgets/premium-charts.php:1062
+msgid "Item Width"
+msgstr ""
+
+#: widgets/premium-color-transition.php:62
+#: widgets/premium-content-toggle.php:257
+#: widgets/premium-content-toggle.php:770 widgets/premium-divider.php:369
+#: widgets/premium-facebook-feed.php:479 widgets/premium-flipbox.php:72
+#: widgets/premium-flipbox.php:370 widgets/premium-hscroll.php:73
+#: widgets/premium-iconbox.php:262 widgets/premium-ihover.php:282
+#: widgets/premium-image-accordion.php:184
+#: widgets/premium-image-accordion.php:584 widgets/premium-magic-section.php:68
+#: widgets/premium-magic-section.php:88 widgets/premium-multi-scroll.php:189
+#: widgets/premium-notbar.php:229 widgets/premium-notbar.php:248
+#: widgets/premium-prev-img.php:381 widgets/premium-twitter-feed.php:541
+#: widgets/premium-unfold.php:64 widgets/premium-unfold.php:708
+msgid "Content"
+msgstr ""
+
+#: widgets/premium-color-transition.php:70
+msgid "CSS ID"
+msgstr ""
+
+#: widgets/premium-color-transition.php:80
+msgid "Scroll Down"
+msgstr ""
+
+#: widgets/premium-color-transition.php:98
+msgid "This color is applied while scrolling down"
+msgstr ""
+
+#: widgets/premium-color-transition.php:138
+#: widgets/premium-color-transition.php:297
+#: widgets/premium-image-accordion.php:95 widgets/premium-img-layers.php:1256
+#: widgets/premium-notbar.php:488 widgets/premium-tables.php:576
+msgid "Auto"
+msgstr ""
+
+#: widgets/premium-color-transition.php:141
+#: widgets/premium-color-transition.php:300 widgets/premium-divider.php:98
+#: widgets/premium-fb-chat.php:182 widgets/premium-image-accordion.php:98
+#: widgets/premium-notbar.php:91 widgets/premium-tables.php:251
+#: widgets/premium-unfold.php:373
+msgid "Custom"
+msgstr ""
+
+#: widgets/premium-color-transition.php:217
+#: widgets/premium-color-transition.php:220
+#: widgets/premium-color-transition.php:376
+#: widgets/premium-color-transition.php:379
+#: widgets/premium-image-accordion.php:165
+#: widgets/premium-image-accordion.php:168
+msgid "Repeat"
+msgstr ""
+
+#: widgets/premium-color-transition.php:221
+#: widgets/premium-color-transition.php:380
+#: widgets/premium-image-accordion.php:169
+msgid "No-repeat"
+msgstr ""
+
+#: widgets/premium-color-transition.php:222
+#: widgets/premium-color-transition.php:381
+#: widgets/premium-image-accordion.php:170
+msgid "Repeat-x"
+msgstr ""
+
+#: widgets/premium-color-transition.php:223
+#: widgets/premium-color-transition.php:382
+#: widgets/premium-image-accordion.php:171
+msgid "Repeat-y"
+msgstr ""
+
+#: widgets/premium-color-transition.php:240
+msgid "Scroll Up"
+msgstr ""
+
+#: widgets/premium-color-transition.php:246
+msgid "This color is applied while scrolling up"
+msgstr ""
+
+#: widgets/premium-color-transition.php:401
+msgid "Elements"
+msgstr ""
+
+#: widgets/premium-color-transition.php:418
+msgid "Transition Duration"
+msgstr ""
+
+#: widgets/premium-color-transition.php:435 widgets/premium-hscroll.php:305
+msgid "Offset (PX)"
+msgstr ""
+
+#: widgets/premium-color-transition.php:437
+msgid ""
+"Distance between the top of viewport and top of the element, default: 30"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:68 widgets/premium-content-toggle.php:379
+#: widgets/premium-content-toggle.php:388
+msgid "Switcher"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:74
+msgid "Show Labels"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:84 widgets/premium-content-toggle.php:526
+#: widgets/premium-image-comparison.php:426
+msgid "First Label"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:85
+msgid "Content #1"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:98 widgets/premium-content-toggle.php:611
+#: widgets/premium-image-comparison.php:522
+msgid "Second Label"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:99
+msgid "Content #2"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:131
+#: widgets/premium-facebook-reviews.php:170
+#: widgets/premium-facebook-reviews.php:319
+#: widgets/premium-google-reviews.php:149
+#: widgets/premium-google-reviews.php:294 widgets/premium-yelp-reviews.php:148
+#: widgets/premium-yelp-reviews.php:293
+msgid "Display"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:134
+#: widgets/premium-facebook-reviews.php:173
+#: widgets/premium-facebook-reviews.php:322
+#: widgets/premium-google-reviews.php:152
+#: widgets/premium-google-reviews.php:297 widgets/premium-yelp-reviews.php:151
+#: widgets/premium-yelp-reviews.php:296
+msgid "Inline"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:174
+msgid "Content 1"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:180
+#: widgets/premium-image-hotspots.php:355 widgets/premium-magic-section.php:74
+#: widgets/premium-notbar.php:235 widgets/premium-tabs.php:98
+msgid "Content to Show"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:183
+#: widgets/premium-content-toggle.php:260
+#: widgets/premium-content-toggle.php:269
+#: widgets/premium-image-hotspots.php:358 widgets/premium-magic-section.php:77
+#: widgets/premium-multi-scroll.php:81 widgets/premium-multi-scroll.php:134
+#: widgets/premium-notbar.php:238 widgets/premium-tabs.php:101
+msgid "Text Editor"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:184
+#: widgets/premium-content-toggle.php:236
+#: widgets/premium-content-toggle.php:261
+#: widgets/premium-content-toggle.php:314 widgets/premium-hscroll.php:92
+#: widgets/premium-hscroll.php:101 widgets/premium-image-hotspots.php:359
+#: widgets/premium-image-hotspots.php:378 widgets/premium-magic-section.php:78
+#: widgets/premium-multi-scroll.php:82 widgets/premium-multi-scroll.php:135
+#: widgets/premium-notbar.php:239 widgets/premium-prev-img.php:211
+#: widgets/premium-tabs.php:102 widgets/premium-tabs.php:122
+msgid "Elementor Template"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:221
+#: widgets/premium-content-toggle.php:299 widgets/premium-facebook-feed.php:208
+#: widgets/premium-facebook-reviews.php:438 widgets/premium-flipbox.php:316
+#: widgets/premium-flipbox.php:702 widgets/premium-google-reviews.php:413
+#: widgets/premium-twitter-feed.php:234 widgets/premium-unfold.php:133
+#: widgets/premium-yelp-reviews.php:412
+msgid "Justify"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:237
+#: widgets/premium-content-toggle.php:315
+#: widgets/premium-image-hotspots.php:379 widgets/premium-tabs.php:123
+msgid ""
+"Elementor Template is a template which you can choose from Elementor "
+"library. Each template will be shown in content"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:251
+msgid "Content 2"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:339 widgets/premium-flipbox.php:759
+#: widgets/premium-image-hotspots.php:574 widgets/premium-magic-section.php:637
+#: widgets/premium-prev-img.php:466 widgets/premium-whatsapp-chat.php:494
+msgid "Slide"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:415
+msgid "Colors"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:424
+msgid "Switcher Content 1 Color"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:440
+msgid "Switcher Content 2 Color"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:456
+msgid "Switcher Background"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:478
+msgid "Switcher Shadow"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:487
+msgid "Background Shadow"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:497
+msgid "Labels"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:506 widgets/premium-hscroll.php:824
+#: widgets/premium-image-comparison.php:782
+#: widgets/premium-image-hotspots.php:509 widgets/premium-prev-img.php:505
+msgid "Spacing"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:699
+#: widgets/premium-content-toggle.php:994 widgets/premium-divider.php:736
+#: widgets/premium-facebook-feed.php:798
+#: widgets/premium-facebook-reviews.php:906
+#: widgets/premium-facebook-reviews.php:1451
+#: widgets/premium-google-reviews.php:885
+#: widgets/premium-google-reviews.php:1440 widgets/premium-hscroll.php:1133
+#: widgets/premium-ihover.php:1063 widgets/premium-image-accordion.php:890
+#: widgets/premium-image-comparison.php:847
+#: widgets/premium-image-hotspots.php:1163 widgets/premium-img-layers.php:1226
+#: widgets/premium-img-layers.php:1340 widgets/premium-instagram-feed.php:936
+#: widgets/premium-magic-section.php:1090 widgets/premium-multi-scroll.php:780
+#: widgets/premium-tabs.php:868 widgets/premium-twitter-feed.php:915
+#: widgets/premium-yelp-reviews.php:908 widgets/premium-yelp-reviews.php:1460
+msgid "Container"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:797
+msgid "First Content"
+msgstr ""
+
+#: widgets/premium-content-toggle.php:882
+msgid "Second Content"
+msgstr ""
+
+#: widgets/premium-divider.php:64 widgets/premium-divider.php:325
+#: widgets/premium-divider.php:360 widgets/premium-divider.php:539
+#: widgets/premium-ihover.php:418 widgets/premium-ihover.php:686
+#: widgets/premium-image-comparison.php:757
+msgid "Separator"
+msgstr ""
+
+#: widgets/premium-divider.php:70
+msgid "Number of Lines"
+msgstr ""
+
+#: widgets/premium-divider.php:73
+msgid "One"
+msgstr ""
+
+#: widgets/premium-divider.php:74
+msgid "Two"
+msgstr ""
+
+#: widgets/premium-divider.php:75
+msgid "Three"
+msgstr ""
+
+#: widgets/premium-divider.php:76
+msgid "Four"
+msgstr ""
+
+#: widgets/premium-divider.php:77
+msgid "Five"
+msgstr ""
+
+#: widgets/premium-divider.php:86 widgets/premium-facebook-feed.php:136
+#: widgets/premium-ihover.php:710 widgets/premium-ihover.php:991
+#: widgets/premium-magic-section.php:634 widgets/premium-twitter-feed.php:162
+msgid "Style"
+msgstr ""
+
+#: widgets/premium-divider.php:89 widgets/premium-ihover.php:714
+#: widgets/premium-ihover.php:995
+msgid "Solid"
+msgstr ""
+
+#: widgets/premium-divider.php:90 widgets/premium-ihover.php:715
+#: widgets/premium-ihover.php:996
+msgid "Double"
+msgstr ""
+
+#: widgets/premium-divider.php:91 widgets/premium-ihover.php:716
+#: widgets/premium-ihover.php:997
+msgid "Dotted"
+msgstr ""
+
+#: widgets/premium-divider.php:92 widgets/premium-ihover.php:998
+msgid "Dashed"
+msgstr ""
+
+#: widgets/premium-divider.php:93 widgets/premium-ihover.php:999
+msgid "Groove"
+msgstr ""
+
+#: widgets/premium-divider.php:94 widgets/premium-divider.php:640
+#: widgets/premium-facebook-reviews.php:799
+#: widgets/premium-facebook-reviews.php:869 widgets/premium-flipbox.php:957
+#: widgets/premium-flipbox.php:969 widgets/premium-flipbox.php:1222
+#: widgets/premium-flipbox.php:1234 widgets/premium-google-reviews.php:797
+#: widgets/premium-google-reviews.php:848 widgets/premium-iconbox.php:632
+#: widgets/premium-iconbox.php:644 widgets/premium-iconbox.php:732
+#: widgets/premium-iconbox.php:744 widgets/premium-ihover.php:575
+#: widgets/premium-ihover.php:587 widgets/premium-ihover.php:950
+#: widgets/premium-image-comparison.php:502
+#: widgets/premium-image-comparison.php:598
+#: widgets/premium-image-hotspots.php:772
+#: widgets/premium-instagram-feed.php:350
+#: widgets/premium-instagram-feed.php:434
+#: widgets/premium-instagram-feed.php:549
+#: widgets/premium-instagram-feed.php:647
+#: widgets/premium-instagram-feed.php:763
+#: widgets/premium-instagram-feed.php:859 widgets/premium-magic-section.php:876
+#: widgets/premium-magic-section.php:956 widgets/premium-magic-section.php:1056
+#: widgets/premium-multi-scroll.php:812 widgets/premium-multi-scroll.php:895
+#: widgets/premium-multi-scroll.php:954 widgets/premium-notbar.php:680
+#: widgets/premium-notbar.php:789 widgets/premium-notbar.php:915
+#: widgets/premium-prev-img.php:886 widgets/premium-tabs.php:579
+#: widgets/premium-tabs.php:697 widgets/premium-tabs.php:819
+#: widgets/premium-unfold.php:673 widgets/premium-unfold.php:751
+#: widgets/premium-yelp-reviews.php:807 widgets/premium-yelp-reviews.php:871
+msgid "Shadow"
+msgstr ""
+
+#: widgets/premium-divider.php:95 widgets/premium-divider.php:706
+msgid "Gradient"
+msgstr ""
+
+#: widgets/premium-divider.php:96
+msgid "Curved Bottom"
+msgstr ""
+
+#: widgets/premium-divider.php:97
+msgid "Curved Top"
+msgstr ""
+
+#: widgets/premium-divider.php:106
+msgid "Left Line Image"
+msgstr ""
+
+#: widgets/premium-divider.php:118
+msgid "Right Line Image"
+msgstr ""
+
+#: widgets/premium-divider.php:130
+msgid "Container Width"
+msgstr ""
+
+#: widgets/premium-divider.php:152 widgets/premium-flipbox.php:548
+#: widgets/premium-flipbox.php:601 widgets/premium-flipbox.php:1415
+#: widgets/premium-iconbox.php:301 widgets/premium-iconbox.php:307
+#: widgets/premium-iconbox.php:437 widgets/premium-iconbox.php:1000
+#: widgets/premium-ihover.php:149 widgets/premium-image-accordion.php:285
+#: widgets/premium-image-accordion.php:310
+#: widgets/premium-image-accordion.php:844
+#: widgets/premium-image-hotspots.php:391 widgets/premium-img-layers.php:216
+#: widgets/premium-img-layers.php:239 widgets/premium-notbar.php:355
+#: widgets/premium-notbar.php:378 widgets/premium-prev-img.php:120
+#: widgets/premium-prev-img.php:143 widgets/premium-tables.php:342
+#: widgets/premium-tables.php:365 widgets/premium-tables.php:462
+#: widgets/premium-tables.php:489
+msgid "Link"
+msgstr ""
+
+#: widgets/premium-divider.php:154 widgets/premium-ihover.php:151
+#: widgets/premium-image-accordion.php:287
+#: widgets/premium-image-hotspots.php:393
+msgid "Add a custom link or select an existing page link"
+msgstr ""
+
+#: widgets/premium-divider.php:160 widgets/premium-ihover.php:157
+#: widgets/premium-image-hotspots.php:398
+msgid "Link/URL"
+msgstr ""
+
+#: widgets/premium-divider.php:163 widgets/premium-divider.php:190
+#: widgets/premium-flipbox.php:588 widgets/premium-iconbox.php:424
+#: widgets/premium-ihover.php:160 widgets/premium-ihover.php:187
+#: widgets/premium-image-accordion.php:297
+#: widgets/premium-image-hotspots.php:401
+#: widgets/premium-image-hotspots.php:427 widgets/premium-img-layers.php:226
+#: widgets/premium-notbar.php:365 widgets/premium-prev-img.php:130
+#: widgets/premium-tables.php:352 widgets/premium-tables.php:475
+msgid "URL"
+msgstr ""
+
+#: widgets/premium-divider.php:164 widgets/premium-divider.php:176
+#: widgets/premium-flipbox.php:589 widgets/premium-flipbox.php:619
+#: widgets/premium-iconbox.php:425 widgets/premium-iconbox.php:454
+#: widgets/premium-ihover.php:161 widgets/premium-ihover.php:173
+#: widgets/premium-image-accordion.php:298
+#: widgets/premium-image-accordion.php:324
+#: widgets/premium-image-hotspots.php:402
+#: widgets/premium-image-hotspots.php:413 widgets/premium-img-layers.php:227
+#: widgets/premium-img-layers.php:257 widgets/premium-notbar.php:366
+#: widgets/premium-notbar.php:395 widgets/premium-prev-img.php:131
+#: widgets/premium-prev-img.php:160 widgets/premium-tables.php:353
+#: widgets/premium-tables.php:383 widgets/premium-tables.php:476
+#: widgets/premium-tables.php:508
+msgid "Existing Page"
+msgstr ""
+
+#: widgets/premium-divider.php:204 widgets/premium-ihover.php:204
+#: widgets/premium-image-accordion.php:337
+#: widgets/premium-image-hotspots.php:440
+msgid "Link Title"
+msgstr ""
+
+#: widgets/premium-divider.php:243
+msgid "Icon/Image/Text"
+msgstr ""
+
+#: widgets/premium-divider.php:249
+msgid "Show/Hide Icon"
+msgstr ""
+
+#: widgets/premium-divider.php:253 widgets/premium-facebook-feed.php:260
+#: widgets/premium-facebook-feed.php:275 widgets/premium-facebook-feed.php:290
+#: widgets/premium-facebook-feed.php:305 widgets/premium-image-hotspots.php:484
+#: widgets/premium-notbar.php:486 widgets/premium-twitter-feed.php:284
+#: widgets/premium-twitter-feed.php:299 widgets/premium-twitter-feed.php:314
+#: widgets/premium-twitter-feed.php:329
+msgid "Show"
+msgstr ""
+
+#: widgets/premium-divider.php:254 widgets/premium-facebook-feed.php:261
+#: widgets/premium-facebook-feed.php:276 widgets/premium-facebook-feed.php:291
+#: widgets/premium-facebook-feed.php:306 widgets/premium-image-hotspots.php:485
+#: widgets/premium-twitter-feed.php:285 widgets/premium-twitter-feed.php:300
+#: widgets/premium-twitter-feed.php:315 widgets/premium-twitter-feed.php:330
+msgid "Hide"
+msgstr ""
+
+#: widgets/premium-divider.php:264
+msgid "Icon/Text/Image"
+msgstr ""
+
+#: widgets/premium-divider.php:269 widgets/premium-divider.php:322
+#: widgets/premium-flipbox.php:571 widgets/premium-iconbox.php:322
+#: widgets/premium-iconbox.php:334 widgets/premium-ihover.php:227
+#: widgets/premium-ihover.php:380 widgets/premium-ihover.php:434
+#: widgets/premium-image-comparison.php:89
+#: widgets/premium-image-comparison.php:226
+#: widgets/premium-image-hotspots.php:168
+#: widgets/premium-image-hotspots.php:202
+#: widgets/premium-image-hotspots.php:907 widgets/premium-notbar.php:730
+#: widgets/premium-tables.php:74 widgets/premium-whatsapp-chat.php:192
+msgid "Text"
+msgstr ""
+
+#: widgets/premium-divider.php:337
+msgid ""
+"Select a Heading tag for the Separator Text. Headings are defined with H1 to "
+"H6 tags"
+msgstr ""
+
+#: widgets/premium-divider.php:419 widgets/premium-facebook-feed.php:547
+#: widgets/premium-facebook-feed.php:701 widgets/premium-facebook-feed.php:762
+#: widgets/premium-facebook-reviews.php:992
+#: widgets/premium-facebook-reviews.php:1256
+#: widgets/premium-facebook-reviews.php:1315
+#: widgets/premium-facebook-reviews.php:1416
+#: widgets/premium-google-reviews.php:971
+#: widgets/premium-google-reviews.php:1239
+#: widgets/premium-google-reviews.php:1301
+#: widgets/premium-google-reviews.php:1405 widgets/premium-hscroll.php:941
+#: widgets/premium-image-accordion.php:613
+#: widgets/premium-image-accordion.php:865
+#: widgets/premium-magic-section.php:1014 widgets/premium-notbar.php:621
+#: widgets/premium-notbar.php:848 widgets/premium-tables.php:1638
+#: widgets/premium-tabs.php:518 widgets/premium-tabs.php:634
+#: widgets/premium-twitter-feed.php:609 widgets/premium-twitter-feed.php:761
+#: widgets/premium-yelp-reviews.php:994 widgets/premium-yelp-reviews.php:1259
+#: widgets/premium-yelp-reviews.php:1321 widgets/premium-yelp-reviews.php:1425
+msgid "Hover Color"
+msgstr ""
+
+#: widgets/premium-divider.php:545
+msgid "Left Width (%)"
+msgstr ""
+
+#: widgets/premium-divider.php:556
+msgid "Right Width (%)"
+msgstr ""
+
+#: widgets/premium-divider.php:584
+msgid "Space Between Lines"
+msgstr ""
+
+#: widgets/premium-divider.php:617 widgets/premium-divider.php:684
+msgid "Number of Slices"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:76
+msgid "Source"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:79
+msgid "User"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:80
+#: widgets/premium-facebook-reviews.php:127
+#: widgets/premium-facebook-reviews.php:739
+msgid "Page"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:99 widgets/premium-facebook-reviews.php:84
+msgid "Please note!"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:99 widgets/premium-facebook-reviews.php:84
+msgid "You need to select only one page per widget."
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:111
+msgid "ID"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:120 widgets/premium-instagram-feed.php:73
+msgid "Access Token"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:138
+msgid "Choose the layout style for the posts"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:140 widgets/premium-twitter-feed.php:166
+msgid "List"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:141
+#: widgets/premium-facebook-reviews.php:394
+#: widgets/premium-google-reviews.php:369
+#: widgets/premium-instagram-feed.php:225 widgets/premium-yelp-reviews.php:368
+msgid "Masonry"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:149
+msgid "Posts/Row"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:192
+#: widgets/premium-facebook-reviews.php:422 widgets/premium-flipbox.php:300
+#: widgets/premium-flipbox.php:686 widgets/premium-google-reviews.php:397
+#: widgets/premium-image-accordion.php:477
+#: widgets/premium-magic-section.php:659 widgets/premium-twitter-feed.php:218
+#: widgets/premium-yelp-reviews.php:396
+msgid "Content Alignment"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:229
+msgid "Posts/Account"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:232
+msgid "How many posts will be shown for each account"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:239
+msgid "Post Length"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:247
+msgid "Show Post Media"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:257 widgets/premium-twitter-feed.php:281
+msgid "Show Avatar"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:287 widgets/premium-twitter-feed.php:311
+msgid "Show Read More Button"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:302
+msgid "Show Facebook Icon"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:320 widgets/premium-google-reviews.php:696
+#: widgets/premium-hscroll.php:717 widgets/premium-yelp-reviews.php:705
+msgid "Helpful Documentations"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:327
+#, php-format
+msgid ""
+"%1$s Feed disappeared after a while ? Extend your Facebook access token » "
+"%2$s"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:335 widgets/premium-google-reviews.php:719
+#: widgets/premium-yelp-reviews.php:736
+#, php-format
+msgid "%1$s Check the video tutorial » %2$s"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:345
+msgid "Post Box"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:520 widgets/premium-twitter-feed.php:582
+msgid "Read More"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:579 widgets/premium-twitter-feed.php:640
+msgid "Avatar"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:632
+msgid "Facebook Icon"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:737
+#: widgets/premium-facebook-reviews.php:1291
+#: widgets/premium-google-reviews.php:1277 widgets/premium-twitter-feed.php:796
+#: widgets/premium-yelp-reviews.php:1297
+msgid "Date"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:912
+msgid "Please fill the required fields: User/Page ID & Access Token"
+msgstr ""
+
+#: widgets/premium-facebook-feed.php:916
+#: widgets/premium-facebook-reviews.php:1650
+msgid "Please activate your license to get the access token"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:93
+msgid "Page Name"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:101 widgets/premium-fb-chat.php:68
+msgid "Page ID"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:110
+msgid "Page Access Token"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:136
+msgid "Replace Page Image"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:215
+#: widgets/premium-facebook-reviews.php:361
+#: widgets/premium-google-reviews.php:193
+#: widgets/premium-google-reviews.php:336 widgets/premium-whatsapp-chat.php:350
+#: widgets/premium-whatsapp-chat.php:381 widgets/premium-yelp-reviews.php:193
+#: widgets/premium-yelp-reviews.php:335
+msgid "Text Alignment"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:261
+msgid "Page Alignment"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:292
+#: widgets/premium-google-reviews.php:268 widgets/premium-yelp-reviews.php:270
+msgid "Reviews"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:299
+#: widgets/premium-google-reviews.php:274 widgets/premium-yelp-reviews.php:276
+msgid "Reviews/Row"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:393
+#: widgets/premium-google-reviews.php:368 widgets/premium-tables.php:1006
+#: widgets/premium-tables.php:1297 widgets/premium-tables.php:1527
+#: widgets/premium-yelp-reviews.php:367
+msgid "Even"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:455
+#: widgets/premium-google-reviews.php:429 widgets/premium-yelp-reviews.php:428
+msgid "Kindly, be noted that Carousel option only works with Even Layout"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:466
+#: widgets/premium-facebook-reviews.php:1560
+#: widgets/premium-google-reviews.php:440
+#: widgets/premium-google-reviews.php:1550 widgets/premium-twitter-feed.php:343
+#: widgets/premium-twitter-feed.php:349 widgets/premium-twitter-feed.php:842
+#: widgets/premium-yelp-reviews.php:439 widgets/premium-yelp-reviews.php:1569
+msgid "Carousel"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:473
+#: widgets/premium-google-reviews.php:447 widgets/premium-twitter-feed.php:356
+#: widgets/premium-yelp-reviews.php:446
+msgid "Auto Play"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:483
+#: widgets/premium-google-reviews.php:457 widgets/premium-twitter-feed.php:366
+#: widgets/premium-yelp-reviews.php:456
+msgid "Autoplay Speed"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:484
+#: widgets/premium-google-reviews.php:458 widgets/premium-twitter-feed.php:367
+#: widgets/premium-yelp-reviews.php:457
+msgid ""
+"Autoplay Speed means at which time the next slide should come. Set a value "
+"in milliseconds (ms)"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:496
+#: widgets/premium-google-reviews.php:470 widgets/premium-hscroll.php:594
+#: widgets/premium-twitter-feed.php:379 widgets/premium-yelp-reviews.php:469
+msgid "Arrows Position"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:521
+#: widgets/premium-google-reviews.php:495 widgets/premium-yelp-reviews.php:494
+msgid "RTL Mode"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:522
+#: widgets/premium-google-reviews.php:496 widgets/premium-yelp-reviews.php:495
+msgid "Recommended for right to left Sites"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:544
+#: widgets/premium-facebook-reviews.php:894
+msgid "Page Info"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:552
+msgid "Page Rate"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:563
+#: widgets/premium-google-reviews.php:537 widgets/premium-yelp-reviews.php:536
+msgid "Show Review Text"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:571
+#: widgets/premium-google-reviews.php:545 widgets/premium-yelp-reviews.php:544
+msgid "Show Stars"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:587
+#: widgets/premium-google-reviews.php:560 widgets/premium-yelp-reviews.php:560
+msgid "Date Position"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:590
+#: widgets/premium-google-reviews.php:563 widgets/premium-yelp-reviews.php:563
+msgid "Above Stars"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:591
+#: widgets/premium-google-reviews.php:564 widgets/premium-yelp-reviews.php:564
+msgid "Below Stars"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:606
+#: widgets/premium-google-reviews.php:579 widgets/premium-yelp-reviews.php:579
+msgid "Date Format"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:621
+msgid "Filter"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:628
+#: widgets/premium-google-reviews.php:609 widgets/premium-yelp-reviews.php:601
+msgid "Min Stars"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:640
+#: widgets/premium-google-reviews.php:621 widgets/premium-yelp-reviews.php:613
+msgid "Max Stars"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:652
+#: widgets/premium-google-reviews.php:633 widgets/premium-yelp-reviews.php:625
+msgid "Reviews Limit"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:659
+#: widgets/premium-google-reviews.php:640 widgets/premium-yelp-reviews.php:632
+msgid "Number of Reviews"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:662
+msgid "Set a number of reviews to retrieve"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:671
+#: widgets/premium-google-reviews.php:653 widgets/premium-yelp-reviews.php:645
+msgid "Review Words Length"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:679
+#: widgets/premium-google-reviews.php:661 widgets/premium-yelp-reviews.php:654
+msgid "Rating Schema"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:686
+#: widgets/premium-yelp-reviews.php:661
+msgid "Schema Type"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:689
+#: widgets/premium-google-reviews.php:106
+#: widgets/premium-google-reviews.php:737 widgets/premium-yelp-reviews.php:106
+#: widgets/premium-yelp-reviews.php:664 widgets/premium-yelp-reviews.php:754
+msgid "Place"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:690
+#: widgets/premium-yelp-reviews.php:665
+msgid "Organization"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:691
+#: widgets/premium-yelp-reviews.php:666
+msgid "Service"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:703
+#: widgets/premium-google-reviews.php:669 widgets/premium-yelp-reviews.php:678
+msgid ""
+"Enabling schema improves SEO as it helps to list star ratings in search "
+"engine results."
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:713
+#: widgets/premium-google-reviews.php:679 widgets/premium-yelp-reviews.php:688
+msgid "Reload Reviews Once Every"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:716
+#: widgets/premium-google-reviews.php:682 widgets/premium-yelp-reviews.php:691
+msgid "Hour"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:717
+#: widgets/premium-google-reviews.php:683 widgets/premium-yelp-reviews.php:692
+msgid "Day"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:718
+#: widgets/premium-google-reviews.php:684 widgets/premium-yelp-reviews.php:693
+msgid "Week"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:719
+#: widgets/premium-google-reviews.php:685 widgets/premium-yelp-reviews.php:694
+msgid "Month"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:720
+#: widgets/premium-google-reviews.php:686 widgets/premium-yelp-reviews.php:695
+msgid "Year"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:730
+#: widgets/premium-google-reviews.php:728
+#: widgets/premium-image-accordion.php:359
+#: widgets/premium-image-accordion.php:519 widgets/premium-img-layers.php:72
+#: widgets/premium-yelp-reviews.php:745
+msgid "Images"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:826
+#: widgets/premium-facebook-reviews.php:1137
+#: widgets/premium-google-reviews.php:824
+#: widgets/premium-google-reviews.php:1117 widgets/premium-yelp-reviews.php:828
+#: widgets/premium-yelp-reviews.php:1140
+msgid "Review"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1041
+#: widgets/premium-facebook-reviews.php:1144
+#: widgets/premium-google-reviews.php:1020
+#: widgets/premium-google-reviews.php:1124
+#: widgets/premium-yelp-reviews.php:1043 widgets/premium-yelp-reviews.php:1147
+msgid "Star Size"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1053
+#: widgets/premium-facebook-reviews.php:1153
+#: widgets/premium-google-reviews.php:1032
+#: widgets/premium-google-reviews.php:1133
+#: widgets/premium-yelp-reviews.php:1055 widgets/premium-yelp-reviews.php:1156
+msgid "Star Color"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1064
+#: widgets/premium-facebook-reviews.php:1161
+#: widgets/premium-google-reviews.php:1043
+#: widgets/premium-google-reviews.php:1144
+#: widgets/premium-yelp-reviews.php:1066 widgets/premium-yelp-reviews.php:1164
+msgid "Empty Star Color"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1235
+#: widgets/premium-google-reviews.php:1218
+#: widgets/premium-yelp-reviews.php:1238
+msgid "Reviewer Name"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1350
+#: widgets/premium-google-reviews.php:1336
+#: widgets/premium-yelp-reviews.php:1356
+msgid "Review Text"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1392
+#: widgets/premium-google-reviews.php:1381
+#: widgets/premium-yelp-reviews.php:1401
+msgid "Readmore Text"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1458
+#: widgets/premium-google-reviews.php:1447
+#: widgets/premium-image-hotspots.php:532 widgets/premium-prev-img.php:522
+#: widgets/premium-yelp-reviews.php:1467
+msgid "Max Width"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1595 widgets/premium-flipbox.php:927
+#: widgets/premium-flipbox.php:1042 widgets/premium-flipbox.php:1113
+#: widgets/premium-flipbox.php:1192 widgets/premium-flipbox.php:1306
+#: widgets/premium-flipbox.php:1377 widgets/premium-flipbox.php:1469
+#: widgets/premium-flipbox.php:1550 widgets/premium-google-reviews.php:1585
+#: widgets/premium-hscroll.php:853 widgets/premium-hscroll.php:951
+#: widgets/premium-hscroll.php:1015 widgets/premium-hscroll.php:1141
+#: widgets/premium-iconbox.php:602 widgets/premium-iconbox.php:702
+#: widgets/premium-iconbox.php:838 widgets/premium-iconbox.php:947
+#: widgets/premium-iconbox.php:1053 widgets/premium-iconbox.php:1134
+#: widgets/premium-ihover.php:545 widgets/premium-ihover.php:902
+#: widgets/premium-image-accordion.php:627
+#: widgets/premium-image-comparison.php:459
+#: widgets/premium-image-comparison.php:555
+#: widgets/premium-image-comparison.php:660
+#: widgets/premium-image-hotspots.php:297
+#: widgets/premium-image-hotspots.php:742
+#: widgets/premium-image-hotspots.php:840
+#: widgets/premium-image-hotspots.php:946
+#: widgets/premium-image-hotspots.php:1109
+#: widgets/premium-image-hotspots.php:1170 widgets/premium-img-layers.php:1279
+#: widgets/premium-img-layers.php:1347 widgets/premium-instagram-feed.php:513
+#: widgets/premium-instagram-feed.php:611
+#: widgets/premium-instagram-feed.php:727
+#: widgets/premium-instagram-feed.php:825 widgets/premium-magic-section.php:836
+#: widgets/premium-magic-section.php:923 widgets/premium-magic-section.php:1027
+#: widgets/premium-multi-scroll.php:449 widgets/premium-multi-scroll.php:571
+#: widgets/premium-multi-scroll.php:786 widgets/premium-multi-scroll.php:880
+#: widgets/premium-multi-scroll.php:939 widgets/premium-notbar.php:528
+#: widgets/premium-notbar.php:651 widgets/premium-notbar.php:760
+#: widgets/premium-notbar.php:869 widgets/premium-prev-img.php:605
+#: widgets/premium-prev-img.php:718 widgets/premium-prev-img.php:778
+#: widgets/premium-prev-img.php:853 widgets/premium-prev-img.php:968
+#: widgets/premium-prev-img.php:1067 widgets/premium-tables.php:1987
+#: widgets/premium-tables.php:2034 widgets/premium-tables.php:2081
+#: widgets/premium-tabs.php:227 widgets/premium-tabs.php:298
+#: widgets/premium-tabs.php:788 widgets/premium-tabs.php:875
+#: widgets/premium-twitter-feed.php:877 widgets/premium-unfold.php:854
+#: widgets/premium-unfold.php:981 widgets/premium-whatsapp-chat.php:571
+#: widgets/premium-whatsapp-chat.php:721 widgets/premium-yelp-reviews.php:1593
+msgid "Background Color"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1658
+msgid "Please fill the required fields: Page ID & Page Access Token"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1679
+#: widgets/premium-google-reviews.php:1669
+#: widgets/premium-yelp-reviews.php:1660
+#, php-format
+msgid "Something went wrong: %s"
+msgstr ""
+
+#: widgets/premium-facebook-reviews.php:1700
+msgid ""
+"Something went wrong. It seems like the page you selected does not have any "
+"reviews"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:54
+msgid "Account Settings"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:60
+msgid "App ID"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:78
+msgid "Messages"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:84
+msgid "Logged in Message"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:86
+msgid ""
+"The greeting text that will be displayed if the user is currently logged in "
+"to Facebook. Maximum 80 characters."
+msgstr ""
+
+#: widgets/premium-fb-chat.php:93
+msgid "Logged out Message"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:95
+msgid ""
+"The greeting text that will be displayed if the user is not currently logged "
+"in to Facebook. Maximum 80 characters."
+msgstr ""
+
+#: widgets/premium-fb-chat.php:111
+msgid "Language"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:112
+msgid "Select language for the chat box, default is English"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:116
+msgid "English"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:117
+msgid "French"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:118
+msgid "Danish"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:119
+msgid "German"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:120
+msgid "Japanese"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:121
+msgid "Korean"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:122
+msgid "Hebrew"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:123
+msgid "Spanish"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:124
+msgid "Chinese"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:132
+msgid "Ref"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:133
+msgid ""
+"Optional. Custom string passed to your webhook in messaging_postbacks and "
+"messaging_referrals events."
+msgstr ""
+
+#: widgets/premium-fb-chat.php:139
+msgid "Minimized"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:140
+msgid ""
+"Specifies whether the plugin should be minimized or shown. Defaults to false "
+"on desktop and true on mobile browsers."
+msgstr ""
+
+#: widgets/premium-fb-chat.php:147 widgets/premium-image-hotspots.php:602
+#: widgets/premium-magic-section.php:739 widgets/premium-multi-scroll.php:123
+#: widgets/premium-multi-scroll.php:177 widgets/premium-notbar.php:510
+#: widgets/premium-prev-img.php:585 widgets/premium-whatsapp-chat.php:460
+msgid "Hide on Mobiles"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:149
+msgid "This will hide the messenger chat on mobile phones"
+msgstr ""
+
+#: widgets/premium-fb-chat.php:164
+msgid "Theme Color"
+msgstr ""
+
+#: widgets/premium-flipbox.php:64 widgets/premium-flipbox.php:887
+msgid "Front"
+msgstr ""
+
+#: widgets/premium-flipbox.php:86 widgets/premium-flipbox.php:384
+#: widgets/premium-iconbox.php:67 widgets/premium-ihover.php:296
+#: widgets/premium-magic-section.php:179 widgets/premium-notbar.php:285
+#: widgets/premium-tables.php:84
+msgid "Icon Type"
+msgstr ""
+
+#: widgets/premium-flipbox.php:87 widgets/premium-flipbox.php:385
+#: widgets/premium-ihover.php:297
+msgid "Select type for the icon"
+msgstr ""
+
+#: widgets/premium-flipbox.php:91 widgets/premium-flipbox.php:389
+#: widgets/premium-iconbox.php:71 widgets/premium-ihover.php:301
+#: widgets/premium-image-hotspots.php:166 widgets/premium-magic-section.php:183
+#: widgets/premium-notbar.php:289 widgets/premium-tables.php:89
+msgid "Font Awesome Icon"
+msgstr ""
+
+#: widgets/premium-flipbox.php:92 widgets/premium-flipbox.php:390
+#: widgets/premium-iconbox.php:72 widgets/premium-iconbox.php:94
+#: widgets/premium-ihover.php:302 widgets/premium-image-hotspots.php:167
+#: widgets/premium-image-hotspots.php:189 widgets/premium-magic-section.php:184
+#: widgets/premium-magic-section.php:252 widgets/premium-notbar.php:290
+#: widgets/premium-notbar.php:318 widgets/premium-tables.php:90
+#: widgets/premium-tables.php:111
+msgid "Custom Image"
+msgstr ""
+
+#: widgets/premium-flipbox.php:104 widgets/premium-ihover.php:314
+msgid "Choose an Icon for Front Side"
+msgstr ""
+
+#: widgets/premium-flipbox.php:127 widgets/premium-flipbox.php:425
+#: widgets/premium-ihover.php:336
+msgid "Choose the icon image"
+msgstr ""
+
+#: widgets/premium-flipbox.php:138 widgets/premium-flipbox.php:163
+#: widgets/premium-flipbox.php:436 widgets/premium-flipbox.php:461
+#: widgets/premium-ihover.php:347 widgets/premium-magic-section.php:376
+#: widgets/premium-unfold.php:794 widgets/premium-whatsapp-chat.php:249
+msgid "Icon Size"
+msgstr ""
+
+#: widgets/premium-flipbox.php:196
+msgid "Type a title for the front side"
+msgstr ""
+
+#: widgets/premium-flipbox.php:199
+msgid "Front Box Title"
+msgstr ""
+
+#: widgets/premium-flipbox.php:210
+msgid "Select the front side title tag"
+msgstr ""
+
+#: widgets/premium-flipbox.php:240 widgets/premium-flipbox.php:538
+msgid "Your Cool Description"
+msgstr ""
+
+#: widgets/premium-flipbox.php:257 widgets/premium-flipbox.php:642
+#: widgets/premium-flipbox.php:668 widgets/premium-iconbox.php:189
+#: widgets/premium-image-accordion.php:459
+#: widgets/premium-image-comparison.php:157
+#: widgets/premium-image-comparison.php:295
+#: widgets/premium-magic-section.php:571 widgets/premium-magic-section.php:695
+#: widgets/premium-multi-scroll.php:306 widgets/premium-multi-scroll.php:523
+#: widgets/premium-multi-scroll.php:645 widgets/premium-notbar.php:87
+#: widgets/premium-notbar.php:200
+msgid "Middle"
+msgstr ""
+
+#: widgets/premium-flipbox.php:362 widgets/premium-flipbox.php:1151
+msgid "Back"
+msgstr ""
+
+#: widgets/premium-flipbox.php:402
+msgid "Choose an Icon for Back Side"
+msgstr ""
+
+#: widgets/premium-flipbox.php:494
+msgid "Type a title for the back side"
+msgstr ""
+
+#: widgets/premium-flipbox.php:497
+msgid "Back Box Title"
+msgstr ""
+
+#: widgets/premium-flipbox.php:508
+msgid "Select the tag for the title"
+msgstr ""
+
+#: widgets/premium-flipbox.php:555
+msgid "Apply on"
+msgstr ""
+
+#: widgets/premium-flipbox.php:558
+msgid "Button Only"
+msgstr ""
+
+#: widgets/premium-flipbox.php:559
+msgid "Whole Box"
+msgstr ""
+
+#: widgets/premium-flipbox.php:574
+msgid "Click Me"
+msgstr ""
+
+#: widgets/premium-flipbox.php:585 widgets/premium-iconbox.php:421
+#: widgets/premium-image-accordion.php:294 widgets/premium-img-layers.php:223
+#: widgets/premium-notbar.php:362 widgets/premium-prev-img.php:127
+#: widgets/premium-tables.php:349 widgets/premium-tables.php:472
+msgid "Link Type"
+msgstr ""
+
+#: widgets/premium-flipbox.php:748 widgets/premium-tabs.php:146
+msgid "Additional Settings"
+msgstr ""
+
+#: widgets/premium-flipbox.php:758
+msgid "Flip"
+msgstr ""
+
+#: widgets/premium-flipbox.php:760 widgets/premium-magic-section.php:638
+msgid "Push"
+msgstr ""
+
+#: widgets/premium-flipbox.php:761
+msgid "Zoom"
+msgstr ""
+
+#: widgets/premium-flipbox.php:771
+msgid "Flip Direction"
+msgstr ""
+
+#: widgets/premium-flipbox.php:788
+msgid "Hover Text Animation"
+msgstr ""
+
+#: widgets/premium-flipbox.php:850
+msgid "hover"
+msgstr ""
+
+#: widgets/premium-flipbox.php:1174 widgets/premium-instagram-feed.php:487
+#: widgets/premium-magic-section.php:777 widgets/premium-tables.php:895
+#: widgets/premium-tables.php:1040 widgets/premium-tables.php:1220
+#: widgets/premium-tables.php:1333 widgets/premium-unfold.php:838
+#: widgets/premium-unfold.php:965 widgets/premium-whatsapp-chat.php:553
+#: widgets/premium-whatsapp-chat.php:703
+msgid "Icon Color"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:76 widgets/premium-yelp-reviews.php:76
+msgid "API Key"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:85
+msgid "Place ID"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:115 widgets/premium-yelp-reviews.php:115
+msgid "Replace Place Image"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:238 widgets/premium-yelp-reviews.php:239
+msgid "Place Alignment"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:518
+#: widgets/premium-google-reviews.php:873 widgets/premium-yelp-reviews.php:517
+#: widgets/premium-yelp-reviews.php:896
+msgid "Place Info"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:526 widgets/premium-yelp-reviews.php:525
+msgid "Place Rate"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:594
+msgid "Get Reviews By Language"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:596
+msgid ""
+"Enter language prefix, eg. en for English, ja for Japanese, if you don't "
+"know your language prefix, please check <a href=\"https://developers.google."
+"com/maps/faq#languagesupport\" target=\"_blank\">here</a>"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:602 widgets/premium-yelp-reviews.php:594
+msgid "Filter by Rate"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:644
+msgid "You can only pull 5 reviews from Google"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:703 widgets/premium-yelp-reviews.php:720
+#, php-format
+msgid "%1$s Getting your API Key » %2$s"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:711
+#, php-format
+msgid "%1$s How to get your place ID » %2$s"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:1639
+#: widgets/premium-yelp-reviews.php:1632
+msgid "Please Enter a Valid API Key & Place ID"
+msgstr ""
+
+#: widgets/premium-google-reviews.php:1689
+#, php-format
+msgid "Something went wrong, error: %s"
+msgstr ""
+
+#: widgets/premium-hscroll.php:79
+msgid ""
+"<p>Important:</p><ul><li>Please make sure that \"Stretch Section\" option is "
+"disabled for sections below.</li></ul>"
+msgstr ""
+
+#: widgets/premium-hscroll.php:89 widgets/premium-prev-img.php:207
+msgid "Content Type"
+msgstr ""
+
+#: widgets/premium-hscroll.php:93 widgets/premium-hscroll.php:126
+msgid "Section ID"
+msgstr ""
+
+#: widgets/premium-hscroll.php:114
+msgid "Anchor ID"
+msgstr ""
+
+#: widgets/premium-hscroll.php:116
+msgid "This ID will be used to anchor your links to this slide"
+msgstr ""
+
+#: widgets/premium-hscroll.php:137
+msgid "Scroll Background Transition"
+msgstr ""
+
+#: widgets/premium-hscroll.php:156 widgets/premium-multi-scroll.php:207
+msgid "Sections"
+msgstr ""
+
+#: widgets/premium-hscroll.php:166
+msgid "Background Transition Speed (sec)"
+msgstr ""
+
+#: widgets/premium-hscroll.php:184
+msgid "Fixed Content Template"
+msgstr ""
+
+#: widgets/premium-hscroll.php:195 widgets/premium-hscroll.php:672
+#: widgets/premium-iconbox.php:510 widgets/premium-image-accordion.php:264
+#: widgets/premium-image-comparison.php:175
+#: widgets/premium-image-comparison.php:313 widgets/premium-img-layers.php:150
+#: widgets/premium-whatsapp-chat.php:172
+msgid "Vertical Offset"
+msgstr ""
+
+#: widgets/premium-hscroll.php:219 widgets/premium-hscroll.php:648
+#: widgets/premium-iconbox.php:486 widgets/premium-image-accordion.php:243
+#: widgets/premium-image-comparison.php:128
+#: widgets/premium-image-comparison.php:266 widgets/premium-img-layers.php:128
+#: widgets/premium-whatsapp-chat.php:130 widgets/premium-whatsapp-chat.php:151
+msgid "Horizontal Offset"
+msgstr ""
+
+#: widgets/premium-hscroll.php:265
+msgid "Number of Slides in Viewport"
+msgstr ""
+
+#: widgets/premium-hscroll.php:267
+msgid ""
+"Select the number of slides to appear in your browser viewport. For example, "
+"1.5 means half of the next slide will appear on viewport"
+msgstr ""
+
+#: widgets/premium-hscroll.php:288
+msgid "Scroll Distance Beyond Last Slide"
+msgstr ""
+
+#: widgets/premium-hscroll.php:290
+msgid ""
+"Set value in pixels for the scroll distance after last slide before scroll "
+"down to next section"
+msgstr ""
+
+#: widgets/premium-hscroll.php:307
+msgid "Offset at which the horizontal scroll is triggered"
+msgstr ""
+
+#: widgets/premium-hscroll.php:322
+msgid "Scroll Type"
+msgstr ""
+
+#: widgets/premium-hscroll.php:326
+msgid "Snappy"
+msgstr ""
+
+#: widgets/premium-hscroll.php:334
+msgid "Disable Snappy Effect on Touch Devices"
+msgstr ""
+
+#: widgets/premium-hscroll.php:346
+msgid "Decrease Scroll Speed by"
+msgstr ""
+
+#: widgets/premium-hscroll.php:348
+msgid "For example, 2 means that scene scroll speed will be decreased to half"
+msgstr ""
+
+#: widgets/premium-hscroll.php:369 widgets/premium-hscroll.php:995
+msgid "Progress Bar"
+msgstr ""
+
+#: widgets/premium-hscroll.php:377
+msgid "Progress Bar Left Posiion (PX)"
+msgstr ""
+
+#: widgets/premium-hscroll.php:396
+msgid "Progress Bar Bottom Posiion (PX)"
+msgstr ""
+
+#: widgets/premium-hscroll.php:415
+msgid "Opacity Scroll Effect"
+msgstr ""
+
+#: widgets/premium-hscroll.php:428
+msgid "Trigger Entrance Animations on Scroll"
+msgstr ""
+
+#: widgets/premium-hscroll.php:429
+msgid ""
+"This option will trigger entrance animations for inner widgets each time you "
+"scroll to a slide"
+msgstr ""
+
+#: widgets/premium-hscroll.php:442 widgets/premium-multi-scroll.php:382
+msgid "Keyboard Scrolling"
+msgstr ""
+
+#: widgets/premium-hscroll.php:443
+msgid "Enable or disable scrolling slides using Keyboard"
+msgstr ""
+
+#: widgets/premium-hscroll.php:455 widgets/premium-multi-scroll.php:217
+msgid "Navigation"
+msgstr ""
+
+#: widgets/premium-hscroll.php:461 widgets/premium-hscroll.php:741
+#: widgets/premium-multi-scroll.php:267 widgets/premium-multi-scroll.php:686
+msgid "Navigation Dots"
+msgstr ""
+
+#: widgets/premium-hscroll.php:479
+msgid "Navigation Dots Position"
+msgstr ""
+
+#: widgets/premium-hscroll.php:496
+msgid "Dots Offset"
+msgstr ""
+
+#: widgets/premium-hscroll.php:522 widgets/premium-hscroll.php:814
+#: widgets/premium-image-hotspots.php:462
+#: widgets/premium-image-hotspots.php:1075
+#: widgets/premium-whatsapp-chat.php:468
+msgid "Tooltips"
+msgstr ""
+
+#: widgets/premium-hscroll.php:533 widgets/premium-multi-scroll.php:276
+msgid "Dots Tooltips Text"
+msgstr ""
+
+#: widgets/premium-hscroll.php:536 widgets/premium-multi-scroll.php:278
+msgid "Add text for each navigation dot separated by ','"
+msgstr ""
+
+#: widgets/premium-hscroll.php:547 widgets/premium-hscroll.php:909
+msgid "Navigation Arrows"
+msgstr ""
+
+#: widgets/premium-hscroll.php:566
+msgid "Left Arrow Icon"
+msgstr ""
+
+#: widgets/premium-hscroll.php:580
+msgid "Right Arrow Icon"
+msgstr ""
+
+#: widgets/premium-hscroll.php:619
+msgid "Loop"
+msgstr ""
+
+#: widgets/premium-hscroll.php:633 widgets/premium-hscroll.php:1027
+msgid "Pagination Numbers"
+msgstr ""
+
+#: widgets/premium-hscroll.php:639
+msgid "Enable Pagination Number"
+msgstr ""
+
+#: widgets/premium-hscroll.php:698
+msgid "Responsive Settings"
+msgstr ""
+
+#: widgets/premium-hscroll.php:704
+msgid "Put Columns Next to Each Other"
+msgstr ""
+
+#: widgets/premium-hscroll.php:706
+msgid ""
+"This option will force the columns to be positioned next to each other on "
+"small screens"
+msgstr ""
+
+#: widgets/premium-hscroll.php:732
+#, php-format
+msgid "%1$s Check the documentation article » %2$s"
+msgstr ""
+
+#: widgets/premium-hscroll.php:773 widgets/premium-tabs.php:532
+#: widgets/premium-tabs.php:648
+msgid "Active Color"
+msgstr ""
+
+#: widgets/premium-hscroll.php:793
+msgid "Active Border Color"
+msgstr ""
+
+#: widgets/premium-hscroll.php:961 widgets/premium-notbar.php:882
+msgid "Hover Background Color"
+msgstr ""
+
+#: widgets/premium-hscroll.php:1005
+msgid "Progress Color"
+msgstr ""
+
+#: widgets/premium-hscroll.php:1045
+msgid "Spacing Between"
+msgstr ""
+
+#: widgets/premium-hscroll.php:1061
+msgid "Current Slide Color"
+msgstr ""
+
+#: widgets/premium-hscroll.php:1071
+msgid "Separator Color"
+msgstr ""
+
+#: widgets/premium-hscroll.php:1081
+msgid "Total Slides Color"
+msgstr ""
+
+#: widgets/premium-iconbox.php:144 widgets/premium-image-hotspots.php:1066
+#: widgets/premium-magic-section.php:524 widgets/premium-whatsapp-chat.php:429
+msgid "Hover Animation"
+msgstr ""
+
+#: widgets/premium-iconbox.php:148
+msgid "Pulse"
+msgstr ""
+
+#: widgets/premium-iconbox.php:149 widgets/premium-img-layers.php:272
+#: widgets/premium-img-layers.php:677 widgets/premium-img-layers.php:1067
+msgid "Rotate"
+msgstr ""
+
+#: widgets/premium-iconbox.php:150
+msgid "Buzz"
+msgstr ""
+
+#: widgets/premium-iconbox.php:151
+msgid "3D Rotate"
+msgstr ""
+
+#: widgets/premium-iconbox.php:152
+msgid "Drop Shadow"
+msgstr ""
+
+#: widgets/premium-iconbox.php:153
+msgid "Wobble Vertical"
+msgstr ""
+
+#: widgets/premium-iconbox.php:161 widgets/premium-magic-section.php:359
+#: widgets/premium-tables.php:124 widgets/premium-unfold.php:213
+#: widgets/premium-whatsapp-chat.php:228
+msgid "Icon Position"
+msgstr ""
+
+#: widgets/premium-iconbox.php:185
+msgid "Vertical Alignment"
+msgstr ""
+
+#: widgets/premium-iconbox.php:226 widgets/premium-unfold.php:90
+msgid "Title Heading"
+msgstr ""
+
+#: widgets/premium-iconbox.php:315 widgets/premium-ihover.php:216
+msgid "Whole Box Link"
+msgstr ""
+
+#: widgets/premium-iconbox.php:380 widgets/premium-image-comparison.php:91
+#: widgets/premium-magic-section.php:363 widgets/premium-notbar.php:184
+#: widgets/premium-tables.php:129 widgets/premium-unfold.php:217
+#: widgets/premium-whatsapp-chat.php:231
+msgid "Before"
+msgstr ""
+
+#: widgets/premium-iconbox.php:381 widgets/premium-image-comparison.php:229
+#: widgets/premium-magic-section.php:364 widgets/premium-notbar.php:183
+#: widgets/premium-tables.php:130 widgets/premium-unfold.php:218
+#: widgets/premium-whatsapp-chat.php:232
+msgid "After"
+msgstr ""
+
+#: widgets/premium-iconbox.php:470
+msgid "Back Icon"
+msgstr ""
+
+#: widgets/premium-iconbox.php:476
+msgid "Show Back Icon"
+msgstr ""
+
+#: widgets/premium-iconbox.php:554
+msgid "Hover Effect "
+msgstr ""
+
+#: widgets/premium-iconbox.php:1191
+msgid "Inner Container"
+msgstr ""
+
+#: widgets/premium-iconbox.php:1338
+msgid "Outer Container"
+msgstr ""
+
+#: widgets/premium-iconbox.php:1345
+msgid "Back Icon Color"
+msgstr ""
+
+#: widgets/premium-ihover.php:110
+msgid "Hover Effect"
+msgstr ""
+
+#: widgets/premium-ihover.php:229
+msgid "Click Here"
+msgstr ""
+
+#: widgets/premium-ihover.php:270 widgets/premium-img-layers.php:1194
+msgid "CSS Classes"
+msgstr ""
+
+#: widgets/premium-ihover.php:274
+msgid "Add your custom class without the dot. e.g: my-class"
+msgstr ""
+
+#: widgets/premium-ihover.php:373
+msgid "Enable/Disable Title"
+msgstr ""
+
+#: widgets/premium-ihover.php:381 widgets/premium-ihover.php:387
+msgid "Awesome Title"
+msgstr ""
+
+#: widgets/premium-ihover.php:398
+msgid ""
+"Select a heading tag for the title. Headings are defined with H1 to H6 tags"
+msgstr ""
+
+#: widgets/premium-ihover.php:420
+msgid "Enable/Disable Separator"
+msgstr ""
+
+#: widgets/premium-ihover.php:428
+msgid "Enable/Disable Description"
+msgstr ""
+
+#: widgets/premium-ihover.php:437
+msgid "Cool Description"
+msgstr ""
+
+#: widgets/premium-ihover.php:479
+msgid "Front Image"
+msgstr ""
+
+#: widgets/premium-ihover.php:494 widgets/premium-image-hotspots.php:638
+#: widgets/premium-img-layers.php:194
+msgid "Blend Mode"
+msgstr ""
+
+#: widgets/premium-ihover.php:729
+msgid "Enter Separator width in (PX, EM, %), default is 100%"
+msgstr ""
+
+#: widgets/premium-ihover.php:858
+msgid "Hover Grow Effect"
+msgstr ""
+
+#: widgets/premium-ihover.php:916
+msgid "Background Hover Color"
+msgstr ""
+
+#: widgets/premium-ihover.php:981 widgets/premium-instagram-feed.php:1006
+msgid "Spinner"
+msgstr ""
+
+#: widgets/premium-ihover.php:1027
+msgid "First Color"
+msgstr ""
+
+#: widgets/premium-ihover.php:1044
+msgid "Second Color"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:70
+msgid "Accordion"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:235
+msgid "Custom Position"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:349
+msgid "Whole Image Link"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:384
+msgid "Hovered By Default Index"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:386
+msgid ""
+"Set the index for the image to be hovered by default on page load, index "
+"starts from 1"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:396
+#: widgets/premium-image-comparison.php:355 widgets/premium-tabs.php:156
+msgid "Horizontal"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:397
+#: widgets/premium-image-comparison.php:354 widgets/premium-tabs.php:157
+msgid "Vertical"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:405
+msgid "Skew Images"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:416
+msgid "Skew Direction"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:433
+#: widgets/premium-instagram-feed.php:287
+msgid "Image Height"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:451
+msgid "Content Vertical Position"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:509
+msgid "Hide Description Below Width (PX)"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:511
+msgid "Set screen width below which the description will be hidden"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:536
+msgid "Overlay Hover Color"
+msgstr ""
+
+#: widgets/premium-image-accordion.php:637
+msgid "Background Hover Color "
+msgstr ""
+
+#: widgets/premium-image-comparison.php:62
+msgid "Original Image"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:71
+#: widgets/premium-image-comparison.php:208
+msgid "It's recommended to use two images that have the same size"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:199
+msgid "Modified Image"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:351
+msgid "Orientation"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:364
+msgid "Visible Ratio"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:375
+msgid "Show Drag Handle"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:376
+msgid "Show drag handle between the images"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:386
+msgid "Show Separator"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:387
+msgid "Show separator between the images"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:399
+msgid "Interaction Mode"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:402
+msgid "Mouse Move"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:403
+msgid "Mouse Drag"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:404
+msgid "Mouse Click"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:618
+msgid "Drag"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:630
+msgid "Enter Drag width in (PX), default is 50px"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:649
+msgid "Enter Drag height in (PX), default is 50px"
+msgstr ""
+
+#: widgets/premium-image-comparison.php:714
+msgid "Arrows"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:102
+msgid "Stretch Image"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:104
+msgid "Stretch image to full container width"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:140
+#: widgets/premium-image-hotspots.php:451
+#: widgets/premium-image-hotspots.php:692
+msgid "Hotspots"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:146
+msgid "NEW: Now you can position hotspots from the preview area"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:154
+msgid "Radar Animation"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:163
+msgid "Display On"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:177
+msgid "Select Icon"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:204
+msgid "Hi, I'm a Hotspot"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:330
+#: widgets/premium-image-hotspots.php:1014
+msgid "Radar Color"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:344
+#: widgets/premium-image-hotspots.php:1032
+msgid "Radar Border Radius"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:368
+msgid "Hi, I'm a Tooltip"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:415
+msgid "Active only when tooltips trigger is set to hover"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:469 widgets/premium-magic-section.php:155
+#: widgets/premium-magic-section.php:160 widgets/premium-magic-section.php:752
+msgid "Trigger"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:472
+msgid "Click"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:482
+msgid "Show Arrow"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:492
+msgid "Positon"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:500 widgets/premium-prev-img.php:577
+msgid ""
+"Sets the side of the tooltip. The value may one of the following: 'top', "
+"'bottom', 'left', 'right'. It may also be an array containing one or more of "
+"these values. When using an array, the order of values is taken into account "
+"as order of fallbacks and the absence of a side disables it"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:511 widgets/premium-prev-img.php:507
+msgid "The distance between the origin and the tooltip in pixels, default is 6"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:518 widgets/premium-prev-img.php:514
+msgid "Min Width"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:526 widgets/premium-prev-img.php:516
+msgid "Set a minimum width for the tooltip in pixels, default: 0 (auto width)"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:540 widgets/premium-prev-img.php:524
+msgid ""
+"Set a maximum width for the tooltip in pixels, default: null (no max width)"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:572 widgets/premium-prev-img.php:464
+#: widgets/premium-whatsapp-chat.php:492
+msgid "Grow"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:573 widgets/premium-prev-img.php:465
+#: widgets/premium-whatsapp-chat.php:493
+msgid "Swing"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:575 widgets/premium-prev-img.php:467
+#: widgets/premium-whatsapp-chat.php:495
+msgid "Fall"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:584 widgets/premium-img-layers.php:316
+#: widgets/premium-prev-img.php:476
+msgid "Animation Duration"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:586 widgets/premium-prev-img.php:478
+msgid "Set the animation duration in milliseconds, default is 350"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:593 widgets/premium-prev-img.php:485
+msgid "Delay"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:595 widgets/premium-prev-img.php:487
+msgid "Set the animation delay in milliseconds, default is 10"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:606 widgets/premium-prev-img.php:589
+msgid "Hide tooltips on mobile phones"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:631
+msgid "Hover CSS Filter"
+msgstr ""
+
+#: widgets/premium-image-hotspots.php:1047
+msgid "Hotspots Opacity"
+msgstr ""
+
+#: widgets/premium-img-layers.php:78
+msgid "NEW: Now you can position, resize layers from the preview area"
+msgstr ""
+
+#: widgets/premium-img-layers.php:99 widgets/premium-prev-img.php:102
+#: widgets/premium-prev-img.php:258
+msgid "Alt"
+msgstr ""
+
+#: widgets/premium-img-layers.php:120 widgets/premium-notbar.php:123
+msgid "Relative"
+msgstr ""
+
+#: widgets/premium-img-layers.php:121
+msgid "Absolute"
+msgstr ""
+
+#: widgets/premium-img-layers.php:130 widgets/premium-img-layers.php:151
+msgid "Mousemove Interactivity works only with pixels"
+msgstr ""
+
+#: widgets/premium-img-layers.php:279
+msgid "Degrees"
+msgstr ""
+
+#: widgets/premium-img-layers.php:281
+msgid "Set rotation value in degress"
+msgstr ""
+
+#: widgets/premium-img-layers.php:303
+msgid "Entrance Animation"
+msgstr ""
+
+#: widgets/premium-img-layers.php:320 widgets/premium-unfold.php:371
+msgid "Slow"
+msgstr ""
+
+#: widgets/premium-img-layers.php:322 widgets/premium-unfold.php:372
+msgid "Fast"
+msgstr ""
+
+#: widgets/premium-img-layers.php:333
+msgid "Animation Delay"
+msgstr ""
+
+#: widgets/premium-img-layers.php:351
+msgid "Mousemove Interactivity"
+msgstr ""
+
+#: widgets/premium-img-layers.php:359
+msgid "Interactivity Style"
+msgstr ""
+
+#: widgets/premium-img-layers.php:362
+msgid "Mouse Parallax"
+msgstr ""
+
+#: widgets/premium-img-layers.php:363
+msgid "Tilt"
+msgstr ""
+
+#: widgets/premium-img-layers.php:375
+msgid "Reverse Direction"
+msgstr ""
+
+#: widgets/premium-img-layers.php:392
+msgid "Choose the movement rate for the layer image, default: -10"
+msgstr ""
+
+#: widgets/premium-img-layers.php:403
+msgid "Scroll Effects"
+msgstr ""
+
+#: widgets/premium-img-layers.php:417
+msgid "Scroll Fade"
+msgstr ""
+
+#: widgets/premium-img-layers.php:428
+msgid "Fade In"
+msgstr ""
+
+#: widgets/premium-img-layers.php:429
+msgid "Fade Out"
+msgstr ""
+
+#: widgets/premium-img-layers.php:440
+msgid "Opacity Level"
+msgstr ""
+
+#: widgets/premium-img-layers.php:482
+msgid "Vertical Parallax"
+msgstr ""
+
+#: widgets/premium-img-layers.php:547
+msgid "Horizontal Parallax"
+msgstr ""
+
+#: widgets/premium-img-layers.php:558
+msgid "To Left"
+msgstr ""
+
+#: widgets/premium-img-layers.php:559
+msgid "To Right"
+msgstr ""
+
+#: widgets/premium-img-layers.php:623
+msgid "Decrease Blur"
+msgstr ""
+
+#: widgets/premium-img-layers.php:624
+msgid "Increase Blur"
+msgstr ""
+
+#: widgets/premium-img-layers.php:635
+msgid "Blur Level"
+msgstr ""
+
+#: widgets/premium-img-layers.php:688
+msgid "Counter Clockwise"
+msgstr ""
+
+#: widgets/premium-img-layers.php:689
+msgid "Clockwise"
+msgstr ""
+
+#: widgets/premium-img-layers.php:753
+msgid "Shrink"
+msgstr ""
+
+#: widgets/premium-img-layers.php:807
+msgid "Gray Scale"
+msgstr ""
+
+#: widgets/premium-img-layers.php:818
+msgid "Increase"
+msgstr ""
+
+#: widgets/premium-img-layers.php:819
+msgid "Decrease"
+msgstr ""
+
+#: widgets/premium-img-layers.php:872
+msgid "X Anchor Point"
+msgstr ""
+
+#: widgets/premium-img-layers.php:918
+msgid "Y Anchor Point"
+msgstr ""
+
+#: widgets/premium-img-layers.php:966
+msgid "Floating Effects"
+msgstr ""
+
+#: widgets/premium-img-layers.php:989
+msgid "Translate X"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1005 widgets/premium-img-layers.php:1034
+#: widgets/premium-img-layers.php:1092 widgets/premium-img-layers.php:1121
+#: widgets/premium-img-layers.php:1150
+msgid "From"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1006 widgets/premium-img-layers.php:1035
+#: widgets/premium-img-layers.php:1093 widgets/premium-img-layers.php:1122
+#: widgets/premium-img-layers.php:1151
+msgid "To"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1018
+msgid "Translate Y"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1076
+msgid "Rotate X"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1105
+msgid "Rotate Y"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1134
+msgid "Rotate Z"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1196
+msgid "Separate class with spaces"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1210
+msgid "Apply Scroll Effects On"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1232
+msgid "Minimum Height"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1253 widgets/premium-notbar.php:483
+msgid "Overflow"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1257
+msgid "Visible"
+msgstr ""
+
+#: widgets/premium-img-layers.php:1258
+msgid "Hidden"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:86
+msgid "Queries"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:92
+msgid "Filter by Tags"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:94
+msgid "You can separate tags by a comma, for example: sport,football,tennis"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:104
+msgid "Sort By:"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:107
+msgid "none"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:108
+msgid "Most Recent"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:109
+msgid "Least Recent"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:110
+msgid "Most Liked"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:111
+msgid "Least Liked"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:112
+msgid "Most Commented"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:113
+msgid "Least Commented"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:114
+msgid "Random"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:122
+msgid "Enable Redirection"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:124
+msgid "Redirect to Photo Link on Instgram"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:130
+msgid "Open in a New Tab"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:142
+msgid "Modal image works only on the frontend"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:151
+msgid "Lightbox Theme"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:154
+msgid "Default"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:155
+msgid "Light Rounded"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:156
+msgid "Dark Rounded"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:157
+msgid "Light Square"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:158
+msgid "Dark Square"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:159
+msgid "Facebook"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:171
+msgid "Show Likes"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:178
+msgid "Show Comments"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:185
+msgid "Show Caption"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:202
+msgid "Maximum Images Number"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:211
+msgid "Image Resolution"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:214
+msgid "Thumbnail (150x150)"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:215
+msgid "Low (306x306)"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:216
+msgid "Standard (612x612)"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:233
+msgid "Images per Row"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:266
+msgid "Brightness"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:280
+msgid "Photo Box"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:397
+msgid "Overlay Background"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:468
+msgid "Likes"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:682
+msgid "Comments"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:893 widgets/premium-prev-img.php:111
+msgid "Caption"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:1023
+msgid "Spinner Background"
+msgstr ""
+
+#: widgets/premium-instagram-feed.php:1109
+msgid "Please fill the required fields: Access Token"
+msgstr ""
+
+#: widgets/premium-magic-section.php:89
+msgid "Magic content is a template which you can choose from Elementor library"
+msgstr ""
+
+#: widgets/premium-magic-section.php:114
+msgid "Close Button"
+msgstr ""
+
+#: widgets/premium-magic-section.php:172 widgets/premium-whatsapp-chat.php:123
+msgid "Float"
+msgstr ""
+
+#: widgets/premium-magic-section.php:322 widgets/premium-notbar.php:346
+msgid "Button Text"
+msgstr ""
+
+#: widgets/premium-magic-section.php:323
+msgid "Premium Magic Section"
+msgstr ""
+
+#: widgets/premium-magic-section.php:337 widgets/premium-unfold.php:174
+#: widgets/premium-whatsapp-chat.php:204
+msgid "Enable or disable button icon"
+msgstr ""
+
+#: widgets/premium-magic-section.php:391 widgets/premium-magic-section.php:412
+#: widgets/premium-magic-section.php:433 widgets/premium-magic-section.php:454
+#: widgets/premium-tables.php:139 widgets/premium-whatsapp-chat.php:264
+#: widgets/premium-whatsapp-chat.php:284
+msgid "Icon Spacing"
+msgstr ""
+
+#: widgets/premium-magic-section.php:475 widgets/premium-unfold.php:229
+msgid "Button Size"
+msgstr ""
+
+#: widgets/premium-magic-section.php:533 widgets/premium-magic-section.php:563
+msgid "Icon Alignment"
+msgstr ""
+
+#: widgets/premium-magic-section.php:623
+msgid "Gutter (%)"
+msgstr ""
+
+#: widgets/premium-magic-section.php:628
+msgid ""
+"0% is default. Increase to push the section outside or decrease to pull the "
+"section inside."
+msgstr ""
+
+#: widgets/premium-magic-section.php:717 widgets/premium-prev-img.php:452
+#: widgets/premium-tables.php:613
+msgid "Responsive"
+msgstr ""
+
+#: widgets/premium-magic-section.php:722 widgets/premium-notbar.php:465
+msgid "Responsive Controls"
+msgstr ""
+
+#: widgets/premium-magic-section.php:724
+msgid ""
+"This options will hide the trigger and the content below a specific screen "
+"size"
+msgstr ""
+
+#: widgets/premium-magic-section.php:729 widgets/premium-notbar.php:500
+msgid "Hide on Tablets"
+msgstr ""
+
+#: widgets/premium-magic-section.php:731
+msgid "Hide Magic Section below Elementor's Tablet Breakpoint "
+msgstr ""
+
+#: widgets/premium-magic-section.php:741
+msgid "Hide Magic Section below Elementor's Mobile Breakpoint "
+msgstr ""
+
+#: widgets/premium-magic-section.php:981
+msgid "Close"
+msgstr ""
+
+#: widgets/premium-magic-section.php:1146
+msgid "Out Margin"
+msgstr ""
+
+#: widgets/premium-magic-section.php:1156
+msgid "In Margin"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:71
+msgid "Names are reversed in RTL mode"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:78
+msgid "Left Content"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:102
+msgid "Left Template"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:115 widgets/premium-multi-scroll.php:169
+#: widgets/premium-whatsapp-chat.php:452
+msgid "Hide on Tabs"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:117 widgets/premium-multi-scroll.php:171
+msgid "This option works only when multiscroll disabled on tablets"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:125 widgets/premium-multi-scroll.php:179
+msgid "This option works only when multiscroll disabled on mobiles"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:131
+msgid "Right Content"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:156
+msgid "Right Template"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:223 widgets/premium-multi-scroll.php:826
+msgid "Navigation Menu"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:225
+msgid "This option works only on the frontend"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:248
+msgid "List Item"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:255
+msgid "List Items"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:287
+msgid "Dots Horizontal Position"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:302
+msgid "Dots Vertical Position"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:326
+msgid "Left Section Width (%)"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:337
+msgid "Right Section Width (%)"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:351
+msgid "Fit to Screen"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:352
+msgid "Min Height"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:360
+msgid "Min Height (px)"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:392
+msgid "Loop Top"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:394
+msgid ""
+"Defines whether scrolling up in the first section should scroll to the last "
+"one or not."
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:401
+msgid "Loop Bottom"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:403
+msgid ""
+"Defines whether scrolling down in the last section should scroll to the "
+"first one or not."
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:410
+msgid "Scroll Speed"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:412
+msgid "Set scolling speed in seconds, default: 0.7"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:422
+msgid "Disable on Tabs"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:424
+msgid "Disable multiscroll on tabs"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:431
+msgid "Disable on Mobiles"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:433
+msgid "Disable multiscroll on mobile phones"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:442
+msgid "Left Side"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:473 widgets/premium-multi-scroll.php:595
+msgid "Text Background Color"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:564
+msgid "Right Side"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:698
+msgid "Dots"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:704
+msgid "Tooltips Text Color"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:722
+msgid "Tooltips Text Font"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:736
+msgid "Dots Color"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:750
+msgid "Active Dot Color"
+msgstr ""
+
+#: widgets/premium-multi-scroll.php:764
+msgid "Dots Border Color"
+msgstr ""
+
+#: widgets/premium-notbar.php:102
+msgid "Vertical Offset (%)"
+msgstr ""
+
+#: widgets/premium-notbar.php:122 widgets/premium-tables.php:577
+msgid "Fixed"
+msgstr ""
+
+#: widgets/premium-notbar.php:138
+msgid "Full Width"
+msgstr ""
+
+#: widgets/premium-notbar.php:139
+msgid "Boxed"
+msgstr ""
+
+#: widgets/premium-notbar.php:152 widgets/premium-tables.php:833
+msgid "LTR"
+msgstr ""
+
+#: widgets/premium-notbar.php:156 widgets/premium-tables.php:837
+msgid "RTL"
+msgstr ""
+
+#: widgets/premium-notbar.php:215
+msgid "Set a z-index for the notification bar, default is: 9999"
+msgstr ""
+
+#: widgets/premium-notbar.php:249
+msgid ""
+"Elementor Template is a template which you can choose from Elementor "
+"Templates library"
+msgstr ""
+
+#: widgets/premium-notbar.php:261
+msgid "Content Width (%)"
+msgstr ""
+
+#: widgets/premium-notbar.php:445
+msgid "Use Cookies"
+msgstr ""
+
+#: widgets/premium-notbar.php:447
+msgid "This option will use cookies to remember user action"
+msgstr ""
+
+#: widgets/premium-notbar.php:452
+msgid "Expiration Time"
+msgstr ""
+
+#: widgets/premium-notbar.php:456
+msgid ""
+"How much time before removing cookie, set the value in hours, default is: 1 "
+"hour"
+msgstr ""
+
+#: widgets/premium-notbar.php:467
+msgid ""
+"This options will hide the notification bar below a specific screen size"
+msgstr ""
+
+#: widgets/premium-notbar.php:502
+msgid "Hide Notification Bar below Elementor's Tablet Breakpoint "
+msgstr ""
+
+#: widgets/premium-notbar.php:512
+msgid "Hide Notification Bar below Elementor's Mobile Breakpoint "
+msgstr ""
+
+#: widgets/premium-prev-img.php:77 widgets/premium-prev-img.php:598
+msgid "Trigger Image"
+msgstr ""
+
+#: widgets/premium-prev-img.php:105 widgets/premium-prev-img.php:114
+#: widgets/premium-prev-img.php:261
+msgid "Premium Preview Window"
+msgstr ""
+
+#: widgets/premium-prev-img.php:210
+msgid "Custom Content"
+msgstr ""
+
+#: widgets/premium-prev-img.php:423
+msgid "Choose Template"
+msgstr ""
+
+#: widgets/premium-prev-img.php:424
+msgid ""
+"Template content is a template which you can choose from Elementor library"
+msgstr ""
+
+#: widgets/premium-prev-img.php:444
+msgid "Interactive"
+msgstr ""
+
+#: widgets/premium-prev-img.php:446
+msgid "Give users the possibility to interact with the content of the tooltip"
+msgstr ""
+
+#: widgets/premium-prev-img.php:454
+msgid "Resize tooltip image to fit screen"
+msgstr ""
+
+#: widgets/premium-prev-img.php:494
+msgid "Arrow"
+msgstr ""
+
+#: widgets/premium-prev-img.php:498
+msgid "Show an arrow beside the tooltip"
+msgstr ""
+
+#: widgets/premium-prev-img.php:530
+msgid "Custom Height"
+msgstr ""
+
+#: widgets/premium-prev-img.php:569
+msgid "Side"
+msgstr ""
+
+#: widgets/premium-prev-img.php:677
+msgid "Trigger Image Caption"
+msgstr ""
+
+#: widgets/premium-prev-img.php:771
+msgid "Preview Window Content"
+msgstr ""
+
+#: widgets/premium-prev-img.php:842
+msgid "Preview Window Image"
+msgstr ""
+
+#: widgets/premium-prev-img.php:926
+msgid "Preview Window Title"
+msgstr ""
+
+#: widgets/premium-prev-img.php:1024
+msgid "Preview Window Description"
+msgstr ""
+
+#: widgets/premium-prev-img.php:1123
+msgid "Preview Window Container"
+msgstr ""
+
+#: widgets/premium-prev-img.php:1130
+msgid "Inner  Background Color"
+msgstr ""
+
+#: widgets/premium-prev-img.php:1144
+msgid "Outer Background Color"
+msgstr ""
+
+#: widgets/premium-tables.php:153
+msgid "Row Span"
+msgstr ""
+
+#: widgets/premium-tables.php:155
+msgid "Enter the number of rows for the cell"
+msgstr ""
+
+#: widgets/premium-tables.php:165
+msgid "Column Span"
+msgstr ""
+
+#: widgets/premium-tables.php:167
+msgid "Enter the number of columns for the cell"
+msgstr ""
+
+#: widgets/premium-tables.php:252
+msgid " File"
+msgstr ""
+
+#: widgets/premium-tables.php:259
+msgid "File Type"
+msgstr ""
+
+#: widgets/premium-tables.php:262
+msgid "Upload FIle"
+msgstr ""
+
+#: widgets/premium-tables.php:263
+msgid "Remote File"
+msgstr ""
+
+#: widgets/premium-tables.php:274
+msgid "Data Separator"
+msgstr ""
+
+#: widgets/premium-tables.php:276
+msgid "Separator between cells data"
+msgstr ""
+
+#: widgets/premium-tables.php:287
+msgid "Upload CSV File"
+msgstr ""
+
+#: widgets/premium-tables.php:299
+msgid "File URL"
+msgstr ""
+
+#: widgets/premium-tables.php:311
+msgid "Render First Row As"
+msgstr ""
+
+#: widgets/premium-tables.php:312
+msgid "Choose whether to render the first row as table head or not"
+msgstr ""
+
+#: widgets/premium-tables.php:315 widgets/premium-tables.php:329
+msgid "Header"
+msgstr ""
+
+#: widgets/premium-tables.php:316 widgets/premium-tables.php:422
+#: widgets/premium-tables.php:448
+msgid "Body"
+msgstr ""
+
+#: widgets/premium-tables.php:397 widgets/premium-tables.php:436
+msgid "Cell"
+msgstr ""
+
+#: widgets/premium-tables.php:402
+msgid "First Head"
+msgstr ""
+
+#: widgets/premium-tables.php:405
+msgid "Second Head"
+msgstr ""
+
+#: widgets/premium-tables.php:408
+msgid "Third Head"
+msgstr ""
+
+#: widgets/premium-tables.php:437
+msgid "Row"
+msgstr ""
+
+#: widgets/premium-tables.php:445
+msgid "Cell Type"
+msgstr ""
+
+#: widgets/premium-tables.php:449 widgets/premium-tables.php:852
+msgid "Head"
+msgstr ""
+
+#: widgets/premium-tables.php:523 widgets/premium-tables.php:1174
+msgid "Rows"
+msgstr ""
+
+#: widgets/premium-tables.php:531 widgets/premium-tables.php:546
+msgid "Column #1"
+msgstr ""
+
+#: widgets/premium-tables.php:535 widgets/premium-tables.php:550
+msgid "Column #2"
+msgstr ""
+
+#: widgets/premium-tables.php:539 widgets/premium-tables.php:554
+msgid "Column #3"
+msgstr ""
+
+#: widgets/premium-tables.php:573
+msgid "Table Layout"
+msgstr ""
+
+#: widgets/premium-tables.php:605
+msgid "Blur On Hover"
+msgstr ""
+
+#: widgets/premium-tables.php:607
+msgid "You will need to set rows text hover color from style tab"
+msgstr ""
+
+#: widgets/premium-tables.php:615
+msgid "Enables scroll on mobile."
+msgstr ""
+
+#: widgets/premium-tables.php:622
+msgid "Table Alignment"
+msgstr ""
+
+#: widgets/premium-tables.php:655
+msgid "Sortable"
+msgstr ""
+
+#: widgets/premium-tables.php:657
+msgid "Enables sorting with respect to the table heads."
+msgstr ""
+
+#: widgets/premium-tables.php:667
+msgid "Sort on Mobile"
+msgstr ""
+
+#: widgets/premium-tables.php:678 widgets/premium-tables.php:1706
+msgid "Search"
+msgstr ""
+
+#: widgets/premium-tables.php:680
+msgid "Enables searching through the table using rows' first cell keyword."
+msgstr ""
+
+#: widgets/premium-tables.php:687
+msgid "Placeholder"
+msgstr ""
+
+#: widgets/premium-tables.php:690
+msgid "Live Search..."
+msgstr ""
+
+#: widgets/premium-tables.php:699
+msgid "Show Records"
+msgstr ""
+
+#: widgets/premium-tables.php:701
+msgid "Shows a dropdown to control number of records"
+msgstr ""
+
+#: widgets/premium-tables.php:714
+msgid "Show Records:"
+msgstr ""
+
+#: widgets/premium-tables.php:723
+msgid "Search Alignment"
+msgstr ""
+
+#: widgets/premium-tables.php:752
+msgid "Show Records Alignment"
+msgstr ""
+
+#: widgets/premium-tables.php:781 widgets/premium-tables.php:1928
+msgid "Pagination"
+msgstr ""
+
+#: widgets/premium-tables.php:783
+msgid "Please note that pagination works only on frontend"
+msgstr ""
+
+#: widgets/premium-tables.php:789
+msgid "Rows Per Page"
+msgstr ""
+
+#: widgets/premium-tables.php:801
+msgid "Pagination Alignment"
+msgstr ""
+
+#: widgets/premium-tables.php:861 widgets/premium-tables.php:1183
+#: widgets/premium-tables.php:1444
+msgid "Odd"
+msgstr ""
+
+#: widgets/premium-tables.php:1435
+msgid "Columns"
+msgstr ""
+
+#: widgets/premium-tables.php:1613
+msgid "Sort"
+msgstr ""
+
+#: widgets/premium-tables.php:1737
+msgid "Input Text Color"
+msgstr ""
+
+#: widgets/premium-tables.php:1811
+msgid "Records"
+msgstr ""
+
+#: widgets/premium-tables.php:1842
+msgid "Options Color"
+msgstr ""
+
+#: widgets/premium-tables.php:1892
+msgid "Select Margin"
+msgstr ""
+
+#: widgets/premium-tables.php:1903
+msgid "Box Margin"
+msgstr ""
+
+#: widgets/premium-tables.php:1958
+msgid "Numbers Padding"
+msgstr ""
+
+#: widgets/premium-tables.php:2447 widgets/premium-tables.php:2749
+msgid "All"
+msgstr ""
+
+#: widgets/premium-tabs.php:59
+msgid "Premium Tabs"
+msgstr ""
+
+#: widgets/premium-tabs.php:67
+msgid "Enable Icon"
+msgstr ""
+
+#: widgets/premium-tabs.php:152
+msgid "Tabs Type"
+msgstr ""
+
+#: widgets/premium-tabs.php:165
+msgid "Tabs Style"
+msgstr ""
+
+#: widgets/premium-tabs.php:169
+msgid "Arrow Pointer"
+msgstr ""
+
+#: widgets/premium-tabs.php:170
+msgid "Circled"
+msgstr ""
+
+#: widgets/premium-tabs.php:171
+msgid "Flipped"
+msgstr ""
+
+#: widgets/premium-tabs.php:172
+msgid "Folded"
+msgstr ""
+
+#: widgets/premium-tabs.php:182
+msgid "Tab"
+msgstr ""
+
+#: widgets/premium-tabs.php:189
+msgid "Tabs Sections Width (%)"
+msgstr ""
+
+#: widgets/premium-tabs.php:374
+msgid "Background Active Color"
+msgstr ""
+
+#: widgets/premium-tabs.php:390 widgets/premium-tabs.php:408
+msgid "Arrow Color"
+msgstr ""
+
+#: widgets/premium-tabs.php:426
+msgid "Circle Size"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:78
+msgid "Consumer Key"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:88
+msgid "Consumer Secret Key"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:101 widgets/premium-twitter-feed.php:118
+msgid "Accounts"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:109
+msgid "Account ID"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:111
+msgid "Account ID is prefixed by @"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:135
+msgid "Hashtag"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:137
+msgid "Hashtag is prefixed by a #"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:144
+msgid "Hashtags"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:164
+msgid "Choose the layout style for the tweets"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:175
+msgid "Tweets/Row"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:255
+msgid "Tweets/Account"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:257
+msgid "How many tweets will be shown for each account, default is 2"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:264
+msgid "Tweet Length"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:272
+msgid "Show Tweet Media"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:326
+msgid "Show Twitter Icon"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:406
+msgid "Tweet Box"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:692
+msgid "Twitter Icon"
+msgstr ""
+
+#: widgets/premium-twitter-feed.php:1071
+msgid "Please fill the required fields: Consumer Key & Consumer Secret"
+msgstr ""
+
+#: widgets/premium-unfold.php:154
+msgid "Unfold Text"
+msgstr ""
+
+#: widgets/premium-unfold.php:157
+msgid "Show more"
+msgstr ""
+
+#: widgets/premium-unfold.php:163
+msgid "Fold Text"
+msgstr ""
+
+#: widgets/premium-unfold.php:166
+msgid "Show Less"
+msgstr ""
+
+#: widgets/premium-unfold.php:181
+msgid "Fold Icon"
+msgstr ""
+
+#: widgets/premium-unfold.php:197
+msgid "Unfold Icon"
+msgstr ""
+
+#: widgets/premium-unfold.php:245 widgets/premium-whatsapp-chat.php:412
+msgid "Button Position"
+msgstr ""
+
+#: widgets/premium-unfold.php:249
+msgid "Inside"
+msgstr ""
+
+#: widgets/premium-unfold.php:250
+msgid "Outside"
+msgstr ""
+
+#: widgets/premium-unfold.php:286
+msgid "Fade Effect"
+msgstr ""
+
+#: widgets/premium-unfold.php:292
+msgid "Faded Content"
+msgstr ""
+
+#: widgets/premium-unfold.php:300
+msgid "Fade Height"
+msgstr ""
+
+#: widgets/premium-unfold.php:302
+msgid "Increase or decrease fade height. The default value is 30px"
+msgstr ""
+
+#: widgets/premium-unfold.php:329 widgets/premium-unfold.php:343
+#: widgets/premium-unfold.php:355
+msgid "Fold Height"
+msgstr ""
+
+#: widgets/premium-unfold.php:333
+msgid "Percentage"
+msgstr ""
+
+#: widgets/premium-unfold.php:334
+msgid "Pixels"
+msgstr ""
+
+#: widgets/premium-unfold.php:345
+msgid "How much of the folded content should be shown, default is 60%"
+msgstr ""
+
+#: widgets/premium-unfold.php:357
+msgid "How much of the folded content should be shown, default is 100px"
+msgstr ""
+
+#: widgets/premium-unfold.php:367
+msgid "Fold Duration"
+msgstr ""
+
+#: widgets/premium-unfold.php:382 widgets/premium-unfold.php:422
+msgid "Number of Seconds"
+msgstr ""
+
+#: widgets/premium-unfold.php:384
+msgid "How much time does it take for the fold, default is 0.5s"
+msgstr ""
+
+#: widgets/premium-unfold.php:394
+msgid "Fold Easing"
+msgstr ""
+
+#: widgets/premium-unfold.php:407
+msgid "Unfold Duration"
+msgstr ""
+
+#: widgets/premium-unfold.php:424
+msgid "How much time does it take for the unfold, default is 0.5s"
+msgstr ""
+
+#: widgets/premium-unfold.php:434
+msgid "Unfold Easing"
+msgstr ""
+
+#: widgets/premium-unfold.php:436
+msgid "Choose the animation style"
+msgstr ""
+
+#: widgets/premium-unfold.php:451
+msgid "Box Settings"
+msgstr ""
+
+#: widgets/premium-unfold.php:891 widgets/premium-unfold.php:1018
+#: widgets/premium-whatsapp-chat.php:605 widgets/premium-whatsapp-chat.php:755
+msgid "Icon Shadow"
+msgstr ""
+
+#: widgets/premium-unfold.php:904 widgets/premium-unfold.php:1031
+#: widgets/premium-whatsapp-chat.php:618 widgets/premium-whatsapp-chat.php:768
+msgid "Text Shadow"
+msgstr ""
+
+#: widgets/premium-unfold.php:914 widgets/premium-unfold.php:1041
+#: widgets/premium-whatsapp-chat.php:631 widgets/premium-whatsapp-chat.php:780
+msgid "Button Shadow"
+msgstr ""
+
+#: widgets/premium-unfold.php:1078
+msgid "Fade Color"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:71 widgets/premium-whatsapp-chat.php:77
+msgid "Chat"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:80
+msgid "Private"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:81
+msgid "Group"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:90
+msgid "Phone Number"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:102
+msgid "Group ID"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:195
+msgid "Contact us"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:320
+msgid "Button Alignment"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:436
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:454
+msgid "This will hide the chat button on tablets"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:462
+msgid "This will hide the chat button on mobile phones"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:470
+msgid "This will show a tooltip next to the button when hovered"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:476
+msgid "Tooltip Message"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:479
+msgid "Message us"
+msgstr ""
+
+#: widgets/premium-whatsapp-chat.php:669
+msgid "Tooltips Background Color"
+msgstr ""
+
+#: widgets/premium-yelp-reviews.php:86
+msgid "Business ID"
+msgstr ""
+
+#: widgets/premium-yelp-reviews.php:636
+msgid "You can only pull 5 reviews from Yelp"
+msgstr ""
+
+#: widgets/premium-yelp-reviews.php:712
+#, php-format
+msgid "%1$s Getting started » %2$s"
+msgstr ""
+
+#: widgets/premium-yelp-reviews.php:728
+#, php-format
+msgid "%1$s How to get your business ID » %2$s"
+msgstr ""
+
+#: widgets/premium-yelp-reviews.php:1692
+msgid ""
+"Something went wrong. It seems like the place you selected does not have any "
+"reviews"
+msgstr ""

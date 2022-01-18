@@ -1,0 +1,160 @@
+#Content {
+    padding-top: 50px !important;
+}
+
+.products .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.products .col, .products .col-1, .products .col-10, .products .col-11, .products .col-12, .products .col-2, .products .col-3, .products .col-4, .products .col-5, .products .col-6, .products .col-7, .products .col-8, .products .col-9, .products .col-auto, .products .col-lg, .products .col-lg-1, .products .col-lg-10, .products .col-lg-11, .products .col-lg-12, .products .col-lg-2, .products .col-lg-3, .products .col-lg-4, .products .col-lg-5, .products .col-lg-6, .products .col-lg-7, .products .col-lg-8, .products .col-lg-9, .products .col-lg-auto, .products .col-md, .products .col-md-1, .products .col-md-10, .products .col-md-11, .products .col-md-12, .products .col-md-2, .products .col-md-3, .products .col-md-4, .products .col-md-5, .products .col-md-6, .products .col-md-7, .products .col-md-8, .products .col-md-9, .products .col-md-auto, .products .col-sm, .products .col-sm-1, .products .col-sm-10, .products .col-sm-11, .products .col-sm-12, .products .col-sm-2, .products .col-sm-3, .products .col-sm-4, .products .col-sm-5, .products .col-sm-6, .products .col-sm-7, .products .col-sm-8, .products .col-sm-9, .products .col-sm-auto, .products .col-xl, .products .col-xl-1, .products .col-xl-10, .products .col-xl-11, .products .col-xl-12, .products .col-xl-2, .products .col-xl-3, .products .col-xl-4, .products .col-xl-5, .products .col-xl-6, .products .col-xl-7, .products .col-xl-8, .products .col-xl-9, .products .col-xl-auto {
+    padding: 5px;
+}
+
+.products .page-title {
+    font-font: "Roboto Slab";
+    font-weight: 700;
+    font-size: 24px;
+    color: #403f3f;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.product-carousel .product-item {
+    /*max-width: 290px;*/
+    height: 300px;
+    border: 1px solid #dce0e6;
+    background-color: #ffffff;
+}
+
+.product-carousel .product-item .product-image {
+    width: 100%;
+    height: 203px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-carousel .product-item .tem-chung-nhan {
+    margin: 0 auto auto 0;
+    padding: 5px;
+}
+
+.images-carousel .slick-slide,
+.product-carousel .slick-slide {
+    padding: 0 5px;
+}
+
+/*.product-carousel .product-item:hover {*/
+/*    border-bottom: 3px solid #faca2b;*/
+/*}*/
+
+.product-carousel .product-name {
+    padding: 5px 5px 0 5px;
+    margin-bottom: 0;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #555555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
+}
+
+.product-carousel .product-price {
+    padding: 0 5px 0 5px;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #109a2c;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
+}
+
+.product-carousel table,
+.product-carousel table tr,
+.product-carousel table tr td {
+    border: none;
+    box-shadow: none;
+}
+
+.product-carousel table tr td:first-child {
+    text-align: left;
+}
+
+.product-carousel .adding-to-cart-btn {
+    padding: 5px 6px;
+    border-radius: 100%;
+    background: #faca2b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.product-carousel .adding-to-cart-btn:hover {
+    background: #109a2c;
+}
+
+.product-carousel a {
+    text-decoration: none;
+}
+
+.btn-min-width {
+    min-width: 235px;
+}
+
+a.btn-min-width:hover {
+    color: #ffffff !important;
+}
+
+.product-categories {
+    padding-top: 10px !important;
+}
+
+.product-categories fieldset {
+    padding: 0 15px 15px;
+    border: 2px solid #f6f6f6;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.product-categories legend {
+    font-size: 15px;
+    font-family: "Roboto Slab";
+    color: #008b32;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: auto !important;
+    padding: 0 15px 10px;
+    text-align: center;
+}
+
+.product-categories span.category-title {
+    font-size: 15px;
+    color: #676767;
+    font-family: Roboto;
+}
+
+.product-categories input[type=checkbox] + label {
+    display: block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #008b32;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: auto 0;
+}
+
+.product-categories input[type=checkbox]:checked + label:after {
+    position: relative;
+    top: -5px;
+    left: -3px;
+    content: '\2714';
+    font-size: 14px;
+}
+
+.product-categories input[type=checkbox] {
+    display: none;
+}

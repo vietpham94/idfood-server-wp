@@ -1,0 +1,136 @@
+#Content {
+    padding-top: 0;
+}
+
+.selction-title {
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-size: 60px;
+    font-weight: 700;
+    color: #008b32;
+}
+
+.product-carousel ul.slick-dots {
+    text-align: center;
+}
+
+.product-carousel ul.slick-dots li {
+    width: auto;
+}
+
+.product-carousel ul.slick-dots button {
+    font-size: 0;
+    width: 60px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 2px solid #faca2b;
+    background: none;
+    border-radius: 0;
+    margin: 7px;
+}
+
+.product-carousel ul.slick-dots button:hover,
+.product-carousel ul.slick-dots li.slick-active button {
+    background: #faca2b;
+}
+
+.images-carousel a.slick-arrow,
+.product-carousel a.slick-arrow {
+    position: absolute;
+    line-height: 0;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.images-carousel a.next-arrow,
+.product-carousel a.next-arrow {
+    right: -70px;
+    top: calc(50% - 58px);
+}
+
+.images-carousel a.prev-arrow,
+.product-carousel a.prev-arrow {
+    left: -70px;
+    top: calc(50% - 58px);
+}
+
+.images-carousel a.prev-arrow,
+.product-carousel a.prev-arrow {
+    left: -70px;
+    top: calc(50% - 58px);
+}
+
+.product-carousel .product-item {
+    max-width: 290px;
+    height: 385px;
+    border: 1px solid #dce0e6;
+    background-color: #ffffff;
+}
+
+.product-carousel .product-item .product-image {
+    width: 100%;
+    height: 290px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-carousel .product-item .tem-chung-nhan {
+    margin: 0 auto auto 0;
+    padding: 5px;
+}
+
+.images-carousel .slick-slide,
+.product-carousel .slick-slide {
+    padding: 0 5px;
+}
+
+.product-carousel .product-item:hover {
+    border-bottom: 3px solid #faca2b;
+}
+
+.product-carousel .product-name {
+    padding: 5px 10px 0 10px;
+    margin-bottom: 0;
+    font-family: Roboto;
+    font-size: 15px;
+    color: #555555;
+    text-wrap: normal;
+    overflow: hidden;
+}
+
+.product-carousel .product-price {
+    padding: 0 10px 0 10px;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #109a2c;
+    text-wrap: normal;
+    overflow: hidden;
+}
+
+.product-carousel table,
+.product-carousel table tr,
+.product-carousel table tr td {
+    border: none;
+    box-shadow: none;
+}
+
+.product-carousel table tr td:first-child {
+    text-align: left;
+}
+
+.product-carousel .adding-to-cart-btn {
+    padding: 5px 6px;
+    border-radius: 100%;
+    background: #faca2b;
+    color: #fff;
+    font-size: 24px;
+}
+
+.product-carousel .adding-to-cart-btn:hover {
+    color: #109a2c;
+}
+
+.product-carousel a {
+    text-decoration: none;
+}
