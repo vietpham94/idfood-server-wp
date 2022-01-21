@@ -14,6 +14,51 @@
  * @package WooCommerce
  */
 
+global $jal_db_version;
+$jal_db_version = '1.0';
+register_activation_hook(__FILE__, 'notifications_install');
+function notifications_install()
+{
+    global $wpdb;
+    global $jal_db_version;
+    $table_name = $wpdb->prefix . 'notifications';
+    $query = $wpdb->prepare('SHOW TABLES LIKE %s', $wpdb->esc_like($table_name));
+
+    if ($wpdb->get_var($query) == $table_name) {
+
+    }
+
+    if (!$wpdb->get_var($query) == $table_name) {
+
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = 'CREATE TABLE $table_name (
+          title text NOT NULL,
+          body text NOT NULL,
+          receiver_id mediumint(9) NOT NULL,
+          order_id mediumint(9) NOT NULL,
+          status boolean DEFAULT false,
+          time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          UNIQUE KEY (order_id)
+        ) $charset_collate;';
+
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+        dbDelta($sql);
+
+        add_option('jal_db_version', $jal_db_version);
+    }
+}
+
+register_deactivation_hook(__FILE__, 'on_deactivation');
+function on_deactivation()
+{
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'notifications';
+    $sql = 'DROP TABLE IF EXISTS $table_name';
+    $wpdb->query($sql);
+    delete_option('jal_db_version');
+}
+
 class WC_REST_Custom_Controller
 {
     /**
@@ -49,6 +94,24 @@ class WC_REST_Custom_Controller
             array(
                 'methods' => 'GET',
                 'callback' => array($this, 'unsubscribeFirebaseToken'),
+            )
+        );
+
+        register_rest_route(
+            $this->namespace,
+            '/notifications',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'get_notifications'),
+            )
+        );
+
+        register_rest_route(
+            $this->namespace,
+            '/notifications/(?P<id>\d+)',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'update_notification_status'),
             )
         );
     }
@@ -178,8 +241,7 @@ class WC_REST_Custom_Controller
             } else {
                 return true;
             }
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             return new WP_Error(
                 'firebase_rest_cannot_subscribe',
                 $e->getMessage(),
@@ -221,6 +283,81 @@ class WC_REST_Custom_Controller
                 )
             );
         }
+    }
+
+    public function get_notifications(WP_REST_Request $request)
+    {
+        if (get_current_user_id() == 0) {
+            return new WP_Error(
+                'woocommerce_rest_cannot_view',
+                'Xin lỗi, xảy ra lỗi xác thực thông tin người dùng. Vui lòng kiểm tra thông tin và đăng nhập lại.',
+                array(
+                    'status' => 401,
+                )
+            );
+        }
+
+        $limit = 10;
+        $offset = 0;
+        if (!empty($request->get_param('page'))) {
+            $offset = ($request->get_param('page') - 1) * $limit;
+        }
+
+        global $wpdb;
+        $notifications_table_name = $wpdb->prefix . 'notifications';
+        $result = $wpdb->get_results("SELECT * FROM `$notifications_table_name` WHERE receiver_id=" . get_current_user_id() . " ORDER BY time DESC LIMIT $offset, $limit", "ARRAY_A");
+        $notifications = array();
+        foreach ($result as $item_notification) {
+            $order = wc_get_order($item_notification["order_id"]);
+            if (!empty($order)) {
+                $orderData = $order->get_data();
+                $orderData['line_items'] = array();
+                foreach ($order->get_items() as $item) {
+                    $product = $item->get_product();
+                    if (!empty($product)) {
+                        $imageLink = wp_get_attachment_thumb_url($product->get_image_id());
+                        $productData = $item->get_data();
+                        $productData['image_link'] = $imageLink;
+                        $productData['price'] = $product->get_price();
+                        $productData['product_id'] = $item->get_product_id();
+                        $productData['_woo_uom_input'] = $product->get_meta('_woo_uom_input');
+                        $orderData['line_items'][] = $productData;
+                    }
+                }
+                $item_notification["order"] = $orderData;
+                $notifications[] = $item_notification;
+            }
+        }
+
+        return $notifications;
+    }
+
+    public function update_notification_status($data)
+    {
+        if (get_current_user_id() == 0) {
+            return new WP_Error(
+                'notifications_rest_cannot_access',
+                'Xin lỗi, xảy ra lỗi xác thực thông tin người dùng. Vui lòng kiểm tra thông tin và đăng nhập lại.',
+                array(
+                    'status' => 401,
+                )
+            );
+        }
+
+        $notification_id = $data['id'];
+        if (empty($notification_id)) {
+            return new WP_Error(
+                'notifications_regist_lost_data',
+                'Xin lỗi, không thể xác định được thông báo cần cập nhật',
+                array(
+                    'status' => 400,
+                )
+            );
+        }
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'notifications';
+        $dbData = array("status" => true);
+        return $wpdb->update($table_name, $dbData, array('order_id' => $notification_id));
     }
 }
 

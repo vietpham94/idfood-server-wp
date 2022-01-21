@@ -1,5 +1,5 @@
 <?php
-add_action('woocommerce_order_status_completed', 'auto_update_orders_internal_status', 10, 2);
+add_action('woocommerce_order_status_on-hold', 'auto_update_orders_internal_status', 10, 2);
 add_action('woocommerce_order_status_processing', 'auto_update_orders_internal_status', 10, 2);
 function auto_update_orders_internal_status(int $order_id)
 {
@@ -46,6 +46,15 @@ function push_notification(int $handler_user_id, int $order_id)
     write_log($ch);
     curl_close($ch);
     write_log($result);
+
+    $notification = array(
+        'title' => $notification['title'],
+        'body' => $notification['body'],
+        'receiver_id' => $handler_user_id,
+        'order_id' => $order_id
+    );
+    notifications_install_data($notification);
+
     return $result;
 }
 
@@ -53,4 +62,18 @@ function push_notification(int $handler_user_id, int $order_id)
 function find_handler_user_id(int $order_id): int
 {
     return 1;
+}
+
+function notifications_install_data($data)
+{
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'notifications';
+    $query = $wpdb->prepare('SHOW TABLES LIKE %s', $wpdb->esc_like($table_name));
+
+    if ($wpdb->get_var($query) == $table_name) {
+        $wpdb->insert(
+            $table_name,
+            $data
+        );
+    }
 }
