@@ -4,25 +4,6 @@
  */
 function create_search_form_shortcode()
 {
-//    $taxonomy     = 'product_cat';
-//    $orderby      = 'name';
-//    $show_count   = 0;
-//    $pad_counts   = 0;
-//    $hierarchical = 1;
-//    $title        = '';
-//    $empty        = 0;
-
-//    $args = array(
-//        'taxonomy'     => $taxonomy,
-//        'child_of'     => $root_category->term_id,
-//        'orderby'      => $orderby,
-//        'show_count'   => $show_count,
-//        'pad_counts'   => $pad_counts,
-//        'hierarchical' => $hierarchical,
-//        'title_li'     => $title,
-//        'hide_empty'   => $empty
-//    );
-
     $root_category = get_term_by('slug', 'phan-loai', 'product_cat');
     $args = array(
         'type' => 'post',
@@ -48,7 +29,7 @@ function create_search_form_shortcode()
             <select name="product_cat">
                 <?php foreach ($all_categories as $product_cat): ?>
                     <option value="<?= $product_cat->slug; ?>"
-                        <?php $_GET["product_cat"] == $product_cat->slug ? __("selected") : __(""); ?>>
+                        <?php (isset($_GET["product_cat"]) && $_GET["product_cat"] == $product_cat->slug) ? __("selected") : __(""); ?>>
                         <?= $product_cat->name; ?>
                     </option>
                 <?php endforeach; ?>

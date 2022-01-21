@@ -150,6 +150,20 @@ if (is_admin()) {
     require_once(get_theme_file_path('/functions/admin/class-mfn-changelog.php'));
 }
 
+if (!function_exists('write_log')) {
+
+    function write_log($log) {
+        if (true === WP_DEBUG) {
+            if (is_array($log) || is_object($log)) {
+                error_log(print_r($log, true));
+            } else {
+                error_log($log);
+            }
+        }
+    }
+
+}
+
 // Customer search form
 require_once(get_theme_file_path('/functions/shortcodes/custom-filter-search-form.php'));
 

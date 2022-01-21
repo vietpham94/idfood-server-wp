@@ -23,16 +23,32 @@ class WC_REST_Custom_Controller
      */
     protected $namespace = 'wc/v3';
 
-    protected $rest_base = 'my-orders';
-
     public function register_routes()
     {
         register_rest_route(
             $this->namespace,
-            '/' . $this->rest_base,
+            '/my-orders',
             array(
                 'methods' => 'GET',
                 'callback' => array($this, 'get_orders'),
+            )
+        );
+
+        register_rest_route(
+            $this->namespace,
+            '/fb/subscribe',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'subscribeFirebaseToken'),
+            )
+        );
+
+        register_rest_route(
+            $this->namespace,
+            '/fb/unsubscribe',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'unsubscribeFirebaseToken'),
             )
         );
     }
@@ -129,6 +145,82 @@ class WC_REST_Custom_Controller
         }
 
         return $orders;
+    }
+
+    public function subscribeFirebaseToken(WP_REST_Request $request)
+    {
+        if (get_current_user_id() == 0) {
+            return new WP_Error(
+                'woocommerce_rest_cannot_view',
+                'Xin lỗi, xảy ra lỗi xác thực thông tin người dùng. Vui lòng kiểm tra thông tin và đăng nhập lại.',
+                array(
+                    'status' => 401,
+                )
+            );
+        }
+
+        if (empty($request->get_param('token'))) {
+            return new WP_Error(
+                'firebase_rest_cannot_subscribe',
+                'Xin lỗi, không thể đăng ký được token',
+                array(
+                    'status' => 500,
+                )
+            );
+        }
+
+        try {
+            if (!empty(get_user_meta(get_current_user_id(), 'firebase_token', true)) &&
+                get_user_meta(get_current_user_id(), 'firebase_token', true) != $request->get_param('token')) {
+                $result = update_user_meta(get_current_user_id(), 'firebase_token', $request->get_param('token'));
+            } else if (empty(get_user_meta(get_current_user_id(), 'firebase_token', true))) {
+                $result = add_user_meta(get_current_user_id(), 'firebase_token', $request->get_param('token'));
+            } else {
+                return true;
+            }
+        }
+        catch (Exception $e) {
+            return new WP_Error(
+                'firebase_rest_cannot_subscribe',
+                $e->getMessage(),
+                array(
+                    'status' => 500,
+                )
+            );
+        }
+
+        return $result;
+    }
+
+    public function unsubscribeFirebaseToken(WP_REST_Request $request)
+    {
+        if (get_current_user_id() == 0) {
+            return new WP_Error(
+                'woocommerce_rest_cannot_view',
+                'Xin lỗi, xảy ra lỗi xác thực thông tin người dùng. Vui lòng kiểm tra thông tin và đăng nhập lại.',
+                array(
+                    'status' => 401,
+                )
+            );
+        }
+
+        if (get_user_meta(get_current_user_id(), 'firebase_token')) {
+            $result = update_user_meta(get_current_user_id(), 'firebase_token', '');
+        } else {
+            $result = true;
+        }
+
+        if ($result != false) {
+            return new WP_REST_Response();
+        } else {
+            return new WP_Error(
+                'firebase_rest_cannot_subscribe',
+                'Xin lỗi, không thể đăng ký được token',
+                array(
+                    'status' => 500,
+                )
+            );
+        }
     }
 }
 

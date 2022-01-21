@@ -25,13 +25,13 @@ function create_product_carousel_shortcode($args)
     <script>
         jQuery(document).ready(function ($) {
             $('#<?=  $args['id'] ?>').slick({
-                dots: <?= $args["dots"] ? $args["dots"] : true ?>,
+                dots: <?= $args["dots"] ?? true ?>,
                 infinite: true,
                 slidesToShow: <?= $args["columns"] ? $args["columns"] : 4 ?>,
                 rows: <?= $args["rows"] ? $args["rows"] : 1 ?>,
-                slidesToScroll: <?= $args["slidesToScroll"] ? $args["slidesToScroll"] : 4 ?>,
-                autoplay: <?= $args["autoplay"] ? $args["autoplay"] : false ?>,
-                autoplaySpeed: <?= $args["autoplaySpeed"] ? $args["autoplaySpeed"] : 2000 ?>,
+                slidesToScroll: <?= $args["slidesToScroll"] ?? 4 ?>,
+                autoplay: <?= $args["autoplay"] ?? false ?>,
+                autoplaySpeed: <?= $args["autoplaySpeed"] ?? 2000 ?>,
                 prevArrow: '<a href="#" class="prev-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/prev-arrow.png" /></a>',
                 nextArrow: '<a href="#" class="next-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/next-arrow.png" /></a>',
             });
