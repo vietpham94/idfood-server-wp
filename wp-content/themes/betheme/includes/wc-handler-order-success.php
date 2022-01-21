@@ -1,11 +1,17 @@
 <?php
-add_action('woocommerce_order_status_on-hold', 'auto_update_orders_internal_status', 10, 2);
-add_action('woocommerce_order_status_processing', 'auto_update_orders_internal_status', 10, 2);
-function auto_update_orders_internal_status(int $order_id)
+add_action('woocommerce_thankyou', 'woocommerce_thankyou_change_order_status', 10, 1);
+function woocommerce_thankyou_change_order_status($order_id)
 {
+    if (!$order_id) return;
+
     $handler_user_id = find_handler_user_id($order_id);
     update_field('handler_user_id', $handler_user_id, $order_id);
-    push_notification($handler_user_id, $order_id);
+
+    $order = wc_get_order($order_id);
+    if ($order->get_status() == 'processing' && $order->get_payment_method() == 'cod') {
+        $order->update_status('pending');
+        push_notification($handler_user_id, $order_id);
+    }
 }
 
 // Push thông báo đơn hàng tới app của đại lý phân phối
