@@ -114,6 +114,24 @@ class WC_REST_Custom_Controller
                 'callback' => array($this, 'update_notification_status'),
             )
         );
+
+        register_rest_route(
+            $this->namespace,
+            '/update-order/(?P<id>\d+)',
+            array(
+                'methods' => 'POST',
+                'callback' => array($this, 'update_order'),
+            )
+        );
+
+        register_rest_route(
+            $this->namespace,
+            '/cities',
+            array(
+                'methods' => 'GET',
+                'callback' => array($this, 'get_cities'),
+            )
+        );
     }
 
     public function get_orders(WP_REST_Request $request)
@@ -358,6 +376,141 @@ class WC_REST_Custom_Controller
         $table_name = $wpdb->prefix . 'notifications';
         $dbData = array("status" => true);
         return $wpdb->update($table_name, $dbData, array('order_id' => $notification_id));
+    }
+
+    public function update_order($data)
+    {
+        if (get_current_user_id() == 0) {
+            return new WP_Error(
+                'woocommerce_rest_cannot_view',
+                'Xin lỗi, xảy ra lỗi xác thực thông tin người dùng. Vui lòng kiểm tra thông tin và đăng nhập lại.',
+                array(
+                    'status' => 401,
+                )
+            );
+        }
+
+        $order_id = $data['id'];
+        if (empty($order_id)) {
+            return new WP_Error(
+                'order_update_lost_data',
+                'Xin lỗi, không thể xác định được đơn hàng cần cập nhật',
+                array(
+                    'status' => 400,
+                )
+            );
+        }
+
+        $order = wc_get_order($order_id);
+        if (empty($order)) {
+            return new WP_Error(
+                'order_update_lost_data',
+                'Xin lỗi, không thể xác định được đơn hàng cần cập nhật',
+                array(
+                    'status' => 400,
+                )
+            );
+        }
+
+        if ($order->get_status() == 'completed') {
+            return false;
+        }
+
+        if ($order->get_status() == 'cancelled') {
+            return false;
+        }
+
+        if ($order->get_status() == 'on-hold') {
+            return false;
+        }
+
+        $orderData = $data->get_param('data');
+        $result = $order->update_status($orderData['status']);
+        update_field('thong_tin_giao_nhan', $orderData['acf']['thong_tin_giao_nhan'], $order_id);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function get_cities(): array
+    {
+        $cities = array(
+            "HANOI" => "Hà Nội",
+            "HOCHIMINH" => "Hồ Chí Minh",
+            "ANGIANG" => "An Giang",
+            "BACGIANG" => "Bắc Giang",
+            "BACKAN" => "Bắc Kạn",
+            "BACLIEU" => "Bạc Liêu",
+            "BACNINH" => "Bắc Ninh",
+            "BARIAVUNGTAU" => "Bà Rịa - Vũng Tàu",
+            "BENTRE" => "Bến Tre",
+            "BINHDINH" => "Bình Định",
+            "BINHDUONG" => "Bình Dương",
+            "BINHPHUOC" => "Bình Phước",
+            "BINHTHUAN" => "Bình Thuận",
+            "CAMAU" => "Cà Mau",
+            "CANTHO" => "Cần Thơ",
+            "CAOBANG" => "Cao Bằng",
+            "DAKLAK" => "Đắk Lắk",
+            "DAKNONG" => "Đắk Nông",
+            "DANANG" => "Đà Nẵng",
+            "DIENBIEN" => "Điện Biên",
+            "DONGNAI" => "Đồng Nai",
+            "DONGTHAP" => "Đồng Tháp",
+            "GIALAI" => "Gia Lai",
+            "HAGIANG" => "Hà Giang",
+            "HAIDUONG" => "Hải Dương",
+            "HAIPHONG" => "Hải Phòng",
+            "HANAM" => "Hà Nam",
+            "HATINH" => "Hà Tĩnh",
+            "HAUGIANG" => "Hậu Giang",
+            "HOABINH" => "Hòa Bình",
+            "HUNGYEN" => "Hưng Yên",
+            "KHANHHOA" => "Khánh Hòa",
+            "KIENGIANG" => "Kiên Giang",
+            "KONTUM" => "Kon Tum",
+            "LAICHAU" => "Lai Châu",
+            "LAMDONG" => "Lâm Đồng",
+            "LANGSON" => "Lạng Sơn",
+            "LAOCAI" => "Lào Cai",
+            "LONGAN" => "Long An",
+            "NAMDINH" => "Nam Định",
+            "NGHEAN" => "Nghệ An",
+            "NINHBINH" => "Ninh Bình",
+            "NINHTHUAN" => "Ninh Thuận",
+            "PHUTHO" => "Phú Thọ",
+            "PHUYEN" => "Phú Yên",
+            "QUANGBINH" => "Quảng Bình",
+            "QUANGNAM" => "Quảng Nam",
+            "QUANGNGAI" => "Quảng Ngãi",
+            "QUANGNINH" => "Quảng Ninh",
+            "QUANGTRI" => "Quảng Trị",
+            "SOCTRANG" => "Sóc Trăng",
+            "SONLA" => "Sơn La",
+            "TAYNINH" => "Tây Ninh",
+            "THAIBINH" => "Thái Bình",
+            "THAINGUYEN" => "Thái Nguyên",
+            "THANHHOA" => "Thanh Hóa",
+            "THUATHIENHUE" => "Thừa Thiên Huế",
+            "TIENGIANG" => "Tiền Giang",
+            "TRAVINH" => "Trà Vinh",
+            "TUYENQUANG" => "Tuyên Quang",
+            "VINHLONG" => "Vĩnh Long",
+            "VINHPHUC" => "Vĩnh Phúc",
+            "YENBAI" => "Yên Bái",
+        );
+
+        $result = array();
+        foreach ($cities as $key => $value) {
+            $result[] = array(
+                "value" => $key,
+                "title" => $value
+            );
+        }
+
+        return $result;
     }
 }
 
