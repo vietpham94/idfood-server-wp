@@ -14,7 +14,7 @@
                 isInnerSection = $scope.closest('.elementor-section').hasClass('elementor-inner-section'),
                 sectionId = (isInnerSection) ? $scope.closest('.elementor-inner-section').data("model-cid") : $scope.closest('.elementor-top-section').data("model-cid"),
                 colId = (isInnerSection) ? $scope.closest('.elementor-inner-column').data("model-cid") : $scope.closest('.elementor-top-column').data("model-cid"),
-                editMode = elementorFrontend.isEditMode();
+                editMode = elementorFrontend.isEditMode() && !target.data('general_settings');
 
             if (editMode) {
                 settings = generateEditorSettings(sectionId);

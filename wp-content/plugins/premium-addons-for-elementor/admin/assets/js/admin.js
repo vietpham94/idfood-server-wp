@@ -32,7 +32,9 @@
 
             self.initElementsTabs($elementsTabs);
 
-            self.getUnusedWidget();
+            if ( settings.isTrackerAllowed ) {
+                self.getUnusedWidget();
+            }
 
             self.handleElementsActions();
 
@@ -73,8 +75,8 @@
 
         //get unused widgets.
         self.getUnusedWidget = function () {
-
-            if ($(".pa-btn-group .pa-btn-disable").hasClass("active")) {
+        
+            if ( $(".pa-btn-group .pa-btn-disable").hasClass("active") ) {
                 $(".pa-btn-group .pa-btn-unused").addClass("dimmed");
             }
 

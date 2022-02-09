@@ -1911,3 +1911,7 @@ input:checked+.slider:before {
 .pa-dash-woo-products:before {
     content: "\e901";
 }
+
+.pa-dash-premium-global-cursor:before {
+    content: "\e951";
+}

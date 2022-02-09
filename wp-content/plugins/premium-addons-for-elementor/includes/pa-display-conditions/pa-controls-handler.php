@@ -95,6 +95,7 @@ class PA_Controls_Handler {
 					'day'        => __( 'Day', 'premium-addons-for-elementor' ),
 					'date'       => __( 'Date', 'premium-addons-for-elementor' ),
 					'date_range' => __( 'Date Range', 'premium-addons-for-elementor' ),
+					'time_range' => __( 'Time Range', 'premium-addons-for-elementor' ),
 				),
 			),
 
@@ -150,6 +151,7 @@ class PA_Controls_Handler {
 				'day',
 				'date',
 				'date_range',
+				'time_range',
 				'ip_location',
 				'lang',
 				'login_status',
@@ -204,7 +206,7 @@ class PA_Controls_Handler {
 	 */
 	public function add_repeater_source_controls( $repeater ) {
 
-		$additional_ids = array( 'pa_condition_acf_text', 'pa_condition_acf_boolean', 'pa_condition_acf_choice', 'pa_condition_woo_orders', 'pa_condition_woo_category', 'pa_condition_woo_total_price' );
+		$additional_ids = array( 'pa_condition_acf_text', 'pa_condition_acf_boolean', 'pa_condition_acf_choice', 'pa_condition_woo_orders', 'pa_condition_woo_category', 'pa_condition_woo_total_price','pa_condition_time_range' );
 
 		foreach ( static::$conditions_classes as $condition_class_name => $condition_obj ) {
 
@@ -300,7 +302,7 @@ class PA_Controls_Handler {
 			$compare_val = isset( $list[ 'pa_condition_val' . $list['pa_condition_key'] ] ) ? esc_html( $list[ 'pa_condition_val' . $list['pa_condition_key'] ] ) : '';
 
 			$id        = $item_key . '_' . $list['_id'];
-			$time_zone = in_array( $list['pa_condition_key'], array( 'date_range', 'date', 'day' ), true ) ? $list['pa_condition_timezone'] : false;
+			$time_zone = in_array( $list['pa_condition_key'], array( 'date_range', 'time_range', 'date', 'day' ), true ) ? $list['pa_condition_timezone'] : false;
 
 			$check = '' !== $value ? $class->compare_value( $settings, $operator, $value, $compare_val, $time_zone ) : true;
 

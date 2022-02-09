@@ -1217,8 +1217,10 @@ class Premium_Template_Tags {
 	 *
 	 * @since 3.4.0
 	 * @access public
+	 *
+	 * @param string $size image size.
 	 */
-	public static function get_current_product_swap_image() {
+	public static function get_current_product_swap_image( $size ) {
 
 		global $product;
 
@@ -1226,7 +1228,7 @@ class Premium_Template_Tags {
 
 		if ( $attachment_ids ) {
 
-			$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'shop_catalog' );
+			$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 
 			echo wp_kses_post( apply_filters( 'pa_woo_product_swap_image', wp_get_attachment_image( reset( $attachment_ids ), $image_size, false, array( 'class' => 'premium-woo-product__on_hover' ) ) ) );
 		}

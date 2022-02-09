@@ -36,7 +36,9 @@ $row_meta = Helper_Functions::is_hide_row_meta();
 					<div class="pa-btn-group">
 						<button type="button" class="pa-btn pa-btn-enable <?php echo esc_attr( $enable_btn ); ?>"><?php echo __( 'Switch On', 'premium-addons-for-elementor' ); ?></button>
 						<button type="button" class="pa-btn pa-btn-disable <?php echo esc_attr( $disable_btn ); ?>"><?php echo __( 'Switch Off', 'premium-addons-for-elementor' ); ?></button>
-						<button type="button" class="pa-btn-unused"><?php echo __( 'Disable Unused Widgets', 'premium-addons-for-elementor' ); ?></button>
+						<?php if ( $used_widgets ) { ?>
+							<button type="button" class="pa-btn-unused"><?php echo __( 'Disable Unused Widgets', 'premium-addons-for-elementor' ); ?></button>
+						<?php } ?>	
 					</div>
 				</div>
 
@@ -96,7 +98,7 @@ $row_meta = Helper_Functions::is_hide_row_meta();
 												<?php echo $elem['title']; ?>
 											<span class="pa-total-use" title="Total Use">
 											<?php
-											if ( ! isset( $elem['is_global'] ) ) {
+											if ( ! isset( $elem['is_global'] ) && is_array( $used_widgets ) ) {
 												echo esc_html__( in_array( $elem['name'], array_keys( $used_widgets ) ) ? '(' . $used_widgets[ $elem['name'] ] . ')' : '(0)' );}
 											?>
 											</span>

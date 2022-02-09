@@ -252,9 +252,10 @@ class Admin_Helper {
 
 			$localized_data = array(
 				'settings'               => array(
-					'ajaxurl' => admin_url( 'admin-ajax.php' ),
-					'nonce'   => wp_create_nonce( 'pa-settings-tab' ),
-					'theme'   => $theme_slug,
+					'ajaxurl'          => admin_url( 'admin-ajax.php' ),
+					'nonce'            => wp_create_nonce( 'pa-settings-tab' ),
+					'theme'            => $theme_slug,
+					'isTrackerAllowed' => 'yes' === get_option( 'elementor_allow_tracking', 'no' ) ? true : false,
 				),
 				'premiumRollBackConfirm' => array(
 					'home_url' => home_url(),
@@ -917,7 +918,12 @@ class Admin_Helper {
 	 */
 	public static function get_used_widgets() {
 
-		$used_widgets = array();
+		$used_widgets    = array();
+		$tracker_allowed = 'yes' === get_option( 'elementor_allow_tracking' ) ? true : false;
+
+		if ( ! $tracker_allowed ) {
+			return false;
+		}
 
 		if ( class_exists( 'Elementor\Modules\Usage\Module' ) ) {
 

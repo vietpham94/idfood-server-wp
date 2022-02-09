@@ -15061,7 +15061,8 @@
         var target = $scope,
             sectionId = target.data("id"),
             settings = {},
-            isEditor = elementorFrontend.isEditMode(),
+            tempTarget = target.find('#premium-lottie-' + sectionId),
+            isEditor = elementorFrontend.isEditMode() && tempTarget.length > 0,
             targetID = isEditor ? target.find('#premium-lottie-' + sectionId) : target;
 
         settings = generateSettings(targetID);

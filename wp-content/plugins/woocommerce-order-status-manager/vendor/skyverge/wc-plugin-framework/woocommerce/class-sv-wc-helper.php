@@ -993,7 +993,7 @@ class SV_WC_Helper {
 	 */
 	public static function trigger_error( $message, $type = E_USER_NOTICE ) {
 
-		if ( is_callable( 'is_ajax' ) && wp_doing_ajax() ) {
+		if ( is_callable( 'is_ajax' ) && is_ajax() ) {
 
 			switch ( $type ) {
 

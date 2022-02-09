@@ -61,6 +61,7 @@ class Admin_Notices {
 
 		self::$notices = array(
 			'pa-review',
+			'cursor_notice',
 		);
 
 		delete_option( 'ch21_notice' );
@@ -100,6 +101,8 @@ class Admin_Notices {
 				$this->get_review_notice();
 			}
 		}
+
+		$this->get_cursor_notice();
 
 	}
 
@@ -225,6 +228,47 @@ class Admin_Notices {
 		<?php
 
 	}
+
+	/**
+	 *
+	 * Shows admin notice for Premium Trustpilot Reviews.
+	 *
+	 * @since 4.3.5
+	 * @access public
+	 *
+	 * @return void
+	 */
+	public function get_cursor_notice() {
+
+		$cursor_notice = get_option( 'cursor_notice' );
+
+		if ( '1' === $cursor_notice ) {
+			return;
+		}
+
+		$notice_url = Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/', 'mouse-cursor-notification', 'wp-dash', 'mouse-cursor' );
+
+		?>
+
+		<div class="error pa-notice-wrap pa-new-feature-notice">
+			<div class="pa-img-wrap">
+				<img src="<?php echo PREMIUM_ADDONS_URL . 'admin/images/pa-logo-symbol.png'; ?>">
+			</div>
+			<div class="pa-text-wrap">
+				<p>
+					<strong><?php echo __( 'Premium Custom Mouse Cursor', 'premium-addons-for-elemetor' ); ?></strong>
+					<?php echo sprintf( __( 'addon is now available in Premium Addons Pro. <a href="%s" target="_blank">Check it out now!</a>', 'premium-addons-for-elementor' ), $notice_url ); ?>
+				</p>
+			</div>
+			<div class="pa-notice-close" data-notice="cursor">
+				<span class="dashicons dashicons-dismiss"></span>
+			</div>
+		</div>
+
+		<?php
+	}
+
+
 
 	/**
 	 * Renders an admin notice error message

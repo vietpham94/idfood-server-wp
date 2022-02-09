@@ -756,7 +756,7 @@ class WC_Order_Status_Manager_Order_Statuses {
 		}
 
 		// Add admin notice
-		if ( $num_updated && is_admin() && ! wp_doing_ajax() ) {
+		if ( $num_updated && is_admin() && ! is_ajax() ) {
 
 			/* translators: Placeholders: %d is the number of orders changed, %1$s is the old order status, %2$s is the new order status  */
 			$message = sprintf( _n(

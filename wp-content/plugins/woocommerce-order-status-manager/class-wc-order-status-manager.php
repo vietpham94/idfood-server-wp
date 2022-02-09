@@ -141,17 +141,17 @@ class WC_Order_Status_Manager extends Framework\SV_WC_Plugin {
 		$this->icons = $this->load_class( '/includes/class-wc-order-status-manager-icons.php', 'WC_Order_Status_Manager_Icons' );
 
 		// load Frontend
-		if ( ! is_admin() || wp_doing_ajax() ) {
+		if ( ! is_admin() || is_ajax() ) {
 			$this->frontend = $this->load_class( '/includes/class-wc-order-status-manager-frontend.php', 'WC_Order_Status_Manager_Frontend' );
 		}
 
 		// load Admin
-		if ( is_admin() && ! wp_doing_ajax() ) {
+		if ( is_admin() && ! is_ajax() ) {
 			$this->admin_includes();
 		}
 
 		// load Ajax
-		if ( wp_doing_ajax() ) {
+		if ( is_ajax() ) {
 			$this->ajax_includes();
 		}
 	}

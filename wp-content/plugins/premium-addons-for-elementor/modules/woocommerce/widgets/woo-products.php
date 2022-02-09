@@ -11,6 +11,7 @@ use Elementor\Repeater;
 use Elementor\Controls_Manager;
 use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Group_Control_Image_Size;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Typography;
@@ -82,6 +83,7 @@ class Woo_Products extends Widget_Base {
 	public function get_style_depends() {
 		return array(
 			'pa-slick',
+			'woocommerce-general',
 			'premium-addons',
 		);
 	}
@@ -180,6 +182,14 @@ class Woo_Products extends Widget_Base {
 					// 'metro'    => __( 'Metro', 'premium-addons-for-elementor' ),
 					'carousel' => __( 'Carousel', 'premium-addons-for-elementor' ),
 				),
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Image_Size::get_type(),
+			array(
+				'name'    => 'featured_image',
+				'default' => 'full',
 			)
 		);
 
@@ -748,6 +758,38 @@ class Woo_Products extends Widget_Base {
 				),
 			)
 		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'section_pa_docs',
+			array(
+				'label' => __( 'Helpful Documentations', 'premium-addons-for-elementor' ),
+			)
+		);
+
+		$docs = array(
+			'https://premiumaddons.com/docs/elementor-woocommerce-products-listing-tutorial/' => __( 'Getting started »', 'premium-addons-for-elementor' ),
+			'https://premiumaddons.com/docs/elementor-woocommerce-display-conditions-tutorial/' => __( 'WooCommerce Display Conditions »', 'premium-addons-for-elementor' ),
+		);
+
+		$doc_index = 1;
+		foreach ( $docs as $url => $title ) {
+
+			$doc_url = Helper_Functions::get_campaign_link( $url, 'editor-page', 'wp-editor', 'get-support' );
+
+			$this->add_control(
+				'doc_' . $doc_index,
+				array(
+					'type'            => Controls_Manager::RAW_HTML,
+					'raw'             => sprintf( '<a href="%s" target="_blank">%s</a>', $doc_url, $title ),
+					'content_classes' => 'editor-pa-doc',
+				)
+			);
+
+			$doc_index++;
+
+		}
 
 		$this->end_controls_section();
 

@@ -241,7 +241,7 @@ class Module {
 					'server' => __( 'Server Timezone', 'premium-addons-for-elementor' ),
 				),
 				'condition'   => array(
-					'pa_condition_key' => array( 'date_range', 'date', 'day' ),
+					'pa_condition_key' => array( 'date_range', 'time_range', 'date', 'day' ),
 				),
 			)
 		);

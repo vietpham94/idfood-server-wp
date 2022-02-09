@@ -78,7 +78,7 @@ param2=value2',
 
 			$is_strict = strpos( $param, '=' );
 			if ( ! $is_strict ) {
-				$value[ $index ] = $value[ $index ] . '=' . $_GET[ $param ];
+				$value[ $index ] = $value[ $index ] . '=' . rawurlencode( $_GET[ $param ] );
 			}
 		}
 

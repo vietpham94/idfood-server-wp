@@ -159,6 +159,9 @@ class Premium_Counter extends Widget_Base {
 				'type'        => Controls_Manager::TEXTAREA,
 				'rows'        => 2,
 				'label_block' => true,
+				'condition'   => array(
+					'premium_counter_title!' => '',
+				),
 			)
 		);
 
@@ -415,21 +418,24 @@ class Premium_Counter extends Widget_Base {
 			)
 		);
 
+		$start = is_rtl() ? 'flex-end' : 'flex-start';
+		$end   = is_rtl() ? 'flex-start' : 'flex-end';
+
 		$this->add_responsive_control(
 			'value_align',
 			array(
 				'label'     => __( 'Value Alignment', 'premium-addons-for-elementor' ),
 				'type'      => Controls_Manager::CHOOSE,
 				'options'   => array(
-					'flex-start' => array(
+					$start   => array(
 						'title' => __( 'Left', 'premium-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-left',
 					),
-					'center'     => array(
+					'center' => array(
 						'title' => __( 'Center', 'premium-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-center',
 					),
-					'flex-end'   => array(
+					$end     => array(
 						'title' => __( 'Right', 'premium-addons-for-elementor' ),
 						'icon'  => 'eicon-text-align-right',
 					),
@@ -1029,9 +1035,11 @@ class Premium_Counter extends Widget_Base {
 
 		$start_value = $settings['premium_counter_start_value'];
 
+		$this->add_render_attribute( 'content_wrapper', 'class', array( 'premium-init-wrapper', $settings['title_display'] ) );
+
 		?>
 
-		<div class="premium-init-wrapper">
+		<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'content_wrapper' ) ); ?>>
 
 			<div class="premium-counter-value-wrap">
 				<?php if ( ! empty( $settings['premium_counter_preffix'] ) ) : ?>
@@ -1217,7 +1225,7 @@ class Premium_Counter extends Widget_Base {
 
 				var startValue = settings.premium_counter_start_value;
 
-				view.addRenderAttribute( 'counter_wrap', 'class', 'premium-init-wrapper' );
+				view.addRenderAttribute( 'counter_wrap', 'class', ['premium-init-wrapper', settings.title_display ]);
 
 				view.addRenderAttribute( 'value', 'id', 'counter-' + view.getID() );
 

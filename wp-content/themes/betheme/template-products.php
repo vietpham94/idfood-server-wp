@@ -74,7 +74,7 @@ function get_children_product_categorie($parent)
                         <div class="column one products">
                             <div class="row">
                                 <!--  Categories filter  -->
-                                <div class="col-3 pr-4">
+                                <div class="col-lg-3 pr-4 hide-md">
                                     <div class="row">
                                         <div class="col-12 product-categories">
                                             <form method="GET" action="/dac-san-vung-mien" id="selectCategories">
@@ -121,7 +121,7 @@ function get_children_product_categorie($parent)
                                 </div>
 
                                 <!--  Products result  -->
-                                <div class="col-9">
+                                <div class="col-md-12 col-lg-9">
                                     <div class="row">
                                         <div class="col-12">
                                             <h2 class="page-title"><?= get_the_title() ?></h2>
@@ -130,7 +130,7 @@ function get_children_product_categorie($parent)
 
                                     <div class="row">
                                         <?php foreach ($products as $product): ?>
-                                            <div class="col-3 product-carousel">
+                                            <div class="col-6 col-md-4 col-lg-3 product-carousel">
                                                 <div class="product-item">
                                                     <?php
                                                     $tems = get_field('danh_sach_tem', $product->id);
@@ -160,7 +160,7 @@ function get_children_product_categorie($parent)
                                                                     </p>
                                                                 </a>
                                                             </td>
-                                                            <td>
+                                                            <td class="hide-md">
                                                                 <a href="/?add-to-cart=<?= $product->id ?>"
                                                                    class="adding-to-cart-btn" title="Mua ngay">
                                                                     <i class="fas fa-cart-plus"></i>

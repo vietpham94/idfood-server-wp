@@ -3,9 +3,9 @@ Contributors: Leap13, Rimoun
 Tags: elementor, elementor addons, elementor widgets, elementor elements, elementor templates
 Donate Link: https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme
 Requires at least: 5.0
-Tested Up To: 5.8.2
+Tested Up To: 5.9
 Requires PHP: 5.4
-Stable Tag: 4.8.2
+Stable Tag: 4.8.4
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -27,12 +27,12 @@ Premium Addons is proudly offering you a professional way to manage your website
 Show off your products in an elegant way using Premium Woo Products Widget for Elementor Page Builder that comes with unlimited customization options. [Check the demo page](https://premiumaddons.com/elementor-woocommerce-products/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme)
 
 ### New: Elementor Floating Effects
-[Floating Effects Elementor Global Feature](https://premiumaddons.com/elementor-floating-effects/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) that comes from Premium Addons for Elementor Free Plugin could be added to any Elementor widget including Elementor Sections, Inner-Sections. In addition, it could be added to the Elements inside each Elementor widget using Custom CSS Selector option.
+[Floating Animations for Elementor Global Feature](https://premiumaddons.com/elementor-floating-effects/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) that comes from Premium Addons for Elementor Free Plugin could be added to any Elementor widget including Elementor Sections, Inner-Sections. In addition, it could be added to the Elements inside each Elementor widget using Custom CSS Selector option.
 
 ### NEW: Elementor Equal Height Feature
 Now, you can make your columns, widgets or any selector you want the same height with just ONE click using [Elementor Equal Height feature](https://premiumaddons.com/docs/elementor-column-equal-height/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) in section settings -> Advanced tab.
 
-### Elementor Templates
+### Elementor Pre-made Templates
 NEW: Ever-growing [Elementor Section Templates Library](https://premiumaddons.com/premium-templates-for-elementor/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) Available on both Premium Addons Free and PRO versions. Browse, preview, and insert the template you like in your page/post with just ONE click.
 
 ### Elementor Lottie Animations Integration
@@ -89,17 +89,18 @@ Each widget and addon has been tested on different screen sizes, mobile devices,
 * [**Vertical Scroll Widget**](https://premiumaddons.com/vertical-scroll-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: Create beautiful vertical scroll pages with advanced responsive control options using Premium Vertical Scroll Widget for Elementor Page Builder.
 * [**Background Transition Widget**](https://premiumaddons.com/elementor-color-transition-widget/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Create fancy, colorful, and eye-catching webpages using background Color Transition Widget for Elementor. It allows you to have a seamless transition between sections background colors.
 * [**Multi-Scroll Widget**](https://premiumaddons.com/multi-scroll-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: The only Elementor widget available that allows you to create attractive multi-scroll effect. It can be used to create full landing pages or use it inside any page.
-* [**Animated Blob Generator**](https://premiumaddons.com/elementor-animated-blob-generator/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple animated blob layers to your Elementor sections with a wide range of smart customization options.
-* [**Lottie Animations Section Addon**](https://premiumaddons.com/elementor-lottie-animations-section-addon/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple Lottie Animations easily to any Elementor section with allot of customization and interactivity options.
-* [**Parallax Section Addon**](https://premiumaddons.com/parallax-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: The only Elementor Parallax Section Addon that can be enabled for Elementor columns with freehand design experience and many styles to choose from.
-* [**Particles Section Addon**](https://premiumaddons.com/particles-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Create eye-catching particles background using Elementor and Premium Addons with many customization options. Also, you can enable it for any Elementor column.
-* [**Animated Gradient Addon**](https://premiumaddons.com/animated-section-gradients-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Subtle animated gradients effect that makes your backgrounds super attractive. It's highly recommended for sections with call to actions. You can also enable it for any Elementor column.
-* [**Ken Burns Section Addon**](https://premiumaddons.com/ken-burns-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple images to your Elementor section or column background and animate them with the popular Ken Burns effect.
+* [**Elementor Custom Mouse Cursor Global Addon**](https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add a custom mouse cursor to any Elementor section, column, or widgets. You can select between Font Awesome icon, custom SVGs, image or Lottie animation.
+* [**Elementor Animated Blob Generator**](https://premiumaddons.com/elementor-animated-blob-generator/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple animated blob layers to your Elementor sections with a wide range of smart customization options.
+* [**Elementor Lottie Animations Section Addon**](https://premiumaddons.com/elementor-lottie-animations-section-addon/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple Lottie Animations easily to any Elementor section with allot of customization and interactivity options.
+* [**Elementor Parallax Section/Column Addon**](https://premiumaddons.com/parallax-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: The only Elementor Parallax Section Addon that can be enabled for Elementor columns with freehand design experience and many styles to choose from.
+* [**Elementor Particles Section/Column Addon**](https://premiumaddons.com/particles-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Create eye-catching particles background using Elementor and Premium Addons with many customization options. Also, you can enable it for any Elementor column.
+* [**Elementor Animated Gradient/Column Addon**](https://premiumaddons.com/animated-section-gradients-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Subtle animated gradients effect that makes your backgrounds super attractive. It's highly recommended for sections with call to actions. You can also enable it for any Elementor column.
+* [**Elementor Ken Burns Section/Column Addon**](https://premiumaddons.com/ken-burns-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple images to your Elementor section or column background and animate them with the popular Ken Burns effect.
 
 ### Off-Grid Widgets
  * [**Modal Box Widget**](https://premiumaddons.com/modal-box-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: All purpose Elementor modal box widget with the ability to use Elementor Templates and many other options.
  * [**Alert Box Widget**](https://premiumaddons.com/alert-box-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Show a popups, GDPR alerts and much more with this handy widget from Premium Addons.
- * [**Magic Section Widget**](https://premiumaddons.com/magic-section-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Another Elementor off-grid widget allows you to slide in a section from any direction with a trigger.
+ * [**Magic Section (off-canvas) Widget**](https://premiumaddons.com/magic-section-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Another Elementor off-canvas widget allows you to slide in a section from any direction with a trigger.
  * [**Preview Window Widget**](https://premiumaddons.com/preview-window-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Very clever way to show more data in less content area. Elementor templates can be used with Preview Window Widget.
 
 ### Reviews & Testimonials Widgets
@@ -183,7 +184,7 @@ Premium Addons for Elementor is light weight and we also gave you the control to
 
 = Is this plugin 100% Ads Free? =
 
-Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from Youtube videos, that can be added to Premium Widgets ( eg. Modal Box, Video Box, Blog, etc..)
+Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from Youtube videos, that can be added to Premium Widgets ( eg. Modal Box, Video Box, Blog, etc.)
 
 == Screenshots ==
 
@@ -203,6 +204,19 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 4.8.4 =
+
+- Tweak: Added Time Range option in Display Conditions global feature.
+- Fixed: Value alignment option not working in Counter widget.
+- Fixed: Floating Effects feature not working on editor when used inside widgets using Elementor templates (carousel, tabs, etc.).
+
+= 4.8.3 =
+
+- Tweak: Added Image Size option in Woo Products Listing widget.
+- Tweak: Make sure Elementor Usage Data Sharing option is enabled before showing elements usage.
+- Tweak: URL Parameter display condition not working with special characters.
+- Tweak: Actions added in Woo Products Listing widget to give the ability to insert custom content.
 
 = 4.8.2 =
 

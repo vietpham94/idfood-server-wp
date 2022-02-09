@@ -681,6 +681,7 @@ class Helper_Functions {
 				$data['url'] = $image_url;
 
 				$data['image']       = wp_get_attachment_image( $attachment->ID, $image_size, true );
+				$data['image_size']  = $image_size;
 				$data['caption']     = $attachment->post_excerpt;
 				$data['title']       = $attachment->post_title;
 				$data['description'] = $attachment->post_content;
@@ -695,6 +696,7 @@ class Helper_Functions {
 			$data['id']          = false;
 			$data['url']         = $image_url;
 			$data['image']       = '<img src="' . $image_url . '" alt="" title="" />';
+			$data['image_size']  = $image_size;
 			$data['caption']     = '';
 			$data['title']       = '';
 			$data['description'] = '';
