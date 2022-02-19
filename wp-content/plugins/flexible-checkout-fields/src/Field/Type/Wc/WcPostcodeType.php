@@ -12,7 +12,7 @@ use WPDesk\FCF\Free\Settings\Option\NameOption;
 use WPDesk\FCF\Free\Settings\Option\OptionInterface;
 use WPDesk\FCF\Free\Settings\Option\PlaceholderOption;
 use WPDesk\FCF\Free\Settings\Option\PriorityOption;
-use WPDesk\FCF\Free\Settings\Option\RequiredHiddenOption;
+use WPDesk\FCF\Free\Settings\Option\RequiredWcHiddenOption;
 use WPDesk\FCF\Free\Settings\Option\ValidationInfoOption;
 use WPDesk\FCF\Free\Settings\Option\ValidationPostcodeOption;
 use WPDesk\FCF\Free\Settings\Tab\AdvancedTab;
@@ -73,11 +73,11 @@ class WcPostcodeType extends TypeAbstract {
 	public function get_options_objects(): array {
 		return [
 			GeneralTab::TAB_NAME    => [
-				PriorityOption::FIELD_NAME       => new PriorityOption(),
-				EnabledOption::FIELD_NAME        => new EnabledOption(),
-				RequiredHiddenOption::FIELD_NAME => new RequiredHiddenOption(),
-				LabelOption::FIELD_NAME          => new LabelOption(),
-				NameOption::FIELD_NAME           => new NameOption(),
+				PriorityOption::FIELD_NAME         => new PriorityOption(),
+				EnabledOption::FIELD_NAME          => new EnabledOption(),
+				RequiredWcHiddenOption::FIELD_NAME => new RequiredWcHiddenOption(),
+				LabelOption::FIELD_NAME            => new LabelOption(),
+				NameOption::FIELD_NAME             => new NameOption(),
 			],
 			AdvancedTab::TAB_NAME   => [
 				ValidationPostcodeOption::FIELD_NAME => new ValidationPostcodeOption(),

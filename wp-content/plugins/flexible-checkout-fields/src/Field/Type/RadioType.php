@@ -2,6 +2,8 @@
 
 namespace WPDesk\FCF\Free\Field\Type;
 
+use WPDesk\FCF\Free\Field\Types;
+
 /**
  * {@inheritdoc}
  */
@@ -20,7 +22,14 @@ class RadioType extends TypeAbstract {
 	 * {@inheritdoc}
 	 */
 	public function get_field_type_label(): string {
-		return __( 'Radio Button', 'flexible-checkout-fields' );
+		return __( 'Radio', 'flexible-checkout-fields' );
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get_field_group(): string {
+		return Types::FIELD_GROUP_OPTION;
 	}
 
 	/**

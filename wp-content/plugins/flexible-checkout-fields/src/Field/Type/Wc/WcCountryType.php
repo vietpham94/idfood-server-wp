@@ -11,9 +11,9 @@ use WPDesk\FCF\Free\Settings\Option\LabelOption;
 use WPDesk\FCF\Free\Settings\Option\NameOption;
 use WPDesk\FCF\Free\Settings\Option\OptionInterface;
 use WPDesk\FCF\Free\Settings\Option\PriorityOption;
-use WPDesk\FCF\Free\Settings\Option\RequiredHiddenOption;
+use WPDesk\FCF\Free\Settings\Option\RequiredWcHiddenOption;
 use WPDesk\FCF\Free\Settings\Option\ValidationInfoOption;
-use WPDesk\FCF\Free\Settings\Option\ValidationOption;
+use WPDesk\FCF\Free\Settings\Option\ValidationWcOption;
 use WPDesk\FCF\Free\Settings\Tab\AdvancedTab;
 use WPDesk\FCF\Free\Settings\Tab\AppearanceTab;
 use WPDesk\FCF\Free\Settings\Tab\DisplayTab;
@@ -72,14 +72,14 @@ class WcCountryType extends TypeAbstract {
 	public function get_options_objects(): array {
 		return [
 			GeneralTab::TAB_NAME    => [
-				PriorityOption::FIELD_NAME       => new PriorityOption(),
-				EnabledOption::FIELD_NAME        => new EnabledOption(),
-				RequiredHiddenOption::FIELD_NAME => new RequiredHiddenOption(),
-				LabelOption::FIELD_NAME          => new LabelOption(),
-				NameOption::FIELD_NAME           => new NameOption(),
+				PriorityOption::FIELD_NAME         => new PriorityOption(),
+				EnabledOption::FIELD_NAME          => new EnabledOption(),
+				RequiredWcHiddenOption::FIELD_NAME => new RequiredWcHiddenOption(),
+				LabelOption::FIELD_NAME            => new LabelOption(),
+				NameOption::FIELD_NAME             => new NameOption(),
 			],
 			AdvancedTab::TAB_NAME   => [
-				ValidationOption::FIELD_NAME     => new ValidationOption(),
+				ValidationWcOption::FIELD_NAME   => new ValidationWcOption(),
 				ValidationInfoOption::FIELD_NAME => new ValidationInfoOption(),
 			],
 			AppearanceTab::TAB_NAME => [

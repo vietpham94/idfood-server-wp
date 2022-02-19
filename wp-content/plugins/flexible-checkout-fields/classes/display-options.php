@@ -131,10 +131,6 @@ class Flexible_Checkout_Fields_Disaplay_Options {
 				}
 
 				$meta_value = get_user_meta( $customer_id, $field_key, true );
-				if ( !empty( $field['type'] ) && !empty( $checkout_field_type[$field['type']]['has_options'] ) ) {
-					$meta_value = $this->get_field_meta_value_from_field_options($field, $meta_value);
-				}
-
 				$meta_value = apply_filters( 'flexible_checkout_fields_user_meta_display_value', $meta_value, $field );
 				$val       .= $meta_value;
 				if ( $is_empty_address && ( $meta_value === '' ) ) {
@@ -186,7 +182,7 @@ class Flexible_Checkout_Fields_Disaplay_Options {
 			return $format;
 		}
 		$fcf_field = new Flexible_Checkout_Fields_Field( $field, $this->plugin );
-		if ( isset( $field['type'] ) && in_array( $field['type'], array( 'heading', 'info' ) ) ) {
+		if ( isset( $field['type'] ) && in_array( $field['type'], array( 'heading', 'info', 'paragraph', 'image' ) ) ) {
 			return $format;
 		}
 		if ( $this->is_field_displayable( $field ) ) {
@@ -323,33 +319,6 @@ class Flexible_Checkout_Fields_Disaplay_Options {
 	}
 
 	/**
-	 * Replaces field meta value using field options
-	 *
-	 * @param array $field Field data
-	 * @param string $meta_value Field meta value
-	 *
-	 * @return string New field meta value from options
-	 */
-	private function get_field_meta_value_from_field_options($field, $meta_value) {
-		$array_options = explode("\n", $field['option']);
-		$options = array();
-		if( !empty( $array_options ) ) {
-			foreach ( $array_options as $option ) {
-				$tmp = explode(':', $option , 2 );
-				$options[trim($tmp[0])] = trim($tmp[0]);
-				if ( isset( $tmp[1] ) ) {
-					$options[ trim( $tmp[0] ) ] = wpdesk__( trim( $tmp[1] ), 'flexible-checkout-fields' );
-				}
-				unset( $tmp );
-			}
-		}
-		if ( is_scalar( $meta_value ) && isset( $options[$meta_value] ) ) {
-			$meta_value = $options[$meta_value];
-		}
-		return $meta_value;
-	}
-
-	/**
 	 * @param array $fields
 	 * @param WC_Order $order
 	 * @param string $address_type
@@ -375,17 +344,12 @@ class Flexible_Checkout_Fields_Disaplay_Options {
 				}
 
 				$meta_value = wpdesk_get_order_meta( $order, '_' . $field_key, true );
-
-				if ( !empty( $checkout_field_type[$field['type']]['has_options'] ) ) {
-					$meta_value = $this->get_field_meta_value_from_field_options($field, $meta_value);
-				}
-
 				$meta_value = apply_filters( 'flexible_checkout_fields_print_value', $meta_value, $field );
 				$val .= $meta_value;
 			}
 
 			$val = $this->flexible_invoices_ask_field_integration($val, $field, $field_key, $fields);
-			$val = esc_html( $val );
+			$val = wp_kses_post( $val );
 
 			$fields[$field['name']] = $val;
 			$fields[$this->replace_only_first(  $address_type . '_', '', $field['name'] )] = $val;

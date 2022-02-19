@@ -7,6 +7,7 @@ use FcfVendor\WPDesk\PluginBuilder\Plugin\HookablePluginDependant;
 use FcfVendor\WPDesk\PluginBuilder\Plugin\PluginAccess;
 use FcfVendor\WPDesk\View\Renderer\SimplePhpRenderer;
 use FcfVendor\WPDesk\View\Resolver\DirResolver;
+use WPDesk\FCF\Free\Field\Types;
 use WPDesk\FCF\Free\Settings\Route\RouteIntegration;
 
 /**
@@ -133,6 +134,24 @@ class Page implements Hookable, HookablePluginDependant {
 					'option_fields' => apply_filters( 'flexible_checkout_fields/field_types', [], $section['id'] ),
 					'option_values' => array_values( apply_filters( 'flexible_checkout_fields/form_data_fields', [], $section['id'] ) ),
 					'settings_tabs' => apply_filters( 'flexible_checkout_fields/field_settings_tabs', [] ),
+					'field_group'   => [
+						[
+							'name'  => Types::FIELD_GROUP_TEXT,
+							'label' => __( 'Text Fields', 'flexible-checkout-fields' ),
+						],
+						[
+							'name'  => Types::FIELD_GROUP_OPTION,
+							'label' => __( 'Option Fields', 'flexible-checkout-fields' ),
+						],
+						[
+							'name'  => Types::FIELD_GROUP_PICKER,
+							'label' => __( 'Picker Fields', 'flexible-checkout-fields' ),
+						],
+						[
+							'name'  => Types::FIELD_GROUP_OTHER,
+							'label' => __( 'Other Fields', 'flexible-checkout-fields' ),
+						],
+					],
 				];
 
 				if ( ! $section['has_section_form'] ) {
@@ -185,6 +204,8 @@ class Page implements Hookable, HookablePluginDependant {
 			'button_read_more'        => __( 'Read more', 'flexible-checkout-fields' ),
 			'button_yes'              => __( 'Yes', 'flexible-checkout-fields' ),
 			'button_no'               => __( 'No', 'flexible-checkout-fields' ),
+			'button_upload_image'     => __( 'Upload image', 'flexible-checkout-fields' ),
+			'button_select_color'     => __( 'Select color', 'flexible-checkout-fields' ),
 			'field_type'              => __( 'Field Type', 'flexible-checkout-fields' ),
 			'field_label'             => __( 'Label', 'flexible-checkout-fields' ),
 			'field_name'              => __( 'Name', 'flexible-checkout-fields' ),
@@ -246,6 +267,7 @@ class Page implements Hookable, HookablePluginDependant {
 			( $is_debug ) ? time() : $this->plugin->get_script_version(),
 			true
 		);
+		wp_enqueue_media();
 		wp_enqueue_script( 'fcf-admin' );
 	}
 }

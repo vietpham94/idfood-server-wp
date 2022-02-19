@@ -33,27 +33,38 @@ class WC_UOM_Public {
 	 * @since 3.0.0
 	 */
 	public function wc_uom_public_activate() {
-		add_filter( 'woocommerce_get_price_html', array( $this, 'wc_uom_render_output' ), 10, 2 );
+		add_filter( 'woocommerce_get_price_html', array( $this, 'wc_uom_render_output' ), 999, 2 );
 	}
 
 	/**
 	 * Render the output.
 	 *
 	 * @since 1.0.1
-	 * @param float $price Gives access to product price.
+	 * @param string $price Gives access to product price html.
 	 * @return $price
 	 */
 	public function wc_uom_render_output( $price ) {
-		global $post;
-		// Check if uom text exists.
-		$woo_uom_output = get_post_meta( $post->ID, '_woo_uom_input', true );
-		// Check if variable OR UOM text exists.
-		if ( $woo_uom_output ) :
-			$price = $price . ' <span class="uom">' . esc_attr( $woo_uom_output, 'woocommerce-uom' ) . '</span>';
-			return $price;
-		else :
+		if ( ! $price || ! $this->woo_uom_output_getter() ) :
 			return $price;
 		endif;
+
+		$price = $price . ' <span class="uom">' . esc_attr( $this->woo_uom_output_getter(), 'woocommerce-uom' ) . '</span>';
+
+		return $price;
+	}
+
+	/**
+	 * Get the uom from post meta for a product.
+	 *
+	 * @since 3.0.3
+	 * @return string $woo_uom_output
+	 */
+	private function woo_uom_output_getter() {
+		global $post;
+
+		$woo_uom_output = get_post_meta( $post->ID, '_woo_uom_input', true );
+
+		return $woo_uom_output;
 	}
 }
 

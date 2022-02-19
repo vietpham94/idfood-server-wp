@@ -50,6 +50,7 @@ class DeactivationTracker implements Hookable {
 						10,
 						__( 'The plugin does not work properly', 'flexible-checkout-fields' ),
 						sprintf(
+							/* translators: %1$s: anchor opening tag, %2$s: anchor closing tag, %3$s: anchor opening tag, %4$s: anchor closing tag */
 							__( 'Contact us on %1$sthe support forum%2$s or read %3$sthe plugin FAQ%4$s for help.', 'flexible-checkout-fields' ),
 							'<a href="' . esc_url( apply_filters( 'flexible_checkout_fields/short_url', '#', 'fcf-doesnt-work-properly-support-forum' ) ) . '" target="_blank">',
 							'</a>',
@@ -65,6 +66,7 @@ class DeactivationTracker implements Hookable {
 						20,
 						__( 'The plugin is difficult to use', 'flexible-checkout-fields' ),
 						sprintf(
+						/* translators: %1$s: anchor opening tag, %2$s: anchor closing tag, %3$s: anchor opening tag, %4$s: anchor closing tag */
 							__( 'Check %1$sthe documentation%2$s or contact us on %3$sthe support forum%4$s for help.', 'flexible-checkout-fields' ),
 							'<a href="' . esc_url( apply_filters( 'flexible_checkout_fields/short_url', '#', 'fcf-plugin-is-difficult-docs' ) ) . '" target="_blank">',
 							'</a>',
@@ -153,7 +155,7 @@ class DeactivationTracker implements Hookable {
 	 * @internal
 	 */
 	public function is_localhost(): bool {
-		return ( in_array( $_SERVER['REMOTE_ADDR'] ?? '', [ '127.0.0.1', '::1' ] ) );
+		return ( in_array( $_SERVER['REMOTE_ADDR'] ?? '', [ '127.0.0.1', '::1' ], true ) );
 	}
 
 	/**
@@ -166,7 +168,6 @@ class DeactivationTracker implements Hookable {
 		if ( $activation_date === null ) {
 			return null;
 		}
-
 
 		$current_date = current_time( 'mysql' );
 		return ( strtotime( $current_date ) - strtotime( $activation_date ) );

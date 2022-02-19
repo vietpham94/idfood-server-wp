@@ -51,10 +51,10 @@ class WC_UOM_Admin {
 			woocommerce_wp_text_input(
 				array(
 					'id'          => '_woo_uom_input',
-					'label'       => __( 'Đơn vị tính', 'woo_uom' ),
+					'label'       => __( 'Unit of Measure', 'woo_uom' ),
 					'placeholder' => '',
 					'desc_tip'    => 'true',
-					'description' => __( 'Nhập vào đơn vị tính cho sản phẩm của bạn.', 'woo_uom' ),
+					'description' => __( 'Enter your unit of measure for this product here.', 'woo_uom' ),
 				)
 			);
 		echo '</div>';

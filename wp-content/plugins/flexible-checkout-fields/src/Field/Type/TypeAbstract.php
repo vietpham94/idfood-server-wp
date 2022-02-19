@@ -19,6 +19,13 @@ abstract class TypeAbstract implements TypeInterface {
 	/**
 	 * {@inheritdoc}
 	 */
+	public function get_field_group() {
+		return null;
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
 	public function get_reserved_field_names(): array {
 		return [];
 	}

@@ -50,7 +50,7 @@ class CssOption extends OptionAbstract {
 	 * {@inheritdoc}
 	 */
 	public function get_default_value() {
-		return 'form-row';
+		return 'form-row-wide';
 	}
 
 	/**

@@ -2,6 +2,7 @@
 
 namespace WPDesk\FCF\Free\Field\Type;
 
+use WPDesk\FCF\Free\Field\Types;
 use WPDesk\FCF\Free\Settings\Option\FieldTypeOption;
 use WPDesk\FCF\Free\Settings\Option\OptionInterface;
 use WPDesk\FCF\Free\Settings\Tab\GeneralTab;
@@ -24,7 +25,14 @@ class SelectType extends DefaultType implements TypeInterface {
 	 * {@inheritdoc}
 	 */
 	public function get_field_type_label(): string {
-		return __( 'Select (Drop Down)', 'flexible-checkout-fields' );
+		return __( 'Select', 'flexible-checkout-fields' );
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get_field_group(): string {
+		return Types::FIELD_GROUP_OPTION;
 	}
 
 	/**

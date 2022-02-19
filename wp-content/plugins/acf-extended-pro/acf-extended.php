@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advanced Custom Fields: Extended PRO
  * Description: All-in-one enhancement suite that improves WordPress & Advanced Custom Fields.
- * Version:     0.8.8.4
+ * Version:     0.8.8.7
  * Author:      ACF Extended
  * Author URI:  https://www.acf-extended.com
  * Text Domain: acfe
@@ -16,7 +16,7 @@ if(!class_exists('ACFE')):
 class ACFE{
     
     // Vars
-    var $version = '0.8.8.4';
+    var $version = '0.8.8.7';
     var $acf = false;
     
     /*

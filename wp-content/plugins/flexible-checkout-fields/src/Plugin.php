@@ -8,8 +8,8 @@ use FcfVendor\WPDesk\PluginBuilder\Plugin\HookableParent;
 use FcfVendor\WPDesk_Plugin_Info;
 use WPDesk\FCF\Free\Admin;
 use WPDesk\FCF\Free\Field;
-use WPDesk\FCF\Free\Helpers;
 use WPDesk\FCF\Free\Integration;
+use WPDesk\FCF\Free\Service;
 use WPDesk\FCF\Free\Settings;
 use WPDesk\FCF\Free\Tracker;
 
@@ -35,6 +35,11 @@ class Plugin extends AbstractPlugin implements HookableCollection {
 	private $plugin_old;
 
 	/**
+	 * @var Service\TemplateLoader
+	 */
+	private $template_loader;
+
+	/**
 	 * Plugin constructor.
 	 *
 	 * @param WPDesk_Plugin_Info               $plugin_info Plugin info.
@@ -47,6 +52,7 @@ class Plugin extends AbstractPlugin implements HookableCollection {
 		$this->plugin_namespace = $this->plugin_info->get_text_domain();
 		$this->script_version   = $plugin_info->get_version();
 		$this->plugin_old       = $plugin_old;
+		$this->template_loader  = new Service\TemplateLoader( $plugin_info->get_plugin_dir(), 'flexible-checkout-fields' );
 	}
 
 	/**
@@ -58,18 +64,25 @@ class Plugin extends AbstractPlugin implements HookableCollection {
 	 * @return void
 	 */
 	public function init() {
-		$this->add_hookable( new Helpers\Shortener() );
+		$this->add_hookable( new Service\ShortLinksGenerator() );
 
 		$this->add_hookable( new Admin\NoticeReview() );
 		$this->add_hookable( new Settings\Page() );
+		$this->add_hookable( new Form\Assets( $this->plugin_info ) );
+		$this->add_hookable( new Field\FieldTranslator() );
+		$this->add_hookable( new Field\FieldTemplateLoader( $this->template_loader ) );
 
 		$this->add_hookable( new Integration\IntegratorIntegration( $this->plugin_old ) );
 		$this->add_hookable( new Tracker\DeactivationTracker( $this->plugin_info ) );
+
+		$this->add_hookable( new Validator\FieldValidator() );
+		$this->add_hookable( new Validator\ValidationClassGenerator() );
 
 		( new Field\Types() )->init();
 		( new Settings\Forms() )->init();
 		( new Settings\Routes() )->init();
 		( new Settings\Tabs() )->init();
+		$this->add_hookable( new Settings\MigrationsManager( $this->plugin_info->get_version() ) );
 	}
 
 	/**

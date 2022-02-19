@@ -2,6 +2,8 @@
 
 namespace WPDesk\FCF\Free\Field\Type;
 
+use WPDesk\FCF\Free\Field\Types;
+
 /**
  * {@inheritdoc}
  */
@@ -21,6 +23,13 @@ class TimeType extends TypeAbstract {
 	 */
 	public function get_field_type_label(): string {
 		return __( 'Time', 'flexible-checkout-fields' );
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get_field_group(): string {
+		return Types::FIELD_GROUP_PICKER;
 	}
 
 	/**

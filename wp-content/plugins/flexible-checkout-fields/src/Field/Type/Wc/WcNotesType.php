@@ -14,7 +14,7 @@ use WPDesk\FCF\Free\Settings\Option\PlaceholderOption;
 use WPDesk\FCF\Free\Settings\Option\PriorityOption;
 use WPDesk\FCF\Free\Settings\Option\RequiredOption;
 use WPDesk\FCF\Free\Settings\Option\ValidationInfoOption;
-use WPDesk\FCF\Free\Settings\Option\ValidationOption;
+use WPDesk\FCF\Free\Settings\Option\ValidationWcOption;
 use WPDesk\FCF\Free\Settings\Tab\AdvancedTab;
 use WPDesk\FCF\Free\Settings\Tab\AppearanceTab;
 use WPDesk\FCF\Free\Settings\Tab\DisplayTab;
@@ -80,7 +80,7 @@ class WcNotesType extends TypeAbstract {
 				NameOption::FIELD_NAME     => new NameOption(),
 			],
 			AdvancedTab::TAB_NAME   => [
-				ValidationOption::FIELD_NAME     => new ValidationOption(),
+				ValidationWcOption::FIELD_NAME   => new ValidationWcOption(),
 				ValidationInfoOption::FIELD_NAME => new ValidationInfoOption(),
 			],
 			AppearanceTab::TAB_NAME => [

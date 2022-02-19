@@ -1,5 +1,9 @@
 <?php
 
+use WPDesk\FCF\Free\Field\Type\FileType;
+use WPDesk\FCF\Free\Field\Type\MultiCheckboxType;
+use WPDesk\FCF\Free\Field\Type\MultiSelectType;
+use WPDesk\FCF\Free\Field\Type\TextareaType;
 use WPDesk\FCF\Free\Plugin as PluginFree;
 
 /**
@@ -100,7 +104,6 @@ class Flexible_Checkout_Fields_Plugin extends \FcfVendor\WPDesk\PluginBuilder\Pl
 	private function load_dependencies() {
 		new WPDesk_Flexible_Checkout_Fields_Tracker();
 		require_once __DIR__ . '/settings.php';
-		require_once __DIR__ . '/field-options.php';
 	}
 
 	/**
@@ -321,84 +324,19 @@ class Flexible_Checkout_Fields_Plugin extends \FcfVendor\WPDesk\PluginBuilder\Pl
 	}
 
 	private function init_fields() {
-		$this->fields[ Flexible_Checkout_Fields_Field_Type_Settings::FIELD_TYPE_TEXT ] = array(
-			'name' => __( 'Single Line Text', 'flexible-checkout-fields' )
-		);
+		$field_types = apply_filters( 'flexible_checkout_fields/field_types', [] );
+		foreach ( $field_types as $field_type ) {
+			if ( $field_type['is_hidden'] ) {
+				continue;
+			}
 
-		$this->fields[ Flexible_Checkout_Fields_Field_Type_Settings::FIELD_TYPE_TEXTAREA ] = array(
-			'name' => __( 'Paragraph Text', 'flexible-checkout-fields' )
-		);
-	}
-
-	private function pro_fields( $fields ) {
-		$add_fields = array();
-
-		$add_fields['inspirecheckbox'] = array(
-			'name' => __( 'Checkbox', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['checkbox'] = array(
-			'name' => __( 'Checkbox', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['inspireradio'] = array(
-			'name' => __( 'Radio button', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['select'] = array(
-			'name' => __( 'Select (Drop Down)', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['wpdeskmultiselect'] = array(
-			'name' => __( 'Multi-select', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['datepicker'] = array(
-			'name' => __( 'Date', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['timepicker'] = array(
-			'name' => __( 'Time', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['colorpicker'] = array(
-			'name' => __( 'Color Picker', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['heading'] = array(
-			'name' => __( 'Headline', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['info'] = array(
-			'name' => __( 'HTML', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		$add_fields['file'] = array(
-			'name' => __( 'File Upload', 'flexible-checkout-fields' ),
-			'pro'  => true
-		);
-
-		foreach ( $add_fields as $key => $field ) {
-			$fields[ $key ] = $field;
+			$this->fields[ $field_type['type'] ] = [
+				'name' => $field_type['label'],
+			];
 		}
-
-		return $fields;
-
 	}
 
 	public function get_fields() {
-		$this->fields = $this->pro_fields( $this->fields );
-
 		return apply_filters( 'flexible_checkout_fields_fields', $this->fields );
 	}
 
@@ -591,22 +529,7 @@ class Flexible_Checkout_Fields_Plugin extends \FcfVendor\WPDesk\PluginBuilder\Pl
 
 								if ( $custom_field ) {
 									$new[ $key ][ $field['name'] ]['type'] = $field['type'] ?? '';
-
-									if ( isset( $checkout_field_type[ $field['type'] ?? '' ]['has_options'] ) && isset( $field['option'] ) ) {
-										$field_options                            = new Flexible_Checkout_Fields_Field_Options( $field['option'], $new[ $key ][ $field['name'] ]['placeholder'], $field['type'] );
-										$new[ $key ][ $field['name'] ]['options'] = $field_options->get_options_as_array();
-									}
 								}
-
-								$custom_attributes = array();
-								if ( isset( $new[ $key ][ $field['name'] ]['custom_attributes'] ) ) {
-									$custom_attributes = $new[ $key ][ $field['name'] ]['custom_attributes'];
-								}
-								if ( isset( $field['label'] ) ) {
-									$custom_attributes['data-qa-id'] = $field['label'];
-								}
-
-								$new[ $key ][ $field['name'] ]['custom_attributes'] = apply_filters( 'flexible_checkout_fields_custom_attributes', $custom_attributes, $field );
 
 								if ( '' !== $fcf_field->get_default() ) {
 									$new[ $key ][ $field['name'] ]['default'] = wpdesk__( $fcf_field->get_default(), 'flexible-checkout-fields' );
@@ -734,11 +657,6 @@ class Flexible_Checkout_Fields_Plugin extends \FcfVendor\WPDesk\PluginBuilder\Pl
 						$new[ $key ]['type'] = $field['type'];
 					}
 
-					if ( isset( $field['type'] ) && ( ! empty( $checkout_field_type[ $field['type'] ]['has_options'] ) ) && isset( $field['option'] ) ) {
-						$field_options          = new Flexible_Checkout_Fields_Field_Options( $field['option'], $new[ $key ]['placeholder'], $field['type'] );
-						$new[ $key ]['options'] = $field_options->get_options_as_array();
-					}
-
 					$new[ $key ]['custom_attributes'] = apply_filters(
 						'flexible_checkout_fields_custom_attributes',
 						$field['custom_attributes'] ?? [],
@@ -794,7 +712,7 @@ class Flexible_Checkout_Fields_Plugin extends \FcfVendor\WPDesk\PluginBuilder\Pl
 
 								$return[] = sprintf(
 									'<strong>%1$s</strong>: %2$s',
-									esc_html( wpdesk__( $field['label'], 'flexible-checkout-fields' ) ),
+									strip_tags( $field['label'] ),
 									wp_kses_post( $value )
 								);
 							}
@@ -858,18 +776,19 @@ class Flexible_Checkout_Fields_Plugin extends \FcfVendor\WPDesk\PluginBuilder\Pl
 	function updateCheckoutFields( $order_id, $data ) {
 		$settings = $this->get_settings();
 		if ( ! empty( $settings ) ) {
-			$fields = array_merge(
-				isset( $settings['billing'] ) ? $settings['billing'] : array(),
-				isset( $settings['shipping'] ) ? $settings['shipping'] : array(),
-				isset( $settings['order'] ) ? $settings['order'] : array()
-			);
+			$fields = [];
+			foreach ( $settings as $section_fields ) {
+				$fields += $section_fields;
+			}
 
 			foreach ( $data as $key => $value ) {
 				if ( isset( $fields[ $key ] ) ) {
 					$fcf_field = new Flexible_Checkout_Fields_Field( $fields[ $key ], $this );
 					if ( $fcf_field->is_custom_field() ) {
-						if ( $fcf_field->get_type() === Flexible_Checkout_Fields_Field_Type_Settings::FIELD_TYPE_TEXTAREA ) {
+						if ( in_array( $fcf_field->get_type(), [ TextareaType::FIELD_TYPE ] ) ) {
 							update_post_meta( $order_id, '_' . $key, sanitize_textarea_field( wp_unslash( $value ) ) );
+						} elseif ( in_array( $fcf_field->get_type(), [ MultiCheckboxType::FIELD_TYPE, MultiSelectType::FIELD_TYPE, FileType::FIELD_TYPE ] ) ) {
+							update_post_meta( $order_id, '_' . $key, json_encode( wp_unslash( $value ) ) );
 						} else {
 							update_post_meta( $order_id, '_' . $key, sanitize_text_field( wp_unslash( $value ) ) );
 						}

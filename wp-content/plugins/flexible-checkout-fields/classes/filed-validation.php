@@ -1,4 +1,10 @@
 <?php
+
+use WPDesk\FCF\Free\Field\Type\FileType;
+use WPDesk\FCF\Free\Field\Type\MultiCheckboxType;
+use WPDesk\FCF\Free\Field\Type\MultiSelectType;
+use WPDesk\FCF\Free\Field\Type\TextareaType;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Flexible_Checkout_Fields_Field_Validation {
@@ -45,9 +51,19 @@ class Flexible_Checkout_Fields_Field_Validation {
 				if ( isset( $_POST[$field_key] ) && !empty( $field['validation'] ) && array_key_exists( $field['validation'], $custom_validations ) ) {
 					call_user_func( $custom_validations[$field['validation']]['callback'], $field['label'], sanitize_textarea_field($_POST[$field_key]), $field );
 				}
-				if ( isset( $field['custom_field'] ) && $field['custom_field'] && isset( $_POST[ $field_key ] ) && ! empty( $_POST[ $field_key ] ) ) {
-					do_action( 'flexible_checkout_fields_validate_' . $field['type'], sanitize_textarea_field( $_POST[ $field_key ] ), $field );
+				if ( ! ( $field['custom_field'] ?? false ) ) {
+					continue;
 				}
+
+				if ( in_array( $field['type'], [ TextareaType::FIELD_TYPE ] ) ) {
+					$value = sanitize_textarea_field( wp_unslash( $_POST[ $field_key ] ?? '' ) );
+				} elseif ( in_array( $field['type'], [ MultiCheckboxType::FIELD_TYPE, MultiSelectType::FIELD_TYPE, FileType::FIELD_TYPE ] ) ) {
+					$value = json_encode( wp_unslash( $_POST[ $field_key ] ?? [] ) );
+				} else {
+					$value = sanitize_text_field( wp_unslash( $_POST[ $field_key ] ?? '' ) );
+				}
+
+				do_action( 'flexible_checkout_fields_validate_' . $field['type'], $value, $field );
 			}
 		}
 	}

@@ -6,7 +6,6 @@ use WPDesk\FCF\Free\Field\Type\TypeAbstract;
 use WPDesk\FCF\Free\Settings\Option\CssOption;
 use WPDesk\FCF\Free\Settings\Option\DisplayOnOnlyAddressOption;
 use WPDesk\FCF\Free\Settings\Option\EnabledOption;
-use WPDesk\FCF\Free\Settings\Option\FormattingWcOption;
 use WPDesk\FCF\Free\Settings\Option\LabelOption;
 use WPDesk\FCF\Free\Settings\Option\LogicAdvOption;
 use WPDesk\FCF\Free\Settings\Option\NameOption;
@@ -15,7 +14,7 @@ use WPDesk\FCF\Free\Settings\Option\PlaceholderOption;
 use WPDesk\FCF\Free\Settings\Option\PriorityOption;
 use WPDesk\FCF\Free\Settings\Option\RequiredOption;
 use WPDesk\FCF\Free\Settings\Option\ValidationInfoOption;
-use WPDesk\FCF\Free\Settings\Option\ValidationOption;
+use WPDesk\FCF\Free\Settings\Option\ValidationWcOption;
 use WPDesk\FCF\Free\Settings\Tab\AdvancedTab;
 use WPDesk\FCF\Free\Settings\Tab\AppearanceTab;
 use WPDesk\FCF\Free\Settings\Tab\DisplayTab;
@@ -82,7 +81,7 @@ class WcContactType extends TypeAbstract {
 				NameOption::FIELD_NAME     => new NameOption(),
 			],
 			AdvancedTab::TAB_NAME   => [
-				ValidationOption::FIELD_NAME     => new ValidationOption(),
+				ValidationWcOption::FIELD_NAME   => new ValidationWcOption(),
 				ValidationInfoOption::FIELD_NAME => new ValidationInfoOption(),
 			],
 			AppearanceTab::TAB_NAME => [
@@ -91,7 +90,6 @@ class WcContactType extends TypeAbstract {
 			],
 			DisplayTab::TAB_NAME    => [
 				DisplayOnOnlyAddressOption::FIELD_NAME => new DisplayOnOnlyAddressOption(),
-				FormattingWcOption::FIELD_NAME         => new FormattingWcOption(),
 			],
 			LogicTab::TAB_NAME      => [
 				LogicAdvOption::FIELD_NAME => new LogicAdvOption(),

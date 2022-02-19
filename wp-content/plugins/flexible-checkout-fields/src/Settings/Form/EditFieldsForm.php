@@ -27,7 +27,7 @@ class EditFieldsForm extends FormAbstract implements FormInterface {
 		$settings       = get_option( self::SETTINGS_OPTION_NAME, [] );
 		$section_fields = $this->combine_fields_settings(
 			$this->get_section_form_data( $form_key ),
-			$settings[ $form_key ] ?? []
+			( $settings[ $form_key ] ?? [] ) ?: []
 		);
 		if ( ! $section_fields ) {
 			return $form_data;

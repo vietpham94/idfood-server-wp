@@ -2,8 +2,10 @@
 
 namespace WPDesk\FCF\Free\Field\Type;
 
+use WPDesk\FCF\Free\Field\Types;
 use WPDesk\FCF\Free\Settings\Option\CssOption;
 use WPDesk\FCF\Free\Settings\Option\CustomFieldOption;
+use WPDesk\FCF\Free\Settings\Option\DefaultOption;
 use WPDesk\FCF\Free\Settings\Option\DisplayOnOption;
 use WPDesk\FCF\Free\Settings\Option\EnabledOption;
 use WPDesk\FCF\Free\Settings\Option\ExternalFieldInfoOption;
@@ -19,7 +21,7 @@ use WPDesk\FCF\Free\Settings\Option\PricingAdvOption;
 use WPDesk\FCF\Free\Settings\Option\PriorityOption;
 use WPDesk\FCF\Free\Settings\Option\RequiredOption;
 use WPDesk\FCF\Free\Settings\Option\ValidationInfoOption;
-use WPDesk\FCF\Free\Settings\Option\ValidationOption;
+use WPDesk\FCF\Free\Settings\Option\ValidationWcOption;
 use WPDesk\FCF\Free\Settings\Tab\AdvancedTab;
 use WPDesk\FCF\Free\Settings\Tab\AppearanceTab;
 use WPDesk\FCF\Free\Settings\Tab\DisplayTab;
@@ -45,7 +47,14 @@ class TextType extends TypeAbstract {
 	 * {@inheritdoc}
 	 */
 	public function get_field_type_label(): string {
-		return __( 'Single Line Text', 'flexible-checkout-fields' );
+		return __( 'Text', 'flexible-checkout-fields' );
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get_field_group(): string {
+		return Types::FIELD_GROUP_TEXT;
 	}
 
 	/**
@@ -78,10 +87,11 @@ class TextType extends TypeAbstract {
 				ExternalFieldOption::FIELD_NAME     => new ExternalFieldOption(),
 				RequiredOption::FIELD_NAME          => new RequiredOption(),
 				LabelOption::FIELD_NAME             => new LabelOption(),
+				DefaultOption::FIELD_NAME           => new DefaultOption(),
 				NameOption::FIELD_NAME              => new NameOption(),
 			],
 			AdvancedTab::TAB_NAME   => [
-				ValidationOption::FIELD_NAME     => new ValidationOption(),
+				ValidationWcOption::FIELD_NAME   => new ValidationWcOption(),
 				ValidationInfoOption::FIELD_NAME => new ValidationInfoOption(),
 			],
 			AppearanceTab::TAB_NAME => [

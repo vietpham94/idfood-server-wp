@@ -40,7 +40,17 @@ class OptionIntegration {
 			'html_atts'             => $this->option_object->get_input_atts(),
 			'display_pattern'       => $this->option_object->get_print_pattern(),
 			'readonly'              => $this->option_object->is_readonly(),
-			'validation_rules'      => $this->option_object->get_validation_rules(),
+			'validation_rules'      => array_map(
+				function ( string $validation_regex, string $validation_message ) {
+					return [
+						'regex'    => $validation_regex,
+						'message'  => $validation_message,
+						'is_fatal' => true,
+					];
+				},
+				array_keys( $this->option_object->get_validation_rules() ),
+				$this->option_object->get_validation_rules()
+			),
 			'option_name_rows'      => $this->option_object->get_option_name_to_rows(),
 			'default_value'         => $this->option_object->get_default_value(),
 			'show_if_regexes'       => $this->option_object->get_options_regexes_to_display(),

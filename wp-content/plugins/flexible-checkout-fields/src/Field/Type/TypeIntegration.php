@@ -52,6 +52,7 @@ class TypeIntegration {
 	private function get_field_type_settings(): array {
 		return [
 			'type'                 => $this->type_object->get_field_type(),
+			'field_group'          => $this->type_object->get_field_group(),
 			'reserved_field_names' => $this->type_object->get_reserved_field_names(),
 			'label'                => $this->type_object->get_field_type_label(),
 			'icon'                 => $this->type_object->get_field_type_icon(),

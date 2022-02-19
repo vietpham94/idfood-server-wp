@@ -2,8 +2,10 @@
 
 namespace WPDesk\FCF\Free\Field\Type;
 
+use WPDesk\FCF\Free\Field\Types;
 use WPDesk\FCF\Free\Settings\Option\CssOption;
 use WPDesk\FCF\Free\Settings\Option\CustomFieldOption;
+use WPDesk\FCF\Free\Settings\Option\DefaultOption;
 use WPDesk\FCF\Free\Settings\Option\DisplayOnOption;
 use WPDesk\FCF\Free\Settings\Option\EnabledOption;
 use WPDesk\FCF\Free\Settings\Option\ExternalFieldInfoOption;
@@ -45,7 +47,14 @@ class TextareaType extends TypeAbstract {
 	 * {@inheritdoc}
 	 */
 	public function get_field_type_label(): string {
-		return __( 'Paragraph Text', 'flexible-checkout-fields' );
+		return __( 'Textarea', 'flexible-checkout-fields' );
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get_field_group(): string {
+		return Types::FIELD_GROUP_TEXT;
 	}
 
 	/**
@@ -78,6 +87,7 @@ class TextareaType extends TypeAbstract {
 				ExternalFieldOption::FIELD_NAME     => new ExternalFieldOption(),
 				RequiredOption::FIELD_NAME          => new RequiredOption(),
 				LabelOption::FIELD_NAME             => new LabelOption(),
+				DefaultOption::FIELD_NAME           => new DefaultOption(),
 				NameOption::FIELD_NAME              => new NameOption(),
 			],
 			AdvancedTab::TAB_NAME   => [

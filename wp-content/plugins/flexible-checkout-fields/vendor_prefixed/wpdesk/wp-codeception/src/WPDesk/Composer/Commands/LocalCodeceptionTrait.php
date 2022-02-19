@@ -2,6 +2,8 @@
 
 namespace FcfVendor\WPDesk\Composer\Codeception\Commands;
 
+use FcfVendor\Composer\Downloader\FilesystemException;
+use FcfVendor\Symfony\Component\Console\Input\InputInterface;
 use FcfVendor\Symfony\Component\Console\Output\OutputInterface;
 use FcfVendor\Symfony\Component\Yaml\Exception\ParseException;
 use FcfVendor\Symfony\Component\Yaml\Yaml;
@@ -28,11 +30,12 @@ trait LocalCodeceptionTrait
         $apache_document_root = $configuration->getApacheDocumentRoot();
         $this->executeWpCliAndOutput('config set WP_DEBUG true --raw', $output, $apache_document_root);
         $this->executeWpCliAndOutput('config set WP_DEBUG_LOG true --raw', $output, $apache_document_root);
-        $this->executeWpCliAndOutput('config set WP_DEBUG_DISPLAY true --raw', $output, $apache_document_root);
+        $this->executeWpCliAndOutput('config set WP_DEBUG_DISPLAY false --raw', $output, $apache_document_root);
         $this->executeWpCliAndOutput('config set WP_HOME http://' . $configuration->getWptestsIp(), $output, $apache_document_root);
         $this->executeWpCliAndOutput('config set WP_SITEURL http://' . $configuration->getWptestsIp(), $output, $apache_document_root);
         $this->executeWpCliAndOutput('config set WP_AUTO_UPDATE_CORE false --raw', $output, $apache_document_root);
         $this->executeWpCliAndOutput('config set AUTOMATIC_UPDATER_DISABLED false --raw', $output, $apache_document_root);
+        $this->executeWpCliAndOutput('rewrite structure \'/%postname%/\'', $output, $apache_document_root);
     }
     /**
      * @param OutputInterface $output
@@ -96,14 +99,21 @@ trait LocalCodeceptionTrait
      * @param string          $plugin_dir
      * @param OutputInterface $output
      * @param Configuration   $configuration
+     * @param bool            $coverage
      */
-    private function installPlugin($plugin_dir, \FcfVendor\Symfony\Component\Console\Output\OutputInterface $output, \FcfVendor\WPDesk\Composer\Codeception\Commands\Configuration $configuration)
+    private function installPlugin(string $plugin_dir, \FcfVendor\Symfony\Component\Console\Output\OutputInterface $output, \FcfVendor\WPDesk\Composer\Codeception\Commands\Configuration $configuration, bool $coverage = \true)
     {
         $source = $this->preparePathForRsync(\getcwd() . '/*', $configuration::isWindows());
         $target = $this->preparePathForRsync($this->prepareTargetDir($plugin_dir, $configuration) . '/', $configuration::isWindows());
-        $rsync = 'rsync -a ' . $source . ' ' . $target . ' --exclude=node_modules --exclude=.git --exclude=tests --exclude=.idea --exclude=vendor';
+        $rsync = 'rsync -av ' . $source . ' ' . $target . ' --exclude=node_modules --exclude=.git --exclude=.idea --exclude=vendor --exclude=vendor_prefixed --exclude=tests/wordpress ';
         $this->execAndOutput($rsync, $output);
-        $this->execAndOutput('composer install --no-dev --working-dir=' . $configuration->getApacheDocumentRoot() . '/wp-content/plugins/' . $plugin_dir, $output);
+        \copy(\getcwd() . '/.env.testing', $this->prepareTargetDir($plugin_dir, $configuration) . '/.env.testing');
+        if (!$coverage) {
+            $this->execAndOutput('composer install --working-dir=' . $configuration->getApacheDocumentRoot() . '/wp-content/plugins/' . $plugin_dir, $output);
+            $this->execAndOutput('composer install --no-dev --working-dir=' . $configuration->getApacheDocumentRoot() . '/wp-content/plugins/' . $plugin_dir, $output);
+        } else {
+            $this->execAndOutput('composer require --dev codeception/c3 --working-dir=' . $configuration->getApacheDocumentRoot() . '/wp-content/plugins/' . $plugin_dir, $output);
+        }
     }
     /**
      * @param string $path
@@ -209,5 +219,38 @@ trait LocalCodeceptionTrait
         $sku = $sku ? $sku : 'product-' . $name;
         $dimensions = $dimensions ? $dimensions : '{"width":"' . $price . '","length":"' . $price . '","height":"' . $price . '"}';
         return "wc product create --name=\"{$product_name}\" --virtual=false --downloadable=false --type=simple --sku={$sku} --regular_price={$price} --weight={$weight} --dimensions='{$dimensions}' --user=admin";
+    }
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @param bool $coverage
+     *
+     * @throws \Composer\Downloader\FilesystemException
+     */
+    private function prepareLocalCodeceptionTests(\FcfVendor\Symfony\Component\Console\Input\InputInterface $input, \FcfVendor\Symfony\Component\Console\Output\OutputInterface $output, bool $coverage = \false)
+    {
+        $configuration = $this->getWpDeskConfiguration();
+        $this->installPlugin($configuration->getPluginDir(), $output, $configuration, $coverage);
+        $this->activatePlugins($output, $configuration);
+        $this->prepareWpConfig($output, $configuration);
+        $this->copyThemeFiles($configuration->getThemeFiles(), $configuration->getApacheDocumentRoot() . '/wp-content/themes/storefront-wpdesk-tests');
+        $sep = \DIRECTORY_SEPARATOR;
+        $codecept = "vendor{$sep}bin{$sep}codecept";
+        $cleanOutput = $codecept . ' clean';
+        $this->execAndOutput($cleanOutput, $output);
+    }
+    /**
+     * @param array $theme_files
+     * @param $theme_folder
+     *
+     * @throws FilesystemException
+     */
+    private function copyThemeFiles(array $theme_files, $theme_folder)
+    {
+        foreach ($theme_files as $theme_file) {
+            if (!\copy($theme_file, $this->trailingslashit($theme_folder) . \basename($theme_file))) {
+                throw new \FcfVendor\Composer\Downloader\FilesystemException('Error copying theme file: ' . $theme_file);
+            }
+        }
     }
 }

@@ -33,15 +33,7 @@ class PrepareLocalCodeceptionTests extends \FcfVendor\WPDesk\Composer\Codeceptio
      */
     protected function execute(\FcfVendor\Symfony\Component\Console\Input\InputInterface $input, \FcfVendor\Symfony\Component\Console\Output\OutputInterface $output)
     {
-        $configuration = $this->getWpDeskConfiguration();
-        $this->installPlugin($configuration->getPluginDir(), $output, $configuration);
-        $this->activatePlugins($output, $configuration);
-        $this->prepareWpConfig($output, $configuration);
-        $this->copyThemeFiles($configuration->getThemeFiles(), $configuration->getApacheDocumentRoot() . '/wp-content/themes/storefront-wpdesk-tests');
-        $sep = \DIRECTORY_SEPARATOR;
-        $codecept = "vendor{$sep}bin{$sep}codecept";
-        $cleanOutput = $codecept . ' clean';
-        $this->execAndOutput($cleanOutput, $output);
+        $this->prepareLocalCodeceptionTests($input, $output, \false);
     }
     /**
      * @param array $theme_files

@@ -5,6 +5,11 @@
  * @package Flexible Checkout Fields
  */
 
+use WPDesk\FCF\Free\Field\Type\FileType;
+use WPDesk\FCF\Free\Field\Type\MultiCheckboxType;
+use WPDesk\FCF\Free\Field\Type\MultiSelectType;
+use WPDesk\FCF\Free\Field\Type\TextareaType;
+
 /**
  * Can update user meta.
  */
@@ -77,8 +82,10 @@ class Flexible_Checkout_Fields_User_Meta {
 					if ( ! $fcf_field->is_field_excluded_for_user() ) {
 						$value = '';
 						if ( isset( $data[ $field_name ] ) ) {
-							if ( $fcf_field->get_type() === Flexible_Checkout_Fields_Field_Type_Settings::FIELD_TYPE_TEXTAREA ) {
+							if ( in_array( $fcf_field->get_type(), [ TextareaType::FIELD_TYPE ] ) ) {
 								$value = sanitize_textarea_field( wp_unslash( $data[ $field_name ] ) );
+							} elseif ( in_array( $fcf_field->get_type(), [ MultiCheckboxType::FIELD_TYPE, MultiSelectType::FIELD_TYPE, FileType::FIELD_TYPE ] ) ) {
+								$value = json_encode( wp_unslash( $data[ $field_name ] ) );
 							} else {
 								$value = sanitize_text_field( wp_unslash( $data[ $field_name ] ) );
 							}
