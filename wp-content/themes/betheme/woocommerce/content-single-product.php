@@ -71,7 +71,7 @@ if (mfn_opts_get('share-style')) {
 
 $single_product_style = mfn_opts_get('shop-product-style');
 $classes[] = $single_product_style;
-
+$classes[] = 'container-fluid';
 
 // translate
 $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'Show all') : __('Show all', 'betheme');
@@ -95,75 +95,10 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
     }
     ?>
 
-    <?php global $product; ?>
-    <script>
-        jQuery(document).ready(function ($) {
-
-            $(".view-product").mousemove(function (e) {
-                let lw = $(this).width();
-                let lh = $(this).height();
-
-                let offset = $(this).offset();
-                let relX = e.pageX - offset.left;
-                let relY = e.pageY - offset.top;
-
-                if (relX < 0) {
-                    relX = 0
-                }
-
-                if (relX > lw) {
-                    relX = lw
-                }
-
-                if (relY < 0) {
-                    relY = 0
-                }
-
-                if (relY > lh) {
-                    relY = lh
-                }
-
-                let zx = -(0.5 * relX);
-                let zy = -(0.5 * relY);
-
-                $(this).css('background-position', (zx) + "px " + (zy) + "px");
-            });
-
-            $(".view-product").mouseout(function (e) {
-                $(this).css('background-position', '');
-            });
-
-            $(".image-item img").click(function (e) {
-                let imgUrl = $(this).attr('src');
-                $(".view-product img").attr('src', imgUrl);
-                $(".view-product a").attr('href', imgUrl);
-                $(".view-product").css('background-image', 'url(' + imgUrl + ')');
-                $(".image-item img").removeClass("active");
-                $(this).addClass("active");
-            });
-
-            $(".show-more-content").click(function (e) {
-                e.preventDefault();
-                $(".summary-content").toggleClass('show');
-                if ($(".summary-content").hasClass('show')) {
-                    $(this).html('Thu gọn');
-                } else {
-                    $(this).html('Xem thêm');
-                }
-            });
-
-            let viewProductHeight = $(".view-product img").width();
-            $(".view-product").css("max-height", viewProductHeight + "px");
-            $(".view-product").css("min-height", viewProductHeight + "px");
-
-            let imageItemWidth = $(".image-item").width();
-            $(".image-item").css("max-height", imageItemWidth + "px");
-            $(".image-item").css("min-height", imageItemWidth + "px");
-        });
-    </script>
-    <?php $gallery_image_ids = $product->get_gallery_image_ids(); ?>
-    <?php $attachment_image = wp_get_attachment_image_url($product->get_image_id(), 'single-post-thumbnail'); ?>
     <?php
+    global $product;
+    $gallery_image_ids = $product->get_gallery_image_ids();
+    $attachment_image = wp_get_attachment_image_url($product->get_image_id(), 'single-post-thumbnail');
     function get_client_ip()
     {
         $ipaddress = '';
@@ -211,7 +146,8 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
         return $str;
     }
 
-    function formatSearchAddressGoogle($str) {
+    function formatSearchAddressGoogle($str)
+    {
         $str = str_replace(' ', '+', $str);
         return $str;
     }
@@ -242,7 +178,7 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
             <!-- Product gallery images -->
             <div class="col-12 col-lg-6 col-xl-5">
                 <?php if (!empty($attachment_image)): ?>
-                    <div class="view-product border" style="background-image: url(<?php echo $attachment_image; ?>)"
+                    <div id="viewProduct" class="view-product border" style="background-image: url(<?php echo $attachment_image; ?>)"
                          title="<?php get_the_title(); ?>">
                         <a href="<?php echo $attachment_image; ?>" rel="lightbox" data-type="image"
                            style="padding: 45% 0;">
@@ -255,15 +191,15 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
                     <?php if (!empty($attachment_image)): ?>
                         <div class="col-3 cursor-pointer image-item mt-3">
                             <img src="<?php echo $attachment_image; ?>" alt="<?php get_the_title(); ?>"
-                                 class="active border"
+                                 class="active border" data-img-index="0"
                                  title="<?php get_the_title(); ?>"/>
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($gallery_image_ids)): ?>
-                        <?php foreach ($gallery_image_ids as $gallery_image_id): ?>
+                        <?php foreach ($gallery_image_ids as $key => $gallery_image_id): ?>
                             <div class="col-3 cursor-pointer image-item mt-3">
                                 <img src="<?php echo wp_get_attachment_url($gallery_image_id); ?>"
-                                     alt="<?php get_the_title(); ?>" class="border" title="<?php get_the_title(); ?>"/>
+                                     alt="<?php get_the_title(); ?>" class="border" data-img-index="<?= $key + 1; ?>" title="<?php get_the_title(); ?>"/>
                             </div>
                         <?php endforeach; ?>
                     <?php endif; ?>
@@ -329,9 +265,6 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
                                        name="quantity" value="1" inputmode="numeric" autocomplete="off">
                             </div>
                             <button type="submit" name="add-to-cart" value="<?php echo get_the_ID(); ?>"
-                                    class="single-add-to-cart-button button ml-0 ml-md-2">Thêm vào giỏ hàng
-                            </button>
-                            <button type="submit" name="add-to-cart" value="<?php echo get_the_ID(); ?>"
                                     class="single-pay-now-button button ml-0 ml-md-2">Mua ngay
                             </button>
                         </form>
@@ -348,8 +281,8 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
                                 </p>
                                 <a href="#diem-ban-gan-day">Xem chi tiết</a>
                             </div>
-                            <div class="col-12 col-md-6 border-left">
-                                <?php echo do_shortcode('[elementor-template id="1431"]'); ?>
+                            <div class="col-12 col-md-6 border-md-left">
+                                <?php echo do_shortcode('[elementor-template id="1452"]'); ?>
                             </div>
                         </div>
                         <hr class="d-none d-md-block"/>
@@ -369,13 +302,13 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
                                 <?php endif; ?>
                             </div>
 
-                            <div class="col-12 col-md-6 border-left htx">
+                            <div class="col-12 col-md-6 border-md-left htx">
                                 <?php $htx = get_field('htx', get_the_ID()); ?>
                                 <?php if (!empty($htx["link"])): ?>
                                     <?php if (empty($htx["title"])) {
                                         $htx_page = get_page_by_path($htx["link"]);
                                     } ?>
-                                    <p class="heading-title mb-1">Sản phẩm của</p>
+                                    <p class="heading-title mb-1 mt-4 mt-xl-0 mr-2 mr-md-0">Sản phẩm của</p>
                                     <a href="<?php echo $htx["link"]; ?>" target="_blank">
                                         <i class="premium-title-icon far fa-hand-point-right" aria-hidden="true"></i>
                                         <span class="premium-title-text"><?= empty($htx['title']) ? $htx_page->post_title : $htx['title']; ?></span>
@@ -413,14 +346,16 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
                     <?php foreach ($cac_nha_cung_cap_khu_vuc as $diem_ban_le): ?>
                         <div class="location">
                             <p class="location-name mb-1"><?= $diem_ban_le->display_name; ?></p>
-                            <p class="location-position mb-1 d-none"">Khoảng cách: 1,5km</p>
+                            <p class="location-position mb-1 d-none">Khoảng cách: 1,5km</p>
                             <p class="location-address">
                                 <?= $diem_ban_le->address_1; ?><br/>
                                 Điện thoại:
                                 <?php echo $diem_ban_le->billing['phone']; ?>
                             </p>
                             <a class="button buy-now d-none">Mua hàng</a>
-                            <a class="button direct" target="_blank" href="https://www.google.co.uk/maps/place/<?= formatSearchAddressGoogle($diem_ban_le->address_1); ?>">Chỉ đường</a>
+                            <a class="button direct" target="_blank"
+                               href="https://www.google.co.uk/maps/place/<?= formatSearchAddressGoogle($diem_ban_le->address_1); ?>">Chỉ
+                                đường</a>
                             <hr>
                         </div>
                     <?php endforeach; ?>
@@ -545,6 +480,72 @@ $translate['all'] = mfn_opts_get('translate') ? mfn_opts_get('translate-all', 'S
         </div>
     </div>
 
-</div><!-- #product-<?php the_ID(); ?> -->
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $(".view-product").mousemove(function (e) {
+                let lw = $(this).width();
+                let lh = $(this).height();
+
+                let offset = $(this).offset();
+                let relX = e.pageX - offset.left;
+                let relY = e.pageY - offset.top;
+
+                if (relX < 0) {
+                    relX = 0
+                }
+
+                if (relX > lw) {
+                    relX = lw
+                }
+
+                if (relY < 0) {
+                    relY = 0
+                }
+
+                if (relY > lh) {
+                    relY = lh
+                }
+
+                let zx = -(0.5 * relX);
+                let zy = -(0.5 * relY);
+
+                $(this).css('background-position', (zx) + "px " + (zy) + "px");
+            });
+
+            $(".view-product").mouseout(function (e) {
+                $(this).css('background-position', '');
+            });
+
+            $(".image-item img").click(function (e) {
+                let imgUrl = $(this).attr('src');
+                $(".view-product img").attr('src', imgUrl);
+                $(".view-product a").attr('href', imgUrl);
+                $(".view-product").css('background-image', 'url(' + imgUrl + ')');
+                $(".image-item img").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $(".show-more-content").click(function (e) {
+                e.preventDefault();
+                $(".summary-content").toggleClass('show');
+                if ($(".summary-content").hasClass('show')) {
+                    $(this).html('Thu gọn');
+                } else {
+                    $(this).html('Xem thêm');
+                }
+            });
+
+            let viewProductHeight = $(".view-product img").width();
+            $(".view-product").css("max-height", viewProductHeight + "px");
+            $(".view-product").css("min-height", viewProductHeight + "px");
+
+            let imageItemWidth = $(".image-item").width();
+            $(".image-item").css("max-height", imageItemWidth + "px");
+            $(".image-item").css("min-height", imageItemWidth + "px");
+        });
+    </script>
+
+</div>
 
 <?php do_action('woocommerce_after_single_product'); ?>

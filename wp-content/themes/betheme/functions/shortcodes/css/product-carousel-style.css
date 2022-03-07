@@ -134,3 +134,26 @@
 .product-carousel a {
     text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+    .product-carousel table tr td {
+        padding: 5px;
+    }
+
+    .product-carousel .product-name,
+    .product-carousel .product-price {
+        padding: 0;
+    }
+
+    .product-carousel .product-name {
+        font-size: 14px;
+    }
+
+    .product-carousel .product-price {
+        font-size: 16px;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+}

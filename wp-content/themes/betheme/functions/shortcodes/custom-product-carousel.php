@@ -22,21 +22,6 @@ function create_product_carousel_shortcode($args)
     $products = wc_get_products($product_args);
 
     ?>
-    <script>
-        jQuery(document).ready(function ($) {
-            $('#<?=  $args['id'] ?>').slick({
-                dots: <?= $args["dots"] ?? true ?>,
-                infinite: true,
-                slidesToShow: <?= $args["columns"] ? $args["columns"] : 4 ?>,
-                rows: <?= $args["rows"] ? $args["rows"] : 1 ?>,
-                slidesToScroll: <?= $args["slidesToScroll"] ?? 4 ?>,
-                autoplay: <?= $args["autoplay"] ?? false ?>,
-                autoplaySpeed: <?= $args["autoplaySpeed"] ?? 2000 ?>,
-                prevArrow: '<a href="#" class="prev-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/prev-arrow.png" /></a>',
-                nextArrow: '<a href="#" class="next-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/next-arrow.png" /></a>',
-            });
-        });
-    </script>
     <div class="product-carousel" id="<?= $args['id'] ?>">
         <?php foreach ($products as $product): ?>
             <div class="product-item">
@@ -65,9 +50,18 @@ function create_product_carousel_shortcode($args)
                                 </p>
                             </a>
                         </td>
-                        <td>
+                        <td class="hidden-sm">
                             <a href="/?add-to-cart=<?= $product->id ?>" class="adding-to-cart-btn" title="Mua ngay">
-                                <i class="fas fa-cart-plus"></i>
+                                <!-- <i class="fas fa-cart-plus"></i>-->
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hidden-xl text-right">
+                            <a href="/?add-to-cart=<?= $product->id ?>" class="adding-to-cart-btn" title="Mua ngay" style="position: absolute; top: 25px; right: 5px; padding: 5px;">
+                                <!-- <i class="fas fa-cart-plus"></i>-->
+                                <i class="fas fa-shopping-bag"></i>
                             </a>
                         </td>
                     </tr>
@@ -75,6 +69,24 @@ function create_product_carousel_shortcode($args)
             </div>
         <?php endforeach; ?>
     </div>
+    <script>
+        jQuery(document).ready(function ($) {
+            if ($("#<?=  $args['id'] ?>").length > 0) {
+                $('#<?=  $args['id'] ?>').slick({
+                    dots: <?= $args["dots"] ?? true ?>,
+                    infinite: true,
+                    mobileFirst: true,
+                    slidesToShow: <?= $args["columns"] ?? 4 ?>,
+                    rows: <?= $args["rows"] ?? 1 ?>,
+                    slidesToScroll: <?= empty($args["slidesToScroll"]) ? 1 : $args["slidesToScroll"] ?>,
+                    autoplay: <?= $args["autoplay"] ?? false ?>,
+                    autoplaySpeed: <?= $args["autoplaySpeed"] ?? 2000 ?>,
+                    prevArrow: '<a href="#" class="prev-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/prev-arrow.png" /></a>',
+                    nextArrow: '<a href="#" class="next-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/next-arrow.png" /></a>'
+                });
+            }
+        });
+    </script>
     <?php
 }
 

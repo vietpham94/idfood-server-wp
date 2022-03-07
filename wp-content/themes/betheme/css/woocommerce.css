@@ -2035,8 +2035,9 @@ h3#ship-to-different-address label {
 }
 
 .woocommerce .product-summary .product-location .location .location-name {
-    font-size: 22px;
-    color: #1363d6;
+    font-size: 18px;
+    color: #282828;
+    font-weight: 600;
 }
 
 .woocommerce .product-summary .comment-form-area #reply-title {
@@ -2163,4 +2164,22 @@ h3#ship-to-different-address label {
 
 .product-summary .related-product-area .woocommerce .products .desc .price span.uom::before {
     content: '/ ';
+}
+
+@media screen and (max-width: 600px) {
+    .woocommerce div.product .product_title {
+        font-size: 1.8rem;
+        padding-top: 15px;
+    }
+
+    .woocommerce .product-data-action .heading-title {
+        width: fit-content;
+        display: inline-flex;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .border-md-left {
+        border-left: 1px solid #dee2e6!important;
+    }
 }

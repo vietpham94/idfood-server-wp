@@ -159,3 +159,15 @@ a.btn-min-width:hover {
     display: none;
 }
 
+@media screen and (max-width: 768px){
+    .product-carousel .product-item .product-image {
+        height: calc((100vw - 100px)/3) !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .product-carousel .product-item .product-image {
+        height: calc((100vw - 20px)/2) !important;
+    }
+}
+

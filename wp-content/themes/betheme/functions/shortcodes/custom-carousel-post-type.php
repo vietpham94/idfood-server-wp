@@ -13,19 +13,6 @@ function create_custom_post_type_carousel_shortcode($args)
     $posts = get_posts($post_tpe_args);
 
     ?>
-    <script>
-        jQuery(document).ready(function ($) {
-            $("#<?=  $args['id'] ?>").slick({
-                dots: <?= $args["dots"] ? $args["dots"] : true ?>,
-                infinite: true,
-                slidesToShow: <?= $args["columns"] ? $args["columns"] : 4 ?>,
-                rows: <?= $args["rows"] ? $args["rows"] : 1 ?>,
-                autoplay: <?= $args["autoplay"] ? $args["autoplay"] : true ?>,
-                prevArrow: '<a href="#" class="prev-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/prev-arrow.png" /></a>',
-                nextArrow: '<a href="#" class="next-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/next-arrow.png" /></a>'
-            });
-        });
-    </script>
     <div class="images-carousel" id="<?=  $args['id'] ?>">
         <?php foreach ($posts as $post): ?>
             <div class="image-item">
@@ -35,6 +22,21 @@ function create_custom_post_type_carousel_shortcode($args)
             </div>
         <?php endforeach; ?>
     </div>
+    <script>
+        jQuery(document).ready(function ($) {
+            if ($("#<?=  $args['id'] ?>").length > 0) {
+                $("#<?=  $args['id'] ?>").slick({
+                    dots: <?= $args["dots"] ? $args["dots"] : true ?>,
+                    infinite: true,
+                    slidesToShow: <?= $args["columns"] ? $args["columns"] : 4 ?>,
+                    rows: <?= $args["rows"] ? $args["rows"] : 1 ?>,
+                    autoplay: <?= $args["autoplay"] ? $args["autoplay"] : true ?>,
+                    prevArrow: '<a href="#" class="prev-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/prev-arrow.png" /></a>',
+                    nextArrow: '<a href="#" class="next-arrow"><img src="<?= get_template_directory_uri(); ?>/functions/shortcodes/icons/next-arrow.png" /></a>',
+                });
+            }
+        });
+    </script>
     <?php
 }
 

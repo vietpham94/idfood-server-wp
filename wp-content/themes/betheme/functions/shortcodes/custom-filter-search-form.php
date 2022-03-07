@@ -29,13 +29,13 @@ function create_search_form_shortcode()
             <select name="product_cat">
                 <?php foreach ($all_categories as $product_cat): ?>
                     <option value="<?= $product_cat->slug; ?>"
-                        <?php (isset($_GET["product_cat"]) && $_GET["product_cat"] == $product_cat->slug) ? __("selected") : __(""); ?>>
+                        <?= ($_GET["product_cat"] == $product_cat->slug) ? "selected" : ""; ?>>
                         <?= $product_cat->name; ?>
                     </option>
                 <?php endforeach; ?>
             </select>
             <input placeholder="Từ khóa tìm kiếm" class="elementor-search-form__input" type="search" name="s"
-                   title="Search" value="<?php isset($_GET["s"]) ? __($_GET["s"]) : __(''); ?>">
+                   title="Search" value="<?= $_GET["s"] ?? ''; ?>">
             <input type="hidden" name="post_type" value="product"/>
             <button class="elementor-search-form__submit" type="submit" title="Search" aria-label="Search">
                 <i class="fa fa-search" aria-hidden="true"></i>

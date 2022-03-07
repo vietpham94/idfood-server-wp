@@ -64,7 +64,7 @@ function get_children_product_categorie($parent)
 }
 
 ?>
-    <div id="Content">
+    <div id="Content" class="container-fluid">
         <div class="content_wrapper clearfix">
 
             <div class="sections_group">
@@ -160,10 +160,10 @@ function get_children_product_categorie($parent)
                                                                     </p>
                                                                 </a>
                                                             </td>
-                                                            <td class="hide-md">
+                                                            <td>
                                                                 <a href="/?add-to-cart=<?= $product->id ?>"
                                                                    class="adding-to-cart-btn" title="Mua ngay">
-                                                                    <i class="fas fa-cart-plus"></i>
+                                                                    <i class="fas fa-shopping-bag"></i>
                                                                 </a>
                                                             </td>
                                                         </tr>
