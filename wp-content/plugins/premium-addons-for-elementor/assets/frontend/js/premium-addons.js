@@ -372,6 +372,7 @@
                 var closeBtn = $scope.find('.premium-video-box-sticky-close');
 
                 closeBtn.off('click.closetrigger').on('click.closetrigger', function (e) {
+                    e.stopPropagation();
                     stickyWaypoint[0].disable();
 
                     $videoBoxElement.removeClass('premium-video-box-sticky-apply premium-video-box-sticky-hide');
@@ -1236,6 +1237,7 @@
                 speed: settings.speed,
                 autoplay: settings.autoplay,
                 autoplaySpeed: settings.autoplaySpeed,
+                rows: 0,
                 draggable: settings.draggable,
                 rtl: settings.rtl,
                 adaptiveHeight: settings.adaptiveHeight,
@@ -1246,11 +1248,17 @@
                 prevArrow: $carouselElem.find(".premium-carousel-nav-arrow-prev").html(),
                 nextArrow: $carouselElem.find(".premium-carousel-nav-arrow-next").html(),
                 dots: settings.dots,
+                variableWidth: settings.variableWidth,
+                cssEase: settings.cssEase,
                 customPaging: function () {
                     var customDot = $carouselElem.find(".premium-carousel-nav-dot").html();
                     return customDot;
                 }
             });
+
+            if (settings.variableWidth) {
+                $carouselElem.find(".elementor-container").css("flex-wrap", "nowrap");
+            }
 
             function resetAnimations(event) {
 
@@ -1409,7 +1417,6 @@
 
                 return {
                     selectors: {
-                        bannerElement: '.premium-banner',
                         bannerImgWrap: '.premium-banner-ib',
                         bannerImg: 'img',
                     }
@@ -1422,7 +1429,6 @@
                 var selectors = this.getSettings('selectors');
 
                 return {
-                    $bannerElement: this.$element.find(selectors.bannerElement),
                     $bannerImgWrap: this.$element.find(selectors.bannerImgWrap),
                     $bannerImg: this.$element.find(selectors.bannerImg)
                 }
@@ -1444,12 +1450,14 @@
 
             run: function () {
 
-                var $bannerElement = this.elements.$bannerElement;
+                var $bannerElement = this.$element;
 
-                if ($bannerElement.data("box-tilt")) {
-                    var reverse = $bannerElement.data("box-tilt-reverse");
+                if ($bannerElement.hasClass("premium-banner-tilt-yes")) {
+
+                    var reverse = $bannerElement.hasClass("premium-banner-tilt-rev-yes");
+                    console.log(reverse);
                     UniversalTilt.init({
-                        elements: $bannerElement,
+                        elements: $bannerElement.closest(".elementor-widget"),
                         settings: {
                             reverse: reverse
                         },

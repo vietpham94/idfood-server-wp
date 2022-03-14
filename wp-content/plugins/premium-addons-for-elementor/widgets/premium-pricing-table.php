@@ -1667,7 +1667,7 @@ class Premium_Pricing_Table extends Widget_Base {
 			array(
 				'name'     => 'premium_pricing_list_background',
 				'types'    => array( 'classic', 'gradient' ),
-				'selector' => '{{WRAPPER}} .premium-pricing-list-container',
+				'selector' => '{{WRAPPER}} .premium-pricing-list',
 			)
 		);
 
@@ -1676,7 +1676,7 @@ class Premium_Pricing_Table extends Widget_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'     => 'premium_pricing_list_border',
-				'selector' => '{{WRAPPER}} .premium-pricing-list-container',
+				'selector' => '{{WRAPPER}} .premium-pricing-list',
 			)
 		);
 
@@ -1688,7 +1688,7 @@ class Premium_Pricing_Table extends Widget_Base {
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', 'em', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-pricing-list-container' => 'border-radius: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .premium-pricing-list' => 'border-radius: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1708,7 +1708,7 @@ class Premium_Pricing_Table extends Widget_Base {
 					'unit'   => 'px',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-pricing-list-container' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .premium-pricing-list' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1721,7 +1721,7 @@ class Premium_Pricing_Table extends Widget_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', 'em', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-pricing-list-container' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .premium-pricing-list' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -2456,11 +2456,11 @@ class Premium_Pricing_Table extends Widget_Base {
 
 		$settings = $this->get_settings_for_display();
 
-		$this->add_inline_editing_attributes( 'title_text' );
+		$this->add_inline_editing_attributes( 'premium_pricing_table_title_text' );
+		$this->add_render_attribute( 'premium_pricing_table_title_text', 'class', 'premium-pricing-table-title' );
 
-		$this->add_inline_editing_attributes( 'description_text', 'advanced' );
-
-		$this->add_inline_editing_attributes( 'button_text' );
+		$this->add_inline_editing_attributes( 'premium_pricing_table_description_text', 'advanced' );
+		$this->add_render_attribute( 'premium_pricing_table_description_text', 'class', 'premium-pricing-description-container' );
 
 		$title_tag = Helper_Functions::validate_html_tag( $settings['premium_pricing_table_title_size'] );
 
@@ -2562,136 +2562,144 @@ class Premium_Pricing_Table extends Widget_Base {
 			</div>
 			<?php
 		endif;
+
 		if ( 'yes' === $settings['premium_pricing_table_title_switcher'] ) :
 			?>
-		<<?php echo wp_kses_post( $title_tag ); ?> class="premium-pricing-table-title">
-			<span <?php echo wp_kses_post( $this->get_render_attribute_string( 'title_text' ) ); ?>>
+			<<?php echo wp_kses_post( $title_tag ) . ' ' . wp_kses_post( $this->get_render_attribute_string( 'premium_pricing_table_title_text' ) ); ?>>
 				<?php echo wp_kses_post( $settings['premium_pricing_table_title_text'] ); ?>
-			</span>
 			</<?php echo wp_kses_post( $title_tag ); ?>>
 		<?php endif; ?>
 		<?php if ( 'yes' === $settings['premium_pricing_table_price_switcher'] ) : ?>
 		<div class="premium-pricing-price-container">
-			<strike class="premium-pricing-slashed-price-value">
-				<?php echo wp_kses_post( $settings['premium_pricing_table_slashed_price_value'] ); ?>
-			</strike>
-			<span class="premium-pricing-price-currency">
-				<?php echo wp_kses_post( $settings['premium_pricing_table_price_currency'] ); ?>
-			</span>
-			<span class="premium-pricing-price-value">
-				<?php echo wp_kses_post( $settings['premium_pricing_table_price_value'] ); ?>
-			</span>
-			<span class="premium-pricing-price-separator">
-				<?php echo wp_kses_post( $settings['premium_pricing_table_price_separator'] ); ?>
-			</span>
-			<span class="premium-pricing-price-duration">
-				<?php echo wp_kses_post( $settings['premium_pricing_table_price_duration'] ); ?>
-			</span>
+
+			<?php if ( ! empty( $settings['premium_pricing_table_slashed_price_value'] ) ) : ?>
+				<strike class="premium-pricing-slashed-price-value">
+					<?php echo wp_kses_post( $settings['premium_pricing_table_slashed_price_value'] ); ?>
+				</strike>
+			<?php endif; ?>
+
+			<?php if ( ! empty( $settings['premium_pricing_table_price_currency'] ) ) : ?>
+				<span class="premium-pricing-price-currency">
+					<?php echo wp_kses_post( $settings['premium_pricing_table_price_currency'] ); ?>
+				</span>
+			<?php endif; ?>
+
+			<?php if ( ! empty( $settings['premium_pricing_table_price_value'] ) ) : ?>
+				<span class="premium-pricing-price-value">
+					<?php echo wp_kses_post( $settings['premium_pricing_table_price_value'] ); ?>
+				</span>
+			<?php endif; ?>
+
+			<?php if ( ! empty( $settings['premium_pricing_table_price_separator'] ) ) : ?>
+				<span class="premium-pricing-price-separator">
+					<?php echo wp_kses_post( $settings['premium_pricing_table_price_separator'] ); ?>
+				</span>
+			<?php endif; ?>
+
+			<?php if ( ! empty( $settings['premium_pricing_table_price_duration'] ) ) : ?>
+				<span class="premium-pricing-price-duration">
+					<?php echo wp_kses_post( $settings['premium_pricing_table_price_duration'] ); ?>
+				</span>
+			<?php endif; ?>
 		</div>
 			<?php
 		endif;
 		if ( 'yes' === $settings['premium_pricing_table_list_switcher'] ) :
 			?>
-			<div class="premium-pricing-list-container">
-				<ul class="premium-pricing-list">
-							<?php
-							foreach ( $settings['premium_fancy_text_list_items'] as $index => $item ) :
+			<ul class="premium-pricing-list">
+						<?php
+						foreach ( $settings['premium_fancy_text_list_items'] as $index => $item ) :
 
-								$key = 'pricing_list_item_' . $index;
-								if ( 'icon' === $item['icon_type'] ) :
-									$icon_migrated = isset( $item['__fa4_migrated']['premium_pricing_list_item_icon_updated'] );
-									$icon_new      = empty( $item['premium_pricing_list_item_icon'] ) && Icons_Manager::is_migration_allowed();
-								endif;
+							$key = 'pricing_list_item_' . $index;
+							if ( 'icon' === $item['icon_type'] ) :
+								$icon_migrated = isset( $item['__fa4_migrated']['premium_pricing_list_item_icon_updated'] );
+								$icon_new      = empty( $item['premium_pricing_list_item_icon'] ) && Icons_Manager::is_migration_allowed();
+							endif;
 
-								$this->add_render_attribute(
-									$key,
-									array(
-										'class' => array(
-											'elementor-repeater-item-' . $item['_id'],
-											'premium-pricing-list-item',
-										),
-									)
-								);
-								?>
-						<li <?php echo wp_kses_post( $this->get_render_attribute_string( $key ) ); ?>>
-								<?php if ( 'icon' === $item['icon_type'] ) : ?>
-									<?php
-									if ( $icon_new || $icon_migrated ) :
-										Icons_Manager::render_icon(
-											$item['premium_pricing_list_item_icon_updated'],
-											array(
-												'class' => 'premium-pricing-feature-icon',
-												'aria-hidden' => 'true',
-											)
-										);
-								else :
-									?>
-									<i class="premium-pricing-feature-icon <?php echo esc_attr( $item['premium_pricing_list_item_icon'] ); ?>"></i>
-								<?php endif; ?>
-									<?php
-									elseif ( 'animation' === $item['icon_type'] ) :
-										$lottie_key = 'pricing_item_lottie_' . $index;
-										$this->add_render_attribute(
-											$lottie_key,
-											array(
-												'class' => array(
-													'premium-pricing-feature-icon',
-													'premium-lottie-animation',
-												),
-												'data-lottie-url' => $item['lottie_url'],
-												'data-lottie-loop' => $item['lottie_loop'],
-												'data-lottie-reverse' => $item['lottie_reverse'],
-											)
-										);
-										?>
-								<div <?php echo wp_kses_post( $this->get_render_attribute_string( $lottie_key ) ); ?>></div>
-										<?php
-									else :
-										$img_key = 'pricing_list_img' . $index;
-										$this->add_render_attribute(
-											$img_key,
-											array(
-												'src' => $item['premium_pricing_list_image']['url'],
-												'alt' => Control_Media::get_image_alt( $item['premium_pricing_list_image'] ),
-											)
-										);
-										?>
-								<div class='premium-pricing-list-image premium-pricing-feature-icon'>
-									<img <?php echo wp_kses_post( $this->get_render_attribute_string( $img_key ) ); ?> />
-								</div>
-									<?php endif; ?>
-
+							$this->add_render_attribute(
+								$key,
+								array(
+									'class' => array(
+										'elementor-repeater-item-' . $item['_id'],
+										'premium-pricing-list-item',
+									),
+								)
+							);
+							?>
+					<li <?php echo wp_kses_post( $this->get_render_attribute_string( $key ) ); ?>>
+							<?php if ( 'icon' === $item['icon_type'] ) : ?>
 								<?php
-								if ( ! empty( $item['premium_pricing_list_item_text'] ) ) :
-									$item_class = 'yes' === $item['premium_pricing_table_item_tooltip'] ? 'list-item-tooltip' : '';
-									?>
-								<span class="premium-pricing-list-span <?php echo esc_attr( $item_class ); ?>">
-									<?php
-									echo wp_kses_post( $item['premium_pricing_list_item_text'] );
-									if ( 'yes' === $item['premium_pricing_table_item_tooltip'] && ! empty( $item['premium_pricing_table_item_tooltip_text'] ) ) :
-										?>
-										<span class="premium-pricing-list-tooltip"><?php echo wp_kses_post( $item['premium_pricing_table_item_tooltip_text'] ); ?></span>
-									<?php endif; ?>
-								</span>
+								if ( $icon_new || $icon_migrated ) :
+									Icons_Manager::render_icon(
+										$item['premium_pricing_list_item_icon_updated'],
+										array(
+											'class'       => 'premium-pricing-feature-icon',
+											'aria-hidden' => 'true',
+										)
+									);
+							else :
+								?>
+								<i class="premium-pricing-feature-icon <?php echo esc_attr( $item['premium_pricing_list_item_icon'] ); ?>"></i>
 							<?php endif; ?>
-						</li>
-							<?php endforeach; ?>
-				</ul>
-			</div>
+								<?php
+								elseif ( 'animation' === $item['icon_type'] ) :
+									$lottie_key = 'pricing_item_lottie_' . $index;
+									$this->add_render_attribute(
+										$lottie_key,
+										array(
+											'class' => array(
+												'premium-pricing-feature-icon',
+												'premium-lottie-animation',
+											),
+											'data-lottie-url' => $item['lottie_url'],
+											'data-lottie-loop' => $item['lottie_loop'],
+											'data-lottie-reverse' => $item['lottie_reverse'],
+										)
+									);
+									?>
+							<div <?php echo wp_kses_post( $this->get_render_attribute_string( $lottie_key ) ); ?>></div>
+									<?php
+								else :
+									$img_key = 'pricing_list_img' . $index;
+									$this->add_render_attribute(
+										$img_key,
+										array(
+											'src' => $item['premium_pricing_list_image']['url'],
+											'alt' => Control_Media::get_image_alt( $item['premium_pricing_list_image'] ),
+										)
+									);
+									?>
+							<div class='premium-pricing-list-image premium-pricing-feature-icon'>
+								<img <?php echo wp_kses_post( $this->get_render_attribute_string( $img_key ) ); ?> />
+							</div>
+								<?php endif; ?>
+
+							<?php
+							if ( ! empty( $item['premium_pricing_list_item_text'] ) ) :
+								$item_class = 'yes' === $item['premium_pricing_table_item_tooltip'] ? ' list-item-tooltip' : '';
+								?>
+							<span class="premium-pricing-list-span<?php echo esc_attr( $item_class ); ?>">
+								<?php
+								echo wp_kses_post( $item['premium_pricing_list_item_text'] );
+								if ( 'yes' === $item['premium_pricing_table_item_tooltip'] && ! empty( $item['premium_pricing_table_item_tooltip_text'] ) ) :
+									?>
+									<span class="premium-pricing-list-tooltip"><?php echo wp_kses_post( $item['premium_pricing_table_item_tooltip_text'] ); ?></span>
+								<?php endif; ?>
+							</span>
+						<?php endif; ?>
+					</li>
+						<?php endforeach; ?>
+			</ul>
 		<?php endif; ?>
 		<?php if ( 'yes' === $settings['premium_pricing_table_description_switcher'] ) : ?>
-		<div class="premium-pricing-description-container">
-			<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'description_text' ) ); ?>>
-			<?php echo $this->parse_text_editor( $settings['premium_pricing_table_description_text'] ); ?>
+			<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'premium_pricing_table_description_text' ) ); ?>>
+				<?php echo $this->parse_text_editor( $settings['premium_pricing_table_description_text'] ); ?>
 			</div>
-		</div>
 		<?php endif; ?>
 		<?php if ( 'yes' === $settings['premium_pricing_table_button_switcher'] ) : ?>
 		<div class="premium-pricing-button-container">
 			<a <?php echo wp_kses_post( $this->get_render_attribute_string( 'button' ) ); ?>>
-				<span <?php echo wp_kses_post( $this->get_render_attribute_string( 'button_text' ) ); ?>>
-					<?php echo wp_kses_post( $settings['premium_pricing_table_button_text'] ); ?>
-				</span>
+				<?php echo wp_kses_post( $settings['premium_pricing_table_button_text'] ); ?>
 			</a>
 		</div>
 		<?php endif; ?>
@@ -2712,11 +2720,11 @@ class Premium_Pricing_Table extends Widget_Base {
 		?>
 		<#
 
-		view.addInlineEditingAttributes('title_text');
+		view.addInlineEditingAttributes('premium_pricing_table_title_text');
+		view.addRenderAttribute( 'premium_pricing_table_title_text', 'class', 'premium-pricing-table-title');
 
-		view.addInlineEditingAttributes('description_text', 'advanced');
-
-		view.addInlineEditingAttributes('button_text');
+		view.addInlineEditingAttributes('premium_pricing_table_description_text', 'advanced');
+		view.addRenderAttribute( 'premium_pricing_table_description_text', 'class', 'premium-pricing-description-container');
 
 		var titleTag = elementor.helpers.validateHTMLTag( settings.premium_pricing_table_title_size ),
 			linkType = settings.premium_pricing_table_button_url_type,
@@ -2786,7 +2794,7 @@ class Premium_Pricing_Table extends Widget_Base {
 				</div>
 			<# } #>
 			<# if('yes' === settings.premium_pricing_table_title_switcher ) { #>
-				<{{{titleTag}}} class="premium-pricing-table-title"><span {{{ view.getRenderAttributeString('title_text') }}}>{{{ settings.premium_pricing_table_title_text }}}</span></{{{titleTag}}}>
+				<{{{titleTag}}} {{{ view.getRenderAttributeString('premium_pricing_table_title_text') }}}>{{{ settings.premium_pricing_table_title_text }}}</{{{titleTag}}}>
 			<# } #>
 
 			<# if('yes' === settings.premium_pricing_table_price_switcher ) { #>
@@ -2799,8 +2807,7 @@ class Premium_Pricing_Table extends Widget_Base {
 				</div>
 			<# } #>
 			<# if('yes' === settings.premium_pricing_table_list_switcher ) { #>
-				<div class="premium-pricing-list-container">
-					<ul class="premium-pricing-list">
+				<ul class="premium-pricing-list">
 					<# _.each( settings.premium_fancy_text_list_items, function( item, index ) {
 
 						var key = 'pricing_list_item_' + index;
@@ -2857,20 +2864,18 @@ class Premium_Pricing_Table extends Widget_Base {
 							<# } #>
 						</li>
 					<# } ); #>
-					</ul>
-				</div>
+				</ul>
+
 			<# } #>
 			<# if('yes' === settings.premium_pricing_table_description_switcher ) { #>
-				<div class="premium-pricing-description-container">
-					<div {{{ view.getRenderAttributeString('description_text') }}}>
-						{{{ settings.premium_pricing_table_description_text }}}
-					</div>
+				<div {{{ view.getRenderAttributeString('premium_pricing_table_description_text') }}}>
+					{{{ settings.premium_pricing_table_description_text }}}
 				</div>
 			<# } #>
 			<# if('yes' === settings.premium_pricing_table_button_switcher ) { #>
 				<div class="premium-pricing-button-container">
 					<a class="premium-pricing-price-button" target="_{{ settings.premium_pricing_table_button_link_target }}" href="{{ linkURL }}">
-						<span {{{ view.getRenderAttributeString('button_text') }}}>{{{ settings.premium_pricing_table_button_text }}}</span>
+						{{{ settings.premium_pricing_table_button_text }}}
 					</a>
 				</div>
 			<# } #>

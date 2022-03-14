@@ -1242,7 +1242,7 @@ class Premium_Template_Tags {
 	 * @since 3.4.0
 	 * @access public
 	 */
-	public static function get_current_product_gallery_images() {
+	public static function get_current_product_gallery_images( $size ) {
 
 		global $product;
 
@@ -1250,7 +1250,7 @@ class Premium_Template_Tags {
 
 		if ( $attachment_ids ) {
 
-			$image_size = apply_filters( 'single_product_archive_thumbnail_size', 'shop_catalog' );
+			$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 
 			foreach ( $attachment_ids as $index => $id ) {
 				if ( $index > 2 ) {
@@ -1261,6 +1261,40 @@ class Premium_Template_Tags {
 			}
 		}
 	}
+
+	/**
+	 * Get Current Product Gallery Images
+	 *
+	 * Gets current product images
+	 *
+	 * @since 3.4.0
+	 * @access public
+	 */
+	public static function get_current_product_linked_images( $size ) {
+
+		global $product;
+
+		$attachment_ids = $product->get_gallery_image_ids();
+
+		if ( $attachment_ids ) {
+
+			$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
+
+			foreach ( $attachment_ids as $index => $id ) {
+				if ( $index > 2 ) {
+					break;
+				}
+
+				woocommerce_template_loop_product_link_open();
+
+				echo wp_kses_post( apply_filters( 'pa_woo_product_gallery_image', wp_get_attachment_image( $id, $image_size, false, array( 'class' => 'premium-woo-product__gallery_image' ) ) ) );
+
+				woocommerce_template_loop_product_link_close(); // closes product anchor tag.
+
+			}
+		}
+	}
+
 
 	/**
 	 * Get Current Product Category

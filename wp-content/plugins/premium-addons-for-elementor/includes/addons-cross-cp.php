@@ -46,7 +46,7 @@ if ( ! class_exists( 'Addons_Cross_CP' ) ) {
 
 			if ( ! current_user_can( 'edit_posts' ) ) {
 				wp_send_json_error(
-					__( 'Not a Valid', 'premium-addons-for-elementor' ),
+					__( 'Not a valid user', 'premium-addons-for-elementor' ),
 					403
 				);
 			}
@@ -95,13 +95,13 @@ if ( ! class_exists( 'Addons_Cross_CP' ) ) {
 			return \Elementor\Plugin::instance()->db->iterate_data(
 				$media_import,
 				function( $element_data ) {
-					$elements = \Elementor\Plugin::instance()->elements_manager->create_element_instance( $element_data );
+					$element = \Elementor\Plugin::instance()->elements_manager->create_element_instance( $element_data );
 
-					if ( ! $elements ) {
+					if ( ! $element ) {
 						return null;
 					}
 
-					return self::cross_cp_import_element( $elements );
+					return self::cross_cp_import_element( $element );
 				}
 			);
 
@@ -115,11 +115,11 @@ if ( ! class_exists( 'Addons_Cross_CP' ) ) {
 		 * @param Controls_Stack $element element to import.
 		 */
 		protected static function cross_cp_import_element( Controls_Stack $element ) {
-			$get_element_instance = $element->get_data();
-			$method               = 'on_import';
+			$element_instance = $element->get_data();
+			$method           = 'on_import';
 
 			if ( method_exists( $element, $method ) ) {
-				$get_element_instance = $element->{$method}( $get_element_instance );
+				$element_instance = $element->{$method}( $element_instance );
 			}
 
 			foreach ( $element->get_controls() as $get_control ) {
@@ -127,15 +127,15 @@ if ( ! class_exists( 'Addons_Cross_CP' ) ) {
 				$control_name = $get_control['name'];
 
 				if ( ! $control_type ) {
-					return $get_element_instance;
+					return $element_instance;
 				}
 
 				if ( method_exists( $control_type, $method ) ) {
-					$get_element_instance['settings'][ $control_name ] = $control_type->{$method}( $element->get_settings( $control_name ), $get_control );
+					$element_instance['settings'][ $control_name ] = $control_type->{$method}( $element->get_settings( $control_name ), $get_control );
 				}
 			}
 
-			return $get_element_instance;
+			return $element_instance;
 		}
 
 		/**

@@ -1,4 +1,5 @@
 (function () {
+
     function a(b) {
         return b.forEach(function (b) {
             b.id = elementorCommon.helpers.getUniqueId(), 0 < b.elements.length && a(b.elements)

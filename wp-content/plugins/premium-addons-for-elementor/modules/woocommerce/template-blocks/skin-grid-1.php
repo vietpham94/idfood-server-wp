@@ -14,10 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Skin_Classic
+ * Class Skin_Grid_1
  */
 class Skin_Grid_1 extends Skin_Style {
-
 
 	/**
 	 * Member Variable

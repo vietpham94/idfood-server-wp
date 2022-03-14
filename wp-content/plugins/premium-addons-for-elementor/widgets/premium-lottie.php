@@ -357,7 +357,7 @@ class Premium_Lottie extends Widget_Base {
 				'toggle'    => false,
 				'separator' => 'before',
 				'selectors' => array(
-					'{{WRAPPER}} .premium-lottie-wrap' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .elementor-widget-container' => 'text-align: {{VALUE}}',
 				),
 			)
 		);
@@ -760,12 +760,10 @@ class Premium_Lottie extends Widget_Base {
 
 		?>
 
-		<div class="premium-lottie-wrap">
-			<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'lottie' ) ); ?>>
-				<?php if ( 'yes' === $settings['link_switcher'] && ! empty( $button_url ) ) : ?>
-					<a <?php echo wp_kses_post( $this->get_render_attribute_string( 'link' ) ); ?>></a>
-				<?php endif; ?>
-			</div>
+		<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'lottie' ) ); ?>>
+			<?php if ( 'yes' === $settings['link_switcher'] && ! empty( $button_url ) ) : ?>
+				<a <?php echo wp_kses_post( $this->get_render_attribute_string( 'link' ) ); ?>></a>
+			<?php endif; ?>
 		</div>
 
 		<?php
@@ -849,12 +847,10 @@ class Premium_Lottie extends Widget_Base {
 
 	#>
 
-		<div class="premium-lottie-wrap">
-			<div {{{ view.getRenderAttributeString('lottie') }}}>
-				<# if( 'yes' === settings.link_switcher && '' !== button_url ) { #>
-					<a {{{ view.getRenderAttributeString('link') }}}></a>
-				<# } #>
-			</div>
+		<div {{{ view.getRenderAttributeString('lottie') }}}>
+			<# if( 'yes' === settings.link_switcher && '' !== button_url ) { #>
+				<a {{{ view.getRenderAttributeString('link') }}}></a>
+			<# } #>
 		</div>
 
 		<?php

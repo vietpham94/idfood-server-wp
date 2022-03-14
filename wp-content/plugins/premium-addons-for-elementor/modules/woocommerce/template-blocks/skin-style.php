@@ -1,6 +1,6 @@
 <?php
 /**
- * Premium Addons Base Skin.
+ * Premium Addons Base Skin Style.
  */
 
 namespace PremiumAddons\Modules\Woocommerce\TemplateBlocks;
@@ -13,15 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Skin_Base
+ * Class Skin_Style
  */
 abstract class Skin_Style {
-
 
 	/**
 	 * Query object
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @var object $query
 	 */
 	public static $query;
@@ -29,7 +28,7 @@ abstract class Skin_Style {
 	/**
 	 * Query object
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @var object $query_obj
 	 */
 	public static $query_obj;
@@ -37,7 +36,7 @@ abstract class Skin_Style {
 	/**
 	 * Settings
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @var object $settings
 	 */
 	public static $settings;
@@ -45,7 +44,7 @@ abstract class Skin_Style {
 	/**
 	 * Skin
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @var object $skin
 	 */
 	public static $skin;
@@ -53,7 +52,7 @@ abstract class Skin_Style {
 	/**
 	 * Node ID of element
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @var object $node_id
 	 */
 	public static $node_id;
@@ -61,7 +60,7 @@ abstract class Skin_Style {
 	/**
 	 * Rendered Settings
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @var object $_render_attributes
 	 */
 	public $_render_attributes;
@@ -716,7 +715,7 @@ abstract class Skin_Style {
 
 		if ( 'yes' === $quick_view ) {
 			wp_enqueue_script( 'wc-add-to-cart-variation' );
-			wp_enqueue_script( 'flexslider' );
+			// wp_enqueue_script( 'flexslider' );
 
 			$widget_id = self::$node_id;
 
@@ -759,7 +758,7 @@ abstract class Skin_Style {
 	 * @param string $style Skin ID.
 	 * @param array  $settings Settings Object.
 	 * @param string $node_id Node ID.
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @access public
 	 */
 	public function render( $style, $settings, $node_id ) {
@@ -800,7 +799,7 @@ abstract class Skin_Style {
 	/**
 	 * Render settings array for selected skin
 	 *
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @param string $control_base_id Skin ID.
 	 * @access public
 	 */
@@ -907,7 +906,7 @@ abstract class Skin_Style {
 	 *
 	 * @param array|string $style_id  The style ID.
 	 * @param array|string $widget    Widget object.
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @access public
 	 */
 	public function inner_render( $style_id, $widget ) {
@@ -936,7 +935,7 @@ abstract class Skin_Style {
 	 *
 	 * @param array|string $style_id  The style ID.
 	 * @param array|string $widget    Widget object.
-	 * @since 1.5.0
+	 * @since 4.7.0
 	 * @access public
 	 */
 	public function page_render( $style_id, $widget ) {

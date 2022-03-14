@@ -337,7 +337,7 @@ class Premium_Templates_Source_Api extends Premium_Templates_Source_Base {
 	 * @since 3.6.0
 	 * @access public
 	 */
-	public function get_item( $template_id, $tab = false ) {
+	public function get_item( $template_id, $tab = false, $media = true ) {
 
 		$id = str_replace( $this->id_prefix(), '', $template_id );
 
@@ -390,7 +390,7 @@ class Premium_Templates_Source_Api extends Premium_Templates_Source_Base {
 
 		if ( ! empty( $content ) ) {
 			$content = $this->replace_elements_ids( $content );
-			$content = $this->process_export_import_content( $content, 'on_import' );
+			$content = $this->process_export_import_content( $content, 'on_import', $media );
 		}
 
 		return array(

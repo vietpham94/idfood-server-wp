@@ -226,5 +226,15 @@
                 <field type="Vertical Scroll: Section ID" editor_type="LINE">section_id</field>
             </fields-in-item>
         </widget>
+
+        <widget name="premium-woo-products">
+            <fields>
+                <field name="Woo Products: Empty Query Message" editor_type="LINE">empty_products_msg</field>
+                <field name="Woo Products: Previous Page String" editor_type="LINE">prev_string</field>
+                <field name="Woo Products: Next Page String" editor_type="LINE">next_string</field>
+                <field name="Woo Products: Featured String" editor_type="LINE">featured_string</field>
+                <field name="Woo Products: Out Of Stock String" editor_type="LINE">sold_out_string</field>
+            </fields>
+        </widget>
     </elementor-widgets>
 </wpml-config>

@@ -1,21 +1,23 @@
 <?php
-
 /**
  * Premium Woo Products.
  */
+
 namespace PremiumAddons\Modules\Woocommerce\Widgets;
 
 // Elementor Classes.
 use Elementor\Widget_Base;
 use Elementor\Repeater;
 use Elementor\Controls_Manager;
-use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
-use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
-use Elementor\Group_Control_Image_Size;
 use Elementor\Group_Control_Border;
-use Elementor\Group_Control_Box_Shadow;
+use Elementor\Group_Control_Image_Size;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Css_Filter;
+use Elementor\Group_Control_Box_Shadow;
+use Elementor\Group_Control_Text_Shadow;
+
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 
 // Premium Addons Classes.
 use PremiumAddons\Includes\Helper_Functions;
@@ -50,6 +52,16 @@ class Woo_Products extends Widget_Base {
 		return $this->template_instance;
 	}
 
+	/**
+	 * Whether the widget has content.
+	 *
+	 * Used in cases where the widget has no content. When widgets uses only
+	 * skins to display dynamic content generated on the server.
+	 *
+	 * @access protected
+	 *
+	 * @var bool
+	 */
 	protected $_has_template_content = false;
 
 	/**
@@ -85,6 +97,7 @@ class Woo_Products extends Widget_Base {
 			'pa-slick',
 			'woocommerce-general',
 			'premium-addons',
+			'premium-pro',
 		);
 	}
 
@@ -110,10 +123,11 @@ class Woo_Products extends Widget_Base {
 	 */
 	public function get_script_depends() {
 		return array(
-			'premium-woocommerce',
 			'isotope-js',
+			'flexslider',
 			'pa-slick',
 			'imagesloaded',
+			'premium-woocommerce',
 		);
 	}
 
@@ -141,15 +155,6 @@ class Woo_Products extends Widget_Base {
 		return array( 'premium-elements' );
 	}
 
-	protected function register_skins() {
-		$this->add_skin( new Skins\Skin_1( $this ) );
-		$this->add_skin( new Skins\Skin_2( $this ) );
-		$this->add_skin( new Skins\Skin_3( $this ) );
-		$this->add_skin( new Skins\Skin_4( $this ) );
-		// $this->add_skin( new Skins\Skin_5( $this ) );
-		$this->add_skin( new Skins\Skin_6( $this ) );
-	}
-
 	/**
 	 * Retrieve Widget Support URL.
 	 *
@@ -161,7 +166,67 @@ class Woo_Products extends Widget_Base {
 		return 'https://premiumaddons.com/support/';
 	}
 
+	/**
+	 * Register Skins.
+	 * Registers woo products widget's skins.
+	 *
+	 * @access protected
+	 */
+	protected function register_skins() {
+		// FREE SKINS.
+		$this->add_skin( new Skins\Skin_1( $this ) );
+		$this->add_skin( new Skins\Skin_2( $this ) );
+		$this->add_skin( new Skins\Skin_3( $this ) );
+		$this->add_skin( new Skins\Skin_4( $this ) );
+		// $this->add_skin( new Skins\Skin_5( $this ) );
+		$this->add_skin( new Skins\Skin_6( $this ) );
+
+		// PRO SKINS.
+		$this->add_skin( new Skins\Skin_7( $this ) );
+		$this->add_skin( new Skins\Skin_8( $this ) );
+		$this->add_skin( new Skins\Skin_9( $this ) );
+		$this->add_skin( new Skins\Skin_10( $this ) );
+		$this->add_skin( new Skins\Skin_11( $this ) );
+	}
+
+	/**
+	 * Register Woo Products controls.
+	 *
+	 * @since 1.0.0
+	 * @access protected
+	 */
 	protected function register_controls() {
+
+		$papro_activated = apply_filters( 'papro_activated', false );
+
+		$pro_skins = ! $papro_activated ? array( 'grid-7', 'grid-8', 'grid-9', 'grid-10', 'grid-11' ) : array( '' );
+
+		// content tab.
+		$this->register_content_general_section( $papro_activated, $pro_skins );
+		$this->register_content_grid_section( $pro_skins );
+		$this->register_content_carousel_section( $pro_skins );
+		$this->register_content_query_section( $pro_skins );
+		$this->register_content_pagination_section( $pro_skins );
+		$this->register_content_ribbon_section( $pro_skins );
+
+		// style tab.
+		$this->register_style_general_section( $pro_skins );
+		$this->register_style_image_section( $pro_skins );
+		$this->register_style_pagination_section( $pro_skins );
+		$this->register_style_carousel_section( $pro_skins );
+		$this->register_style_sold_out_controls( $pro_skins );
+	}
+
+	/**
+	 * Register content general section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param boolean $papro_activated  true|false.
+	 * @param array   $pro_skins   pro skins.
+	 */
+	public function register_content_general_section( $papro_activated, $pro_skins ) {
 
 		$this->start_controls_section(
 			'general_section',
@@ -171,16 +236,36 @@ class Woo_Products extends Widget_Base {
 			)
 		);
 
+		if ( ! $papro_activated ) {
+
+			$get_pro = Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-woocommerce-products/', 'editor-page', 'wp-editor', 'get-pro' );
+
+			$this->add_control(
+				'woo_products_notice',
+				array(
+					'type'            => Controls_Manager::RAW_HTML,
+					'raw'             => __( 'This skin is available in ', 'premium-addons-for-elementor' ) . '<b>Premium Addons Pro. </b>' . '<a href="' . esc_url( $get_pro ) . '" target="_blank">' . __( 'Upgrade now!', 'premium-addons-for-elementor' ) . '</a>',
+					'content_classes' => 'papro-upgrade-notice',
+					'condition'       => array(
+						'_skin' => $pro_skins,
+					),
+				)
+			);
+		}
+
 		$this->add_control(
 			'layout_type',
 			array(
-				'label'   => __( 'Layout', 'premium-addons-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'grid',
-				'options' => array(
+				'label'     => __( 'Layout', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::SELECT,
+				'default'   => 'grid',
+				'options'   => array(
 					'grid'     => __( 'Grid', 'premium-addons-for-elementor' ),
 					// 'metro'    => __( 'Metro', 'premium-addons-for-elementor' ),
 					'carousel' => __( 'Carousel', 'premium-addons-for-elementor' ),
+				),
+				'condition' => array(
+					'_skin!' => $pro_skins,
 				),
 			)
 		);
@@ -188,19 +273,33 @@ class Woo_Products extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Image_Size::get_type(),
 			array(
-				'name'    => 'featured_image',
-				'default' => 'full',
+				'name'      => 'featured_image',
+				'default'   => 'full',
+				'condition' => array(
+					'_skin!' => $pro_skins,
+				),
 			)
 		);
 
 		$this->end_controls_section();
+	}
 
+	/**
+	 * Register content grid section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_content_grid_section( $pro_skins ) {
 		$this->start_controls_section(
 			'section_grid_options',
 			array(
 				'label'     => __( 'Grid', 'premium-addons-for-elementor' ),
 				'condition' => array(
 					'layout_type' => array( 'grid', 'metro' ),
+					'_skin!'      => $pro_skins,
 				),
 			)
 		);
@@ -291,6 +390,17 @@ class Woo_Products extends Widget_Base {
 
 		$this->end_controls_section();
 
+	}
+
+	/**
+	 * Register content carousel section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_content_carousel_section( $pro_skins ) {
 		$this->start_controls_section(
 			'section_carousel_options',
 			array(
@@ -298,6 +408,7 @@ class Woo_Products extends Widget_Base {
 				'type'      => Controls_Manager::SECTION,
 				'condition' => array(
 					'layout_type' => 'carousel',
+					'_skin!'      => $pro_skins,
 				),
 			)
 		);
@@ -489,10 +600,24 @@ class Woo_Products extends Widget_Base {
 
 		$this->end_controls_section();
 
+	}
+
+	/**
+	 * Register content query section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_content_query_section( $pro_skins ) {
 		$this->start_controls_section(
 			'section_query_settings',
 			array(
-				'label' => __( 'Query', 'premium-addons-for-elementor' ),
+				'label'     => __( 'Query', 'premium-addons-for-elementor' ),
+				'condition' => array(
+					'_skin!' => $pro_skins,
+				),
 			)
 		);
 
@@ -669,12 +794,24 @@ class Woo_Products extends Widget_Base {
 
 		$this->end_controls_section();
 
+	}
+
+	/**
+	 * Register content pagination section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_content_pagination_section( $pro_skins ) {
 		$this->start_controls_section(
 			'section_pagination_options',
 			array(
 				'label'     => __( 'Pagination', 'premium-addons-for-elementor' ),
 				'condition' => array(
 					'layout_type' => array( 'grid', 'metro' ),
+					'_skin!'      => $pro_skins,
 				),
 			)
 		);
@@ -761,6 +898,254 @@ class Woo_Products extends Widget_Base {
 
 		$this->end_controls_section();
 
+	}
+
+	/**
+	 * Register content ribbons section.
+	 * Adds sale/fearured ribbon controls
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_content_ribbon_section( $pro_skins ) {
+
+		$this->start_controls_section(
+			'section_ribbons_settings',
+			array(
+				'label'     => __( 'Sale/Featured Ribbons', 'premium-addons-for-elementor' ),
+				'condition' => array(
+					'_skin!' => $pro_skins,
+				),
+
+			)
+		);
+
+		$this->add_control(
+			'sale',
+			array(
+				'label'   => __( 'Show Sale Ribbon', 'premium-addons-for-elementor' ),
+				'type'    => Controls_Manager::SWITCHER,
+				'default' => 'yes',
+			)
+		);
+
+		$this->add_control(
+			'sale_type',
+			array(
+				'label'     => __( 'Type', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::SELECT,
+				'options'   => array(
+					''       => __( 'Default', 'premium-addons-for-elementor' ),
+					'custom' => __( 'Custom', 'premium-addons-for-elementor' ),
+				),
+				'default'   => '',
+				'condition' => array(
+					'sale' => 'yes',
+				),
+			)
+		);
+
+		$this->add_control(
+			'sale_string',
+			array(
+				'label'       => __( 'String', 'premium-addons-for-elementor' ),
+				'type'        => Controls_Manager::TEXT,
+				'default'     => '[value]%',
+				'description' => __( 'Show Sale % Value ( [value] Autocalculated offer value will replace this ).', 'premium-addons-for-elementor' ),
+				'condition'   => array(
+					'sale'      => 'yes',
+					'sale_type' => 'custom',
+				),
+			)
+		);
+
+		$this->add_control(
+			'featured',
+			array(
+				'label' => __( 'Show Featured Ribbon', 'premium-addons-for-elementor' ),
+				'type'  => Controls_Manager::SWITCHER,
+			)
+		);
+
+		$this->add_control(
+			'featured_string',
+			array(
+				'label'     => __( 'String', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::TEXT,
+				'default'   => __( 'Hot', 'premium-addons-for-elementor' ),
+				'condition' => array(
+					'featured' => 'yes',
+				),
+			)
+		);
+
+		$dir = is_rtl() ? 'right' : 'left';
+
+		$this->add_responsive_control(
+			'ribbons_hor',
+			array(
+				'label'      => __( 'Horizontal Offset', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%' ),
+				'range'      => array(
+					'px' => array(
+						'min' => 0,
+						'max' => 500,
+					),
+				),
+				'conditions' => array(
+					'relation' => 'and',
+					'terms'    => array(
+						array(
+							'name'     => '_skin',
+							'operator' => '===',
+							'value'    => 'grid-9',
+						),
+						array(
+							'relation' => 'or',
+							'terms'    => array(
+								array(
+									'name'  => 'sale',
+									'value' => 'yes',
+								),
+								array(
+									'name'  => 'featured',
+									'value' => 'yes',
+								),
+							),
+						),
+					),
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .premium-woo-ribbon-container' => $dir . ': {{SIZE}}{{UNIT}}; transform: translateX(0)',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'ribbons_ver',
+			array(
+				'label'      => __( 'Vertical Offset', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%' ),
+				'range'      => array(
+					'px' => array(
+						'min' => 0,
+						'max' => 500,
+					),
+				),
+				'conditions' => array(
+					'relation' => 'and',
+					'terms'    => array(
+						array(
+							'name'     => '_skin',
+							'operator' => '===',
+							'value'    => 'grid-9',
+						),
+						array(
+							'relation' => 'or',
+							'terms'    => array(
+								array(
+									'name'  => 'sale',
+									'value' => 'yes',
+								),
+								array(
+									'name'  => 'featured',
+									'value' => 'yes',
+								),
+							),
+						),
+					),
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .premium-woo-ribbon-container' => 'top: {{SIZE}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'ribbons_spacing',
+			array(
+				'label'      => __( 'Spacing', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%' ),
+				'range'      => array(
+					'px' => array(
+						'min' => -10,
+						'max' => 200,
+					),
+				),
+				'conditions' => array(
+					'relation' => 'and',
+					'terms'    => array(
+						array(
+							'name'  => '_skin',
+							'value' => 'grid-9',
+						),
+						array(
+							'name'  => 'sale',
+							'value' => 'yes',
+						),
+						array(
+							'name'  => 'featured',
+							'value' => 'yes',
+						),
+					),
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .premium-woo-product-featured-wrap' => 'margin-top: {{SIZE}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'section_sold_out_settings',
+			array(
+				'label'     => __( 'Out Of Stock Ribbon', 'premium-addons-for-elementor' ),
+				'condition' => array(
+					'_skin!' => $pro_skins,
+				),
+
+			)
+		);
+
+		$this->add_control(
+			'sold_out',
+			array(
+				'label' => __( 'Show Ribbon', 'premium-addons-for-elementor' ),
+				'type'  => Controls_Manager::SWITCHER,
+			)
+		);
+
+		$this->add_control(
+			'sold_out_string',
+			array(
+				'label'     => __( 'String', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::TEXT,
+				'default'   => __( 'Out Of Stock', 'premium-addons-for-elementor' ),
+				'condition' => array(
+					'sold_out' => 'yes',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+	}
+
+	/**
+	 * Register style general section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_style_general_section( $pro_skins ) {
+
 		$this->start_controls_section(
 			'section_pa_docs',
 			array(
@@ -796,8 +1181,11 @@ class Woo_Products extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			array(
-				'label' => __( 'General', 'premium-addons-for-elementor' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
+				'label'     => __( 'General', 'premium-addons-for-elementor' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'_skin!' => $pro_skins,
+				),
 			)
 		);
 
@@ -923,11 +1311,26 @@ class Woo_Products extends Widget_Base {
 
 		$this->end_controls_section();
 
+	}
+
+	/**
+	 * Register style image section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_style_image_section( $pro_skins ) {
+
 		$this->start_controls_section(
 			'section_image_style',
 			array(
-				'label' => __( 'Image', 'premium-addons-for-elementor' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
+				'label'     => __( 'Image', 'premium-addons-for-elementor' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'_skin!' => $pro_skins,
+				),
 			)
 		);
 
@@ -971,8 +1374,30 @@ class Woo_Products extends Widget_Base {
 			)
 		);
 
-		$this->end_controls_section();
+		$this->add_responsive_control(
+			'product_img_height',
+			array(
+				'label'      => __( 'Height', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%', 'em' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .premium-woocommerce .woocommerce-loop-product__link img' => 'height: {{SIZE}}{{UNIT}}; object-fit: cover;',
+				),
+			)
+		);
 
+		$this->end_controls_section();
+	}
+
+	/**
+	 * Register style pagination section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_style_pagination_section( $pro_skins ) {
 		$this->start_controls_section(
 			'section_pagination_style',
 			array(
@@ -981,6 +1406,7 @@ class Woo_Products extends Widget_Base {
 				'condition' => array(
 					'layout_type' => array( 'grid', 'metro' ),
 					'pagination'  => 'yes',
+					'_skin!'      => $pro_skins,
 				),
 			)
 		);
@@ -1167,6 +1593,18 @@ class Woo_Products extends Widget_Base {
 
 		$this->end_controls_section();
 
+	}
+
+	/**
+	 * Register style carousel section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_style_carousel_section( $pro_skins ) {
+
 		$this->start_controls_section(
 			'section_carousel_style',
 			array(
@@ -1174,6 +1612,18 @@ class Woo_Products extends Widget_Base {
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'condition' => array(
 					'layout_type' => 'carousel',
+					'_skin!'      => $pro_skins,
+				),
+			)
+		);
+
+		$this->add_control(
+			'content_carousel_arrows',
+			array(
+				'label'     => esc_html__( 'Arrows', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::HEADING,
+				'condition' => array(
+					'arrows' => 'yes',
 				),
 			)
 		);
@@ -1258,6 +1708,17 @@ class Woo_Products extends Widget_Base {
 		);
 
 		$this->add_control(
+			'content_carousel_dots',
+			array(
+				'label'     => esc_html__( 'Dots', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::HEADING,
+				'condition' => array(
+					'arrows' => 'yes',
+				),
+			)
+		);
+
+		$this->add_control(
 			'dot_color',
 			array(
 				'label'     => __( 'Color', 'premium-addons-for-elementor' ),
@@ -1293,9 +1754,163 @@ class Woo_Products extends Widget_Base {
 		);
 
 		$this->end_controls_section();
-
 	}
 
+
+	/**
+	 * Register style sold out section.
+	 *
+	 * @access public
+	 * @since 4.8.3
+	 *
+	 * @param array $pro_skins   pro skins.
+	 */
+	public function register_style_sold_out_controls( $pro_skins ) {
+
+		$this->start_controls_section(
+			'section_sold_out_style',
+			array(
+				'label'     => __( 'Out Of Stock Ribbon', 'premium-addons-for-elementor' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'sold_out' => 'yes',
+					'_skin!'   => $pro_skins,
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'sold_out_width',
+			array(
+				'label'      => __( 'Size', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', 'em', '%' ),
+				'range'      => array(
+					'px' => array(
+						'min' => 20,
+						'max' => 200,
+					),
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'width: {{SIZE}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'sold_out_hor',
+			array(
+				'label'      => __( 'Horizontal Offset', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%' ),
+				'range'      => array(
+					'px' => array(
+						'min' => 0,
+						'max' => 200,
+					),
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'left: {{SIZE}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'sold_out_ver',
+			array(
+				'label'      => __( 'Vertical Offset', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%' ),
+				'range'      => array(
+					'px' => array(
+						'min' => 0,
+						'max' => 200,
+					),
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'top: {{SIZE}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			array(
+				'name'     => 'sold_out_typography',
+				'global'   => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
+				'selector' => '{{WRAPPER}} .pa-out-of-stock',
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Box_Shadow::get_type(),
+			array(
+				'name'     => 'sold_out_shadow',
+				'selector' => '{{WRAPPER}} .pa-out-of-stock',
+			)
+		);
+
+		$this->add_control(
+			'sold_out_color',
+			array(
+				'label'     => __( 'Color', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'color: {{VALUE}};',
+				),
+			)
+		);
+
+		$this->add_control(
+			'sold_out_background',
+			array(
+				'label'     => __( 'Background Color', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::COLOR,
+				'global'    => array(
+					'default' => Global_Colors::COLOR_SECONDARY,
+				),
+				'selectors' => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'background-color: {{VALUE}};',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'sold_out_radius',
+			array(
+				'label'      => __( 'Border Radius', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', 'em', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'sold_out_padding',
+			array(
+				'label'      => __( 'Padding', 'premium-addons-for-elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', 'em', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .pa-out-of-stock' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+	}
+
+	/**
+	 * Get queries.
+	 *
+	 * @access public
+	 *
+	 * @return array
+	 */
 	public function get_queries() {
 
 		$query_type = array(
@@ -1311,6 +1926,13 @@ class Woo_Products extends Widget_Base {
 		return $query_type;
 	}
 
+	/**
+	 * Get woo tags.
+	 *
+	 * @access protected
+	 *
+	 * @return array
+	 */
 	protected function get_woo_tags() {
 
 		$product_tag = array();

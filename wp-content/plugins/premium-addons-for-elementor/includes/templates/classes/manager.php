@@ -37,11 +37,7 @@ if ( ! class_exists( 'Premium_Templates_Manager' ) ) {
 			add_action( 'wp_ajax_premium_get_templates', array( $this, 'get_templates' ) );
 			add_action( 'wp_ajax_premium_inner_template', array( $this, 'insert_inner_template' ) );
 
-			if ( defined( 'ELEMENTOR_VERSION' ) && version_compare( ELEMENTOR_VERSION, '2.2.8', '>' ) ) {
-				add_action( 'elementor/ajax/register_actions', array( $this, 'register_ajax_actions' ), 20 );
-			} else {
-				add_action( 'wp_ajax_elementor_get_template_data', array( $this, 'get_template_data' ), -1 );
-			}
+			add_action( 'elementor/ajax/register_actions', array( $this, 'register_ajax_actions' ), 20 );
 
 			$this->register_sources();
 
@@ -212,15 +208,16 @@ if ( ! class_exists( 'Premium_Templates_Manager' ) ) {
 				wp_send_json_error();
 			}
 
-			$template_id = isset( $template['template_id'] ) ? esc_attr( $template['template_id'] ) : false;
-			$source_name = isset( $template['source'] ) ? esc_attr( $template['source'] ) : false;
-			$source      = isset( $this->sources[ $source_name ] ) ? $this->sources[ $source_name ] : false;
+			$template_id  = isset( $template['template_id'] ) ? esc_attr( $template['template_id'] ) : false;
+			$source_name  = isset( $template['source'] ) ? esc_attr( $template['source'] ) : false;
+			$source       = isset( $this->sources[ $source_name ] ) ? $this->sources[ $source_name ] : false;
+			$insert_media = isset( $template['withMedia'] ) ? $template['withMedia'] : true;
 
 			if ( ! $source || ! $template_id ) {
 				wp_send_json_error();
 			}
 
-			$template_data = $source->get_item( $template_id );
+			$template_data = $source->get_item( $template_id, $insert_media );
 
 			if ( ! empty( $template_data['content'] ) ) {
 				wp_insert_post(
@@ -325,29 +322,11 @@ if ( ! class_exists( 'Premium_Templates_Manager' ) ) {
 				return false;
 			}
 
-			$template = $source->get_item( $data['template_id'], $data['tab'] );
+			$insert_media = isset( $data['withMedia'] ) ? $data['withMedia'] : true;
+
+			$template = $source->get_item( $data['template_id'], $data['tab'], $insert_media );
 
 			return $template;
-		}
-
-		/**
-		 * Premium get template data
-		 *
-		 * trigger `get_template_data_array` after template insert
-		 *
-		 * @since 3.6.0
-		 * @access public
-		 */
-		public function premium_get_template_data() {
-
-			$template = $this->get_template_data_array( $_REQUEST );
-
-			if ( ! $template ) {
-				wp_send_json_error();
-			}
-
-			wp_send_json_success( $template );
-
 		}
 
 		/**

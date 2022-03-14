@@ -51,7 +51,7 @@ global $post, $product, $woocommerce;
 			}
 		}
 	} else {
-		echo sprintf( '<li><img src="%s" alt="%s" /></li>', wp_kses_post(wc_placeholder_img_src()), __( 'Placeholder', 'premium-addons-for-elementor' ) );
+		echo sprintf( '<li><img src="%s" alt="%s" /></li>', wp_kses_post( wc_placeholder_img_src() ), __( 'Placeholder', 'premium-addons-for-elementor' ) );
 	}
 	?>
 	</div>

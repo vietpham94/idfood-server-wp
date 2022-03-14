@@ -61,10 +61,10 @@ class Admin_Notices {
 
 		self::$notices = array(
 			'pa-review',
-			'cursor_notice',
+			'badge_notice',
 		);
 
-		delete_option( 'ch21_notice' );
+		delete_option( 'woo_notice' );
 
 	}
 
@@ -102,7 +102,7 @@ class Admin_Notices {
 			}
 		}
 
-		$this->get_cursor_notice();
+		$this->get_badge_notice();
 
 	}
 
@@ -231,22 +231,22 @@ class Admin_Notices {
 
 	/**
 	 *
-	 * Shows admin notice for Premium Trustpilot Reviews.
+	 * Shows admin notice for Premium Badge Addon.
 	 *
-	 * @since 4.3.5
+	 * @since 4.8.8
 	 * @access public
 	 *
 	 * @return void
 	 */
-	public function get_cursor_notice() {
+	public function get_badge_notice() {
 
-		$cursor_notice = get_option( 'cursor_notice' );
+		$badge_notice = get_option( 'badge_notice' );
 
-		if ( '1' === $cursor_notice ) {
+		if ( '1' === $badge_notice ) {
 			return;
 		}
 
-		$notice_url = Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/', 'mouse-cursor-notification', 'wp-dash', 'mouse-cursor' );
+		$notice_url = Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-badge-global-addon', 'badge-notification', 'wp-dash', 'badge' );
 
 		?>
 
@@ -256,11 +256,11 @@ class Admin_Notices {
 			</div>
 			<div class="pa-text-wrap">
 				<p>
-					<strong><?php echo __( 'Premium Custom Mouse Cursor', 'premium-addons-for-elemetor' ); ?></strong>
-					<?php echo sprintf( __( 'addon is now available in Premium Addons Pro. <a href="%s" target="_blank">Check it out now!</a>', 'premium-addons-for-elementor' ), $notice_url ); ?>
+					<strong><?php echo __( 'Premium Badge Global Addon', 'premium-addons-for-elemetor' ); ?></strong>
+					<?php echo sprintf( __( 'is now available in Premium Addons Pro. <a href="%s" target="_blank">Check it out now!</a>', 'premium-addons-for-elementor' ), $notice_url ); ?>
 				</p>
 			</div>
-			<div class="pa-notice-close" data-notice="cursor">
+			<div class="pa-notice-close" data-notice="badge">
 				<span class="dashicons dashicons-dismiss"></span>
 			</div>
 		</div>

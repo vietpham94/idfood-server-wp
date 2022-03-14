@@ -194,6 +194,8 @@ class PA_Controls_Handler {
 		add_filter( 'elementor/frontend/widget/should_render', array( $this, 'should_render' ), 10, 2 );
 		add_filter( 'elementor/frontend/column/should_render', array( $this, 'should_render' ), 10, 2 );
 		add_filter( 'elementor/frontend/section/should_render', array( $this, 'should_render' ), 10, 2 );
+
+		add_filter( 'elementor/frontend/container/should_render', array( $this, 'should_render' ), 10, 2 );
 	}
 
 	/**
@@ -206,7 +208,7 @@ class PA_Controls_Handler {
 	 */
 	public function add_repeater_source_controls( $repeater ) {
 
-		$additional_ids = array( 'pa_condition_acf_text', 'pa_condition_acf_boolean', 'pa_condition_acf_choice', 'pa_condition_woo_orders', 'pa_condition_woo_category', 'pa_condition_woo_total_price','pa_condition_time_range' );
+		$additional_ids = array( 'pa_condition_acf_text', 'pa_condition_acf_boolean', 'pa_condition_acf_choice', 'pa_condition_woo_orders', 'pa_condition_woo_category', 'pa_condition_woo_total_price', 'pa_condition_time_range' );
 
 		foreach ( static::$conditions_classes as $condition_class_name => $condition_obj ) {
 

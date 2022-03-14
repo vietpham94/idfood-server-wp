@@ -45,6 +45,10 @@ class Module {
 		add_action( 'elementor/element/column/section_advanced/after_section_end', array( $this, 'register_controls' ), 10 );
 		add_action( 'elementor/element/common/_section_style/after_section_end', array( $this, 'register_controls' ), 10 );
 
+		if ( Helper_Functions::check_elementor_experiment( 'container' ) ) {
+			add_action( 'elementor/element/container/section_layout/after_section_end', array( $this, 'register_controls' ), 10 );
+		}
+
 	}
 
 	/**

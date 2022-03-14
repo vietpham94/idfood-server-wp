@@ -667,7 +667,7 @@ class Premium_Button extends Widget_Base {
 					),
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .premium-button-container' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .elementor-widget-container' => 'text-align: {{VALUE}}',
 				),
 				'toggle'    => false,
 				'default'   => 'center',
@@ -1276,7 +1276,7 @@ class Premium_Button extends Widget_Base {
 
 		?>
 
-	<div class="premium-button-container">
+
 		<a <?php echo wp_kses_post( $this->get_render_attribute_string( 'button' ) ); ?>>
 			<div class="premium-button-text-icon-wrapper">
 				<?php if ( 'yes' === $settings['premium_button_icon_switcher'] ) : ?>
@@ -1332,7 +1332,7 @@ class Premium_Button extends Widget_Base {
 				<span <?php echo wp_kses_post( $this->get_render_attribute_string( 'style6' ) ); ?>></span>
 			<?php endif; ?>
 		</a>
-	</div>
+
 
 		<?php
 	}
@@ -1427,55 +1427,54 @@ class Premium_Button extends Widget_Base {
 
 		#>
 
-		<div class="premium-button-container">
-			<a class="premium-button {{ buttonSize }} {{ styleDir }} premium-button-{{hoverEffect}}" href="{{ buttonUrl }}" onclick="{{ buttonEvent }}">
-				<div class="premium-button-text-icon-wrapper">
-					<# if ('yes' === settings.premium_button_icon_switcher) { #>
-						<# if( 'before' === settings.premium_button_icon_position &&  'style4' !== hoverEffect ) { #>
-							<# if( 'icon' === iconType ) {
-								if ( iconHTML && iconHTML.rendered && ( ! buttonIcon || migrated ) ) { #>
-									{{{ iconHTML.value }}}
-								<# } else { #>
-									<i class="{{ buttonIcon }}" aria-hidden="true"></i>
-								<# } #>
+		<a class="premium-button {{ buttonSize }} {{ styleDir }} premium-button-{{hoverEffect}}" href="{{ buttonUrl }}" onclick="{{ buttonEvent }}">
+			<div class="premium-button-text-icon-wrapper">
+				<# if ('yes' === settings.premium_button_icon_switcher) { #>
+					<# if( 'before' === settings.premium_button_icon_position &&  'style4' !== hoverEffect ) { #>
+						<# if( 'icon' === iconType ) {
+							if ( iconHTML && iconHTML.rendered && ( ! buttonIcon || migrated ) ) { #>
+								{{{ iconHTML.value }}}
 							<# } else { #>
-								<div {{{ view.getRenderAttributeString('lottie') }}}></div>
-							<# } #>
-						<# } #>
-					<# } #>
-					<span {{{ view.getRenderAttributeString('premium_button_text') }}}>{{{ buttonText }}}</span>
-					<# if ('yes' === settings.premium_button_icon_switcher) { #>
-						<# if( 'after' === settings.premium_button_icon_position && 'style4' !== hoverEffect ) { #>
-							<# if( 'icon' === iconType ) {
-								if ( iconHTML && iconHTML.rendered && ( ! buttonIcon || migrated ) ) { #>
-									{{{ iconHTML.value }}}
-								<# } else { #>
-									<i class="{{ buttonIcon }}" aria-hidden="true"></i>
-								<# } #>
-							<# } else { #>
-								<div {{{ view.getRenderAttributeString('lottie') }}}></div>
-							<# } #>
-						<# } #>
-					<# } #>
-				</div>
-				<# if( 'style4' === hoverEffect ) { #>
-					<div class="premium-button-style4-icon-wrapper {{ settings.premium_button_style4_dir }}">
-						<# if ( 'icon' === slideIconType ) { #>
-							<# if ( slideIconHTML && slideIconHTML.rendered && ( ! slideIcon || slideMigrated ) ) { #>
-								{{{ slideIconHTML.value }}}
-							<# } else { #>
-								<i class="{{ slideIcon }}" aria-hidden="true"></i>
+								<i class="{{ buttonIcon }}" aria-hidden="true"></i>
 							<# } #>
 						<# } else { #>
-							<div {{{ view.getRenderAttributeString('slide_lottie') }}}></div>
+							<div {{{ view.getRenderAttributeString('lottie') }}}></div>
 						<# } #>
-					</div>
+					<# } #>
 				<# } #>
-				<# if( 'style6' === hoverEffect  && 'yes' === mouseDetect) { #>
-					<span {{{ view.getRenderAttributeString('style6') }}}></span>
+				<span {{{ view.getRenderAttributeString('premium_button_text') }}}>{{{ buttonText }}}</span>
+				<# if ('yes' === settings.premium_button_icon_switcher) { #>
+					<# if( 'after' === settings.premium_button_icon_position && 'style4' !== hoverEffect ) { #>
+						<# if( 'icon' === iconType ) {
+							if ( iconHTML && iconHTML.rendered && ( ! buttonIcon || migrated ) ) { #>
+								{{{ iconHTML.value }}}
+							<# } else { #>
+								<i class="{{ buttonIcon }}" aria-hidden="true"></i>
+							<# } #>
+						<# } else { #>
+							<div {{{ view.getRenderAttributeString('lottie') }}}></div>
+						<# } #>
+					<# } #>
 				<# } #>
-			</a>
-		</div>
+			</div>
+			<# if( 'style4' === hoverEffect ) { #>
+				<div class="premium-button-style4-icon-wrapper {{ settings.premium_button_style4_dir }}">
+					<# if ( 'icon' === slideIconType ) { #>
+						<# if ( slideIconHTML && slideIconHTML.rendered && ( ! slideIcon || slideMigrated ) ) { #>
+							{{{ slideIconHTML.value }}}
+						<# } else { #>
+							<i class="{{ slideIcon }}" aria-hidden="true"></i>
+						<# } #>
+					<# } else { #>
+						<div {{{ view.getRenderAttributeString('slide_lottie') }}}></div>
+					<# } #>
+				</div>
+			<# } #>
+			<# if( 'style6' === hoverEffect  && 'yes' === mouseDetect) { #>
+				<span {{{ view.getRenderAttributeString('style6') }}}></span>
+			<# } #>
+		</a>
+
 
 		<?php
 	}

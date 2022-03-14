@@ -102,6 +102,7 @@ class Premium_Videobox extends Widget_Base {
 	public function get_script_depends() {
 		return array(
 			'elementor-waypoints',
+			'jquery-ui-draggable',
 			'premium-addons',
 		);
 	}

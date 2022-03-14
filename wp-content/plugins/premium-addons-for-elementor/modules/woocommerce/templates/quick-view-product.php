@@ -64,7 +64,7 @@ while ( have_posts() ) :
 	}
 	?>
 <div class="premium-woo-product">
-	<div id="product-<?php echo $post_id; ?>" class="<?php echo implode( ' ', $classes ); ?>">
+	<div id="product-<?php echo esc_attr( $post_id ); ?>" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 		<?php do_action( 'premium_woo_qv_image' ); ?>
 		<div class="summary entry-summary">
 			<?php do_action( 'premium_woo_quick_view_product' ); ?>

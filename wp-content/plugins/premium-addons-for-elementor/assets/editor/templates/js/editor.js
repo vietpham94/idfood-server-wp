@@ -217,20 +217,23 @@
 
             self.ModalInsertTemplateBehavior = Marionette.Behavior.extend({
                 ui: {
-                    insertButton: '.premium-template-insert'
+                    insertButtons: ['.premium-template-insert', '.premium-template-insert-no-media'],
                 },
 
                 events: {
-                    'click @ui.insertButton': 'onInsertButtonClick'
+                    'click @ui.insertButtons': 'onInsertButtonClick'
                 },
 
-                onInsertButtonClick: function () {
+                onInsertButtonClick: function (event) {
 
                     var templateModel = this.view.model,
                         innerTemplates = templateModel.attributes.dependencies,
                         isPro = templateModel.attributes.pro,
                         innerTemplatesLength = Object.keys(innerTemplates).length,
-                        options = {};
+                        options = {},
+                        insertMedia = !$(event.currentTarget).hasClass("premium-template-insert-no-media");
+
+                    console.log(insertMedia);
 
                     PremiumEditor.layout.showLoadingView();
                     if (innerTemplatesLength > 0) {
@@ -242,7 +245,8 @@
                                 data: {
                                     action: 'premium_inner_template',
                                     template: innerTemplates[key],
-                                    tab: PremiumEditor.getTab()
+                                    tab: PremiumEditor.getTab(),
+                                    withMedia: insertMedia
                                 }
                             });
                         }
@@ -255,7 +259,8 @@
                             templateModel.get('template_id'), {
                             data: {
                                 tab: PremiumEditor.getTab(),
-                                page_settings: false
+                                page_settings: false,
+                                withMedia: insertMedia
                             },
                             success: function (data) {
 
@@ -268,6 +273,7 @@
 
                                 PremiumEditor.closeModal();
 
+                                console.log(data.content);
                                 elementor.channels.data.trigger('template:before:insert', templateModel);
 
                                 if (null !== PremiumEditor.atIndex) {

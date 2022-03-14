@@ -15370,6 +15370,7 @@
         elementorFrontend.hooks.addAction("frontend/element_ready/widget", PremiumLottieHandler);
 
         elementorFrontend.hooks.addAction("frontend/element_ready/section", PremiumLottieAddonHandler);
+        elementorFrontend.hooks.addAction("frontend/element_ready/container", PremiumLottieAddonHandler);
 
     });
 

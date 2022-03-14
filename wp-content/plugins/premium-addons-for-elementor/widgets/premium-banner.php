@@ -362,7 +362,7 @@ class Premium_Banner extends Widget_Base {
 			array(
 				'label'        => __( 'Enable Mouse Tilt', 'premium-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'return_value' => 'true',
+                'prefix_class' => 'premium-banner-tilt-',
 			)
 		);
 
@@ -371,9 +371,9 @@ class Premium_Banner extends Widget_Base {
 			array(
 				'label'        => __( 'Reverse', 'premium-addons-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'return_value' => 'true',
+                'prefix_class' => 'premium-banner-tilt-rev-',
 				'condition'    => array(
-					'mouse_tilt' => 'true',
+					'mouse_tilt' => 'yes',
 				),
 			)
 		);
@@ -927,7 +927,7 @@ class Premium_Banner extends Widget_Base {
 					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .premium-banner .premium_banner_content' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .premium_banner_content' => 'color: {{VALUE}};',
 				),
 			)
 		);
@@ -936,7 +936,7 @@ class Premium_Banner extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'premium_banner_content_typhography',
-				'selector' => '{{WRAPPER}} .premium-banner .premium_banner_content',
+				'selector' => '{{WRAPPER}} .premium_banner_content',
 				'global'   => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
@@ -948,7 +948,7 @@ class Premium_Banner extends Widget_Base {
 			array(
 				'label'    => __( 'Shadow', 'premium-addons-for-elementor' ),
 				'name'     => 'premium_banner_description_shadow',
-				'selector' => '{{WRAPPER}} .premium-banner .premium_banner_content',
+				'selector' => '{{WRAPPER}} .premium_banner_content',
 			)
 		);
 
@@ -987,7 +987,7 @@ class Premium_Banner extends Widget_Base {
 					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .premium-banner .premium-banner-link' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .premium-banner-link' => 'color: {{VALUE}};',
 				),
 			)
 		);
@@ -1001,7 +1001,7 @@ class Premium_Banner extends Widget_Base {
 					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .premium-banner .premium-banner-link:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .premium-banner-link:hover' => 'color: {{VALUE}};',
 				),
 			)
 		);
@@ -1023,7 +1023,7 @@ class Premium_Banner extends Widget_Base {
 				'label'     => __( 'Background Color', 'premium-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .premium-banner .premium-banner-link' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .premium-banner-link' => 'background-color: {{VALUE}};',
 				),
 			)
 		);
@@ -1034,7 +1034,7 @@ class Premium_Banner extends Widget_Base {
 				'label'     => __( 'Hover Background Color', 'premium-addons-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .premium-banner .premium-banner-link:hover' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .premium-banner-link:hover' => 'background-color: {{VALUE}};',
 				),
 			)
 		);
@@ -1043,7 +1043,7 @@ class Premium_Banner extends Widget_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'     => 'premium_banner_button_border',
-				'selector' => '{{WRAPPER}} .premium-banner .premium-banner-link',
+				'selector' => '{{WRAPPER}} .premium-banner-link',
 			)
 		);
 
@@ -1091,7 +1091,7 @@ class Premium_Banner extends Widget_Base {
 			array(
 				'label'    => __( 'Shadow', 'premium-addons-for-elementor' ),
 				'name'     => 'premium_banner_button_shadow',
-				'selector' => '{{WRAPPER}} .premium-banner .premium-banner-link',
+				'selector' => '{{WRAPPER}} .premium-banner-link',
 			)
 		);
 
@@ -1133,7 +1133,7 @@ class Premium_Banner extends Widget_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'     => 'premium_banner_border',
-				'selector' => '{{WRAPPER}} .premium-banner',
+				'selector' => '{{WRAPPER}}',
 			)
 		);
 
@@ -1144,7 +1144,7 @@ class Premium_Banner extends Widget_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-banner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}}' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1153,7 +1153,7 @@ class Premium_Banner extends Widget_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'premium_banner_shadow',
-				'selector' => '{{WRAPPER}} .premium-banner',
+				'selector' => '{{WRAPPER}}',
 			)
 		);
 
@@ -1237,16 +1237,6 @@ class Premium_Banner extends Widget_Base {
 
 		$settings = $this->get_settings_for_display();
 
-		$this->add_render_attribute( 'banner', 'id', 'premium-banner-' . $this->get_id() );
-		$this->add_render_attribute( 'banner', 'class', 'premium-banner' );
-
-		if ( 'true' === $settings['mouse_tilt'] ) {
-			$this->add_render_attribute( 'banner', 'data-box-tilt', 'true' );
-			if ( 'true' === $settings['mouse_tilt_rev'] ) {
-				$this->add_render_attribute( 'banner', 'data-box-tilt-reverse', 'true' );
-			}
-		}
-
 		$this->add_inline_editing_attributes( 'premium_banner_title' );
 		$this->add_render_attribute(
 			'premium_banner_title',
@@ -1258,10 +1248,18 @@ class Premium_Banner extends Widget_Base {
 		);
 
 		$this->add_inline_editing_attributes( 'premium_banner_description', 'advanced' );
+		$this->add_render_attribute(
+			'premium_banner_description',
+			'class',
+			array(
+				'premium-banner-ib-content',
+				'premium_banner_content',
+			)
+		);
 
 		$title_tag  = $settings['premium_banner_title_tag'];
 		$title      = $settings['premium_banner_title'];
-		$full_title = '<div class="premium-banner-title-wrap"><' . Helper_Functions::validate_html_tag( $title_tag ) . ' ' . $this->get_render_attribute_string( 'premium_banner_title' ) . '>' . $title . '</' . Helper_Functions::validate_html_tag( $title_tag ) . '></div>';
+		$full_title = '<' . Helper_Functions::validate_html_tag( $title_tag ) . ' ' . $this->get_render_attribute_string( 'premium_banner_title' ) . '>' . $title . '</' . Helper_Functions::validate_html_tag( $title_tag ) . '>';
 
 		$link = 'yes' === $settings['premium_banner_image_link_switcher'] ? $settings['premium_banner_image_custom_link']['url'] : get_permalink( $settings['premium_banner_image_existing_page_link'] );
 
@@ -1297,78 +1295,89 @@ class Premium_Banner extends Widget_Base {
 
 		}
 
+		$this->add_render_attribute(
+			'banner_inner',
+			array(
+				'class' => array(
+					'premium-banner-ib',
+					'premium-banner-min-height',
+					$full_class,
+				),
+			)
+		);
+
 		?>
-		<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'banner' ) ); ?>>
-			<div class="premium-banner-ib <?php echo esc_attr( $full_class ); ?> premium-banner-min-height">
-				<?php if ( 'animation7' === $settings['premium_banner_image_animation'] || 'animation8' === $settings['premium_banner_image_animation'] ) : ?>
-					<div class="premium-banner-border">
-						<div class="premium-banner-br premium-banner-bleft premium-banner-brlr"></div>
-						<div class="premium-banner-br premium-banner-bright premium-banner-brlr"></div>
-						<div class="premium-banner-br premium-banner-btop premium-banner-brtb"></div>
-						<div class="premium-banner-br premium-banner-bottom premium-banner-brtb"></div>
-					</div>
-				<?php endif; ?>
-				<?php if ( ! empty( $settings['premium_banner_image']['url'] ) ) : ?>
-					<?php if ( 'custom' === $settings['premium_banner_height'] ) : ?>
-						<div class="premium-banner-img-wrap">
-					<?php endif; ?>
-						<?php echo wp_kses_post( $image_html ); ?>
-					<?php if ( 'custom' === $settings['premium_banner_height'] ) : ?>
-						</div>
-						<?php
-					endif;
-				endif;
-				?>
-				<?php if ( 'animation11' === $settings['premium_banner_image_animation'] ) : ?>
-					<div class="premium-banner-gradient"></div>
-				<?php endif; ?>
-				<div class="premium-banner-ib-desc">
-					<div class="premium-banner-desc-centered">
-						<?php
-						echo wp_kses_post( $full_title );
-						if ( ! empty( $settings['premium_banner_description'] ) ) :
-							?>
-							<div class="premium-banner-ib-content premium_banner_content">
-								<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'premium_banner_description' ) ); ?>>
-									<?php echo $this->parse_text_editor( $settings['premium_banner_description'] ); ?>
-								</div>
-							</div>
-						<?php endif; ?>
-						<?php if ( 'yes' === $settings['premium_banner_link_switcher'] && ! empty( $settings['premium_banner_more_text'] ) ) : ?>
-							<div class="premium-banner-read-more">
-								<a class="premium-banner-link"
-								<?php
-								if ( ! empty( $banner_url ) ) :
-									?>
-									href="<?php echo esc_url( $banner_url ); ?>"<?php endif; ?>
-									<?php if ( ! empty( $settings['premium_banner_link']['is_external'] ) ) : ?>
-										target="_blank"
-									<?php endif; ?>
-									<?php if ( ! empty( $settings['premium_banner_link']['nofollow'] ) ) : ?>
-										rel="nofollow"
-									<?php endif; ?>>
-									<?php echo esc_html( $settings['premium_banner_more_text'] ); ?>
-								</a>
-							</div>
-						<?php endif; ?>
-					</div>
+		<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'banner_inner' ) ); ?>>
+			<?php if ( 'animation7' === $settings['premium_banner_image_animation'] || 'animation8' === $settings['premium_banner_image_animation'] ) : ?>
+				<div class="premium-banner-border">
+					<div class="premium-banner-br premium-banner-bleft premium-banner-brlr"></div>
+					<div class="premium-banner-br premium-banner-bright premium-banner-brlr"></div>
+					<div class="premium-banner-br premium-banner-btop premium-banner-brtb"></div>
+					<div class="premium-banner-br premium-banner-bottom premium-banner-brtb"></div>
 				</div>
-				<?php
-				if ( 'yes' === $settings['premium_banner_link_url_switch'] && ( ! empty( $settings['premium_banner_image_custom_link']['url'] ) || ! empty( $settings['premium_banner_image_existing_page_link'] ) ) ) {
-					echo wp_kses_post( $full_link );
-				}
-				?>
-			</div>
-			<?php if ( 'yes' === $settings['premium_banner_responsive_switcher'] ) : ?>
-				<style>
-					@media( min-width: <?php echo wp_kses_post( $min_size ); ?> ) and (max-width:<?php echo wp_kses_post( $max_size ); ?> ) {
-						#premium-banner-<?php echo esc_attr( $this->get_id() ); ?> .premium-banner-ib-content {
-							display: none;
-						}
-					}
-				</style>
 			<?php endif; ?>
+			<?php if ( ! empty( $settings['premium_banner_image']['url'] ) ) : ?>
+				<?php if ( 'custom' === $settings['premium_banner_height'] ) : ?>
+					<div class="premium-banner-img-wrap">
+				<?php endif; ?>
+					<?php echo wp_kses_post( $image_html ); ?>
+				<?php if ( 'custom' === $settings['premium_banner_height'] ) : ?>
+					</div>
+					<?php
+				endif;
+			endif;
+			?>
+			<?php if ( 'animation11' === $settings['premium_banner_image_animation'] ) : ?>
+				<div class="premium-banner-gradient"></div>
+			<?php endif; ?>
+			<div class="premium-banner-ib-desc">
+				<?php if ( 'animation7' === $settings['premium_banner_image_animation'] ) : ?>
+					<div class="premium-banner-desc-centered">
+				<?php endif; ?>
+					<?php
+					echo wp_kses_post( $full_title );
+					if ( ! empty( $settings['premium_banner_description'] ) ) :
+						?>
+						<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'premium_banner_description' ) ); ?>>
+							<?php echo $this->parse_text_editor( $settings['premium_banner_description'] ); ?>
+						</div>
+					<?php endif; ?>
+					<?php if ( 'yes' === $settings['premium_banner_link_switcher'] && ! empty( $settings['premium_banner_more_text'] ) ) : ?>
+						<div class="premium-banner-read-more">
+							<a class="premium-banner-link"
+							<?php
+							if ( ! empty( $banner_url ) ) :
+								?>
+								href="<?php echo esc_url( $banner_url ); ?>"<?php endif; ?>
+								<?php if ( ! empty( $settings['premium_banner_link']['is_external'] ) ) : ?>
+									target="_blank"
+								<?php endif; ?>
+								<?php if ( ! empty( $settings['premium_banner_link']['nofollow'] ) ) : ?>
+									rel="nofollow"
+								<?php endif; ?>>
+								<?php echo esc_html( $settings['premium_banner_more_text'] ); ?>
+							</a>
+						</div>
+					<?php endif; ?>
+				<?php if ( 'animation7' === $settings['premium_banner_image_animation'] ) : ?>
+				</div>
+				<?php endif; ?>
+			</div>
+			<?php
+			if ( 'yes' === $settings['premium_banner_link_url_switch'] && ( ! empty( $settings['premium_banner_image_custom_link']['url'] ) || ! empty( $settings['premium_banner_image_existing_page_link'] ) ) ) {
+				echo wp_kses_post( $full_link );
+			}
+			?>
 		</div>
+		<?php if ( 'yes' === $settings['premium_banner_responsive_switcher'] ) : ?>
+			<style>
+				@media( min-width: <?php echo wp_kses_post( $min_size ); ?> ) and (max-width:<?php echo wp_kses_post( $max_size ); ?> ) {
+					#premium-banner-<?php echo esc_attr( $this->get_id() ); ?> .premium-banner-ib-content {
+						display: none;
+					}
+				}
+			</style>
+		<?php endif; ?>
 		<?php
 	}
 
@@ -1383,16 +1392,6 @@ class Premium_Banner extends Widget_Base {
 	protected function content_template() {
 		?>
 		<#
-
-			view.addRenderAttribute( 'banner', 'id', 'premium-banner-' + view.getID() );
-			view.addRenderAttribute( 'banner', 'class', 'premium-banner' );
-
-			if( 'true' === settings.mouse_tilt ) {
-				view.addRenderAttribute( 'banner', 'data-box-tilt', 'true' );
-				if( 'true' === settings.mouse_tilt_rev ) {
-					view.addRenderAttribute( 'banner', 'data-box-tilt-reverse', 'true' );
-				}
-			}
 
 			var active = 'yes' === settings.premium_banner_active ? 'active' : '';
 
@@ -1415,9 +1414,11 @@ class Premium_Banner extends Widget_Base {
 
 			view.addInlineEditingAttributes( 'premium_banner_title' );
 
-			var description = settings.premium_banner_description;
-
-			view.addInlineEditingAttributes( 'description', 'advanced' );
+			view.addInlineEditingAttributes( 'premium_banner_description', 'advanced' );
+			view.addRenderAttribute( 'premium_banner_description', 'class', [
+				'premium-banner-ib-content',
+				'premium_banner_content',
+			] );
 
 			var linkSwitcher = settings.premium_banner_link_switcher,
 				readMore     = settings.premium_banner_more_text,
@@ -1447,61 +1448,59 @@ class Premium_Banner extends Widget_Base {
 
 		#>
 
-			<div {{{ view.getRenderAttributeString( 'banner' ) }}}>
-				<div {{{ view.getRenderAttributeString( 'banner_inner' ) }}}>
-					<# if (settings.premium_banner_image_animation ==='animation7' || settings.premium_banner_image_animation ==='animation8'){ #>
-						<div class="premium-banner-border">
-							<div class="premium-banner-br premium-banner-bleft premium-banner-brlr"></div>
-							<div class="premium-banner-br premium-banner-bright premium-banner-brlr"></div>
-							<div class="premium-banner-br premium-banner-btop premium-banner-brtb"></div>
-							<div class="premium-banner-br premium-banner-bottom premium-banner-brtb"></div>
-						</div>
-					<# } #>
-					<# if( '' !== settings.premium_banner_image.url ) { #>
-						<# if( 'custom' === settings.premium_banner_height ) { #>
-							<div class="premium-banner-img-wrap">
-						<# } #>
-							{{{imageHtml}}}
-						<# if( 'custom' === settings.premium_banner_height ) { #>
-							</div>
-						<# } #>
-					<# } #>
-					<# if( 'animation11' === settings.premium_banner_image_animation ) { #>
-						<div class="premium-banner-gradient"></div>
-					<# } #>
-					<div class="premium-banner-ib-desc">
-						<div class="premium-banner-desc-centered">
-							<# if( '' !== title ) { #>
-								<div class="premium-banner-title-wrap">
-									<{{{titleTag}}} {{{ view.getRenderAttributeString('premium_banner_title') }}}>{{{ title }}}</{{{titleTag}}}>
-								</div>
-							<# } #>
-							<# if( '' !== description ) { #>
-								<div class="premium-banner-ib-content premium_banner_content">
-									<div {{{ view.getRenderAttributeString( 'description' ) }}}>{{{ description }}}</div>
-								</div>
-							<# } #>
-						<# if( 'yes' === linkSwitcher && '' !== readMore ) { #>
-							<div class="premium-banner-read-more">
-								<a class="premium-banner-link" href="{{ bannerUrl }}">{{{ readMore }}}</a>
-							</div>
-						<# } #>
-						</div>
+			<div {{{ view.getRenderAttributeString( 'banner_inner' ) }}}>
+				<# if (settings.premium_banner_image_animation ==='animation7' || settings.premium_banner_image_animation ==='animation8'){ #>
+					<div class="premium-banner-border">
+						<div class="premium-banner-br premium-banner-bleft premium-banner-brlr"></div>
+						<div class="premium-banner-br premium-banner-bright premium-banner-brlr"></div>
+						<div class="premium-banner-br premium-banner-btop premium-banner-brtb"></div>
+						<div class="premium-banner-br premium-banner-bottom premium-banner-brtb"></div>
 					</div>
-					<# if( 'yes' === settings.premium_banner_link_url_switch  && ( '' !== settings.premium_banner_image_custom_link.url || '' !== settings.premium_banner_image_existing_page_link ) ) { #>
-							<a class="premium-banner-ib-link" href="{{ bannerLink }}" title="{{ linkTitle }}"></a>
+				<# } #>
+				<# if( '' !== settings.premium_banner_image.url ) { #>
+					<# if( 'custom' === settings.premium_banner_height ) { #>
+						<div class="premium-banner-img-wrap">
+					<# } #>
+						{{{imageHtml}}}
+					<# if( 'custom' === settings.premium_banner_height ) { #>
+						</div>
+					<# } #>
+				<# } #>
+				<# if( 'animation11' === settings.premium_banner_image_animation ) { #>
+					<div class="premium-banner-gradient"></div>
+				<# } #>
+				<div class="premium-banner-ib-desc">
+				<# if( 'animation7' === settings.premium_banner_image_animation ) { #>
+					<div class="premium-banner-desc-centered">
+				<# } #>
+						<# if( '' !== title ) { #>
+							<{{{titleTag}}} {{{ view.getRenderAttributeString('premium_banner_title') }}}>{{{ title }}}</{{{titleTag}}}>
+						<# } #>
+						<# if( '' !== settings.premium_banner_description ) { #>
+							<div {{{ view.getRenderAttributeString( 'premium_banner_description' ) }}}>{{{ settings.premium_banner_description }}}</div>
+						<# } #>
+					<# if( 'yes' === linkSwitcher && '' !== readMore ) { #>
+						<div class="premium-banner-read-more">
+							<a class="premium-banner-link" href="{{ bannerUrl }}">{{{ readMore }}}</a>
+						</div>
+					<# } #>
+					<# if( 'animation7' === settings.premium_banner_image_animation ) { #>
+					</div>
 					<# } #>
 				</div>
-				<# if( 'yes' === settings.premium_banner_responsive_switcher ) { #>
-				<style>
-					@media( min-width: {{minSize}} ) and ( max-width: {{maxSize}} ) {
-						#premium-banner-{{ view.getID() }} .premium-banner-ib-content {
-							display: none;
-						}
-					}
-				</style>
+				<# if( 'yes' === settings.premium_banner_link_url_switch  && ( '' !== settings.premium_banner_image_custom_link.url || '' !== settings.premium_banner_image_existing_page_link ) ) { #>
+						<a class="premium-banner-ib-link" href="{{ bannerLink }}" title="{{ linkTitle }}"></a>
 				<# } #>
 			</div>
+			<# if( 'yes' === settings.premium_banner_responsive_switcher ) { #>
+			<style>
+				@media( min-width: {{minSize}} ) and ( max-width: {{maxSize}} ) {
+					#premium-banner-{{ view.getID() }} .premium-banner-ib-content {
+						display: none;
+					}
+				}
+			</style>
+			<# } #>
 		<?php
 	}
 }

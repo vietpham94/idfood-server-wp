@@ -2711,6 +2711,8 @@ class Premium_Grid extends Widget_Base {
 
 				$key = 'gallery_item_' . $index;
 
+				$alt = apply_filters( 'pa_grid_image_alt', Control_Media::get_image_alt( $image['premium_gallery_img'] ), $image );
+
 				$this->add_render_attribute(
 					$key,
 					array(
@@ -2744,7 +2746,7 @@ class Premium_Grid extends Widget_Base {
 							?>
 							<div class="pa-gallery-icons-wrapper">
 								<div class="pa-gallery-icons-inner-container">
-									<?php $this->render_icons( $image, $index ); ?>
+									<?php $this->render_icons( $image, $index, $alt ); ?>
 								</div>
 							</div>
 						<?php endif; ?>
@@ -2755,7 +2757,7 @@ class Premium_Grid extends Widget_Base {
 							?>
 							<div class="pa-gallery-icons-wrapper">
 								<div class="pa-gallery-icons-inner-container">
-									<?php $this->render_icons( $image, $index ); ?>
+									<?php $this->render_icons( $image, $index, $alt ); ?>
 								</div>
 							</div>
 							<?php
@@ -2766,7 +2768,7 @@ class Premium_Grid extends Widget_Base {
 						<div class="pa-gallery-icons-caption-container">
 							<div class="pa-gallery-icons-caption-cell">
 								<?php
-									$this->render_icons( $image, $index );
+									$this->render_icons( $image, $index, $alt );
 									$this->render_image_caption( $image );
 								?>
 							</div>
@@ -2823,8 +2825,6 @@ class Premium_Grid extends Widget_Base {
 								);
 
 								if ( 'yes' === $settings['lightbox_show_title'] ) {
-
-									$alt = Control_Media::get_image_alt( $image['premium_gallery_img'] );
 
 									$this->add_render_attribute( $lightbox_key, 'data-elementor-lightbox-title', $alt );
 
@@ -2913,8 +2913,6 @@ class Premium_Grid extends Widget_Base {
 
 		$is_video = $item['premium_gallery_video'];
 
-		$alt = Control_Media::get_image_alt( $item['premium_gallery_img'] );
-
 		$key = 'image_' . $index;
 
 		$image_html = Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'image_data' );
@@ -2951,15 +2949,6 @@ class Premium_Grid extends Widget_Base {
 			}
 		}
 
-		// $this->add_render_attribute(
-		// $key,
-		// array(
-		// 'class' => 'pa-gallery-image',
-		// 'src'   => $image_src,
-		// 'alt'   => $alt,
-		// )
-		// );
-
 		if ( $is_video ) {
 			?>
 			<div class="premium-gallery-video-wrap" data-type="<?php echo esc_attr( $item['premium_gallery_video_type'] ); ?>">
@@ -2992,8 +2981,9 @@ class Premium_Grid extends Widget_Base {
 	 *
 	 * @param array   $item grid image repeater item.
 	 * @param integer $index item index.
+	 * @param string  $alt image alternative text.
 	 */
-	protected function render_icons( $item, $index ) {
+	protected function render_icons( $item, $index, $alt ) {
 
 		$settings = $this->get_settings_for_display();
 
@@ -3117,8 +3107,6 @@ class Premium_Grid extends Widget_Base {
 					);
 
 					if ( 'yes' === $settings['lightbox_show_title'] ) {
-
-						$alt = Control_Media::get_image_alt( $item['premium_gallery_img'] );
 
 						$this->add_render_attribute( $lightbox_key, 'data-elementor-lightbox-title', $alt );
 

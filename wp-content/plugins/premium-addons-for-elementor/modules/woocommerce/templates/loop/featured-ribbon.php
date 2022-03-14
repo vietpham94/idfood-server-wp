@@ -13,8 +13,8 @@ global $post, $product;
 
 $featured_text = __( 'New', 'premium-addons-for-elementor' );
 
-if ( '' !== $this->get_option_value( 'featured_string' ) ) {
-	$featured_text = $this->get_option_value( 'featured_string' );
+if ( '' !== self::$settings['featured_string'] ) {
+	$featured_text = self::$settings['featured_string'];
 }
 
 ?>

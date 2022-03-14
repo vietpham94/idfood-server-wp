@@ -247,14 +247,6 @@ $elements = array(
 				'is_global' => true,
 			),
 			array(
-				'key'       => 'premium-global-cursor',
-				'title'     => __( 'Custom Mouse Cursor', 'premium-addons-for-elementor' ),
-				'demo'      => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/', 'settings-page', 'wp-dash', 'dashboard' ),
-				'doc'       => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/docs/elementor-custom-mouse-cursor-addon-tutorial/', 'settings-page', 'wp-dash', 'dashboard' ),
-				'is_pro'    => true,
-				'is_global' => true,
-			),
-			array(
 				'key'       => 'premium-kenburns',
 				'title'     => __( 'Animated Ken Burns', 'premium-addons-for-elementor' ),
 				'demo'      => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/ken-burns-section-addon-for-elementor-page-builder/', 'settings-page', 'wp-dash', 'dashboard' ),
@@ -780,14 +772,6 @@ $elements = array(
 				'is_global' => true,
 			),
 			array(
-				'key'       => 'premium-global-cursor',
-				'title'     => __( 'Custom Mouse Cursor', 'premium-addons-for-elementor' ),
-				'demo'      => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/', 'settings-page', 'wp-dash', 'dashboard' ),
-				'doc'       => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/docs/elementor-custom-mouse-cursor-addon-tutorial/', 'settings-page', 'wp-dash', 'dashboard' ),
-				'is_pro'    => true,
-				'is_global' => true,
-			),
-			array(
 				'key'       => 'premium-kenburns',
 				'title'     => __( 'Animated Ken Burns', 'premium-addons-for-elementor' ),
 				'demo'      => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/ken-burns-section-addon-for-elementor-page-builder/', 'settings-page', 'wp-dash', 'dashboard' ),
@@ -1086,19 +1070,34 @@ $elements = array(
 		'icon'     => 'extensions',
 		'elements' => array(
 			array(
-				'key' => 'premium-templates',
+				'key'  => 'premium-templates',
+				'demo' => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/premium-templates-for-elementor/', 'settings-page', 'wp-dash', 'dashboard' ),
 			),
 			array(
-				'key' => 'premium-equal-height',
+				'key'  => 'premium-equal-height',
+				'demo' => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/premium-addons-global-features-for-elementor/#equal-height-feature', 'settings-page', 'wp-dash', 'dashboard' ),
 			),
 			array(
-				'key' => 'pa-display-conditions',
+				'key'  => 'pa-display-conditions',
+				'demo' => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-display-conditions/', 'settings-page', 'wp-dash', 'dashboard' ),
 			),
 			array(
-				'key' => 'premium-floating-effects',
+				'key'    => 'premium-global-cursor',
+				'is_pro' => true,
+				'demo'   => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/', 'settings-page', 'wp-dash', 'dashboard' ),
 			),
 			array(
-				'key' => 'premium-cross-domain',
+				'key'    => 'premium-global-badge',
+				'is_pro' => true,
+				'demo'   => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-badge-global-addon/', 'settings-page', 'wp-dash', 'dashboard' ),
+			),
+			array(
+				'key'  => 'premium-floating-effects',
+				'demo' => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/elementor-floating-effects-animation/', 'settings-page', 'wp-dash', 'dashboard' ),
+			),
+			array(
+				'key'  => 'premium-cross-domain',
+				'demo' => Helper_Functions::get_campaign_link( 'https://premiumaddons.com/premium-addons-global-features-for-elementor/#common-features', 'settings-page', 'wp-dash', 'dashboard' ),
 			),
 			array(
 				'key' => 'premium-duplicator',

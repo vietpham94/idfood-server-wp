@@ -56,6 +56,7 @@
         };
 
         elementorFrontend.hooks.addAction("frontend/element_ready/section", PremiumEqualHeightHandler);
+        elementorFrontend.hooks.addAction("frontend/element_ready/container", PremiumEqualHeightHandler);
 
     });
 

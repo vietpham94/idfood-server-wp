@@ -209,7 +209,7 @@ class Premium_Dual_Header extends Widget_Base {
 				'default'      => 'inline',
 				'prefix_class' => 'premium-header-',
 				'selectors'    => array(
-					'{{WRAPPER}} .premium-dual-header-first-container span, {{WRAPPER}} .premium-dual-header-second-container' => 'display: {{VALUE}}',
+					'{{WRAPPER}} .premium-dual-header-first-header  span' => 'display: {{VALUE}}',
 				),
 				'label_block'  => true,
 			)
@@ -297,7 +297,7 @@ class Premium_Dual_Header extends Widget_Base {
 				),
 				'default'   => 'center',
 				'selectors' => array(
-					'{{WRAPPER}} .premium-dual-header-container' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .elementor-widget-container' => 'text-align: {{VALUE}};',
 				),
 			)
 		);
@@ -310,7 +310,7 @@ class Premium_Dual_Header extends Widget_Base {
 				'min'       => -180,
 				'max'       => 180,
 				'selectors' => array(
-					'{{WRAPPER}} .premium-dual-header-container' => 'transform: rotate({{VALUE}}deg);',
+					'{{WRAPPER}} .elementor-widget-container' => 'transform: rotate({{VALUE}}deg);',
 				),
 			)
 		);
@@ -365,7 +365,7 @@ class Premium_Dual_Header extends Widget_Base {
 					),
 				),
 				'selectors'   => array(
-					'{{WRAPPER}} .premium-dual-header-container' => 'transform-origin: {{transform_origin_x.VALUE}} {{VALUE}}',
+					'{{WRAPPER}} .elementor-widget-container' => 'transform-origin: {{transform_origin_x.VALUE}} {{VALUE}}',
 				),
 				'label_block' => false,
 				'toggle'      => false,
@@ -378,8 +378,10 @@ class Premium_Dual_Header extends Widget_Base {
 		$this->add_control(
 			'background_text_switcher',
 			array(
-				'label' => __( 'Background Text', 'premium-addons-for-elementor' ),
-				'type'  => Controls_Manager::SWITCHER,
+				'label'        => __( 'Background Text', 'premium-addons-for-elementor' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'separator'    => 'before',
+				'prefix_class' => 'premium-bg-text-',
 			)
 		);
 
@@ -392,6 +394,10 @@ class Premium_Dual_Header extends Widget_Base {
 				'condition' => array(
 					'background_text_switcher' => 'yes',
 				),
+				'selectors' => array(
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'content: "{{VALUE}}"',
+				),
+
 			)
 		);
 
@@ -407,7 +413,7 @@ class Premium_Dual_Header extends Widget_Base {
 				'default'     => 'auto',
 				'label_block' => true,
 				'selectors'   => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'width: {{VALUE}}',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'width: {{VALUE}}',
 				),
 				'condition'   => array(
 					'background_text_switcher' => 'yes',
@@ -436,7 +442,7 @@ class Premium_Dual_Header extends Widget_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'left: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'left: {{SIZE}}{{UNIT}}',
 				),
 				'condition'  => array(
 					'background_text_switcher' => 'yes',
@@ -465,9 +471,38 @@ class Premium_Dual_Header extends Widget_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'top: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'top: {{SIZE}}{{UNIT}}',
 				),
 				'condition'  => array(
+					'background_text_switcher' => 'yes',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'background_text_align',
+			array(
+				'label'     => __( 'Alignment', 'premium-addons-for-elementor' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => array(
+					'left'   => array(
+						'title' => __( 'Left', 'premium-addons-for-elementor' ),
+						'icon'  => 'eicon-text-align-left',
+					),
+					'center' => array(
+						'title' => __( 'Center', 'premium-addons-for-elementor' ),
+						'icon'  => 'eicon-text-align-center',
+					),
+					'right'  => array(
+						'title' => __( 'Right', 'premium-addons-for-elementor' ),
+						'icon'  => 'eicon-text-align-right',
+					),
+				),
+				'default'   => 'left',
+				'selectors' => array(
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'text-align: {{VALUE}};',
+				),
+				'condition' => array(
 					'background_text_switcher' => 'yes',
 				),
 			)
@@ -484,7 +519,7 @@ class Premium_Dual_Header extends Widget_Base {
 					'size' => 0,
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'transform: rotate({{SIZE}}{{UNIT}})',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'transform: rotate({{SIZE}}{{UNIT}})',
 				),
 				'condition'  => array(
 					'background_text_switcher' => 'yes',
@@ -510,7 +545,7 @@ class Premium_Dual_Header extends Widget_Base {
 				'type'        => Controls_Manager::COLOR,
 				'render_type' => 'template',
 				'selectors'   => array(
-					'{{WRAPPER}}.premium-mask-yes .premium-dual-header-first-container span::after'   => 'background: {{VALUE}};',
+					'{{WRAPPER}}.premium-mask-yes .premium-dual-header-first-header span::after'   => 'background: {{VALUE}};',
 				),
 				'condition'   => array(
 					'mask_switcher' => 'yes',
@@ -1000,7 +1035,7 @@ class Premium_Dual_Header extends Widget_Base {
 					'default' => Global_Colors::COLOR_PRIMARY,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'color: {{VALUE}}',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1012,7 +1047,7 @@ class Premium_Dual_Header extends Widget_Base {
 				'global'   => array(
 					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
 				),
-				'selector' => '{{WRAPPER}} .premium-title-bg-text:before',
+				'selector' => '{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before',
 			)
 		);
 
@@ -1020,7 +1055,7 @@ class Premium_Dual_Header extends Widget_Base {
 			Group_Control_Text_Shadow::get_type(),
 			array(
 				'name'     => 'background_text_shadow',
-				'selector' => '{{WRAPPER}} .premium-title-bg-text:before',
+				'selector' => '{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before',
 			)
 		);
 
@@ -1043,7 +1078,7 @@ class Premium_Dual_Header extends Widget_Base {
 				),
 				'separator' => 'before',
 				'selectors' => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'mix-blend-mode: {{VALUE}}',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'mix-blend-mode: {{VALUE}}',
 				),
 			)
 		);
@@ -1057,7 +1092,7 @@ class Premium_Dual_Header extends Widget_Base {
 				'max'       => 20,
 				'step'      => 1,
 				'selectors' => array(
-					'{{WRAPPER}} .premium-title-bg-text:before' => 'z-index: {{VALUE}}',
+					'{{WRAPPER}}.premium-bg-text-yes .elementor-widget-container:before' => 'z-index: {{VALUE}}',
 				),
 			)
 		);
@@ -1152,22 +1187,18 @@ class Premium_Dual_Header extends Widget_Base {
 
 		?>
 
-	<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'container' ) ); ?>>
 		<?php if ( ! empty( $link ) ) : ?>
-			<a href="<?php echo esc_attr( $link ); ?>"
+		<a href="<?php echo esc_attr( $link ); ?>"
 			<?php if ( ! empty( $settings['premium_dual_heading_link']['is_external'] ) ) : ?>
-			target="_blank"
-		<?php endif; ?>
+		target="_blank"
+	<?php endif; ?>
 			<?php if ( ! empty( $settings['premium_dual_heading_link']['nofollow'] ) ) : ?>
-			rel="nofollow" <?php endif; ?>>
-		<?php endif; ?>
-		<div class="premium-dual-header-first-container">
-			<?php echo wp_kses_post( $full_title ); ?>
-		</div>
+		rel="nofollow" <?php endif; ?>>
+	<?php endif; ?>
+		<?php echo wp_kses_post( $full_title ); ?>
 		<?php if ( ! empty( $link ) ) : ?>
-			</a>
-		<?php endif; ?>
-	</div>
+		</a>
+	<?php endif; ?>
 
 		<?php
 	}
@@ -1247,23 +1278,18 @@ class Premium_Dual_Header extends Widget_Base {
 
 		#>
 
-		<div {{{ view.getRenderAttributeString('container') }}}>
-			<# if( 'yes' === settings.premium_dual_header_link_switcher && '' !== link ) { #>
-				<a href="{{ link }}">
+		<# if( 'yes' === settings.premium_dual_header_link_switcher && '' !== link ) { #>
+			<a href="{{ link }}">
+		<# } #>
+		<{{{firstTag}}} {{{ view.getRenderAttributeString('first_title') }}}>
+			<span class="premium-dual-header-first-span">{{{ firstText }}}</span>
+			<# if ( '' != secondText ) { #>
+				<span {{{ view.getRenderAttributeString('second_title') }}}>{{{ secondText }}}</span>
 			<# } #>
-			<div class="premium-dual-header-first-container">
-				<{{{firstTag}}} {{{ view.getRenderAttributeString('first_title') }}}>
-					<span class="premium-dual-header-first-span">{{{ firstText }}}</span>
-					<# if ( '' != secondText ) { #>
-						<span {{{ view.getRenderAttributeString('second_title') }}}>{{{ secondText }}}</span>
-					<# } #>
-				</{{{firstTag}}}>
-
-			</div>
-			<# if( 'yes' == settings.premium_dual_header_link_switcher && '' !== link ) { #>
-				</a>
-			<# } #>
-		</div>
+		</{{{firstTag}}}>
+		<# if( 'yes' == settings.premium_dual_header_link_switcher && '' !== link ) { #>
+			</a>
+		<# } #>
 
 		<?php
 	}

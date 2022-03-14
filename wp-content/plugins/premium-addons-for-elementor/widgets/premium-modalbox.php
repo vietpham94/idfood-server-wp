@@ -1566,7 +1566,7 @@ class Premium_Modalbox extends Widget_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'premium_modal_box_modal_size',
 			array(
 				'label'       => __( 'Width', 'premium-addons-for-elementor' ),
@@ -1584,6 +1584,9 @@ class Premium_Modalbox extends Widget_Base {
 				),
 				'separator'   => 'before',
 				'label_block' => true,
+				'selectors'   => array(
+					'{{WRAPPER}} .premium-modal-box-modal-dialog'  => 'width: {{SIZE}}{{UNIT}};',
+				),
 			)
 		);
 
@@ -1634,7 +1637,7 @@ class Premium_Modalbox extends Widget_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'     => 'contentborder',
-				'selector' => '{{WRAPPER}} .premium-modal-box-modal-content',
+				'selector' => '{{WRAPPER}} .premium-modal-box-modal-dialog',
 			)
 		);
 
@@ -1645,7 +1648,7 @@ class Premium_Modalbox extends Widget_Base {
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .premium-modal-box-modal-content'     => 'border-radius: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .premium-modal-box-modal-dialog'     => 'border-radius: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1941,59 +1944,44 @@ class Premium_Modalbox extends Widget_Base {
 				<?php endif; ?>
 			</div>
 
-			<div id="premium-modal-<?php echo esc_attr( $this->get_id() ); ?>" class="premium-modal-box-modal" role="dialog">
+			<div id="premium-modal-<?php echo esc_attr( $this->get_id() ); ?>" class="premium-modal-box-modal" role="dialog" style="display: none">
 				<div <?php echo wp_kses_post( $this->get_render_attribute_string( 'dialog' ) ); ?>>
-					<div class="premium-modal-box-modal-content">
-						<?php if ( 'yes' === $settings['premium_modal_box_header_switcher'] ) : ?>
-							<div class="premium-modal-box-modal-header">
-								<?php if ( ! empty( $settings['premium_modal_box_title'] ) ) : ?>
-									<h3 class="premium-modal-box-modal-title">
-										<?php
-											$this->render_header_icon( $header_new, $header_migrated );
-											echo wp_kses_post( $settings['premium_modal_box_title'] );
-										?>
-									</h3>
-								<?php endif; ?>
-								<?php if ( 'yes' === $settings['premium_modal_box_upper_close'] ) : ?>
-									<div class="premium-modal-box-close-button-container">
-										<button type="button" class="premium-modal-box-modal-close" data-dismiss="premium-modal">&times;</button>
-									</div>
-								<?php endif; ?>
-							</div>
-						<?php endif; ?>
-						<div class="premium-modal-box-modal-body">
-							<?php
-							if ( 'editor' === $settings['premium_modal_box_content_type'] ) :
-								echo $this->parse_text_editor( $settings['premium_modal_box_content'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							else :
-								echo $this->getTemplateInstance()->get_template_content( $template ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							endif;
-							?>
+					<?php if ( 'yes' === $settings['premium_modal_box_header_switcher'] ) : ?>
+						<div class="premium-modal-box-modal-header">
+							<?php if ( ! empty( $settings['premium_modal_box_title'] ) ) : ?>
+								<h3 class="premium-modal-box-modal-title">
+									<?php
+										$this->render_header_icon( $header_new, $header_migrated );
+										echo wp_kses_post( $settings['premium_modal_box_title'] );
+									?>
+								</h3>
+							<?php endif; ?>
+							<?php if ( 'yes' === $settings['premium_modal_box_upper_close'] ) : ?>
+								<div class="premium-modal-box-close-button-container">
+									<button type="button" class="premium-modal-box-modal-close" data-dismiss="premium-modal">&times;</button>
+								</div>
+							<?php endif; ?>
 						</div>
-						<?php if ( 'yes' === $settings['premium_modal_box_lower_close'] ) : ?>
-							<div class="premium-modal-box-modal-footer">
-								<button type="button" class="premium-modal-box-modal-lower-close" data-dismiss="premium-modal">
-									<?php echo wp_kses_post( $settings['premium_modal_close_text'] ); ?>
-								</button>
-							</div>
-						<?php endif; ?>
+					<?php endif; ?>
+					<div class="premium-modal-box-modal-body">
+						<?php
+						if ( 'editor' === $settings['premium_modal_box_content_type'] ) :
+							echo $this->parse_text_editor( $settings['premium_modal_box_content'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						else :
+							echo $this->getTemplateInstance()->get_template_content( $template ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						endif;
+						?>
 					</div>
+					<?php if ( 'yes' === $settings['premium_modal_box_lower_close'] ) : ?>
+						<div class="premium-modal-box-modal-footer">
+							<button type="button" class="premium-modal-box-modal-lower-close" data-dismiss="premium-modal">
+								<?php echo wp_kses_post( $settings['premium_modal_close_text'] ); ?>
+							</button>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
-		<style>
-			<?php
-			if ( ! empty( $settings['premium_modal_box_modal_size']['size'] ) ) :
-				echo '@media (min-width: 992px) {';
-				?>
-				#premium-modal-<?php echo esc_attr( $this->get_id() ); ?> .premium-modal-box-modal-dialog {
-				width: <?php echo esc_attr( $settings['premium_modal_box_modal_size']['size'] . $settings['premium_modal_box_modal_size']['unit'] ); ?>
-			}
-				<?php
-				echo '}';
-			endif;
-			?>
-		</style>
 
 		<?php
 	}

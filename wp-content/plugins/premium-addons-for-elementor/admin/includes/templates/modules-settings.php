@@ -36,9 +36,9 @@ $row_meta = Helper_Functions::is_hide_row_meta();
 					<div class="pa-btn-group">
 						<button type="button" class="pa-btn pa-btn-enable <?php echo esc_attr( $enable_btn ); ?>"><?php echo __( 'Switch On', 'premium-addons-for-elementor' ); ?></button>
 						<button type="button" class="pa-btn pa-btn-disable <?php echo esc_attr( $disable_btn ); ?>"><?php echo __( 'Switch Off', 'premium-addons-for-elementor' ); ?></button>
-						<?php if ( $used_widgets ) { ?>
+						<?php if ( false !== $used_widgets ) { ?>
 							<button type="button" class="pa-btn-unused"><?php echo __( 'Disable Unused Widgets', 'premium-addons-for-elementor' ); ?></button>
-						<?php } ?>	
+						<?php } ?>
 					</div>
 				</div>
 

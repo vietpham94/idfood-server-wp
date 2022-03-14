@@ -1,18 +1,16 @@
 (function ($) {
 
     var PremiumWooProductsHandler = function ($scope, $) {
-
         var instance = null;
 
         instance = new premiumWooProducts($scope);
         instance.init();
-
     };
 
     window.premiumWooProducts = function ($scope) {
-
         var self = this,
-            $elem = $scope.find(".premium-woocommerce");
+            $elem = $scope.find(".premium-woocommerce"),
+            skin = $scope.find('.premium-woocommerce').data('skin');
 
         //Check Quick View
         var isQuickView = $elem.data("quick-view");
@@ -33,17 +31,26 @@
 
             self.handleProductsCarousel();
 
-            if ("yes" === isQuickView)
+            if ("yes" === isQuickView) {
                 self.handleProductQuickView();
+            }
 
             self.handleProductPagination();
 
-            var skin = $scope.data("widget_type");
-
             self.handleAddToCart();
 
-            if ("premium-woo-products.grid-6" === skin)
+            if ("grid_6" === skin) {
                 self.handleGalleryImages();
+            }
+
+            if (["grid_7", "grid_11"].includes(skin)) {
+
+                self.handleGalleryCarousel(skin);
+
+                if ("grid_11" === skin) {
+                    self.handleGalleryNav();
+                }
+            }
 
             if ($elem.hasClass("premium-woo-products-metro")) {
 
@@ -52,7 +59,6 @@
                 $(window).on("resize", self.handleGridMetro);
 
             }
-
 
         };
 
@@ -151,7 +157,6 @@
         };
 
         self.handleProductQuickView = function () {
-
             $modal.appendTo(document.body);
 
             $elem.on('click', '.premium-woo-qv-btn, .premium-woo-qv-data', self.triggerQuickViewModal);
@@ -163,7 +168,6 @@
         };
 
         self.triggerQuickViewModal = function (event) {
-
             event.preventDefault();
 
             var $this = $(this),
@@ -330,8 +334,8 @@
         self.handleAddToCart = function () {
 
             $elem
-                .on('click', '.premium-woo-cart-btn.product_type_simple', self.onAddCartBtnClick).on('premium_product_add_to_cart', self.handleAddCartBtnClick)
-                .on('click', '.premium-woo-atc-button .button.product_type_simple', self.onAddCartBtnClick).on('premium_product_add_to_cart', self.handleAddCartBtnClick);
+                .on('click', '.instock .premium-woo-cart-btn.product_type_simple', self.onAddCartBtnClick).on('premium_product_add_to_cart', self.handleAddCartBtnClick)
+                .on('click', '.instock .premium-woo-atc-button .button.product_type_simple', self.onAddCartBtnClick).on('premium_product_add_to_cart', self.handleAddCartBtnClick);
 
         };
 
@@ -359,6 +363,7 @@
                 type: 'POST',
                 data: {
                     action: 'premium_woo_add_cart_product',
+                    nonce: PremiumWooSettings.cta_nonce,
                     product_id: productID,
                     quantity: quantity,
                 },
@@ -366,10 +371,15 @@
                     $(document.body).trigger('wc_fragment_refresh');
                     $elem.trigger('premium_product_add_to_cart', [$this]);
 
-                    if (!$this.hasClass('premium-woo-cart-btn')) {
+                    if ('grid_10' === skin || !$this.hasClass('premium-woo-cart-btn')) {
                         setTimeout(function () {
-                            var cartURL = $this.siblings('.added_to_cart').attr('href');
-                            $this.removeClass('add_to_cart_button').attr('href', cartURL).text('View Cart');
+
+                            var viewCartTxt = $this.siblings('.added_to_cart').text();
+
+                            if ('' == viewCartTxt)
+                                viewCartTxt = 'View Cart';
+
+                            $this.removeClass('add_to_cart_button').attr('href', PremiumWooSettings.woo_cart_url).text(viewCartTxt);
 
                             $this.attr('data-added-to-cart', true);
                         }, 200);
@@ -407,6 +417,48 @@
 
         };
 
+        self.handleGalleryNav = function () {
+
+            $elem.on('click', '.premium-woo-product-gallery-images .premium-woo-product__gallery_image', function () {
+                var imgParent = $(this).parentsUntil(".premium-woo-product-wrapper")[2],
+                    slickContainer = $(imgParent).siblings('.premium-woo-product-thumbnail'),
+                    imgIndex = $(this).index() + 1;
+
+                slickContainer.slick('slickGoTo', imgIndex);
+            });
+        };
+
+        self.handleGalleryCarousel = function (skin) {
+
+            var products = $elem.find('.premium-woo-product-thumbnail'),
+                prevArrow = '<a type="button" data-role="none" class="carousel-arrow carousel-prev" aria-label="Previous" role="button" style=""><i class="fas fa-angle-left" aria-hidden="true"></i></a>',
+                nextArrow = '<a type="button" data-role="none" class="carousel-arrow carousel-next" aria-label="Next" role="button" style=""><i class="fas fa-angle-right" aria-hidden="true"></i></a>',
+                infinite = 'grid_11' === skin ? false : true,
+                slickSettings = {
+                    infinite: infinite,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    draggable: true,
+                    autoplay: false,
+                    rtl: elementorFrontend.config.is_rtl,
+                };
+
+            if ('grid_11' !== skin) {
+                slickSettings.nextArrow = nextArrow;
+                slickSettings.prevArrow = prevArrow;
+            } else {
+                slickSettings.arrows = false;
+            }
+
+            products.each(function (index, product) {
+                $imgs = $(product).find('a').length;
+
+                if ($imgs > 1) {
+                    $(product).slick(slickSettings);
+                }
+            });
+        }
+
         self.handleProductPagination = function () {
 
             $elem.on('click', '.premium-woo-products-pagination a.page-numbers', function (e) {
@@ -422,7 +474,6 @@
 
                 var pageID = $elem.data('page-id'),
                     currentPage = parseInt($elem.find('.page-numbers.current').html()),
-                    skin = $elem.data('skin'),
                     page_number = 1;
 
                 if ($targetPage.hasClass('next')) {
@@ -460,6 +511,11 @@
 
                         $elem.find('.premium-woo-products-pagination').replaceWith(data.data.pagination);
 
+                        //Trigger carousel for products in the next pages.
+                        if ("grid_7" === skin) {
+                            self.handleGalleryCarousel(skin);
+                        }
+
                         if ($elem.hasClass("premium-woo-products-metro"))
                             self.handleGridMetro();
 
@@ -477,7 +533,7 @@
     };
 
 
-    //Elementor JS Hooks
+    //Elementor JS Hooks.
     $(window).on("elementor/frontend/init", function () {
         elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-1", PremiumWooProductsHandler);
         elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-2", PremiumWooProductsHandler);
@@ -485,6 +541,10 @@
         elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-4", PremiumWooProductsHandler);
         elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-5", PremiumWooProductsHandler);
         elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-6", PremiumWooProductsHandler);
-
+        elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-7", PremiumWooProductsHandler);
+        elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-8", PremiumWooProductsHandler);
+        elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-9", PremiumWooProductsHandler);
+        elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-10", PremiumWooProductsHandler);
+        elementorFrontend.hooks.addAction("frontend/element_ready/premium-woo-products.grid-11", PremiumWooProductsHandler);
     });
 })(jQuery);

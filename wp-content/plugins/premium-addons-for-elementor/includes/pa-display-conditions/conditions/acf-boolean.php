@@ -122,7 +122,7 @@ class Acf_Boolean extends Condition {
 
 		$value = $acf_helper->get_acf_field_value( $value, $field['parent'] );
 
-		$input_val = (bool) sanitize_text_field( $compare_val );
+		$input_val = 'true' ===  sanitize_text_field( $compare_val ) ? true : false;
 
 		$condition_result = $value === $input_val ? true : false;
 

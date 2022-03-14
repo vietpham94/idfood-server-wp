@@ -232,14 +232,6 @@ class Addons_Integration {
 			'all'
 		);
 
-		wp_register_style(
-			'premium-woocommerce',
-			PREMIUM_ADDONS_URL . 'assets/frontend/css/premium-woocommerce.css',
-			array(),
-			PREMIUM_ADDONS_VERSION,
-			'all'
-		);
-
 	}
 
 	/**
@@ -343,7 +335,7 @@ class Addons_Integration {
 		wp_register_script(
 			'premium-addons',
 			PREMIUM_ADDONS_URL . 'assets/frontend/' . $dir . '/premium-addons' . $suffix . '.js',
-			array( 'jquery', 'jquery-ui-draggable' ),
+			array( 'jquery' ),
 			PREMIUM_ADDONS_VERSION,
 			true
 		);
@@ -452,13 +444,15 @@ class Addons_Integration {
 			true
 		);
 
-		wp_register_script(
-			'premium-woocommerce',
-			PREMIUM_ADDONS_URL . 'assets/frontend/' . $dir . '/premium-woocommerce' . $suffix . '.js',
-			array( 'jquery' ),
-			PREMIUM_ADDONS_VERSION,
-			true
-		);
+		if ( class_exists( 'woocommerce' ) ) {
+			wp_register_script(
+				'premium-woocommerce',
+				PREMIUM_ADDONS_URL . 'assets/frontend/' . $dir . '/premium-woocommerce' . $suffix . '.js',
+				array( 'jquery' ),
+				PREMIUM_ADDONS_VERSION,
+				true
+			);
+		}
 
 		if ( $maps_settings['premium-map-cluster'] ) {
 			wp_register_script(
@@ -523,15 +517,19 @@ class Addons_Integration {
 			true
 		);
 
-		wp_localize_script(
-			'premium-woocommerce',
-			'PremiumWooSettings',
-			array(
-				'ajaxurl'        => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'products_nonce' => wp_create_nonce( 'pa-woo-products-nonce' ),
-				'qv_nonce'       => wp_create_nonce( 'pa-woo-qv-nonce' ),
-			)
-		);
+		if ( class_exists( 'woocommerce' ) ) {
+			wp_localize_script(
+				'premium-woocommerce',
+				'PremiumWooSettings',
+				array(
+					'ajaxurl'        => esc_url( admin_url( 'admin-ajax.php' ) ),
+					'products_nonce' => wp_create_nonce( 'pa-woo-products-nonce' ),
+					'qv_nonce'       => wp_create_nonce( 'pa-woo-qv-nonce' ),
+					'cta_nonce'      => wp_create_nonce( 'pa-woo-cta-nonce' ),
+					'woo_cart_url'   => get_permalink( wc_get_page_id( 'cart' ) ),
+				)
+			);
+		}
 
 		// Localize jQuery with required data for Global Add-ons.
 		if ( self::$modules['premium-floating-effects'] ) {
@@ -612,12 +610,20 @@ class Addons_Integration {
 			true
 		);
 
+		// Check for required Compatible Elementor version.
+		if ( ! version_compare( ELEMENTOR_VERSION, '3.1.0', '>=' ) ) {
+			$elementor_old = true;
+		} else {
+			$elementor_old = false;
+		}
+
 		wp_localize_script(
 			'jquery',
 			'premium_cross_cp',
 			array(
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
-				'nonce'    => wp_create_nonce( 'premium_cross_cp_import' ),
+				'ajax_url'            => admin_url( 'admin-ajax.php' ),
+				'nonce'               => wp_create_nonce( 'premium_cross_cp_import' ),
+				'elementorCompatible' => $elementor_old,
 			)
 		);
 	}

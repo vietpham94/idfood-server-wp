@@ -10,6 +10,7 @@ use PremiumAddonsPro\Includes\White_Label\Helper;
 
 // Elementor Classes.
 use Elementor\Core\Settings\Manager as SettingsManager;
+use Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -558,7 +559,7 @@ class Helper_Functions {
 				$expire_time = 365 * DAY_IN_SECONDS;
 				break;
 			default:
-				$expire_time = 365 * DAY_IN_SECONDS;
+				$expire_time = 24 * HOUR_IN_SECONDS;
 		}
 
 		return $expire_time;
@@ -726,33 +727,6 @@ class Helper_Functions {
 	}
 
 	/**
-	 * Get Browser Name.
-	 *
-	 * @since 4.4.8
-	 * @access public
-	 *
-	 * @param string $user_agent  user agent.
-	 *
-	 * @return array browser name.
-	 */
-	public static function get_browser_name( $user_agent ) {
-
-		if ( strpos( $user_agent, 'Opera' ) || strpos( $user_agent, 'OPR/' ) ) {
-			return 'opera';
-		} elseif ( strpos( $user_agent, 'Edg' ) || strpos( $user_agent, 'Edge' ) ) {
-			return 'edge';
-		} elseif ( strpos( $user_agent, 'Chrome' ) ) {
-			return 'chrome';
-		} elseif ( strpos( $user_agent, 'Safari' ) ) {
-			return 'safari';
-		} elseif ( strpos( $user_agent, 'Firefox' ) ) {
-			return 'firefox';
-		} elseif ( strpos( $user_agent, 'MSIE' ) || strpos( $user_agent, 'Trident/7' ) ) {
-			return 'ie';
-		}
-	}
-
-	/**
 	 * Get Local Time ( WordPress TimeZone Setting ).
 	 *
 	 * @access public
@@ -800,11 +774,11 @@ class Helper_Functions {
 			'mobile'  => __( 'Mobile', 'elementor' ),
 		);
 
-		$method_available = method_exists( \Elementor\Plugin::$instance->breakpoints, 'has_custom_breakpoints' );
+		$method_available = method_exists( Plugin::$instance->breakpoints, 'has_custom_breakpoints' );
 
 		if ( ( defined( 'ELEMENTOR_VERSION' ) && version_compare( ELEMENTOR_VERSION, '3.4.0', '>' ) ) && $method_available ) {
 
-			if ( \Elementor\Plugin::$instance->breakpoints->has_custom_breakpoints() ) {
+			if ( Plugin::$instance->breakpoints->has_custom_breakpoints() ) {
 				$devices = array_merge(
 					$devices,
 					array(
@@ -856,7 +830,7 @@ class Helper_Functions {
 	 * @access public
 	 * @since 4.4.8
 	 *
-	 * @param string $id  array key.
+	 * @param string $id array key.
 	 *
 	 * @return array
 	 */
@@ -885,4 +859,25 @@ class Helper_Functions {
 		return $product_cat;
 	}
 
+	/**
+	 * Check Elementor Experiment
+	 *
+	 * Check if an Elementor experiment is enabled.
+	 *
+	 * @since 4.8.6
+	 * @access public
+	 *
+	 * @param string $experiment feature ID.
+	 *
+	 * @return boolean $is_enabled is feature enabled.
+	 */
+	public static function check_elementor_experiment( $experiment ) {
+
+		$experiments_manager = Plugin::$instance->experiments;
+
+		$is_enabled = $experiments_manager->is_feature_active( $experiment );
+
+		return $is_enabled;
+
+	}
 }

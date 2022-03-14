@@ -39,7 +39,7 @@ class ACF_Helper {
 
 		foreach ( $posts as $post ) {
 
-			$acf_settings = json_decode( $post->post_content );
+			$acf_settings = unserialize( $post->post_content, ['allowed_classes' => false] ); // TODO:: check for a safer method.
 
 			$acf_type = $show_field_type ? ucwords( $acf_settings['type'] ) . ': ' : '';
 
@@ -114,7 +114,7 @@ class ACF_Helper {
 	 * @param string $type field category.
 	 * @return array
 	 */
-	public function get_allowed_field_types( $type ) {
+	public static function get_allowed_field_types( $type ) {
 
 		$default_types = array(
 			'textual' => array(

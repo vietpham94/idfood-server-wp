@@ -68,12 +68,39 @@ class Browser extends Condition {
 
 		$user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? filter_var( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ), FILTER_SANITIZE_STRING ) : '';
 
-		$user_agent = Helper_Functions::get_browser_name( $user_agent );
+		$user_agent = $this->get_browser_name( $user_agent );
 
 		$condition_result = is_array( $value ) && ! empty( $value ) ? in_array( $user_agent, $value, true ) : $value === $user_agent;
 
 		return Helper_Functions::get_final_result( $condition_result, $operator );
 
+	}
+
+	/**
+	 * Get Browser Name.
+	 *
+	 * @since 4.4.8
+	 * @access private
+	 *
+	 * @param string $user_agent  user agent.
+	 *
+	 * @return array browser name.
+	 */
+	private static function get_browser_name( $user_agent ) {
+
+		if ( strpos( $user_agent, 'Opera' ) || strpos( $user_agent, 'OPR/' ) ) {
+			return 'opera';
+		} elseif ( strpos( $user_agent, 'Edg' ) || strpos( $user_agent, 'Edge' ) ) {
+			return 'edge';
+		} elseif ( strpos( $user_agent, 'Chrome' ) ) {
+			return 'chrome';
+		} elseif ( strpos( $user_agent, 'Safari' ) ) {
+			return 'safari';
+		} elseif ( strpos( $user_agent, 'Firefox' ) ) {
+			return 'firefox';
+		} elseif ( strpos( $user_agent, 'MSIE' ) || strpos( $user_agent, 'Trident/7' ) ) {
+			return 'ie';
+		}
 	}
 
 }

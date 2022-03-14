@@ -3,9 +3,9 @@ Contributors: Leap13, Rimoun
 Tags: elementor, elementor addons, elementor widgets, elementor elements, elementor templates
 Donate Link: https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme
 Requires at least: 5.0
-Tested Up To: 5.9
+Tested Up To: 5.9.1
 Requires PHP: 5.4
-Stable Tag: 4.8.4
+Stable Tag: 4.8.9
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -33,7 +33,7 @@ Show off your products in an elegant way using Premium Woo Products Widget for E
 Now, you can make your columns, widgets or any selector you want the same height with just ONE click using [Elementor Equal Height feature](https://premiumaddons.com/docs/elementor-column-equal-height/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) in section settings -> Advanced tab.
 
 ### Elementor Pre-made Templates
-NEW: Ever-growing [Elementor Section Templates Library](https://premiumaddons.com/premium-templates-for-elementor/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) Available on both Premium Addons Free and PRO versions. Browse, preview, and insert the template you like in your page/post with just ONE click.
+NEW: Ever-growing [Elementor Section Templates Library](https://premiumaddons.com/premium-templates-for-elementor/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) Available on both Premium Addons Free and PRO versions. Browse, preview, and insert the template you like in your page/post with just ONE click. You can also select to insert the templates without media files (images, videos, etc.) to prevent overloading your WordPress Media Library with large files.
 
 ### Elementor Lottie Animations Integration
 You can now use [Lottie Animations in ALL our Elementor widgets](https://premiumaddons.com/elementor-lottie-animations-section-addon/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme). Whatever widget that have an image or icon option now have also the option to add a Lottie animation. Lottie animations are open source, lightweight and available for free, Use them now to make your Elementor pages more eye-catching.
@@ -89,7 +89,8 @@ Each widget and addon has been tested on different screen sizes, mobile devices,
 * [**Vertical Scroll Widget**](https://premiumaddons.com/vertical-scroll-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: Create beautiful vertical scroll pages with advanced responsive control options using Premium Vertical Scroll Widget for Elementor Page Builder.
 * [**Background Transition Widget**](https://premiumaddons.com/elementor-color-transition-widget/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Create fancy, colorful, and eye-catching webpages using background Color Transition Widget for Elementor. It allows you to have a seamless transition between sections background colors.
 * [**Multi-Scroll Widget**](https://premiumaddons.com/multi-scroll-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: The only Elementor widget available that allows you to create attractive multi-scroll effect. It can be used to create full landing pages or use it inside any page.
-* [**Elementor Custom Mouse Cursor Global Addon**](https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add a custom mouse cursor to any Elementor section, column, or widgets. You can select between Font Awesome icon, custom SVGs, image or Lottie animation.
+* [**Elementor Custom Mouse Cursor Global Addon**](https://premiumaddons.com/elementor-custom-mouse-cursor-global-feature/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add a custom mouse cursor to any Elementor section, column, or widget. You can select between Font Awesome icon, custom SVGs, image or Lottie animation.
+* [**Elementor Badge Global Addon**](https://premiumaddons.com/elementor-badge-global-addon/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add an icon, image, Lottie animation, or SVG blob shape badge to any Elementor section, column, or widget.
 * [**Elementor Animated Blob Generator**](https://premiumaddons.com/elementor-animated-blob-generator/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple animated blob layers to your Elementor sections with a wide range of smart customization options.
 * [**Elementor Lottie Animations Section Addon**](https://premiumaddons.com/elementor-lottie-animations-section-addon/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Add multiple Lottie Animations easily to any Elementor section with allot of customization and interactivity options.
 * [**Elementor Parallax Section/Column Addon**](https://premiumaddons.com/parallax-section-addon-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: The only Elementor Parallax Section Addon that can be enabled for Elementor columns with freehand design experience and many styles to choose from.
@@ -204,6 +205,42 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 4.8.9 =
+
+- Tweak: Added Product Image Height option in WooCommerce Products Listing widget.
+- Tweak: HTML markup optimized for some widgets for better performance.
+
+= 4.8.8 =
+
+- Tweak: HTML markup optimized for Banner, Pricing Table, and Lottie Animation widgets for better performance.
+- Tweak: Added Variable Width and Linear Easing options in Carousel widget.
+- Tweak: JS Code refactored for better performance and security.
+- Tweak: Fixed compatibility issue between ACF Display Condition and PHP 8.
+
+= 4.8.7 =
+
+- Tweak: Added option to insert Premium Templates without media files (images, videos, etc.) to prevent overloading website's Media Library.
+- Tweak: Responsive styling improved for Quick View Modal in WooCommerce Products Listing widget.
+- Tweak: Make sure View Cart string is translated to the current langugage in WooCommerce Products Listing widget.
+- Tweak: Added Scotland and Wales countries for IP Location Display Condition.
+- Fixed: Inserting Premium Templates sometimes causes Elementor placeholder image to be inserted multiple times into the media library.
+- Fixed: Close sticky video causes the original video to play in Videobox Widget
+
+= 4.8.6 =
+
+- Tweak: Compatibility between Display Conditions, Equal Height features and Elementor Container element - [here](https://elementor.com/help/container-element/).
+- Tweak: Compatibility between 'alt' text for images in Media Grid widget and WPML translation plugin.
+- Tweak: Added Text Align option for Background Text in Dual Heading widget.
+
+= 4.8.5 =
+
+- Tweak: Added responsive controls for Width option in Modal Box widget.
+- Tweak: Load widgets JS dependencies only when required to improve performance.
+- Tweak: Custom Mouse Cursor addon switcher moved to Global Features tab.
+- Tweak: HTML markup optimized for Button, Image Button, Dual Heading, and Modal Box widgets for better performance.
+- Fixed: Prevent creating additional unnecessary containers in Carousel widget.
+- Fixed: Products slashed price style overriden by WooCommerce styling in Woo Products Listing.
 
 = 4.8.4 =
 

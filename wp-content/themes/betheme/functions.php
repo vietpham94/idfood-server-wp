@@ -164,6 +164,17 @@ if (!function_exists('write_log')) {
 
 }
 
+add_filter( 'woocommerce_add_to_cart_validation', 'bbloomer_only_one_in_cart', 9999, 2 );
+   
+function bbloomer_only_one_in_cart( $passed, $added_product_id ) {
+   wc_empty_cart();
+   return $passed;
+}
+
+add_filter ('woocommerce_add_to_cart_redirect', function( $url, $adding_to_cart ) {
+    //return wc_get_checkout_url();
+}, 10, 2 ); 
+
 // Customer search form
 require_once(get_theme_file_path('/functions/shortcodes/custom-filter-search-form.php'));
 
@@ -177,12 +188,6 @@ require_once(get_theme_file_path('/functions/shortcodes/custom-carousel-post-typ
 require_once(get_theme_file_path('/functions/shortcodes/product-sold-count.php'));
 require_once(get_theme_file_path('/functions/shortcodes/product-review-count.php'));
 require_once(get_theme_file_path('/functions/shortcodes/product-average-rating.php'));
-
-add_filter( 'woocommerce_add_to_cart_validation', 'bbloomer_only_one_in_cart', 9999, 2 );
-function bbloomer_only_one_in_cart( $passed, $added_product_id ) {
-    wc_empty_cart();
-    return $passed;
-}
 
 /**
  * @deprecated 21.0.5

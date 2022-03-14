@@ -461,7 +461,7 @@ class Premium_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'premium-carousel-advance-settings',
 			array(
-				'label' => __( 'Additional Settings', 'premium-addons-for-elementor' ),
+				'label' => __( 'Advanced Settings', 'premium-addons-for-elementor' ),
 			)
 		);
 
@@ -494,6 +494,15 @@ class Premium_Carousel extends Widget_Base {
 				'condition'   => array(
 					'premium_carousel_slider_type!' => 'vertical',
 				),
+			)
+		);
+
+		$this->add_control(
+			'variable_width',
+			array(
+				'label'       => __( 'Variable Width', 'premium-addons-for-elementor' ),
+				'description' => __( 'Allows each slide to have a different width.', 'premium-addons-for-elementor' ),
+				'type'        => Controls_Manager::SWITCHER,
 			)
 		);
 
@@ -551,6 +560,14 @@ class Premium_Carousel extends Widget_Base {
 				'description' => __( 'Sets the breakpoint between tablet and mobile devices. Below this breakpoint mobile layout will appear (Default: 768px).', 'premium-addons-for-elementor' ),
 				'type'        => Controls_Manager::NUMBER,
 				'default'     => 768,
+			)
+		);
+
+		$this->add_control(
+			'linear_ease',
+			array(
+				'label' => __( 'Linear Easing', 'premium-addons-for-elementor' ),
+				'type'  => Controls_Manager::SWITCHER,
 			)
 		);
 
@@ -1150,7 +1167,11 @@ class Premium_Carousel extends Widget_Base {
 			$dir = 'dir="rtl"';
 		}
 
+		$variable_width = 'yes' === $settings['variable_width'] ? true : false;
+
 		$adaptive_height = 'yes' === $settings['premium_carousel_adaptive_height'] ? true : false;
+
+		$linear = 'yes' === $settings['linear_ease'] ? true : false;
 
 		$pause_hover = 'yes' === $settings['premium_carousel_pausehover'] ? true : false;
 
@@ -1294,6 +1315,8 @@ class Premium_Carousel extends Widget_Base {
 			'touchMove'      => $touch_move,
 			'rtl'            => $rtl,
 			'adaptiveHeight' => $adaptive_height,
+			'variableWidth'  => $variable_width,
+			'cssEase'        => $linear ? 'linear' : 'ease',
 			'pauseOnHover'   => $pause_hover,
 			'centerMode'     => $center_mode,
 			'centerPadding'  => $center_padding,
@@ -1443,6 +1466,8 @@ class Premium_Carousel extends Widget_Base {
 			}
 
 			var adaptiveHeight  = 'yes' === settings.premium_carousel_adaptive_height ? true : false,
+				variableWidth  = 'yes' === settings.variable_width ? true : false,
+				cssEase     = 'yes' === settings.linear_ease ? true : false,
 				pauseOnHover    = 'yes' === settings.premium_carousel_pausehover ? true : false,
 				centerMode      = 'yes' === settings.premium_carousel_center_mode ? true : false,
 				centerPadding   = '' !== settings.premium_carousel_space_btw_items ? settings.premium_carousel_space_btw_items + "px" : '';
@@ -1613,6 +1638,8 @@ class Premium_Carousel extends Widget_Base {
 			carouselSettings.touchMove      = touchMove;
 			carouselSettings.rtl            = rtl;
 			carouselSettings.adaptiveHeight = adaptiveHeight;
+			carouselSettings.variableWidth = variableWidth;
+			carouselSettings.cssEase        = cssEase;
 			carouselSettings.pauseOnHover   = pauseOnHover;
 			carouselSettings.centerMode     = centerMode;
 			carouselSettings.centerPadding  = centerPadding;

@@ -59,6 +59,13 @@ class Module {
 		// Check if scripts should be loaded.
 		add_action( 'elementor/frontend/section/before_render', array( $this, 'check_script_enqueue' ) );
 
+		if ( Helper_Functions::check_elementor_experiment( 'container' ) ) {
+			add_action( 'elementor/element/container/section_layout/after_section_end', array( $this, 'register_controls' ), 10 );
+			add_action( 'elementor/container/print_template', array( $this, '_print_template' ), 10, 2 );
+			add_action( 'elementor/frontend/container/before_render', array( $this, 'before_render' ), 10, 1 );
+			add_action( 'elementor/frontend/container/before_render', array( $this, 'check_script_enqueue' ) );
+		}
+
 	}
 
 	/**
@@ -203,7 +210,7 @@ class Module {
 	 */
 	public function _print_template( $template, $element ) {
 
-		if ( $element->get_name() !== 'section' ) {
+		if ( $element->get_name() !== 'section' && $element->get_name() !== 'container' ) {
 			return $template;
 		}
 
@@ -294,6 +301,7 @@ class Module {
 			self::$load_script = true;
 
 			remove_action( 'elementor/frontend/section/before_render', array( $this, 'check_script_enqueue' ) );
+			remove_action( 'elementor/frontend/container/before_render', array( $this, 'check_script_enqueue' ) );
 		}
 
 	}

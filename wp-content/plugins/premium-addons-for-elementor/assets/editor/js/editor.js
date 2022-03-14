@@ -4,7 +4,8 @@
     var selectOptions = elementor.modules.controls.Select2.extend({
 
         onBeforeRender: function () {
-            if (this.container && "section" === this.container.type) {
+            console.log(this.container.type);
+            if (this.container && ("section" === this.container.type || "container" === this.container.type)) {
                 var widgetObj = elementor.widgetsCache || elementor.config.widgets,
                     optionsToUpdate = {};
 
@@ -156,7 +157,7 @@
         onReady: function () {
             var self = this;
 
-            if (!self.isUpdated ) {
+            if (!self.isUpdated) {
                 self.fetchData();
             }
         },
@@ -198,7 +199,7 @@
     });
 
     elementor.addControlView("premium-acf-selector", acfOptions);
-    
+
     elementor.hooks.addFilter("panel/elements/regionViews", function (panel) {
 
         if (PremiumPanelSettings.papro_installed || PremiumPanelSettings.papro_widgets.length <= 0)

@@ -227,13 +227,15 @@ abstract class Premium_Templates_Source_Base {
 	 * @param array  $content A set of elements.
 	 * @param string $method  Accepts either `on_export` to export data or
 	 *                        `on_import` to import data.
+	 * @param string $with_media include templates media.
 	 *
 	 * @return mixed Processed content data.
 	 */
-	protected function process_export_import_content( $content, $method ) {
+	protected function process_export_import_content( $content, $method, $with_media ) {
+
 		return \Elementor\Plugin::$instance->db->iterate_data(
 			$content,
-			function( $element_data ) use ( $method ) {
+			function( $element_data ) use ( $method, $with_media ) {
 				$element = \Elementor\Plugin::$instance->elements_manager->create_element_instance( $element_data );
 
 				// If the widget/element isn't exist, like a plugin that creates a widget but deactivated.
@@ -241,7 +243,7 @@ abstract class Premium_Templates_Source_Base {
 					return null;
 				}
 
-				return $this->process_element_export_import_content( $element, $method );
+				return $this->process_element_export_import_content( $element, $method, $with_media );
 			}
 		);
 	}
@@ -256,10 +258,11 @@ abstract class Premium_Templates_Source_Base {
 	 *
 	 * @param Controls_Stack $element
 	 * @param string         $method
+	 * @param string         $with_media include templates media.
 	 *
 	 * @return array Processed element data.
 	 */
-	protected function process_element_export_import_content( $element, $method ) {
+	protected function process_element_export_import_content( $element, $method, $with_media ) {
 
 		$element_data = $element->get_data();
 
@@ -277,10 +280,83 @@ abstract class Premium_Templates_Source_Base {
 			}
 
 			if ( method_exists( $control_class, $method ) ) {
-				$element_data['settings'][ $control['name'] ] = $control_class->{$method}( $element->get_settings( $control['name'] ), $control );
+
+				if ( 'media' !== $control['type'] && 'hedia' !== $control['type'] && 'repeater' !== $control['type'] ) {
+					// wp_die();
+					$element_data['settings'][ $control['name'] ] = $control_class->{$method}( $element->get_settings( $control['name'] ), $control );
+				} elseif ( 'repeater' === $control['type'] ) {
+						$element_data['settings'][ $control['name'] ] = $this->on_import_repeater( $element->get_settings( $control['name'] ), $control, $with_media );
+						// $element_data['settings'][ $control['name'] ]['url'] = Utils::get_placeholder_image_src();
+				} else {
+					if ( ! empty( $element_data['settings'][ $control['name'] ]['url'] ) ) {
+						$element_data['settings'][ $control['name'] ] = $this->on_import_media( $element->get_settings( $control['name'] ), $with_media );
+						// $element_data['settings'][ $control['name'] ]['url'] = Utils::get_placeholder_image_src();
+					}
+				}
 			}
 		}
 
 		return $element_data;
+	}
+
+	public function on_import_media( $settings, $media ) {
+
+		if ( empty( $settings['url'] ) || false != strpos( $settings['url'], 'placeholder' ) ) {
+			return $settings;
+		}
+
+		if ( ! $media ) {
+
+			$file_ext = pathinfo( $settings['url'] )['extension'];
+			switch ( true ) {
+				case 'mp4' === $file_ext:
+					$settings['url'] = 'https://pa.premiumtemplates.io/wp-content/uploads/2018/10/video-placeholder.mp4';
+					break;
+				case 'jpg' === $file_ext || 'png' === $file_ext:
+					$settings['url'] = ELEMENTOR_ASSETS_URL . 'images/placeholder.png';
+					break;
+				case 'json' === $file_ext:
+					$settings['url'] = 'https://assets1.lottiefiles.com/packages/lf20_FPxkbx.json';
+					break;
+			}
+		} else {
+			$settings = \Elementor\Plugin::$instance->templates_manager->get_import_images_instance()->import( $settings );
+		}
+
+		return $settings;
+	}
+
+	public function on_import_repeater( $settings, $control_data = array(), $media ) {
+		if ( empty( $settings ) || empty( $control_data['fields'] ) ) {
+			return $settings;
+		}
+
+		$method = 'on_import';
+
+		foreach ( $settings as &$item ) {
+			foreach ( $control_data['fields'] as $field ) {
+				if ( empty( $field['name'] ) || empty( $item[ $field['name'] ] ) ) {
+					continue;
+				}
+
+				$control_obj = \Elementor\Plugin::$instance->controls_manager->get_control( $field['type'] );
+
+				if ( ! $control_obj ) {
+					continue;
+				}
+
+				if ( method_exists( $control_obj, $method ) ) {
+					if ( 'media' !== $field['type'] && 'hedia' !== $field['type'] ) {
+						$item[ $field['name'] ] = $control_obj->{$method}( $item[ $field['name'] ], $field );
+					} else {
+						if ( ! empty( $item[ $field['name'] ]['url'] ) ) {
+							$item[ $field['name'] ] = $this->on_import_media( $item[ $field['name'] ], $media );
+						}
+					}
+				}
+			}
+		}
+
+		return $settings;
 	}
 }
