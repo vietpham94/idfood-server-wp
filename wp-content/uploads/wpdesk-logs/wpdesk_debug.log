@@ -1,0 +1,2 @@
+[2022-01-09 19:38:24] wpdesk.DEBUG: Sender payload: {"click_action":"no","url":"http:\/\/idfood.vn","localhost":"yes"} {"source":"wpdesk-sender"} []
+[2022-01-09 19:38:27] wpdesk.DEBUG: Sender response: {"headers":[],"body":"","response":{"code":false,"message":false},"cookies":[],"http_response":null} {"source":"wpdesk-sender"} []

@@ -1,4 +1,8 @@
 <?php
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
+
 /**
  * Cấu hình cơ bản cho WordPress
  *
@@ -26,7 +30,8 @@ define( 'DB_NAME', 'idfood_vn' );
 define( 'DB_USER', 'root' );
 
 /** Mật khẩu của database */
-define( 'DB_PASSWORD', 'Dig@311' );
+//define( 'DB_PASSWORD', 'Dig@311' );
+define( 'DB_PASSWORD', '' );
 
 /** Hostname của database */
 define( 'DB_HOST', 'localhost' );
@@ -80,7 +85,9 @@ $table_prefix = 'pte_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', false);
+define('WP_DEBUG_LOG', true);
 
 /* Đó là tất cả thiết lập, ngưng sửa từ phần này trở xuống. Chúc bạn viết blog vui vẻ. */
 

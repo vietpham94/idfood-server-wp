@@ -1,0 +1,11 @@
+2022-03-08T18:07:00+00:00 CRITICAL Uncaught Error: Call to a member function get_city() on null in /usr/share/nginx/html/dig/idfood.vn/wp-content/themes/betheme/woocommerce/content-single-product.php:172
+Stack trace:
+#0 /usr/share/nginx/html/dig/idfood.vn/wp-includes/template.php(772): require()
+#1 /usr/share/nginx/html/dig/idfood.vn/wp-content/plugins/woocommerce/includes/wc-core-functions.php(284): load_template('/usr/share/ngin...', false)
+#2 /usr/share/nginx/html/dig/idfood.vn/wp-content/themes/betheme/woocommerce/single-product.php(48): wc_get_template_part('content', 'single-product')
+#3 /usr/share/nginx/html/dig/idfood.vn/wp-includes/template-loader.php(106): include('/usr/share/ngin...')
+#4 /usr/share/nginx/html/dig/idfood.vn/wp-blog-header.php(19): require_once('/usr/share/ngin...')
+#5 /usr/share/nginx/html/dig/idfood.vn/index.php(17): require('/usr/share/ngin...')
+#6 {main}
+  thrown in /usr/share/nginx/html/dig/idfood.vn/wp-content/themes/betheme/woocommerce/content-single-product.php on line 172
+
